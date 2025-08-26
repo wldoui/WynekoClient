@@ -50,12 +50,12 @@ dependencies {
     implementation "com.paulscode.sound:librarylwjglopenal:20100824"
     implementation "com.mojang:authlib:1.5.21"
 }
-tasks.register('runStart', JavaExec) {
+tasks.register('runClient', JavaExec) {
     group = "MCP"
     description = "Run Start class with Zulu 17 JDK"
 
     executable = "C:/Program Files/Zulu/zulu-17/bin/java.exe"
-    workingDir = file('D:/!Other/git/WynekoClient/WynekoClientV1')
+    workingDir = file('D:/!Other/git/WynekoClient/WynekoClientV2')
     classpath = sourceSets.main.runtimeClasspath
     mainClass = 'Start'
 
