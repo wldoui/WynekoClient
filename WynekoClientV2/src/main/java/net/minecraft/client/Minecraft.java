@@ -167,6 +167,7 @@ import net.minecraft.world.chunk.storage.AnvilSaveConverter;
 import net.minecraft.world.storage.ISaveFormat;
 import net.minecraft.world.storage.ISaveHandler;
 import net.minecraft.world.storage.WorldInfo;
+import net.wynekoclient.WynekoClient;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.Validate;
 import org.apache.logging.log4j.LogManager;
@@ -390,6 +391,8 @@ public class Minecraft implements IThreadListener, IPlayerUsage
 
     private void startGame() throws LWJGLException, IOException
     {
+        try {WynekoClient.Start();} catch (Exception e) {e.printStackTrace();}
+
         this.gameSettings = new GameSettings(this, this.mcDataDir);
         this.defaultResourcePacks.add(this.mcDefaultResourcePack);
         this.startTimerHackThread();

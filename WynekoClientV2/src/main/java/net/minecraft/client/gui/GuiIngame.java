@@ -74,6 +74,7 @@ public class GuiIngame extends Gui
     private int lastPlayerHealth = 0;
     private long lastSystemTime = 0L;
     private long healthUpdateCounter = 0L;
+    private final net.wynekoclient.DevWindow wyneko$overlay = new net.wynekoclient.DevWindow();
 
     public GuiIngame(Minecraft mcIn)
     {
@@ -96,6 +97,7 @@ public class GuiIngame extends Gui
 
     public void renderGameOverlay(float partialTicks)
     {
+        this.wyneko$overlay.renderOverlay(partialTicks);
         ScaledResolution scaledresolution = new ScaledResolution(this.mc);
         int i = scaledresolution.getScaledWidth();
         int j = scaledresolution.getScaledHeight();
