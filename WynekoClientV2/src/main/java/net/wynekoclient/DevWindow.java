@@ -9,6 +9,8 @@ public final class DevWindow {
 
     public static boolean noHurtCam = false;
     public static boolean fullBright = false;
+    private static boolean fastPlaceEnabled = false;
+    private static int fastPlaceSpeed = 0; // 0 = мгновенно, 4 = стандартно
 
     private final Minecraft mc = Minecraft.getMinecraft();
 
@@ -41,9 +43,9 @@ public final class DevWindow {
     private static void CreateWindowContent(){
     Tabs = new JTabbedPane();
 
-        CreateTab("Render"      , WynekoRenderTab()); /* 0 */
-        /*CreateTab("World"       , WynekoWorld());
-        CreateTab("Player"      , WynekoPlayer()); */
+        CreateTab("Render"      , WynekoRenderTab());
+        CreateTab("World"       , WynekoWorldTab());
+        CreateTab("Player"      , WynekoPlayerTab());
 
 
         Tabs.addChangeListener((e) -> {
@@ -60,9 +62,44 @@ public final class DevWindow {
         JPanel panel = new JPanel(new BorderLayout());
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
-
-
         JCheckBox cbNoHurtCam = new JCheckBox("No HurtCam");
+        JCheckBox cbFullBright = new JCheckBox("Full Bright");
+
+        cbNoHurtCam.setSelected(noHurtCam);
+        cbNoHurtCam.addItemListener(e -> noHurtCam = cbNoHurtCam.isSelected());
+
+        /*cbNoHurtCam.setSelected(fullBright);
+        cbNoHurtCam.addItemListener(e -> fullBright = cbFullBright.isSelected());*/
+
+        cbFullBright.setSelected(fullBright);
+        cbFullBright.addItemListener(e -> {
+            fullBright = cbFullBright.isSelected();
+            Minecraft mc = Minecraft.getMinecraft();
+            if (fullBright) {
+                mc.gameSettings.gammaSetting = 1000.0F;
+            } else {
+                mc.gameSettings.gammaSetting = 1.0F;
+            }
+        });
+
+        panel.add(cbNoHurtCam);
+        panel.add(cbFullBright);
+
+        return panel;
+    }
+
+    public static JPanel WynekoWorldTab() {
+        return null;
+    }
+
+
+    private static JPanel WynekoPlayerTab(){
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+
+
+
+        JCheckBox cbNoHurtCam = new JCheckBox("SEX)))))");
         //JCheckBox cbFullBright = CreateCheckBox("Full Bright");
 
         cbNoHurtCam.setSelected(noHurtCam);

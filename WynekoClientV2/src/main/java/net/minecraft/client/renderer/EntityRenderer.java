@@ -608,11 +608,8 @@ public class EntityRenderer implements IResourceManagerReloadListener
     private void hurtCameraEffect(float partialTicks)
     {
         if (noHurtCam) {
-            // Если галочка включена, тряску отключаем
             return;
         }
-
-        // Иначе выполняем стандартный код тряски
         if (this.mc.getRenderViewEntity() instanceof EntityLivingBase) {
             EntityLivingBase entity = (EntityLivingBase) this.mc.getRenderViewEntity();
             float f = (float) entity.hurtTime - partialTicks;
