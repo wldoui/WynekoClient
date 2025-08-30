@@ -1,20 +1,14 @@
 package net.wynekoclient;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.Gui;
-import net.minecraft.client.renderer.GlStateManager;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.util.MathHelper;
-
 import java.awt.*;
 import javax.swing.*;
 
-import static net.wynekoclient.Overrides.fullBright;
-import static net.wynekoclient.Overrides.noHurtCam;
 
 public final class DevWindow {
 
-
+    public static boolean noHurtCam = false;
+    public static boolean fullBright = false;
 
     private final Minecraft mc = Minecraft.getMinecraft();
 
@@ -34,11 +28,11 @@ public final class DevWindow {
         CreateWindowContent();
     }
 
-    private static JCheckBox CreateCheckBox(String text) {
+    /*private static JCheckBox CreateCheckBox(String text) {
         JCheckBox checkBox = new JCheckBox(text);
         checkBox.setSelected(false);
         return checkBox;
-    }
+    }*/
 
     private static void CreateTab(String TabName, JPanel Content){
         Tabs.addTab(TabName, Content);
@@ -47,7 +41,7 @@ public final class DevWindow {
     private static void CreateWindowContent(){
     Tabs = new JTabbedPane();
 
-        CreateTab("Render"      , WynekoRender()); /* 0 */
+        CreateTab("Render"      , WynekoRenderTab()); /* 0 */
         /*CreateTab("World"       , WynekoWorld());
         CreateTab("Player"      , WynekoPlayer()); */
 
@@ -62,25 +56,20 @@ public final class DevWindow {
 
     //==========================================================//
 
-    private static JPanel WynekoRender(){
+    private static JPanel WynekoRenderTab(){
         JPanel panel = new JPanel(new BorderLayout());
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
-        JCheckBox cbNoHurtCam = CreateCheckBox("No Hurt Cam");
-        JCheckBox cbFullBright = CreateCheckBox("Full Bright");
 
-        cbNoHurtCam.addItemListener(e -> {
-            noHurtCam = cbNoHurtCam.isSelected();
-            System.out.println("NoHurtCam = " + noHurtCam);
-        });
 
-        cbFullBright.addItemListener(e -> {
-            fullBright = cbFullBright.isSelected();
-            System.out.println("FullBright = " + fullBright);
-        });
+        JCheckBox cbNoHurtCam = new JCheckBox("No HurtCam");
+        //JCheckBox cbFullBright = CreateCheckBox("Full Bright");
 
-        panel.add(CreateCheckBox("No Hurt Cam "));
-        panel.add(CreateCheckBox("Full Bright"));
+        cbNoHurtCam.setSelected(noHurtCam);
+        cbNoHurtCam.addItemListener(e -> noHurtCam = cbNoHurtCam.isSelected());
+
+        panel.add(cbNoHurtCam);
+        //panel.add(CreateCheckBox("Full Bright"));
 
         return panel;
     }

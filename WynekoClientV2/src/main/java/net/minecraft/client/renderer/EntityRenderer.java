@@ -97,6 +97,8 @@ import org.lwjgl.opengl.GL12;
 import org.lwjgl.opengl.GLContext;
 import org.lwjgl.util.glu.Project;
 
+import static net.wynekoclient.DevWindow.noHurtCam;
+
 public class EntityRenderer implements IResourceManagerReloadListener
 {
     private static final Logger logger = LogManager.getLogger();
@@ -605,25 +607,22 @@ public class EntityRenderer implements IResourceManagerReloadListener
 
     private void hurtCameraEffect(float partialTicks)
     {
-        if (this.mc.getRenderViewEntity() instanceof EntityLivingBase)
-        {
-            EntityLivingBase entitylivingbase = (EntityLivingBase)this.mc.getRenderViewEntity();
-            float f = (float)entitylivingbase.hurtTime - partialTicks;
+        if (noHurtCam) {
+            // Если галочка включена, тряску отключаем
+            return;
+        }
 
-            if (entitylivingbase.getHealth() <= 0.0F)
-            {
-                float f1 = (float)entitylivingbase.deathTime + partialTicks;
-                GlStateManager.rotate(40.0F - 8000.0F / (f1 + 200.0F), 0.0F, 0.0F, 1.0F);
-            }
+        // Иначе выполняем стандартный код тряски
+        if (this.mc.getRenderViewEntity() instanceof EntityLivingBase) {
+            EntityLivingBase entity = (EntityLivingBase) this.mc.getRenderViewEntity();
+            float f = (float) entity.hurtTime - partialTicks;
 
-            if (f < 0.0F)
-            {
-                return;
-            }
+            if (f < 0.0F) return;
 
-            f = f / (float)entitylivingbase.maxHurtTime;
+            f = f / (float) entity.maxHurtTime;
             f = MathHelper.sin(f * f * f * f * (float)Math.PI);
-            float f2 = entitylivingbase.attackedAtYaw;
+            float f2 = entity.attackedAtYaw;
+
             GlStateManager.rotate(-f2, 0.0F, 1.0F, 0.0F);
             GlStateManager.rotate(-f * 14.0F, 0.0F, 0.0F, 1.0F);
             GlStateManager.rotate(f2, 0.0F, 1.0F, 0.0F);
