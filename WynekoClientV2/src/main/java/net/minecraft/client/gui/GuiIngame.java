@@ -97,7 +97,6 @@ public class GuiIngame extends Gui
 
     public void renderGameOverlay(float partialTicks)
     {
-        this.wyneko$overlay.renderOverlay(partialTicks);
         ScaledResolution scaledresolution = new ScaledResolution(this.mc);
         int i = scaledresolution.getScaledWidth();
         int j = scaledresolution.getScaledHeight();

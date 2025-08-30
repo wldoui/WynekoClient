@@ -2,31 +2,86 @@ package net.wynekoclient;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
-import net.minecraft.client.gui.ScaledResolution;
+import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.util.MathHelper;
+
+import java.awt.*;
+import javax.swing.*;
+
+import static net.wynekoclient.Overrides.fullBright;
+import static net.wynekoclient.Overrides.noHurtCam;
 
 public final class DevWindow {
 
+
+
     private final Minecraft mc = Minecraft.getMinecraft();
 
-    public void renderOverlay(float partialTicks) {
-        if (mc == null || mc.theWorld == null || mc.thePlayer == null) {
-            return;
-        }
+    private static JFrame W = null;
+    private static JTabbedPane Tabs = null;
+    private static int SelectedTab = 0;
 
-        ScaledResolution sr = new ScaledResolution(mc);
+    static void CreateWindow(){
+        W = new JFrame("...");
+        W.setResizable(false);
 
-        int width = 120;
-        int height = 56;
-        int x = sr.getScaledWidth() / 2 - width / 2;
-        int y = sr.getScaledHeight() / 2 - height / 2;
+        W.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 
-        Gui.drawRect(x, y, x + width, y + height, 0x80000000);
-        mc.fontRendererObj.drawStringWithShadow("Wyneko Overlay", x + 6, y + 6, 0xFFFFFF);
+        W.setSize(900,600);
+        W.setVisible(true);
 
-        String pos = "XYZ: " + (int) mc.thePlayer.posX + " / " + (int) mc.thePlayer.posY + " / " + (int) mc.thePlayer.posZ;
-        mc.fontRendererObj.drawStringWithShadow(pos, x + 6, y + 18, 0xA0A0A0);
+        CreateWindowContent();
+    }
 
-        String fps = mc.debug.split(",")[0];
-        mc.fontRendererObj.drawStringWithShadow(fps, x + 6, y + 30, 0xA0FFA0);
+    private static JCheckBox CreateCheckBox(String text) {
+        JCheckBox checkBox = new JCheckBox(text);
+        checkBox.setSelected(false);
+        return checkBox;
+    }
+
+    private static void CreateTab(String TabName, JPanel Content){
+        Tabs.addTab(TabName, Content);
+    }
+
+    private static void CreateWindowContent(){
+    Tabs = new JTabbedPane();
+
+        CreateTab("Render"      , WynekoRender()); /* 0 */
+        /*CreateTab("World"       , WynekoWorld());
+        CreateTab("Player"      , WynekoPlayer()); */
+
+
+        Tabs.addChangeListener((e) -> {
+            SelectedTab = Tabs.getSelectedIndex();
+        });
+
+        W.add(Tabs);
+
+    }
+
+    //==========================================================//
+
+    private static JPanel WynekoRender(){
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+
+        JCheckBox cbNoHurtCam = CreateCheckBox("No Hurt Cam");
+        JCheckBox cbFullBright = CreateCheckBox("Full Bright");
+
+        cbNoHurtCam.addItemListener(e -> {
+            noHurtCam = cbNoHurtCam.isSelected();
+            System.out.println("NoHurtCam = " + noHurtCam);
+        });
+
+        cbFullBright.addItemListener(e -> {
+            fullBright = cbFullBright.isSelected();
+            System.out.println("FullBright = " + fullBright);
+        });
+
+        panel.add(CreateCheckBox("No Hurt Cam "));
+        panel.add(CreateCheckBox("Full Bright"));
+
+        return panel;
     }
 }
