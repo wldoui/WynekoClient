@@ -5,6 +5,8 @@ plugins {
 group = 'WynekoClient'
 version = '1.0'
 
+var nick = 'Wekyldi_33'
+
 repositories {
     mavenCentral()
     maven {
@@ -52,6 +54,9 @@ dependencies {
 
     //===============================================//
 
+    // SOCKS5 & HTTP Proxy Support
+    implementation 'io.netty:netty-handler-proxy:4.1.97.Final'
+
 }
 tasks.register('runClient', JavaExec) {
     group = "MCP"
@@ -64,5 +69,5 @@ tasks.register('runClient', JavaExec) {
 
     jvmArgs "-Djava.library.path=version/1.8.9/1.8.9-natives/", "-Xmx4G"
 
-    args '--username', 'Wyldi'
+    args '--username', nick
 }

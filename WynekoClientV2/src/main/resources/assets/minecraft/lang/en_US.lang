@@ -24,6 +24,7 @@ translation.test.args=%s %s
 translation.test.world=world
 
 menu.game=Game menu
+menu.wyneko.connection=Account Manager
 menu.singleplayer=Singleplayer
 menu.multiplayer=Multiplayer
 menu.online=Minecraft Realms

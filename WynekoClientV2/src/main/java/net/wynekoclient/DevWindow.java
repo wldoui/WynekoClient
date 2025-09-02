@@ -2,10 +2,10 @@ package net.wynekoclient;
 
 import net.minecraft.client.Minecraft;
 
+import javax.swing.*;
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
-import javax.swing.*;
 
 public final class DevWindow {
 
@@ -45,6 +45,7 @@ public final class DevWindow {
         CreateTab("Render", WynekoRenderTab());
         CreateTab("World", WynekoWorldTab());
         CreateTab("Player", WynekoPlayerTab());
+        CreateTab("Connection", WynekoConnectionTab());
 
         Tabs.addChangeListener(e -> SelectedTab = Tabs.getSelectedIndex());
 
@@ -183,7 +184,6 @@ public final class DevWindow {
 
 
 
-
         leftPanel.add(cbNoHurtCam);
         leftPanel.add(CreateSeparator());
 
@@ -271,6 +271,16 @@ public final class DevWindow {
         localPanel.setLayout(new BoxLayout(localPanel, BoxLayout.Y_AXIS));
 
         JLabel label = new JLabel("Player settings coming soon...");
+        localPanel.add(label);
+
+        return localPanel;
+    }
+
+    private static JPanel WynekoConnectionTab(){
+        JPanel localPanel = new JPanel();
+        localPanel.setLayout(new BoxLayout(localPanel, BoxLayout.Y_AXIS));
+
+        JLabel label = new JLabel("Proxy settings coming soon...");
         localPanel.add(label);
 
         return localPanel;
