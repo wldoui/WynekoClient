@@ -186,6 +186,9 @@ import org.lwjgl.opengl.OpenGLException;
 import org.lwjgl.opengl.PixelFormat;
 import org.lwjgl.util.glu.GLU;
 
+import static net.wynekoclient.DevWindow.fastPlace;
+import static net.wynekoclient.DevWindow.fastPlaceSpeed;
+
 public class Minecraft implements IThreadListener, IPlayerUsage
 {
     private static final Logger logger = LogManager.getLogger();
@@ -1436,7 +1439,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage
     {
         if (!this.playerController.getIsHittingBlock())
         {
-            this.rightClickDelayTimer = 4;
+            this.rightClickDelayTimer = (fastPlace) ? fastPlaceSpeed : 4;
             boolean flag = true;
             ItemStack itemstack = this.thePlayer.inventory.getCurrentItem();
 

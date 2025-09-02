@@ -4,6 +4,8 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.google.gson.JsonSyntaxException;
+
+import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -109,12 +111,15 @@ import net.optifine.shaders.ShadowUtils;
 import net.optifine.shaders.gui.GuiShaderOptions;
 import net.optifine.util.ChunkUtils;
 import net.optifine.util.RenderChunkUtils;
+import net.wynekoclient.DevWindow;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Vector3f;
 import org.lwjgl.util.vector.Vector4f;
+
+import static net.wynekoclient.DevWindow.customBlockOutline;
 
 public class RenderGlobal implements IWorldAccess, IResourceManagerReloadListener
 {
@@ -2566,7 +2571,16 @@ public class RenderGlobal implements IWorldAccess, IResourceManagerReloadListene
         {
             GlStateManager.enableBlend();
             GlStateManager.tryBlendFuncSeparate(770, 771, 1, 0);
-            GlStateManager.color(0.0F, 0.0F, 0.0F, 0.4F);
+            if(customBlockOutline){
+                Color c = DevWindow.blockOutlineColor;
+                float r = c.getRed() / 255.0F;
+                float g = c.getGreen() / 255.0F;
+                float b = c.getBlue() / 255.0F;
+                float a = c.getAlpha() / 255.f;
+
+                GlStateManager.tryBlendFuncSeparate(770, 771, 1, 0);
+                GlStateManager.color(r, g, b, a);
+            }else {GlStateManager.color(0.0F, 0.0F, 0.0F, 0.4F);}
             GL11.glLineWidth(2.0F);
             GlStateManager.disableTexture2D();
 
