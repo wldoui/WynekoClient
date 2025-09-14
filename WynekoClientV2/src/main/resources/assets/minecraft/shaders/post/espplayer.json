@@ -1,0 +1,31 @@
+{
+  "targets": [
+    "esp_target"
+  ],
+  "passes": [
+    {
+      "name": "blit",
+      "intarget": "minecraft:main",
+      "outtarget": "esp_target"
+    },
+    {
+      "name": "outline",
+      "intarget": "esp_target",
+      "outtarget": "minecraft:main",
+      "uniforms": [
+        {
+          "name": "ColorModulate",
+          "values": [ 0.0, 1.0, 0.0, 1.0 ]
+        },
+        {
+          "name": "IgnoreDepth",
+          "values": [ 1.0 ]
+        },
+        {
+          "name": "OutlineWidth",
+          "values": [ 2.0 ]
+        }
+      ]
+    }
+  ]
+}

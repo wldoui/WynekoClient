@@ -5,7 +5,8 @@ plugins {
 group = 'WynekoClient'
 version = '1.0'
 
-var nick = 'Wekyldi_33'
+var buildFolder = 'build/libs'
+var nick = 'WyldiiiiNya'
 
 repositories {
     mavenCentral()
@@ -55,19 +56,52 @@ dependencies {
     //===============================================//
 
     // SOCKS5 & HTTP Proxy Support
-    implementation 'io.netty:netty-handler-proxy:4.1.97.Final'
+    implementation 'io.netty:netty-all:4.0.23.Final'
+
+    //FlatLaf - Swing Look and Feel || Swing Themes
+    implementation 'com.formdev:flatlaf:3.4'
+    implementation 'com.formdev:flatlaf-intellij-themes:3.4'
+
+    //Json
+    implementation 'org.json:json:20230227'
 
 }
 tasks.register('runClient', JavaExec) {
     group = "MCP"
     description = "Run Start class with Zulu 17 JDK"
 
-    executable = "C:/Program Files/Zulu/zulu-17/bin/java.exe"
-    workingDir = file('D:/!Other/git/WynekoClient/WynekoClientV2')
+    executable = "C:/Program Files/Zulu/zulu-8/bin/java.exe"
+    workingDir = file('D:/1Other/git/WynekoClient/WynekoClientV2')
     classpath = sourceSets.main.runtimeClasspath
     mainClass = 'Start'
 
     jvmArgs "-Djava.library.path=version/1.8.9/1.8.9-natives/", "-Xmx4G"
 
     args '--username', nick
+}
+
+task buildClientJar(type: Jar) {
+    group = "MCP"
+    description = "Builds a runnable JAR of the client"
+
+    mkdir buildFolder
+
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE  // <-- добавлено
+
+    from sourceSets.main.output
+
+    dependsOn configurations.runtimeClasspath
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+
+    manifest {
+        attributes(
+                'Main-Class': 'Start'
+        )
+    }
+
+    archiveBaseName.set('WynekoClient')
+    archiveVersion.set('1.0')
+    destinationDirectory.set(file(buildFolder))
 }

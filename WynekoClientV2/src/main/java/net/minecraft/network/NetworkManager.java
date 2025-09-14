@@ -3,51 +3,35 @@ package net.minecraft.network;
 import com.google.common.collect.Queues;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import io.netty.bootstrap.Bootstrap;
-import io.netty.channel.Channel;
-import io.netty.channel.ChannelException;
-import io.netty.channel.ChannelFuture;
-import io.netty.channel.ChannelFutureListener;
-import io.netty.channel.ChannelHandler;
-import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelInitializer;
-import io.netty.channel.ChannelOption;
-import io.netty.channel.EventLoopGroup;
-import io.netty.channel.SimpleChannelInboundHandler;
-import io.netty.channel.epoll.Epoll;
+import io.netty.channel.*;
 import io.netty.channel.epoll.EpollEventLoopGroup;
-import io.netty.channel.epoll.EpollSocketChannel;
 import io.netty.channel.local.LocalChannel;
 import io.netty.channel.local.LocalEventLoopGroup;
 import io.netty.channel.local.LocalServerChannel;
 import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.SocketChannel;
+import io.netty.channel.oio.OioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.timeout.ReadTimeoutHandler;
 import io.netty.handler.timeout.TimeoutException;
 import io.netty.util.AttributeKey;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
-import java.net.InetAddress;
-import java.net.SocketAddress;
-import java.util.Queue;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
-import javax.crypto.SecretKey;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.CryptManager;
-import net.minecraft.util.IChatComponent;
-import net.minecraft.util.ITickable;
-import net.minecraft.util.LazyLoadBase;
-import net.minecraft.util.MessageDeserializer;
-import net.minecraft.util.MessageDeserializer2;
-import net.minecraft.util.MessageSerializer;
-import net.minecraft.util.MessageSerializer2;
+import net.minecraft.util.*;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.Validate;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.Marker;
 import org.apache.logging.log4j.MarkerManager;
+
+import javax.crypto.SecretKey;
+import java.io.IOException;
+import java.net.*;
+import java.nio.channels.SocketChannel;
+import java.util.Queue;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
+import static net.wynekoclient.DevWindow.*;
 
 public class NetworkManager extends SimpleChannelInboundHandler<Packet>
 {
@@ -304,39 +288,54 @@ public class NetworkManager extends SimpleChannelInboundHandler<Packet>
         return this.channel instanceof LocalChannel || this.channel instanceof LocalServerChannel;
     }
 
-    public static NetworkManager createNetworkManagerAndConnect(InetAddress address, int serverPort, boolean useNativeTransport)
-    {
+    public static final LazyLoadBase<OioEventLoopGroup> CLIENT_OIO_EVENTLOOP =
+            new LazyLoadBase<OioEventLoopGroup>() {
+                @Override
+                protected OioEventLoopGroup load() {
+                    return new OioEventLoopGroup();
+                }
+            };
+
+    public static NetworkManager createNetworkManagerAndConnect(InetAddress address, int serverPort, boolean useNativeTransport) {
         final NetworkManager networkmanager = new NetworkManager(EnumPacketDirection.CLIENTBOUND);
-        Class <? extends SocketChannel > oclass;
-        LazyLoadBase <? extends EventLoopGroup > lazyloadbase;
 
-        if (Epoll.isAvailable() && useNativeTransport)
-        {
-            oclass = EpollSocketChannel.class;
-            lazyloadbase = CLIENT_EPOLL_EVENTLOOP;
-        }
-        else
-        {
-            oclass = NioSocketChannel.class;
-            lazyloadbase = CLIENT_NIO_EVENTLOOP;
-        }
+        Bootstrap bootstrap = new Bootstrap();
+        bootstrap.group(CLIENT_NIO_EVENTLOOP.getValue())
+                .handler(new ChannelInitializer<Channel>() {
+                    @Override
+                    protected void initChannel(Channel ch) throws Exception {
+                        ChannelPipeline pipeline = ch.pipeline();
+                        pipeline.addLast("timeout", new ReadTimeoutHandler(30));
+                        pipeline.addLast("splitter", new MessageDeserializer2());
+                        pipeline.addLast("decoder", new MessageDeserializer(EnumPacketDirection.CLIENTBOUND));
+                        pipeline.addLast("prepender", new MessageSerializer2());
+                        pipeline.addLast("encoder", new MessageSerializer(EnumPacketDirection.SERVERBOUND));
+                        pipeline.addLast("packet_handler", networkmanager);
+                    }
+                });
 
-        ((Bootstrap)((Bootstrap)((Bootstrap)(new Bootstrap()).group((EventLoopGroup)lazyloadbase.getValue())).handler(new ChannelInitializer<Channel>()
-        {
-            protected void initChannel(Channel p_initChannel_1_) throws Exception
-            {
-                try
-                {
-                    p_initChannel_1_.config().setOption(ChannelOption.TCP_NODELAY, Boolean.valueOf(true));
-                }
-                catch (ChannelException var3)
-                {
-                    ;
-                }
+        // Проверяем прокси
+        if (ProxyEnabled) {
+            // SOCKS5 через стандартный Socket
+            try {
+                Proxy proxy = new Proxy(Proxy.Type.SOCKS, new InetSocketAddress(Host, Port));
+                Socket socket = new Socket(proxy);
+                socket.connect(new InetSocketAddress(address, serverPort), 10000);
 
-                p_initChannel_1_.pipeline().addLast((String)"timeout", (ChannelHandler)(new ReadTimeoutHandler(30))).addLast((String)"splitter", (ChannelHandler)(new MessageDeserializer2())).addLast((String)"decoder", (ChannelHandler)(new MessageDeserializer(EnumPacketDirection.CLIENTBOUND))).addLast((String)"prepender", (ChannelHandler)(new MessageSerializer2())).addLast((String)"encoder", (ChannelHandler)(new MessageSerializer(EnumPacketDirection.SERVERBOUND))).addLast((String)"packet_handler", (ChannelHandler)networkmanager);
+                // Используем NioSocketChannel с готовым Socket
+                SocketChannel rawChannel = socket.getChannel();
+                if (rawChannel == null) throw new IOException("Не удалось получить SocketChannel из SOCKS Socket");
+
+                bootstrap.connect(rawChannel.socket().getInetAddress(), rawChannel.socket().getPort()).syncUninterruptibly();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        })).channel(oclass)).connect(address, serverPort).syncUninterruptibly();
+        } else {
+            // Без прокси — стандартное подключение
+            bootstrap.channel(NioSocketChannel.class)
+                    .connect(address, serverPort).syncUninterruptibly();
+        }
+
         return networkmanager;
     }
 

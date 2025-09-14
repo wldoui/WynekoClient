@@ -70,12 +70,13 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
     private GuiScreen field_183503_M;
     private GuiButton modButton;
     private GuiScreen modUpdateNotification;
+    private FontRenderer customFontRenderer;
 
     public GuiMainMenu()
     {
         this.openGLWarning2 = field_96138_a;
         this.field_183502_L = false;
-        this.splashText = "missingno";
+        this.splashText = "";
         BufferedReader bufferedreader = null;
 
         try
@@ -159,10 +160,14 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
 
     protected void keyTyped(char typedChar, int keyCode) throws IOException
     {
+
     }
 
     public void initGui()
     {
+
+        this.customFontRenderer = new FontRenderer(this.mc.gameSettings, new ResourceLocation("textures/font/ascii2.png"), this.mc.getTextureManager(), false);
+
         this.viewportTexture = new DynamicTexture(256, 256);
         this.backgroundTexture = this.mc.getTextureManager().getDynamicTextureLocation("background", this.viewportTexture);
         Calendar calendar = Calendar.getInstance();
@@ -350,6 +355,8 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
             this.mc.displayGuiScreen(this);
         }
     }
+
+
 
     private void drawPanorama(int p_73970_1_, int p_73970_2_, float p_73970_3_)
     {
@@ -587,7 +594,8 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
         GlStateManager.scale(f, f, f);
         this.drawCenteredString(this.fontRendererObj, this.splashText, 0, -8, -256);
         GlStateManager.popMatrix();
-        String s = "Minecraft 1.8.9";
+        String s = "WynekoClient V2 (0.0.3)";
+        String b = "";
 
         if (this.mc.isDemo())
         {
@@ -617,7 +625,20 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
         else
         {
             this.drawString(this.fontRendererObj, s, 2, this.height - 10, -1);
+
         }
+
+
+
+
+        this.drawString(this.fontRendererObj, "MMM", 2, this.height - 230, -1);
+
+
+
+
+        this.drawString(this.customFontRenderer,"Test", 2, this.height - 220, -1);
+
+
 
         String s2 = "Copyright Mojang AB. Do not distribute!";
         this.drawString(this.fontRendererObj, s2, this.width - this.fontRendererObj.getStringWidth(s2) - 2, this.height - 10, -1);

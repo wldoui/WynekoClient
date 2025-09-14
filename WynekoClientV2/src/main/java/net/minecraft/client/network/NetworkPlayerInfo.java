@@ -142,7 +142,7 @@ public class NetworkPlayerInfo
 
     public IChatComponent getDisplayName()
     {
-        return this.displayName;
+        return null;
     }
 
     public int func_178835_l()
