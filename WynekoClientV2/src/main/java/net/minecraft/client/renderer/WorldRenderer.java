@@ -1,14 +1,6 @@
 package net.minecraft.client.renderer;
 
 import com.google.common.primitives.Floats;
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.nio.FloatBuffer;
-import java.nio.IntBuffer;
-import java.nio.ShortBuffer;
-import java.util.Arrays;
-import java.util.BitSet;
-import java.util.Comparator;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.vertex.VertexFormat;
@@ -23,6 +15,11 @@ import net.optifine.shaders.SVertexBuilder;
 import net.optifine.util.TextureUtils;
 import org.apache.logging.log4j.LogManager;
 import org.lwjgl.opengl.GL11;
+
+import java.nio.*;
+import java.util.Arrays;
+import java.util.BitSet;
+import java.util.Comparator;
 
 public class WorldRenderer
 {
@@ -690,6 +687,7 @@ public class WorldRenderer
         return this;
     }
 
+
     public void setTranslation(double x, double y, double z)
     {
         this.xOffset = x;
@@ -935,6 +933,7 @@ public class WorldRenderer
             return this.renderEnv;
         }
     }
+
 
     public boolean isDrawing()
     {

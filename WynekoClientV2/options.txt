@@ -3,14 +3,14 @@ mouseSensitivity:0.40140846
 fov:1.0
 gamma:1000.0
 saturation:0.0
-renderDistance:6
+renderDistance:4
 guiScale:2
 particles:0
 bobView:true
 anaglyph3d:false
 maxFps:260
 fboEnable:true
-difficulty:2
+difficulty:0
 fancyGraphics:false
 ao:1
 renderClouds:fast
@@ -28,7 +28,7 @@ fullscreen:false
 enableVsync:false
 useVbo:false
 hideServerAddress:false
-advancedItemTooltips:false
+advancedItemTooltips:true
 pauseOnLostFocus:false
 touchscreen:false
 overrideWidth:0

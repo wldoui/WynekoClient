@@ -314,17 +314,18 @@ public class NetworkManager extends SimpleChannelInboundHandler<Packet>
                     }
                 });
 
-        // Проверяем прокси
         if (ProxyEnabled) {
             // SOCKS5 через стандартный Socket
             try {
-                Proxy proxy = new Proxy(Proxy.Type.SOCKS, new InetSocketAddress(Host, Port));
+                int ProxyPort = GetPort();
+                String ProxyHost = GetHost();
+                Proxy proxy = new Proxy(Proxy.Type.SOCKS, new InetSocketAddress(ProxyHost, ProxyPort));
                 Socket socket = new Socket(proxy);
-                socket.connect(new InetSocketAddress(address, serverPort), 10000);
+                socket.connect(new InetSocketAddress(address, serverPort), 1000);
 
                 // Используем NioSocketChannel с готовым Socket
                 SocketChannel rawChannel = socket.getChannel();
-                if (rawChannel == null) throw new IOException("Не удалось получить SocketChannel из SOCKS Socket");
+                if (rawChannel == null) throw new IOException();
 
                 bootstrap.connect(rawChannel.socket().getInetAddress(), rawChannel.socket().getPort()).syncUninterruptibly();
             } catch (IOException e) {

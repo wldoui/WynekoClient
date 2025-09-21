@@ -216,12 +216,6 @@ public class EntityRenderer implements IResourceManagerReloadListener
             this.theShaderGroup = null;
 
 
-            //if (entityIn instanceof EntityPlayer) {
-            if (espShader) {
-                this.loadShader(new ResourceLocation("shaders/post/espplayer.json"));
-            }
-            //}
-
             if (entityIn instanceof EntityCreeper)
             {
                 this.loadShader(new ResourceLocation("shaders/post/creeper.json"));
@@ -1547,6 +1541,8 @@ public class EntityRenderer implements IResourceManagerReloadListener
             this.renderCloudsCheck(renderglobal, partialTicks, pass);
         }
 
+
+
         this.mc.mcProfiler.endStartSection("prepareterrain");
         this.setupFog(0, partialTicks);
         this.mc.getTextureManager().bindTexture(TextureMap.locationBlocksTexture);
@@ -1646,7 +1642,7 @@ public class EntityRenderer implements IResourceManagerReloadListener
             GlStateManager.popMatrix();
             GlStateManager.pushMatrix();
 
-            if (this.mc.objectMouseOver != null && entity.isInsideOfMaterial(Material.water) && flag1)
+            if (this.mc.objectMouseOver != null /*&& entity.isInsideOfMaterial(Material.water) && flag1*/)
             {
                 EntityPlayer entityplayer = (EntityPlayer)entity;
                 GlStateManager.disableAlpha();
@@ -1823,10 +1819,12 @@ public class EntityRenderer implements IResourceManagerReloadListener
             this.renderWorldDirections(partialTicks);
         }
 
+
         if (flag)
         {
             Shaders.endRender();
         }
+
     }
 
     private void renderCloudsCheck(RenderGlobal renderGlobalIn, float partialTicks, int pass)
@@ -2333,43 +2331,42 @@ public class EntityRenderer implements IResourceManagerReloadListener
         Block block = ActiveRenderInfo.getBlockAtEntityViewpoint(this.mc.theWorld, entity, partialTicks);
         float f = -1.0F;
 
-        if (Reflector.ForgeHooksClient_getFogDensity.exists())
-        {
-            f = Reflector.callFloat(Reflector.ForgeHooksClient_getFogDensity, new Object[] {this, entity, block, Float.valueOf(partialTicks), Float.valueOf(0.1F)});
+        if (Reflector.ForgeHooksClient_getFogDensity.exists()) {
+            f = Reflector.callFloat(
+                    Reflector.ForgeHooksClient_getFogDensity,
+                    new Object[] {this, entity, block, Float.valueOf(partialTicks), Float.valueOf(0.1F)}
+            );
+        }
+        else if (entity instanceof EntityLivingBase && ((EntityLivingBase)entity).isPotionActive(Potion.blindness)) {
+
+            if (!antiBlind) {
+                float f4 = 5.0F;
+                int i = ((EntityLivingBase)entity).getActivePotionEffect(Potion.blindness).getDuration();
+
+                if (i < 20) {
+                    f4 = 5.0F + (this.farPlaneDistance - 5.0F) * (1.0F - (float)i / 20.0F);
+                }
+
+                GlStateManager.setFog(9729);
+
+                if (startCoords == -1) {
+                    GlStateManager.setFogStart(0.0F);
+                    GlStateManager.setFogEnd(f4 * 0.8F);
+                }
+                else {
+                    GlStateManager.setFogStart(f4 * 0.25F);
+                    GlStateManager.setFogEnd(f4);
+                }
+
+                if (GLContext.getCapabilities().GL_NV_fog_distance && Config.isFogFancy()) {
+                    GL11.glFogi(34138, 34139);
+                }
+            }
+            else {
+                return;
+            }
         }
 
-        if (f >= 0.0F)
-        {
-            GlStateManager.setFogDensity(f);
-        }
-        else if (entity instanceof EntityLivingBase && ((EntityLivingBase)entity).isPotionActive(Potion.blindness))
-        {
-            float f4 = 5.0F;
-            int i = ((EntityLivingBase)entity).getActivePotionEffect(Potion.blindness).getDuration();
-
-            if (i < 20)
-            {
-                f4 = 5.0F + (this.farPlaneDistance - 5.0F) * (1.0F - (float)i / 20.0F);
-            }
-
-            GlStateManager.setFog(9729);
-
-            if (startCoords == -1)
-            {
-                GlStateManager.setFogStart(0.0F);
-                GlStateManager.setFogEnd(f4 * 0.8F);
-            }
-            else
-            {
-                GlStateManager.setFogStart(f4 * 0.25F);
-                GlStateManager.setFogEnd(f4);
-            }
-
-            if (GLContext.getCapabilities().GL_NV_fog_distance && Config.isFogFancy())
-            {
-                GL11.glFogi(34138, 34139);
-            }
-        }
         else if (this.cloudFog)
         {
             GlStateManager.setFog(2048);
@@ -2436,6 +2433,41 @@ public class EntityRenderer implements IResourceManagerReloadListener
                 Reflector.callVoid(Reflector.ForgeHooksClient_onFogRender, new Object[] {this, entity, block, Float.valueOf(partialTicks), Integer.valueOf(startCoords), Float.valueOf(f3)});
             }
         }
+
+        if (f >= 0.0F)
+        {
+            GlStateManager.setFogDensity(f);
+        }
+
+        else if (entity instanceof EntityLivingBase && ((EntityLivingBase)entity).isPotionActive(Potion.blindness))
+        {
+            float f4 = 5.0F;
+            int i = ((EntityLivingBase)entity).getActivePotionEffect(Potion.blindness).getDuration();
+
+            if (i < 20)
+            {
+                f4 = 5.0F + (this.farPlaneDistance - 5.0F) * (1.0F - (float)i / 20.0F);
+            }
+
+            GlStateManager.setFog(9729);
+
+            if (startCoords == -1)
+            {
+                GlStateManager.setFogStart(0.0F);
+                GlStateManager.setFogEnd(f4 * 0.8F);
+            }
+            else
+            {
+                GlStateManager.setFogStart(f4 * 0.25F);
+                GlStateManager.setFogEnd(f4);
+            }
+
+            if (GLContext.getCapabilities().GL_NV_fog_distance && Config.isFogFancy())
+            {
+                GL11.glFogi(34138, 34139);
+            }
+        }
+
 
         GlStateManager.enableColorMaterial();
         GlStateManager.enableFog();

@@ -1,122 +1,68 @@
 package net.wynekoclient.features;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.RenderGlobal;
+import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.renderer.WorldRenderer;
+import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.lwjgl.opengl.GL11;
+import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.util.Vec3;
+import net.optifine.shaders.Shaders;
+
+import static net.wynekoclient.DevWindow.rainbowPlayerEsp;
+import static net.wynekoclient.util.RainbowColor.getRainbowColor;
 
 public class PlayerESP {
 
-    private static final Logger logger = LogManager.getLogger();
+    public static void RenderPlayerEsp(Entity entityIn, double x, double y, double z, float entityYaw, float partialTicks)
+    {
+        if (!Shaders.isShadowPass)
+        {
+            GlStateManager.disableDepth();
+            GlStateManager.depthMask(false);
+            GlStateManager.disableTexture2D();
+            GlStateManager.disableLighting();
+            GlStateManager.disableCull();
+            GlStateManager.enableBlend();
+            GlStateManager.tryBlendFuncSeparate(770, 771, 1, 0);
 
-    private static final Minecraft mc = Minecraft.getMinecraft();
+            float f = entityIn.width / 2.0F;
+            AxisAlignedBB axisalignedbb = entityIn.getEntityBoundingBox();
+            AxisAlignedBB axisalignedbb1 = new AxisAlignedBB(
+                    axisalignedbb.minX - entityIn.posX + x,
+                    axisalignedbb.minY - entityIn.posY + y,
+                    axisalignedbb.minZ - entityIn.posZ + z,
+                    axisalignedbb.maxX - entityIn.posX + x,
+                    axisalignedbb.maxY - entityIn.posY + y,
+                    axisalignedbb.maxZ - entityIn.posZ + z
+            );
 
-    public static boolean showHitbox = true;
-    public static boolean showName = true;
-
-    // Этот метод вызывай из RenderWorldLastEvent или из твоего хука рендера
-    public static void onRenderWorldLast(float partialTicks) {
-        if (mc.theWorld == null || mc.thePlayer == null) return;
-
-        for (Entity entity : mc.theWorld.loadedEntityList) {
-            if (entity instanceof EntityPlayer && entity != mc.thePlayer) {
-                EntityPlayer player = (EntityPlayer) entity;
-                if (showName) {
-                    renderPlayerName(player, partialTicks);
-                }
-                if (showHitbox) {
-                    renderHitbox(player, partialTicks);
-                }
+            if (rainbowPlayerEsp) {
+                int[] rgb = getRainbowColor(3000, 1.0f, 1.0f);
+                GlStateManager.color(rgb[0] / 255.0F, rgb[1] / 255.0F, rgb[2] / 255.0F, 1.0F);
+                RenderGlobal.drawOutlinedBoundingBox(axisalignedbb1, rgb[0], rgb[1], rgb[2], 255);
+            } else {
+                RenderGlobal.drawOutlinedBoundingBox(axisalignedbb1, 255, 255, 255, 255);
             }
+
+
+            // направление взгляда (синяя линия)
+            Tessellator tessellator = Tessellator.getInstance();
+            WorldRenderer worldrenderer = tessellator.getWorldRenderer();
+            Vec3 vec3 = entityIn.getLook(partialTicks);
+            worldrenderer.begin(3, DefaultVertexFormats.POSITION_COLOR);
+            worldrenderer.pos(x, y + (double)entityIn.getEyeHeight(), z).color(0, 0, 255, 255).endVertex();
+            worldrenderer.pos(x + vec3.xCoord * 1.2D, y + (double)entityIn.getEyeHeight() + vec3.yCoord * 1.2D, z + vec3.zCoord * 1.2D).color(0, 0, 125, 255).endVertex();
+            tessellator.draw();
+
+            // возвращаем OpenGL в исходное состояние
+            GlStateManager.enableDepth();
+            GlStateManager.enableTexture2D();
+            GlStateManager.enableLighting();
+            GlStateManager.enableCull();
+            GlStateManager.disableBlend();
+            GlStateManager.depthMask(true);
         }
-    }
-
-    private static void renderPlayerName(EntityPlayer player, float partialTicks) {
-
-        PlayerESP.logger.error("Loaded renderPlayerName condition");
-
-        double x = player.lastTickPosX + (player.posX - player.lastTickPosX) * partialTicks - mc.getRenderManager().viewerPosX;
-        double y = player.lastTickPosY + (player.posY - player.lastTickPosY) * partialTicks - mc.getRenderManager().viewerPosY + player.height + 0.5;
-        double z = player.lastTickPosZ + (player.posZ - player.lastTickPosZ) * partialTicks - mc.getRenderManager().viewerPosZ;
-
-        String displayName = player.getDisplayName().getFormattedText();
-
-        double distance = player.getDistanceToEntity(mc.thePlayer);
-        float maxDistance = 50;
-        float scale = 0.02F + (float) Math.min(Math.min(distance, maxDistance) / 300, 0.8);
-
-        GL11.glPushMatrix();
-        GL11.glTranslated(x, y, z);
-        GL11.glNormal3f(0.0F, 1.0F, 0.0F);
-        GlStateManager.rotate(-mc.getRenderManager().playerViewY, 0.0F, 1.0F, 0.0F);
-        GlStateManager.rotate(mc.getRenderManager().playerViewX, 1.0F, 0.0F, 0.0F);
-        GlStateManager.scale(-scale, -scale, scale);
-
-        GlStateManager.enableTexture2D();
-        GlStateManager.disableDepth();
-        GlStateManager.enableBlend();
-
-        int color = 0xFFFFFF;
-        mc.fontRendererObj.drawString(displayName, -mc.fontRendererObj.getStringWidth(displayName) / 2, 0, color, false);
-
-        GlStateManager.enableDepth();
-        GlStateManager.disableBlend();
-        GL11.glPopMatrix();
-    }
-
-    private static void renderHitbox(EntityPlayer player, float partialTicks) {
-        double x = player.lastTickPosX + (player.posX - player.lastTickPosX) * partialTicks - mc.getRenderManager().viewerPosX;
-        double y = player.lastTickPosY + (player.posY - player.lastTickPosY) * partialTicks - mc.getRenderManager().viewerPosY;
-        double z = player.lastTickPosZ + (player.posZ - player.lastTickPosZ) * partialTicks - mc.getRenderManager().viewerPosZ;
-
-        GL11.glPushMatrix();
-        GL11.glTranslated(x, y, z);
-        GlStateManager.disableTexture2D();
-        GlStateManager.disableDepth();
-        GlStateManager.enableBlend();
-
-        // фиксированный зелёный цвет ESP
-        GlStateManager.color(0.0F, 1.0F, 0.0F, 1.0F);
-
-        GL11.glLineWidth(2.0F);
-
-        // нижняя грань
-        GL11.glBegin(GL11.GL_LINE_LOOP);
-        GL11.glVertex3d(-player.width / 2, 0, -player.width / 2);
-        GL11.glVertex3d(-player.width / 2, 0, player.width / 2);
-        GL11.glVertex3d(player.width / 2, 0, player.width / 2);
-        GL11.glVertex3d(player.width / 2, 0, -player.width / 2);
-        GL11.glEnd();
-
-        // верхняя грань
-        GL11.glBegin(GL11.GL_LINE_LOOP);
-        GL11.glVertex3d(-player.width / 2, player.height, -player.width / 2);
-        GL11.glVertex3d(-player.width / 2, player.height, player.width / 2);
-        GL11.glVertex3d(player.width / 2, player.height, player.width / 2);
-        GL11.glVertex3d(player.width / 2, player.height, -player.width / 2);
-        GL11.glEnd();
-
-        // вертикальные линии
-        GL11.glBegin(GL11.GL_LINES);
-        GL11.glVertex3d(-player.width / 2, 0, -player.width / 2);
-        GL11.glVertex3d(-player.width / 2, player.height, -player.width / 2);
-
-        GL11.glVertex3d(-player.width / 2, 0, player.width / 2);
-        GL11.glVertex3d(-player.width / 2, player.height, player.width / 2);
-
-        GL11.glVertex3d(player.width / 2, 0, player.width / 2);
-        GL11.glVertex3d(player.width / 2, player.height, player.width / 2);
-
-        GL11.glVertex3d(player.width / 2, 0, -player.width / 2);
-        GL11.glVertex3d(player.width / 2, player.height, -player.width / 2);
-        GL11.glEnd();
-
-        GlStateManager.enableDepth();
-        GlStateManager.enableTexture2D();
-        GlStateManager.disableBlend();
-        GL11.glPopMatrix();
     }
 }

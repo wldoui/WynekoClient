@@ -3,12 +3,13 @@ package net.wynekoclient;
 import com.formdev.flatlaf.intellijthemes.FlatOneDarkIJTheme;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.IResourceManager;
-import net.wynekoclient.features.PlayerESP;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.JSONObject;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.awt.*;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -22,7 +23,6 @@ import java.util.Map;
 public final class DevWindow {
 
     public static boolean noHurtCam = false;
-    public static boolean EntityESP = false;
     public static boolean fullBright = false;
     public static boolean customBlockOutline = false;
     public static boolean antiBlind = false;
@@ -33,15 +33,17 @@ public final class DevWindow {
 
     public static float partialTicks = Minecraft.getMinecraft().timer.renderPartialTicks;
 
-    public static boolean espShader = false;
-    public static boolean espBox = false;
+    public static boolean entityESP = false;
+    public static boolean playerEspShader = false;
+    public static boolean playerEspBox = false;
+    public static boolean rainbowPlayerEsp = false;
 
-    public IResourceManager resourceManager = mc.getResourceManager();
     public static final Logger logger = LogManager.getLogger();
 
     public static int fastPlaceSpeed = 0; // 0 = мгновенно, 4 = стандартно
 
     private static final Minecraft mc = Minecraft.getMinecraft();
+    public IResourceManager resourceManager = mc.getResourceManager();
 
 
     //== == == == == == == == =PROXY= == == == == == == == ==//
@@ -54,7 +56,6 @@ public final class DevWindow {
     public static String GetHost() { return Host; }
     public static int GetPort() { return Port; }
     public static String GetType() { return Type; }
-    public static String GetCbProxyEnabled() { return Type; }
 
     //== == == == == == == == =PROXY= == == == == == == == ==//
 
@@ -72,9 +73,10 @@ public final class DevWindow {
         SwingUtilities.invokeLater(() -> {
             W = new JFrame("Wyneko Client");
             W.setResizable(false);
-            W.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
             W.setSize(900, 600);
-
+            W.setLocationRelativeTo(null);
+            W.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+            W.setLocation(25, 25);
             CreateWindowContent();
 
             W.setVisible(true);
@@ -164,7 +166,6 @@ public final class DevWindow {
         Map<String, Boolean> stateMap = new HashMap<>();
         JSeparator separator = new JSeparator(SwingConstants.HORIZONTAL);
         separator.setMaximumSize(new Dimension(Integer.MAX_VALUE, 2));
-
         //Мусорка
 
         leftPanel.setLayout(new BoxLayout(leftPanel, BoxLayout.Y_AXIS));
@@ -172,12 +173,19 @@ public final class DevWindow {
         JCheckBox cbNoHurtCam = new JCheckBox("No HurtCam");
         JCheckBox cbFullBright = new JCheckBox("Full Bright");
         JCheckBox cbCustomBOutline = new JCheckBox("Custom Block Outline");
-        JCheckBox cbEntityESP = new JCheckBox("ESP");
         JCheckBox cbWynekoNameTags = new JCheckBox("Wyneko NameTags");
         JCheckBox cbAntiBlind = new JCheckBox("AntiBlind");
 
-        JCheckBox cbESPShader = new JCheckBox("Shader");
-        JCheckBox cbESPBox = new JCheckBox("Box");
+        //=== === === ESP === === ===
+
+        JCheckBox cbEntityESP = new JCheckBox("ESP");
+
+        JCheckBox cbESPRainbow = new JCheckBox("Rainbow");
+
+        JCheckBox cbESPShader = new JCheckBox("ESP Shader");
+        JCheckBox cbESPBox = new JCheckBox("ESP Box");
+
+        //=== === === ESP === === ===
 
         JCheckBox cbWNTItemStack = new JCheckBox("ItemStack");
         JCheckBox cbWNTNickname = new JCheckBox("Nickname") ;
@@ -197,11 +205,8 @@ public final class DevWindow {
         cbCustomBOutline.setSelected(customBlockOutline);
         cbCustomBOutline.addItemListener(e -> customBlockOutline = cbCustomBOutline.isSelected());
 
-        cbEntityESP.setSelected(EntityESP);
-        cbEntityESP.addItemListener(e ->{
-            EntityESP = cbEntityESP.isSelected();
-
-        });
+        cbEntityESP.setSelected(entityESP);
+        cbEntityESP.addItemListener(e -> entityESP = cbEntityESP.isSelected());
 
         cbWynekoNameTags.setSelected(wynekoNameTags);
         cbWynekoNameTags.addItemListener(e -> wynekoNameTags = cbWynekoNameTags.isSelected());
@@ -209,13 +214,72 @@ public final class DevWindow {
         cbAntiBlind.setSelected(antiBlind);
         cbAntiBlind.addItemListener(e -> antiBlind = cbAntiBlind.isSelected());
 
-        cbESPShader.addItemListener(e -> espShader = cbESPShader.isSelected());
-        cbESPShader.addItemListener(e -> espBox = cbESPBox.isSelected());
 
-        if (espBox){
-            PlayerESP.onRenderWorldLast(partialTicks);
-            DevWindow.logger.error("Loaded EspBox condition");
-        }
+        cbEntityESP.addItemListener(e -> {
+            if (cbEntityESP.isSelected()) {
+                playerEspShader = false;
+                rainbowPlayerEsp = false;
+                playerEspBox = true;
+
+                cbESPBox.setSelected(true);
+                cbESPShader.setSelected(false);
+                cbESPRainbow.setSelected(false);
+
+            } else {
+                playerEspBox = false;
+                playerEspShader = false;
+                rainbowPlayerEsp = false;
+
+                cbESPBox.setSelected(false);
+                cbESPShader.setSelected(false);
+                cbESPRainbow.setSelected(false);
+            }
+        });
+
+        cbESPRainbow.addItemListener(e -> {
+            if (!cbEntityESP.isSelected() || !cbESPBox.isSelected()) {
+                cbESPRainbow.setSelected(false);
+                rainbowPlayerEsp = false;
+            } else {
+                rainbowPlayerEsp = cbESPRainbow.isSelected();
+            }
+        });
+
+        cbESPShader.addItemListener(e -> {
+            if (!cbEntityESP.isSelected()) {
+                cbESPShader.setSelected(false);
+                playerEspShader = false;
+                return;
+            }
+            if (cbESPShader.isSelected()) {
+                playerEspShader = true;
+                playerEspBox = false;
+                rainbowPlayerEsp = false;
+
+                cbESPBox.setSelected(false);
+                cbESPRainbow.setSelected(false);
+            } else {
+                playerEspShader = false;
+            }
+        });
+
+        cbESPBox.addItemListener(e -> {
+            if (!cbEntityESP.isSelected()) {
+                cbESPBox.setSelected(false);
+                playerEspBox = false;
+                return;
+            }
+            if (cbESPBox.isSelected()) {
+                playerEspBox = true;
+                playerEspShader = false;
+
+                cbESPShader.setSelected(false);
+            } else {
+                playerEspBox = false;
+                rainbowPlayerEsp = false;
+                cbESPRainbow.setSelected(false);
+            }
+        });
 
         //== == == == == == == Прослушивание Checkbox == == == == == == ==//
 
@@ -230,7 +294,7 @@ public final class DevWindow {
         leftPanel.add(CreateSeparator());
 
         leftPanel.add(cbEntityESP);
-        leftPanel.add(CreateDetails("Expand", stateMap, cbESPShader, cbESPBox));
+        leftPanel.add(CreateDetails("Expand", stateMap, cbESPShader, cbESPBox, cbESPRainbow));
 
         leftPanel.add(cbWynekoNameTags);
         leftPanel.add(CreateDetails("Expand", stateMap, cbWNTItemStack, cbWNTNickname));
@@ -420,10 +484,29 @@ public final class DevWindow {
             }
         });
 
+
+        hostField.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                Host = hostField.getText().trim();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                Host = hostField.getText().trim();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                Host = hostField.getText().trim();
+            }
+        });
+
         disconnectBtn.addActionListener(e -> {
             ProxyEnabled = false;
             infoLabel.setText("Proxy info: disconnected");
         });
+
 
         return localPanel;
     }
@@ -438,9 +521,5 @@ public final class DevWindow {
         localPanel.add(label);
 
         return localPanel;
-    }
-
-    private static void OnUpdate(){
-
     }
 }

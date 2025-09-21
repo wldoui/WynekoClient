@@ -1,7 +1,6 @@
 package net.minecraft.command;
 
 import com.google.common.collect.Lists;
-import java.util.List;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -12,6 +11,8 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class CommandFill extends CommandBase
 {
@@ -53,11 +54,11 @@ public class CommandFill extends CommandBase
             BlockPos blockpos3 = new BlockPos(Math.max(blockpos.getX(), blockpos1.getX()), Math.max(blockpos.getY(), blockpos1.getY()), Math.max(blockpos.getZ(), blockpos1.getZ()));
             int j = (blockpos3.getX() - blockpos2.getX() + 1) * (blockpos3.getY() - blockpos2.getY() + 1) * (blockpos3.getZ() - blockpos2.getZ() + 1);
 
-            if (j > 32768)
+            /*if (j > 32768)
             {
                 throw new CommandException("commands.fill.tooManyBlocks", new Object[] {Integer.valueOf(j), Integer.valueOf(32768)});
-            }
-            else if (blockpos2.getY() >= 0 && blockpos3.getY() < 256)
+            }*/
+            if (blockpos2.getY() >= 0 && blockpos3.getY() < 256)
             {
                 World world = sender.getEntityWorld();
 
