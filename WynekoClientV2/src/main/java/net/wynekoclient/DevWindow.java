@@ -3,6 +3,7 @@ package net.wynekoclient;
 import com.formdev.flatlaf.intellijthemes.FlatOneDarkIJTheme;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.IResourceManager;
+import net.minecraft.util.ResourceLocation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.JSONObject;
@@ -11,13 +12,18 @@ import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.InetSocketAddress;
 import java.net.Proxy;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public final class DevWindow {
@@ -25,11 +31,35 @@ public final class DevWindow {
     public static boolean noHurtCam = false;
     public static boolean fullBright = false;
     public static boolean customBlockOutline = false;
+    public static boolean rainbowBlockOutline = false;
     public static boolean antiBlind = false;
     public static boolean wynekoNameTags = false;
     public static Color blockOutlineColor = Color.BLACK;
     public static boolean fastPlace = false;
     public static boolean fastPlaceRandom = false;
+
+    // == == == == == == == Other STR == == == == == == == ==
+
+    public static boolean customMainMenu = true;
+
+    private static int currentIndex = 0;
+    private static List<String> pngFiles = new ArrayList<>();
+    public static ResourceLocation customBg = new ResourceLocation("wynekoclient/themes/1.png");
+
+
+    // == == == == == == == Other END == == == == == == == ==
+
+
+
+    // == == == == == == == Tracers STR == == == == == == == ==
+
+    public static boolean tracers = false;
+    public static float lineWidth = 3.0f;
+    public static boolean distanceBasedColor = true;
+    public static boolean rainbowTracers = false;
+    public static boolean showDistanceLabels = true;
+
+    // == == == == == == == Tracers END == == == == == == == ==
 
     public static float partialTicks = Minecraft.getMinecraft().timer.renderPartialTicks;
 
@@ -37,6 +67,8 @@ public final class DevWindow {
     public static boolean playerEspShader = false;
     public static boolean playerEspBox = false;
     public static boolean rainbowPlayerEsp = false;
+
+    public static boolean playerEspED = false;
 
     public static final Logger logger = LogManager.getLogger();
 
@@ -46,7 +78,7 @@ public final class DevWindow {
     public IResourceManager resourceManager = mc.getResourceManager();
 
 
-    //== == == == == == == == =PROXY= == == == == == == == ==//
+    //== == == == == == == == =PROXY= START == == == == == == == ==//
 
     public static String Type = "SOCKS5";
     public static String Host = "127.0.0.1";
@@ -57,11 +89,23 @@ public final class DevWindow {
     public static int GetPort() { return Port; }
     public static String GetType() { return Type; }
 
-    //== == == == == == == == =PROXY= == == == == == == == ==//
+    //== == == == == == == == =PROXY= END == == == == == == == ==//
 
     private static JFrame W = null;
     private static JTabbedPane Tabs = null;
     private static int SelectedTab = 0;
+
+    static void init(){
+        CreateWindow();
+
+        File folder = new File("src/main/resources/assets/minecraft/wynekoclient/themes/");
+        File[] files = folder.listFiles((dir, name) -> name.toLowerCase().endsWith(".png"));
+        if (files != null) {
+            for (File f : files) {
+                pngFiles.add(f.getName());
+            }
+        }
+    }
 
     static void CreateWindow() {
         try {
@@ -121,10 +165,11 @@ public final class DevWindow {
         JPanel content = new JPanel();
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
 
+        content.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 0));
+
         for (JComponent comp : components) {
             comp.setAlignmentX(Component.LEFT_ALIGNMENT);
 
-            // если это чекбокс — регистрируем в stateMap
             if (comp instanceof JCheckBox) {
                 JCheckBox cb = (JCheckBox) comp;
                 stateMap.put(cb.getText(), cb.isSelected());
@@ -172,20 +217,38 @@ public final class DevWindow {
 
         JCheckBox cbNoHurtCam = new JCheckBox("No HurtCam");
         JCheckBox cbFullBright = new JCheckBox("Full Bright");
+
+        // === === === === === Block Outline === === === === === ===
         JCheckBox cbCustomBOutline = new JCheckBox("Custom Block Outline");
+        JCheckBox cbRainbowBOutline = new JCheckBox("Rainbow Block Outline");
+        // === === === === === === === === === === ===
+
         JCheckBox cbWynekoNameTags = new JCheckBox("Wyneko NameTags");
         JCheckBox cbAntiBlind = new JCheckBox("AntiBlind");
+        JCheckBox cbTracers = new JCheckBox("Tracers");
 
         //=== === === ESP === === ===
 
         JCheckBox cbEntityESP = new JCheckBox("ESP");
 
         JCheckBox cbESPRainbow = new JCheckBox("Rainbow");
+        JCheckBox cbESPDTE = new JCheckBox("Direction Of Eyes");
 
         JCheckBox cbESPShader = new JCheckBox("ESP Shader");
         JCheckBox cbESPBox = new JCheckBox("ESP Box");
 
         //=== === === ESP === === ===
+
+
+
+        //Tracers//
+
+        JCheckBox cbTracerRainbow = new JCheckBox("Rainbow Tracers");
+        JCheckBox cbTracerNearPlayer = new JCheckBox("Near Player Tracers");
+        JLabel slTracerLineWidthLabel = new JLabel("Line Width");
+        JSlider slTracerLineWidth = new JSlider(1,10,3);
+
+        //Tracers//
 
         JCheckBox cbWNTItemStack = new JCheckBox("ItemStack");
         JCheckBox cbWNTNickname = new JCheckBox("Nickname") ;
@@ -205,6 +268,9 @@ public final class DevWindow {
         cbCustomBOutline.setSelected(customBlockOutline);
         cbCustomBOutline.addItemListener(e -> customBlockOutline = cbCustomBOutline.isSelected());
 
+        cbRainbowBOutline.setSelected(rainbowBlockOutline);
+        cbRainbowBOutline.addItemListener(e -> rainbowBlockOutline = cbRainbowBOutline.isSelected());
+
         cbEntityESP.setSelected(entityESP);
         cbEntityESP.addItemListener(e -> entityESP = cbEntityESP.isSelected());
 
@@ -214,72 +280,146 @@ public final class DevWindow {
         cbAntiBlind.setSelected(antiBlind);
         cbAntiBlind.addItemListener(e -> antiBlind = cbAntiBlind.isSelected());
 
+        cbTracers.setSelected(tracers);
+        cbTracers.addItemListener(e -> tracers = cbTracers.isSelected());
 
-        cbEntityESP.addItemListener(e -> {
-            if (cbEntityESP.isSelected()) {
-                playerEspShader = false;
-                rainbowPlayerEsp = false;
-                playerEspBox = true;
+        cbTracerRainbow.setSelected(rainbowTracers);
+        cbTracerRainbow.addItemListener(e -> rainbowTracers = cbTracerRainbow.isSelected());
 
-                cbESPBox.setSelected(true);
-                cbESPShader.setSelected(false);
-                cbESPRainbow.setSelected(false);
+        cbTracerNearPlayer.setSelected(distanceBasedColor);
+        cbTracerNearPlayer.addItemListener(e -> distanceBasedColor = cbTracerRainbow.isSelected());
 
+
+
+        //ESP)))
+            cbEntityESP.addItemListener(e -> {
+                if (cbEntityESP.isSelected()) {
+                    playerEspShader = false;
+                    rainbowPlayerEsp = false;
+                    playerEspBox = true;
+                    playerEspED = false;
+
+                    cbESPBox.setSelected(true);
+                    cbESPShader.setSelected(false);
+                    cbESPRainbow.setSelected(false);
+                    cbESPDTE.setSelected(false);
+
+                } else {
+                    playerEspBox = false;
+                    playerEspShader = false;
+                    rainbowPlayerEsp = false;
+                    playerEspED = false;
+
+                    cbESPBox.setSelected(false);
+                    cbESPShader.setSelected(false);
+                    cbESPRainbow.setSelected(false);
+                    cbESPDTE.setSelected(false);
+                }
+            });
+
+            cbESPDTE.addItemListener(e -> {
+                if (!cbEntityESP.isSelected() || !cbESPBox.isSelected()) {
+                    cbESPDTE.setSelected(false);
+                    playerEspED = false;
+                } else {
+                    playerEspED = cbESPDTE.isSelected();
+                }
+            });
+
+            cbESPRainbow.addItemListener(e -> {
+                if (!cbEntityESP.isSelected()) {
+                    cbESPRainbow.setSelected(false);
+                    rainbowPlayerEsp = false;
+                } else {
+                    rainbowPlayerEsp = cbESPRainbow.isSelected();
+                }
+            });
+
+            cbESPShader.addItemListener(e -> {
+                if (!cbEntityESP.isSelected()) {
+                    cbESPShader.setSelected(false);
+                    playerEspShader = false;
+                    return;
+                }
+                if (cbESPShader.isSelected()) {
+                    playerEspShader = true;
+                    playerEspBox = false;
+
+                    cbESPBox.setSelected(false);
+                } else {
+                    playerEspShader = false;
+                }
+            });
+
+            cbESPBox.addItemListener(e -> {
+                if (!cbEntityESP.isSelected()) {
+                    cbESPBox.setSelected(false);
+                    playerEspBox = false;
+                    return;
+                }
+                if (cbESPBox.isSelected()) {
+                    playerEspBox = true;
+                    playerEspShader = false;
+
+                    cbESPShader.setSelected(false);
+                } else {
+                    playerEspBox = false;
+                }
+            });
+
+
+
+        //Block Outline
+        cbRainbowBOutline.addItemListener(e -> {
+            if (cbRainbowBOutline.isSelected()) {
+                rainbowBlockOutline = true;
+                customBlockOutline = false;
+
+                cbCustomBOutline.setSelected(false); // выключаем кастом
             } else {
-                playerEspBox = false;
-                playerEspShader = false;
-                rainbowPlayerEsp = false;
-
-                cbESPBox.setSelected(false);
-                cbESPShader.setSelected(false);
-                cbESPRainbow.setSelected(false);
+                rainbowBlockOutline = false;
             }
         });
 
-        cbESPRainbow.addItemListener(e -> {
-            if (!cbEntityESP.isSelected() || !cbESPBox.isSelected()) {
-                cbESPRainbow.setSelected(false);
-                rainbowPlayerEsp = false;
+        cbCustomBOutline.addItemListener(e -> {
+            if (cbCustomBOutline.isSelected()) {
+                customBlockOutline = true;
+                rainbowBlockOutline = false;
+
+                cbRainbowBOutline.setSelected(false); // выключаем радужный
             } else {
-                rainbowPlayerEsp = cbESPRainbow.isSelected();
+                customBlockOutline = false;
             }
         });
 
-        cbESPShader.addItemListener(e -> {
-            if (!cbEntityESP.isSelected()) {
-                cbESPShader.setSelected(false);
-                playerEspShader = false;
-                return;
-            }
-            if (cbESPShader.isSelected()) {
-                playerEspShader = true;
-                playerEspBox = false;
-                rainbowPlayerEsp = false;
 
-                cbESPBox.setSelected(false);
-                cbESPRainbow.setSelected(false);
+        //Tracers
+        cbTracerRainbow.addItemListener(e -> {
+            if (cbTracerRainbow.isSelected()) {
+                rainbowTracers = true;
+                distanceBasedColor = false;
+
+                cbTracerNearPlayer.setSelected(false);
             } else {
-                playerEspShader = false;
+                rainbowTracers = false;
             }
         });
 
-        cbESPBox.addItemListener(e -> {
-            if (!cbEntityESP.isSelected()) {
-                cbESPBox.setSelected(false);
-                playerEspBox = false;
-                return;
-            }
-            if (cbESPBox.isSelected()) {
-                playerEspBox = true;
-                playerEspShader = false;
+        cbTracerNearPlayer.addItemListener(e -> {
+            if (cbTracerNearPlayer.isSelected()) {
+                distanceBasedColor = true;
+                rainbowTracers = false;
 
-                cbESPShader.setSelected(false);
+                cbTracerRainbow.setSelected(false);
             } else {
-                playerEspBox = false;
-                rainbowPlayerEsp = false;
-                cbESPRainbow.setSelected(false);
+                distanceBasedColor = false;
             }
         });
+
+        slTracerLineWidth.addChangeListener(e -> {
+            lineWidth = slTracerLineWidth.getValue();
+        });
+
 
         //== == == == == == == Прослушивание Checkbox == == == == == == ==//
 
@@ -293,14 +433,21 @@ public final class DevWindow {
         leftPanel.add(cbCustomBOutline);
         leftPanel.add(CreateSeparator());
 
+        leftPanel.add(cbRainbowBOutline);
+        leftPanel.add(CreateSeparator());
+
         leftPanel.add(cbEntityESP);
         leftPanel.add(CreateDetails("Expand", stateMap, cbESPShader, cbESPBox, cbESPRainbow));
 
         leftPanel.add(cbWynekoNameTags);
         leftPanel.add(CreateDetails("Expand", stateMap, cbWNTItemStack, cbWNTNickname));
 
+
         leftPanel.add(cbAntiBlind);
         leftPanel.add(CreateSeparator());
+
+        leftPanel.add(cbTracers);
+        leftPanel.add(CreateDetails("Expand", stateMap, cbTracerNearPlayer, cbTracerRainbow, slTracerLineWidthLabel, slTracerLineWidth));
 
         localPanel.add(leftPanel, BorderLayout.WEST);
 
@@ -347,6 +494,14 @@ public final class DevWindow {
         rightPanel.add(blueSlider);
         rightPanel.add(alphaSlider);
         rightPanel.add(colorPreview);
+
+        rightPanel.setVisible(false);
+
+        cbCustomBOutline.addActionListener(e -> {
+            rightPanel.setVisible(cbCustomBOutline.isSelected());
+            localPanel.revalidate();
+            localPanel.repaint();
+        });
 
         localPanel.add(rightPanel, BorderLayout.CENTER);
 
@@ -517,8 +672,34 @@ public final class DevWindow {
         JPanel localPanel = new JPanel();
         localPanel.setLayout(new BoxLayout(localPanel, BoxLayout.Y_AXIS));
 
+
         JLabel label = new JLabel("Other settings coming soon...");
+        JCheckBox cbCustomMainMenu = new JCheckBox("Custom MainMenu");
+        JButton bNextBG = new JButton("Next Custom Background");
+
+        // Слушатели swing
+
+        cbCustomMainMenu.setSelected(customMainMenu);
+        cbCustomMainMenu.addItemListener(e -> customMainMenu = cbCustomMainMenu.isSelected());
+
+        bNextBG.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (pngFiles.isEmpty()) return;
+
+                currentIndex = (currentIndex + 1) % pngFiles.size();
+                String fileName = pngFiles.get(currentIndex);
+                customBg = new ResourceLocation("wynekoclient/themes/" + fileName);
+            }
+        });
+
+        // Слушатели swing
+
+
+
         localPanel.add(label);
+        localPanel.add(cbCustomMainMenu);
+        localPanel.add(bNextBG);
 
         return localPanel;
     }

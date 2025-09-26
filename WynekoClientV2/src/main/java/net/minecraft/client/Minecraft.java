@@ -86,6 +86,7 @@ import net.minecraft.world.storage.ISaveFormat;
 import net.minecraft.world.storage.ISaveHandler;
 import net.minecraft.world.storage.WorldInfo;
 import net.wynekoclient.WynekoClient;
+import net.wynekoclient.util.Version;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.Validate;
 import org.apache.logging.log4j.LogManager;
@@ -476,7 +477,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage
 
     private void createDisplay() throws LWJGLException
     {
-        String Title = "Wyneko Client";
+        String Title = Version.TitleVersion;
         Display.setResizable(true);
         Display.setTitle(Title);
 
@@ -1370,11 +1371,23 @@ public class Minecraft implements IThreadListener, IPlayerUsage
         if (!this.playerController.getIsHittingBlock())
         {
             if (fastPlaceRandom){
-                this.rightClickDelayTimer = (fastPlace) ? fastPlaceSpeed + ((int)(float)Math.random()*5) : 4;
+                this.rightClickDelayTimer = (fastPlace) ? fastPlaceSpeed + (int)(Math.random() * 2) : 4;
             }
             else {
                 this.rightClickDelayTimer = (fastPlace) ? fastPlaceSpeed : 4;
             }
+
+          /*if (fastPlace) {
+                // эмуляция клика: задержка по слайдеру + рандом
+                this.rightClickDelayTimer = fastPlaceRandom ? fastPlaceSpeed + (int)(Math.random() * 3) : fastPlaceSpeed;
+
+                // swing для реализма
+                if (fastPlace) this.thePlayer.swingItem();
+            } else {
+                // дефолтная задержка майна
+                this.rightClickDelayTimer = 4;
+            }*/
+
             boolean flag = true;
             ItemStack itemstack = this.thePlayer.inventory.getCurrentItem();
 

@@ -81,6 +81,8 @@ import java.util.List;
 import java.util.concurrent.Callable;
 
 import static net.wynekoclient.DevWindow.customBlockOutline;
+import static net.wynekoclient.DevWindow.rainbowBlockOutline;
+import static net.wynekoclient.util.RainbowColor.getRainbowColor;
 
 public class RenderGlobal implements IWorldAccess, IResourceManagerReloadListener
 {
@@ -2541,7 +2543,15 @@ public class RenderGlobal implements IWorldAccess, IResourceManagerReloadListene
 
                 GlStateManager.tryBlendFuncSeparate(770, 771, 1, 0);
                 GlStateManager.color(r, g, b, a);
-            }else {GlStateManager.color(0.0F, 0.0F, 0.0F, 0.4F);}
+            } else if (rainbowBlockOutline) {
+                int[] rgb = getRainbowColor(3000, 1.0f, 1.0f);
+                float r = rgb[0] / 255.0F;
+                float g = rgb[1] / 255.0F;
+                float b = rgb[2] / 255.0F;
+                float a = 1.0F;
+                GlStateManager.tryBlendFuncSeparate(770, 771, 1, 0);
+                GlStateManager.color(r, g, b, a);
+            } else {GlStateManager.color(0.0F, 0.0F, 0.0F, 0.4F);}
             GL11.glLineWidth(2.0F);
             GlStateManager.disableTexture2D();
 

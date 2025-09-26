@@ -4,6 +4,7 @@ import com.google.common.collect.Maps;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBed;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.model.*;
@@ -37,11 +38,12 @@ import net.optifine.player.PlayerItemsLayer;
 import net.optifine.reflect.Reflector;
 import net.optifine.shaders.Shaders;
 import net.wynekoclient.features.PlayerESP;
+import net.wynekoclient.features.Tracers;
 
 import java.util.Collections;
 import java.util.Map;
 
-import static net.wynekoclient.DevWindow.playerEspBox;
+import static net.wynekoclient.DevWindow.*;
 
 public class RenderManager
 {
@@ -49,9 +51,9 @@ public class RenderManager
     private Map<String, RenderPlayer> skinMap = Maps.<String, RenderPlayer>newHashMap();
     private RenderPlayer playerRenderer;
     private FontRenderer textRenderer;
-    private double renderPosX;
-    private double renderPosY;
-    private double renderPosZ;
+    public double renderPosX;
+    public double renderPosY;
+    public double renderPosZ;
     public TextureManager renderEngine;
     public World worldObj;
     public Entity livingPlayer;
@@ -66,6 +68,7 @@ public class RenderManager
     private boolean renderShadow = true;
     private boolean debugBoundingBox = false;
     public Render renderRender = null;
+    private static final Minecraft mc = Minecraft.getMinecraft();
 
     public RenderManager(TextureManager renderEngineIn, RenderItem itemRendererIn)
     {
@@ -357,7 +360,13 @@ public class RenderManager
                 }
 
                 if(playerEspBox){
-                    PlayerESP.RenderPlayerEsp(entity, x, y, z, entityYaw, partialTicks);
+                    PlayerESP.RenderPlayerBoxEsp(entity, x, y, z, entityYaw, partialTicks);
+                } else if (playerEspShader) {
+                    mc.entityRenderer.loadShader(new ResourceLocation("shaders/post/espplayer.json"));
+                }
+
+                if (tracers){
+                   Tracers.renderTracers(partialTicks);
                 }
             }
             else if (this.renderEngine != null)

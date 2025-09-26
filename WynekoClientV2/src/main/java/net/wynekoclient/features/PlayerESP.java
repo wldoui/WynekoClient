@@ -9,13 +9,15 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Vec3;
 import net.optifine.shaders.Shaders;
+import org.lwjgl.opengl.GL11;
 
+import static net.wynekoclient.DevWindow.playerEspED;
 import static net.wynekoclient.DevWindow.rainbowPlayerEsp;
 import static net.wynekoclient.util.RainbowColor.getRainbowColor;
 
 public class PlayerESP {
 
-    public static void RenderPlayerEsp(Entity entityIn, double x, double y, double z, float entityYaw, float partialTicks)
+    public static void RenderPlayerBoxEsp(Entity entityIn, double x, double y, double z, float entityYaw, float partialTicks)
     {
         if (!Shaders.isShadowPass)
         {
@@ -41,22 +43,25 @@ public class PlayerESP {
             if (rainbowPlayerEsp) {
                 int[] rgb = getRainbowColor(3000, 1.0f, 1.0f);
                 GlStateManager.color(rgb[0] / 255.0F, rgb[1] / 255.0F, rgb[2] / 255.0F, 1.0F);
+                GL11.glLineWidth(2.0F);
                 RenderGlobal.drawOutlinedBoundingBox(axisalignedbb1, rgb[0], rgb[1], rgb[2], 255);
             } else {
-                RenderGlobal.drawOutlinedBoundingBox(axisalignedbb1, 255, 255, 255, 255);
+                int[] rgb = new int[]{255, 255, 255};
+                GlStateManager.color(rgb[0] / 255.0F, rgb[1] / 255.0F, rgb[2] / 255.0F, 1.0F);
+                GL11.glLineWidth(2.0F);
+                RenderGlobal.drawOutlinedBoundingBox(axisalignedbb1, rgb[0], rgb[1], rgb[2], 255);
             }
 
 
-            // направление взгляда (синяя линия)
-            Tessellator tessellator = Tessellator.getInstance();
-            WorldRenderer worldrenderer = tessellator.getWorldRenderer();
-            Vec3 vec3 = entityIn.getLook(partialTicks);
-            worldrenderer.begin(3, DefaultVertexFormats.POSITION_COLOR);
-            worldrenderer.pos(x, y + (double)entityIn.getEyeHeight(), z).color(0, 0, 255, 255).endVertex();
-            worldrenderer.pos(x + vec3.xCoord * 1.2D, y + (double)entityIn.getEyeHeight() + vec3.yCoord * 1.2D, z + vec3.zCoord * 1.2D).color(0, 0, 125, 255).endVertex();
-            tessellator.draw();
-
-            // возвращаем OpenGL в исходное состояние
+            if (playerEspED){
+                Tessellator tessellator = Tessellator.getInstance();
+                WorldRenderer worldrenderer = tessellator.getWorldRenderer();
+                Vec3 vec3 = entityIn.getLook(partialTicks);
+                worldrenderer.begin(3, DefaultVertexFormats.POSITION_COLOR);
+                worldrenderer.pos(x, y + (double)entityIn.getEyeHeight(), z).color(0, 0, 255, 255).endVertex();
+                worldrenderer.pos(x + vec3.xCoord * 1.2D, y + (double)entityIn.getEyeHeight() + vec3.yCoord * 1.2D, z + vec3.zCoord * 1.2D).color(0, 0, 125, 255).endVertex();
+                tessellator.draw();
+            }
             GlStateManager.enableDepth();
             GlStateManager.enableTexture2D();
             GlStateManager.enableLighting();

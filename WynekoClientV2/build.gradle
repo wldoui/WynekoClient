@@ -6,7 +6,7 @@ group = 'WynekoClient'
 version = '1.0'
 
 var buildFolder = 'build/libs'
-var nick = 'WyldiiiiNya'
+var nick = 'WynekoV2'
 
 repositories {
     mavenCentral()

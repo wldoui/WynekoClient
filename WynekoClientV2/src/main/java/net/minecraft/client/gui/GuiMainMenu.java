@@ -22,6 +22,8 @@ import net.optifine.CustomPanorama;
 import net.optifine.CustomPanoramaProperties;
 import net.optifine.reflect.Reflector;
 import net.wynekoclient.features.ConnectionMenu;
+import net.wynekoclient.util.Version;
+import net.wynekoclient.util.WynekoFontRenderer;
 import org.apache.commons.io.Charsets;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -29,6 +31,7 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GLContext;
 import org.lwjgl.util.glu.Project;
 
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -38,6 +41,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import static net.wynekoclient.DevWindow.*;
 
 public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
 {
@@ -70,7 +75,6 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
     private GuiScreen field_183503_M;
     private GuiButton modButton;
     private GuiScreen modUpdateNotification;
-    private FontRenderer customFontRenderer;
 
     public GuiMainMenu()
     {
@@ -165,9 +169,6 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
 
     public void initGui()
     {
-
-        this.customFontRenderer = new FontRenderer(this.mc.gameSettings, new ResourceLocation("textures/font/ascii2.png"), this.mc.getTextureManager(), false);
-
         this.viewportTexture = new DynamicTexture(256, 256);
         this.backgroundTexture = this.mc.getTextureManager().getDynamicTextureLocation("background", this.viewportTexture);
         Calendar calendar = Calendar.getInstance();
@@ -537,70 +538,89 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
 
     public void drawScreen(int mouseX, int mouseY, float partialTicks)
     {
-        GlStateManager.disableAlpha();
-        this.renderSkybox(mouseX, mouseY, partialTicks);
-        GlStateManager.enableAlpha();
-        Tessellator tessellator = Tessellator.getInstance();
-        WorldRenderer worldrenderer = tessellator.getWorldRenderer();
-        int i = 274;
-        int j = this.width / 2 - i / 2;
-        int k = 30;
-        int l = -2130706433;
-        int i1 = 16777215;
-        int j1 = 0;
-        int k1 = Integer.MIN_VALUE;
-        CustomPanoramaProperties custompanoramaproperties = CustomPanorama.getCustomPanoramaProperties();
+        if (customMainMenu) {
 
-        if (custompanoramaproperties != null)
-        {
-            l = custompanoramaproperties.getOverlay1Top();
-            i1 = custompanoramaproperties.getOverlay1Bottom();
-            j1 = custompanoramaproperties.getOverlay2Top();
-            k1 = custompanoramaproperties.getOverlay2Bottom();
+            this.mc.getTextureManager().bindTexture(customBg);
+            GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
+            drawModalRectWithCustomSizedTexture(0, 0, 0, 0, this.width, this.height, this.width, this.height);
+
+            GlStateManager.enableBlend();
+            GlStateManager.blendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+
+            Font font = null;
+            try {
+                font = Font.createFont(Font.TRUETYPE_FONT,
+                                getClass().getResourceAsStream("/assets/minecraft/font/Comfortaa-Regular.ttf"))
+                        .deriveFont(64f);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            WynekoFontRenderer fontRenderer = new WynekoFontRenderer(font);
+            fontRenderer.drawString("Wyneko Client", this.width / 2 - 240 / 2, this.height / 10 + 10, -1, 0.5f);
+
+
+        } else {
+            GlStateManager.disableAlpha();
+            this.renderSkybox(mouseX, mouseY, partialTicks);
+            GlStateManager.enableAlpha();
+            Tessellator tessellator = Tessellator.getInstance();
+            WorldRenderer worldrenderer = tessellator.getWorldRenderer();
+            int i = 274;
+            int j = this.width / 2 - i / 2;
+            int k = 30;
+            int l = -2130706433;
+            int i1 = 16777215;
+            int j1 = 0;
+            int k1 = Integer.MIN_VALUE;
+            CustomPanoramaProperties custompanoramaproperties = CustomPanorama.getCustomPanoramaProperties();
+
+            if (custompanoramaproperties != null)
+            {
+                l = custompanoramaproperties.getOverlay1Top();
+                i1 = custompanoramaproperties.getOverlay1Bottom();
+                j1 = custompanoramaproperties.getOverlay2Top();
+                k1 = custompanoramaproperties.getOverlay2Bottom();
+            }
+
+            if (l != 0 || i1 != 0)
+            {
+                this.drawGradientRect(0, 0, this.width, this.height, l, i1);
+            }
+
+            if (j1 != 0 || k1 != 0)
+            {
+                this.drawGradientRect(0, 0, this.width, this.height, j1, k1);
+            }
+
+            this.mc.getTextureManager().bindTexture(minecraftTitleTextures);
+            GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
+
+            if ((double)this.updateCounter < 1.0E-4D)
+            {
+                this.drawTexturedModalRect(j + 0, k + 0, 0, 0, 99, 44);
+                this.drawTexturedModalRect(j + 99, k + 0, 129, 0, 27, 44);
+                this.drawTexturedModalRect(j + 99 + 26, k + 0, 126, 0, 3, 44);
+                this.drawTexturedModalRect(j + 99 + 26 + 3, k + 0, 99, 0, 26, 44);
+                this.drawTexturedModalRect(j + 155, k + 0, 0, 45, 155, 44);
+            }
+            else
+            {
+                this.drawTexturedModalRect(j + 0, k + 0, 0, 0, 155, 44);
+                this.drawTexturedModalRect(j + 155, k + 0, 0, 45, 155, 44);
+            }
+            GlStateManager.pushMatrix();
+            GlStateManager.translate((float)(this.width / 2 + 90), 70.0F, 0.0F);
+            GlStateManager.rotate(-20.0F, 0.0F, 0.0F, 1.0F);
+            float f = 1.8F - MathHelper.abs(MathHelper.sin((float)(Minecraft.getSystemTime() % 1000L) / 1000.0F * (float)Math.PI * 2.0F) * 0.1F);
+            f = f * 100.0F / (float)(this.fontRendererObj.getStringWidth(this.splashText) + 32);
+            GlStateManager.scale(f, f, f);
+            this.drawCenteredString(this.fontRendererObj, this.splashText, 0, -8, -256);
+            GlStateManager.popMatrix();
         }
 
-        if (l != 0 || i1 != 0)
-        {
-            this.drawGradientRect(0, 0, this.width, this.height, l, i1);
-        }
 
-        if (j1 != 0 || k1 != 0)
-        {
-            this.drawGradientRect(0, 0, this.width, this.height, j1, k1);
-        }
-
-        this.mc.getTextureManager().bindTexture(minecraftTitleTextures);
-        GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-
-        if ((double)this.updateCounter < 1.0E-4D)
-        {
-            this.drawTexturedModalRect(j + 0, k + 0, 0, 0, 99, 44);
-            this.drawTexturedModalRect(j + 99, k + 0, 129, 0, 27, 44);
-            this.drawTexturedModalRect(j + 99 + 26, k + 0, 126, 0, 3, 44);
-            this.drawTexturedModalRect(j + 99 + 26 + 3, k + 0, 99, 0, 26, 44);
-            this.drawTexturedModalRect(j + 155, k + 0, 0, 45, 155, 44);
-        }
-        else
-        {
-            this.drawTexturedModalRect(j + 0, k + 0, 0, 0, 155, 44);
-            this.drawTexturedModalRect(j + 155, k + 0, 0, 45, 155, 44);
-        }
-
-        GlStateManager.pushMatrix();
-        GlStateManager.translate((float)(this.width / 2 + 90), 70.0F, 0.0F);
-        GlStateManager.rotate(-20.0F, 0.0F, 0.0F, 1.0F);
-        float f = 1.8F - MathHelper.abs(MathHelper.sin((float)(Minecraft.getSystemTime() % 1000L) / 1000.0F * (float)Math.PI * 2.0F) * 0.1F);
-        f = f * 100.0F / (float)(this.fontRendererObj.getStringWidth(this.splashText) + 32);
-        GlStateManager.scale(f, f, f);
-        this.drawCenteredString(this.fontRendererObj, this.splashText, 0, -8, -256);
-        GlStateManager.popMatrix();
-        String s = "WynekoClient V2 (0.0.3)";
-        String b = "";
-
-        if (this.mc.isDemo())
-        {
-            s = s + " Demo";
-        }
+        String s = Version.MCVersion;
 
         if (Reflector.FMLCommonHandler_getBrandings.exists())
         {
@@ -624,24 +644,30 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
         }
         else
         {
-            this.drawString(this.fontRendererObj, s, 2, this.height - 10, -1);
-
+            //Это важно для Forge потом когда будешь его добавлять учти шрифт свой
         }
 
 
 
 
-        this.drawString(this.fontRendererObj, "MMM", 2, this.height - 230, -1);
+
+        Font font = null;
+        try {
+            font = Font.createFont(Font.TRUETYPE_FONT,
+                            getClass().getResourceAsStream("/assets/minecraft/font/Comfortaa-Regular.ttf"))
+                    .deriveFont(16f);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        WynekoFontRenderer fontRenderer = new WynekoFontRenderer(font);
+        fontRenderer.drawString(s, 2, this.height - 10, -1, 0.5f);
+        fontRenderer.drawString("Created By Wyldi", 2, 5, -1, 0.5f);
 
 
 
-
-        this.drawString(this.customFontRenderer,"Test", 2, this.height - 220, -1);
-
-
-
-        String s2 = "Copyright Mojang AB. Do not distribute!";
-        this.drawString(this.fontRendererObj, s2, this.width - this.fontRendererObj.getStringWidth(s2) - 2, this.height - 10, -1);
+        //String s2 = "Copyright Mojang AB. Do not distribute!";
+        //this.drawString(this.fontRendererObj, s2, this.width - this.fontRendererObj.getStringWidth(s2) - 2, this.height - 10, -1);
 
         if (this.openGLWarning1 != null && this.openGLWarning1.length() > 0)
         {
