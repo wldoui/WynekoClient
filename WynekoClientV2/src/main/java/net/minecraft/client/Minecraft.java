@@ -87,6 +87,7 @@ import net.minecraft.world.storage.ISaveHandler;
 import net.minecraft.world.storage.WorldInfo;
 import net.wynekoclient.WynekoClient;
 import net.wynekoclient.util.Version;
+import net.wynekoclient.util.menu.BindsMenu;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.Validate;
 import org.apache.logging.log4j.LogManager;
@@ -1885,6 +1886,8 @@ public class Minecraft implements IThreadListener, IPlayerUsage
                     }
                 }
             }
+
+            BindsMenu.MacroHandler.onTick();
 
             boolean flag = this.gameSettings.chatVisibility != EntityPlayer.EnumChatVisibility.HIDDEN;
 

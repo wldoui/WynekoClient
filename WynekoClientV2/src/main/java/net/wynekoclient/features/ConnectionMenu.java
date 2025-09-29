@@ -5,6 +5,7 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.GuiTextField;
 import net.minecraft.client.resources.I18n;
 import net.wynekoclient.util.WynekoFontRenderer;
+import net.wynekoclient.util.menu.BindsMenu;
 
 import java.awt.*;
 import java.io.IOException;
@@ -48,7 +49,7 @@ public class ConnectionMenu extends GuiScreen {
             if (button.id == 1) {
                 this.mc.displayGuiScreen(this.parentScreen);
             } else if (button.id == 2) {
-                //this.mc.displayGuiScreen(new BindEditorScreen(this));
+                this.mc.displayGuiScreen(new BindsMenu(this));
             }
         }
     }

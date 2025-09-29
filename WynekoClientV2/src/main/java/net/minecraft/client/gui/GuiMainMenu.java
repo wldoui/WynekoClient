@@ -193,13 +193,13 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
 
         if (Reflector.GuiModList_Constructor.exists())
         {
-            this.buttonList.add(new GuiButton(10001, this.width / 2 + 2 - 5, p_73969_1_ + p_73969_2_ * 2, 98, 20, I18n.format("Wyneko Client", new Object[0])));
+            this.buttonList.add(new GuiButton(10001, this.width / 2 + 2, p_73969_1_ + p_73969_2_ * 2, 98, 20, I18n.format("Wyneko Client", new Object[0])));
             //this.buttonList.add(this.realmsButton = new GuiButton(14, this.width / 2 + 2, p_73969_1_ + p_73969_2_ * 2, 98, 20, I18n.format("menu.online", new Object[0]).replace("Minecraft", "").trim()));
-            this.buttonList.add(this.modButton = new GuiButton(6, this.width / 2 - 100, p_73969_1_ + p_73969_2_ * 2, 98, 20, I18n.format("fml.menu.mods", new Object[0])));
+            this.buttonList.add(this.modButton = new GuiButton(6, this.width / 2 - 98, p_73969_1_ + p_73969_2_ * 2, 98, 20, I18n.format("fml.menu.mods", new Object[0])));
         }
         else
         {
-            this.buttonList.add(new GuiButton(10001, this.width / 2, p_73969_1_ + p_73969_2_ * 2, 98, 20, I18n.format("Wyneko Client", new Object[0])));
+            this.buttonList.add(new GuiButton(10001, this.width / 2 + 2, p_73969_1_ + p_73969_2_ * 2, 98, 20, I18n.format("Wyneko Client", new Object[0])));
             //this.buttonList.add(this.realmsButton = new GuiButton(14, this.width / 2 - 100, p_73969_1_ + p_73969_2_ * 2, I18n.format("menu.online", new Object[0])));
         }
     }
