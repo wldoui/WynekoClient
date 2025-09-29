@@ -35,6 +35,9 @@ public final class DevWindow {
     public static boolean antiBlind = false;
     public static boolean wynekoNameTags = false;
     public static Color blockOutlineColor = Color.BLACK;
+
+    public static boolean customCrosshair = false;
+
     public static boolean fastPlace = false;
     public static boolean fastPlaceRandom = false;
 
@@ -49,7 +52,7 @@ public final class DevWindow {
 
     // == == == == == == == Other END == == == == == == == ==
 
-
+    public static boolean keystroks = false;
 
     // == == == == == == == Tracers STR == == == == == == == ==
 
@@ -57,7 +60,6 @@ public final class DevWindow {
     public static float lineWidth = 3.0f;
     public static boolean distanceBasedColor = true;
     public static boolean rainbowTracers = false;
-    public static boolean showDistanceLabels = true;
 
     // == == == == == == == Tracers END == == == == == == == ==
 
@@ -223,7 +225,12 @@ public final class DevWindow {
         JCheckBox cbRainbowBOutline = new JCheckBox("Rainbow Block Outline");
         // === === === === === === === === === === ===
 
+        JCheckBox cbKeystroks = new JCheckBox("Keystroks");
+
         JCheckBox cbWynekoNameTags = new JCheckBox("Wyneko NameTags");
+
+        JCheckBox cbCustomCrosshair = new JCheckBox("Custom Crosshair");
+
         JCheckBox cbAntiBlind = new JCheckBox("AntiBlind");
         JCheckBox cbTracers = new JCheckBox("Tracers");
 
@@ -271,6 +278,9 @@ public final class DevWindow {
         cbRainbowBOutline.setSelected(rainbowBlockOutline);
         cbRainbowBOutline.addItemListener(e -> rainbowBlockOutline = cbRainbowBOutline.isSelected());
 
+        cbKeystroks.setSelected(keystroks);
+        cbKeystroks.addItemListener(e -> keystroks = cbKeystroks.isSelected());
+
         cbEntityESP.setSelected(entityESP);
         cbEntityESP.addItemListener(e -> entityESP = cbEntityESP.isSelected());
 
@@ -289,6 +299,8 @@ public final class DevWindow {
         cbTracerNearPlayer.setSelected(distanceBasedColor);
         cbTracerNearPlayer.addItemListener(e -> distanceBasedColor = cbTracerRainbow.isSelected());
 
+        cbCustomCrosshair.setSelected(customCrosshair);
+        cbCustomCrosshair.addItemListener(e -> customCrosshair = cbCustomCrosshair.isSelected());
 
 
         //ESP)))
@@ -436,12 +448,17 @@ public final class DevWindow {
         leftPanel.add(cbRainbowBOutline);
         leftPanel.add(CreateSeparator());
 
+        leftPanel.add(cbKeystroks);
+        leftPanel.add(CreateSeparator());
+
         leftPanel.add(cbEntityESP);
         leftPanel.add(CreateDetails("Expand", stateMap, cbESPShader, cbESPBox, cbESPRainbow));
 
         leftPanel.add(cbWynekoNameTags);
         leftPanel.add(CreateDetails("Expand", stateMap, cbWNTItemStack, cbWNTNickname));
 
+        leftPanel.add(cbCustomCrosshair);
+        leftPanel.add(CreateSeparator());
 
         leftPanel.add(cbAntiBlind);
         leftPanel.add(CreateSeparator());
@@ -498,9 +515,11 @@ public final class DevWindow {
         rightPanel.setVisible(false);
 
         cbCustomBOutline.addActionListener(e -> {
-            rightPanel.setVisible(cbCustomBOutline.isSelected());
-            localPanel.revalidate();
-            localPanel.repaint();
+            if (customBlockOutline) {
+                rightPanel.setVisible(cbCustomBOutline.isSelected());
+                localPanel.revalidate();
+                localPanel.repaint();
+            }
         });
 
         localPanel.add(rightPanel, BorderLayout.CENTER);
@@ -521,7 +540,7 @@ public final class DevWindow {
         cbRandomFastPlace.setSelected(fastPlaceRandom);
         cbRandomFastPlace.addItemListener(e -> fastPlaceRandom = cbRandomFastPlace.isSelected());
 
-        JSlider speedSlider = new JSlider(0, 4, fastPlaceSpeed);
+        JSlider speedSlider = new JSlider(0, 30, fastPlaceSpeed);
         speedSlider.setMajorTickSpacing(1);
         speedSlider.setPaintTicks(true);
         speedSlider.setPaintLabels(true);

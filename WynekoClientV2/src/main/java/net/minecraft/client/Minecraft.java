@@ -151,9 +151,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage
     private final Session session;
     private boolean isGamePaused;
     public FontRenderer fontRendererObj;
-    public FontRenderer CustomFontRenderer;
     public FontRenderer standardGalacticFontRenderer;
-    public FontRenderer fontRendererWC;
     public GuiScreen currentScreen;
     public LoadingScreenRenderer loadingScreen;
     public EntityRenderer entityRenderer;
@@ -1372,6 +1370,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage
         {
             if (fastPlaceRandom){
                 this.rightClickDelayTimer = (fastPlace) ? fastPlaceSpeed + (int)(Math.random() * 2) : 4;
+
             }
             else {
                 this.rightClickDelayTimer = (fastPlace) ? fastPlaceSpeed : 4;
@@ -1453,62 +1452,58 @@ public class Minecraft implements IThreadListener, IPlayerUsage
         }
     }
 
-    public void toggleFullscreen()
-    {
-        try
-        {
+    public void toggleFullscreen() {
+        try {
             this.fullscreen = !this.fullscreen;
             this.gameSettings.fullScreen = this.fullscreen;
 
-            if (this.fullscreen)
-            {
-                this.updateDisplayMode();
-                this.displayWidth = Display.getDisplayMode().getWidth();
-                this.displayHeight = Display.getDisplayMode().getHeight();
+            if (this.fullscreen) {
+                DisplayMode targetDisplayMode = null;
+                DisplayMode[] modes = Display.getAvailableDisplayModes();
+                int screenWidth = Display.getDesktopDisplayMode().getWidth();
+                int screenHeight = Display.getDesktopDisplayMode().getHeight();
+                int freq = Display.getDesktopDisplayMode().getFrequency();
 
-                if (this.displayWidth <= 0)
-                {
-                    this.displayWidth = 1;
+                for (DisplayMode mode : modes) {
+                    if (mode.getWidth() == screenWidth && mode.getHeight() == screenHeight) {
+                        if (targetDisplayMode == null || mode.getFrequency() == freq) {
+                            targetDisplayMode = mode;
+                        }
+                    }
                 }
 
-                if (this.displayHeight <= 0)
-                {
-                    this.displayHeight = 1;
+                if (targetDisplayMode == null) {
+                    targetDisplayMode = Display.getDesktopDisplayMode();
                 }
-            }
-            else
-            {
+
+                Display.setDisplayMode(targetDisplayMode);
+                this.displayWidth = targetDisplayMode.getWidth();
+                this.displayHeight = targetDisplayMode.getHeight();
+
+            } else {
                 Display.setDisplayMode(new DisplayMode(this.tempDisplayWidth, this.tempDisplayHeight));
                 this.displayWidth = this.tempDisplayWidth;
                 this.displayHeight = this.tempDisplayHeight;
-
-                if (this.displayWidth <= 0)
-                {
-                    this.displayWidth = 1;
-                }
-
-                if (this.displayHeight <= 0)
-                {
-                    this.displayHeight = 1;
-                }
             }
 
-            if (this.currentScreen != null)
-            {
+            if (this.displayWidth <= 0) this.displayWidth = 1;
+            if (this.displayHeight <= 0) this.displayHeight = 1;
+
+            if (this.currentScreen != null) {
                 this.resize(this.displayWidth, this.displayHeight);
-            }
-            else
-            {
+            } else {
                 this.updateFramebufferSize();
             }
 
             Display.setFullscreen(this.fullscreen);
+
+
             Display.setVSyncEnabled(this.gameSettings.enableVsync);
+            Display.setResizable(true);
             this.updateDisplay();
-        }
-        catch (Exception exception)
-        {
-            logger.error((String)"Couldn\'t toggle fullscreen", (Throwable)exception);
+
+        } catch (Exception exception) {
+            logger.error("Couldn't toggle fullscreen", exception);
         }
     }
 

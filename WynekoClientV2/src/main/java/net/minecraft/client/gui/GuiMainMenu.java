@@ -10,8 +10,6 @@ import net.minecraft.client.renderer.WorldRenderer;
 import net.minecraft.client.renderer.texture.DynamicTexture;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.client.resources.I18n;
-import net.minecraft.client.settings.GameSettings;
-import net.minecraft.realms.RealmsBridge;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
@@ -36,13 +34,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static net.wynekoclient.DevWindow.*;
+import static net.wynekoclient.DevWindow.customBg;
+import static net.wynekoclient.DevWindow.customMainMenu;
 
 public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
 {
@@ -70,7 +67,6 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
     private int field_92020_v;
     private int field_92019_w;
     private ResourceLocation backgroundTexture;
-    private GuiButton realmsButton;
     private boolean field_183502_L;
     private GuiScreen field_183503_M;
     private GuiButton modButton;
@@ -142,19 +138,9 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
         }
     }
 
-    private boolean func_183501_a()
-    {
-        return Minecraft.getMinecraft().gameSettings.getOptionOrdinalValue(GameSettings.Options.REALMS_NOTIFICATIONS) && this.field_183503_M != null;
-    }
-
     public void updateScreen()
     {
         ++this.panoramaTimer;
-
-        if (this.func_183501_a())
-        {
-            this.field_183503_M.updateScreen();
-        }
     }
 
     public boolean doesGuiPauseGame()
@@ -171,21 +157,6 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
     {
         this.viewportTexture = new DynamicTexture(256, 256);
         this.backgroundTexture = this.mc.getTextureManager().getDynamicTextureLocation("background", this.viewportTexture);
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(new Date());
-
-        if (calendar.get(2) + 1 == 12 && calendar.get(5) == 24)
-        {
-            this.splashText = "Merry X-mas!";
-        }
-        else if (calendar.get(2) + 1 == 1 && calendar.get(5) == 1)
-        {
-            this.splashText = "Happy new year!";
-        }
-        else if (calendar.get(2) + 1 == 10 && calendar.get(5) == 31)
-        {
-            this.splashText = "OOoooOOOoooo! Spooky!";
-        }
 
         int i = 24;
         int j = this.height / 4 + 48;
@@ -196,15 +167,12 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
         }
         else
         {
-            this.addSingleplayerMultiplayerButtons(j, 24);
+            this.addSingleplayerMultiplayerButtons(j, i);
         }
 
         this.buttonList.add(new GuiButton(0, this.width / 2 - 100, j + 72 + 12, 98, 20, I18n.format("menu.options", new Object[0])));
         this.buttonList.add(new GuiButton(4, this.width / 2 + 2, j + 72 + 12, 98, 20, I18n.format("menu.quit", new Object[0])));
         this.buttonList.add(new GuiButtonLanguage(5, this.width / 2 - 124, j + 72 + 12));
-
-        this.buttonList.add(new GuiButton(10001, this.width - 98 - 5, 5, 98, 20, I18n.format("menu.wyneko.connection", new Object[0])));
-
 
         synchronized (this.threadLock)
         {
@@ -216,21 +184,6 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
             this.field_92020_v = this.field_92022_t + k;
             this.field_92019_w = this.field_92021_u + 24;
         }
-
-        this.mc.setConnectedToRealms(false);
-
-        if (Minecraft.getMinecraft().gameSettings.getOptionOrdinalValue(GameSettings.Options.REALMS_NOTIFICATIONS) && !this.field_183502_L)
-        {
-            RealmsBridge realmsbridge = new RealmsBridge();
-            this.field_183503_M = realmsbridge.getNotificationScreen(this);
-            this.field_183502_L = true;
-        }
-
-        if (this.func_183501_a())
-        {
-            this.field_183503_M.setGuiSize(this.width, this.height);
-            this.field_183503_M.initGui();
-        }
     }
 
     private void addSingleplayerMultiplayerButtons(int p_73969_1_, int p_73969_2_)
@@ -240,12 +193,14 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
 
         if (Reflector.GuiModList_Constructor.exists())
         {
-            this.buttonList.add(this.realmsButton = new GuiButton(14, this.width / 2 + 2, p_73969_1_ + p_73969_2_ * 2, 98, 20, I18n.format("menu.online", new Object[0]).replace("Minecraft", "").trim()));
+            this.buttonList.add(new GuiButton(10001, this.width / 2 + 2 - 5, p_73969_1_ + p_73969_2_ * 2, 98, 20, I18n.format("Wyneko Client", new Object[0])));
+            //this.buttonList.add(this.realmsButton = new GuiButton(14, this.width / 2 + 2, p_73969_1_ + p_73969_2_ * 2, 98, 20, I18n.format("menu.online", new Object[0]).replace("Minecraft", "").trim()));
             this.buttonList.add(this.modButton = new GuiButton(6, this.width / 2 - 100, p_73969_1_ + p_73969_2_ * 2, 98, 20, I18n.format("fml.menu.mods", new Object[0])));
         }
         else
         {
-            this.buttonList.add(this.realmsButton = new GuiButton(14, this.width / 2 - 100, p_73969_1_ + p_73969_2_ * 2, I18n.format("menu.online", new Object[0])));
+            this.buttonList.add(new GuiButton(10001, this.width / 2, p_73969_1_ + p_73969_2_ * 2, 98, 20, I18n.format("Wyneko Client", new Object[0])));
+            //this.buttonList.add(this.realmsButton = new GuiButton(14, this.width / 2 - 100, p_73969_1_ + p_73969_2_ * 2, I18n.format("menu.online", new Object[0])));
         }
     }
 
@@ -289,11 +244,6 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
             this.mc.displayGuiScreen(new GuiMultiplayer(this));
         }
 
-        if (button.id == 14 && this.realmsButton.visible)
-        {
-            this.switchToRealms();
-        }
-
         if (button.id == 4)
         {
             this.mc.shutdown();
@@ -322,11 +272,6 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
         }
     }
 
-    private void switchToRealms()
-    {
-        RealmsBridge realmsbridge = new RealmsBridge();
-        realmsbridge.switchToRealms(this);
-    }
 
     public void confirmClicked(boolean result, int id)
     {
@@ -662,9 +607,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
 
         WynekoFontRenderer fontRenderer = new WynekoFontRenderer(font);
         fontRenderer.drawString(s, 2, this.height - 10, -1, 0.5f);
-        fontRenderer.drawString("Created By Wyldi", 2, 5, -1, 0.5f);
-
-
+        fontRenderer.drawString("Created By Wyldi" , 2, 5, -1, 0.5f);
 
         //String s2 = "Copyright Mojang AB. Do not distribute!";
         //this.drawString(this.fontRendererObj, s2, this.width - this.fontRendererObj.getStringWidth(s2) - 2, this.height - 10, -1);
@@ -678,10 +621,6 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
 
         super.drawScreen(mouseX, mouseY, partialTicks);
 
-        if (this.func_183501_a())
-        {
-            this.field_183503_M.drawScreen(mouseX, mouseY, partialTicks);
-        }
 
         if (this.modUpdateNotification != null)
         {
@@ -701,11 +640,6 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
                 guiconfirmopenlink.disableSecurityWarning();
                 this.mc.displayGuiScreen(guiconfirmopenlink);
             }
-        }
-
-        if (this.func_183501_a())
-        {
-            this.field_183503_M.mouseClicked(mouseX, mouseY, mouseButton);
         }
     }
 

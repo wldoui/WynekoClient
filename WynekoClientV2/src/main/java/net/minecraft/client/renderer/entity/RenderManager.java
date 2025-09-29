@@ -37,6 +37,7 @@ import net.optifine.entity.model.CustomEntityModels;
 import net.optifine.player.PlayerItemsLayer;
 import net.optifine.reflect.Reflector;
 import net.optifine.shaders.Shaders;
+import net.wynekoclient.features.Keystroks;
 import net.wynekoclient.features.PlayerESP;
 import net.wynekoclient.features.Tracers;
 
@@ -367,6 +368,10 @@ public class RenderManager
 
                 if (tracers){
                    Tracers.renderTracers(partialTicks);
+                }
+
+                if (keystroks){
+                    Keystroks.render();
                 }
             }
             else if (this.renderEngine != null)
