@@ -56,7 +56,14 @@ dependencies {
     //===============================================//
 
     // SOCKS5 & HTTP Proxy Support
-    implementation "io.netty:netty-handler:4.1.127.Final"
+    implementation("io.netty:netty-all:4.0.23.Final")
+    implementation("io.netty:netty-handler-proxy:4.1.127.Final")
+
+    // Netty 4.1.x
+    //implementation "io.netty:netty-buffer:4.1.127.Final"
+    //implementation "io.netty:netty-transport:4.1.127.Final"
+    //implementation "io.netty:netty-codec:4.1.127.Final"
+    //implementation "io.netty:netty-resolver:4.1.127.Final"
 
     //FlatLaf - Swing Look and Feel || Swing Themes
     implementation 'com.formdev:flatlaf:3.4'

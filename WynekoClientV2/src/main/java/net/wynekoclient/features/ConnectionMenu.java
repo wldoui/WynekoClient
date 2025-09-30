@@ -18,9 +18,13 @@ public class ConnectionMenu extends GuiScreen {
     public void initGui() {
         this.buttonList.clear();
         this.buttonList.add(new GuiButton(1, this.width / 2 - 50, this.height  / 2 + 65, 100, 20, I18n.format("gui.cancel")));
-        this.buttonList.add(new GuiButton(2, this.width / 2 - 135, this.height / 2 - 10, 100, 20, "Bind"));
-        this.buttonList.add(new GuiButton(3, this.width / 2 + 35, this.height / 2  - 10, 100, 20, "Friends"));
-        this.buttonList.add(new GuiButton(3, this.width / 2 + 3005, this.height / 2  - 10, 100, 20, "F"));
+        this.buttonList.add(new GuiButton(2, this.width / 2 - 135, this.height / 2 - 30, 100, 20, "Bind"));
+        this.buttonList.add(new GuiButton(3, this.width / 2 + 35, this.height / 2  - 30, 100, 20, "Friends"));
+        this.buttonList.add(new GuiButton(3, this.width / 2 - 135, this.height / 2, 100, 20, "Proxy"));
+
+
+        //Костыль))))
+        this.buttonList.add(new GuiButton(4, this.width / 2 + 3005, this.height / 2  - 10, 100, 20, "F"));
     }
 
 

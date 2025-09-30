@@ -25,13 +25,10 @@ import org.apache.logging.log4j.Marker;
 import org.apache.logging.log4j.MarkerManager;
 
 import javax.crypto.SecretKey;
-import java.io.IOException;
-import java.net.*;
-import java.nio.channels.SocketChannel;
+import java.net.InetAddress;
+import java.net.SocketAddress;
 import java.util.Queue;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-
-import static net.wynekoclient.DevWindow.*;
 
 public class NetworkManager extends SimpleChannelInboundHandler<Packet>
 {
@@ -63,7 +60,7 @@ public class NetworkManager extends SimpleChannelInboundHandler<Packet>
     private final EnumPacketDirection direction;
     private final Queue<NetworkManager.InboundHandlerTuplePacketListener> outboundPacketsQueue = Queues.<NetworkManager.InboundHandlerTuplePacketListener>newConcurrentLinkedQueue();
     private final ReentrantReadWriteLock readWriteLock = new ReentrantReadWriteLock();
-    private Channel channel;
+    public Channel channel;
     private SocketAddress socketAddress;
     private INetHandler packetListener;
     private IChatComponent terminationReason;
@@ -314,29 +311,8 @@ public class NetworkManager extends SimpleChannelInboundHandler<Packet>
                     }
                 });
 
-        if (ProxyEnabled) {
-            // SOCKS5 через стандартный Socket
-            try {
-                int ProxyPort = GetPort();
-                String ProxyHost = GetHost();
-                Proxy proxy = new Proxy(Proxy.Type.SOCKS, new InetSocketAddress(ProxyHost, ProxyPort));
-                Socket socket = new Socket(proxy);
-                socket.connect(new InetSocketAddress(address, serverPort), 1000);
-
-                // Используем NioSocketChannel с готовым Socket
-                SocketChannel rawChannel = socket.getChannel();
-                if (rawChannel == null) throw new IOException();
-
-                bootstrap.connect(rawChannel.socket().getInetAddress(), rawChannel.socket().getPort()).syncUninterruptibly();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else {
-            // Без прокси — стандартное подключение
-            bootstrap.channel(NioSocketChannel.class)
-                    .connect(address, serverPort).syncUninterruptibly();
-        }
-
+                bootstrap.channel(NioSocketChannel.class)
+                        .connect(address, serverPort).syncUninterruptibly();
         return networkmanager;
     }
 

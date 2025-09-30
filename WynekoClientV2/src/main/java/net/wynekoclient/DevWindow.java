@@ -625,12 +625,21 @@ public final class DevWindow {
                 Port = Integer.parseInt(portField.getText().trim());
                 Type = (String) typeBox.getSelectedItem();
 
+                Type = (String) typeBox.getSelectedItem();
+
                 Proxy proxy;
                 if (ProxyEnabled) {
                     Proxy.Type t = Type.equalsIgnoreCase("HTTP") ? Proxy.Type.HTTP : Proxy.Type.SOCKS;
                     proxy = new Proxy(t, new InetSocketAddress(Host, Port));
                 } else {
                     proxy = Proxy.NO_PROXY;
+                }
+
+                Type = (String) typeBox.getSelectedItem();
+
+                if ("HTTP".equalsIgnoreCase(Type)) {
+                    infoLabel.setText("HTTP proxy not supported, use SOCKS5");
+                    return;
                 }
 
                 // Запрос информации о текущем IP через прокси
