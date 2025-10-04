@@ -369,10 +369,6 @@ public class RenderManager
                 if (tracers){
                    Tracers.renderTracers(partialTicks);
                 }
-
-                if (keystroks){
-                    Keystroks.render();
-                }
             }
             else if (this.renderEngine != null)
             {

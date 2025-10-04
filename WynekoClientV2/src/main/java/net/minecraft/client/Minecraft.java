@@ -1370,7 +1370,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage
         if (!this.playerController.getIsHittingBlock())
         {
             if (fastPlaceRandom){
-                this.rightClickDelayTimer = (fastPlace) ? fastPlaceSpeed + (int)(Math.random() * 2) : 4;
+                this.rightClickDelayTimer = (fastPlace) ? fastPlaceSpeed + new java.util.Random().nextInt(2) : 4;
 
             }
             else {

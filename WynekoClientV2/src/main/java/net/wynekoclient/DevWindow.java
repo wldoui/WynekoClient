@@ -69,6 +69,7 @@ public final class DevWindow {
     public static boolean playerEspShader = false;
     public static boolean playerEspBox = false;
     public static boolean rainbowPlayerEsp = false;
+    public static boolean plrStopCollidedBlock = false;
 
     public static boolean playerEspED = false;
 
@@ -558,8 +559,16 @@ public final class DevWindow {
         JPanel localPanel = new JPanel();
         localPanel.setLayout(new BoxLayout(localPanel, BoxLayout.Y_AXIS));
 
-        JLabel label = new JLabel("Player settings coming soon...");
-        localPanel.add(label);
+
+        JCheckBox cbPlayerStopWhenBlock = new JCheckBox("Player Stop When Collider With Block");
+
+        //Слушатели
+        cbPlayerStopWhenBlock.setSelected(plrStopCollidedBlock);
+        cbPlayerStopWhenBlock.addItemListener(e -> plrStopCollidedBlock = cbPlayerStopWhenBlock.isSelected());
+        //Слушатели
+
+
+        localPanel.add(cbPlayerStopWhenBlock);
 
         return localPanel;
     }

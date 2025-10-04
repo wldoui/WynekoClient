@@ -76,9 +76,7 @@ dependencies {
 tasks.register('runClient', JavaExec) {
     group = "MCP"
     description = "Run Start class with Zulu 17 JDK"
-
-    executable = "C:/Program Files/Zulu/zulu-8/bin/java.exe"
-    workingDir = file('D:/1Other/git/WynekoClient/WynekoClientV2')
+    
     classpath = sourceSets.main.runtimeClasspath
     mainClass = 'Start'
 

@@ -18,9 +18,6 @@ public class WynekoProxyManager {
         return new Proxy(t, new InetSocketAddress(Host, Port));
     }
 
-    public static String getHost() {
-        return Host;
-    }
 
     public static int getPort() {
         return Port;

@@ -52,6 +52,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.IInteractionObject;
 import net.minecraft.world.World;
 
+import static net.wynekoclient.DevWindow.plrStopCollidedBlock;
+
 public class EntityPlayerSP extends AbstractClientPlayer
 {
     public final NetHandlerPlayClient sendQueue;
@@ -685,9 +687,16 @@ public class EntityPlayerSP extends AbstractClientPlayer
             this.setSprinting(true);
         }
 
-        if (this.isSprinting() && (this.movementInput.moveForward < f || this.isCollidedHorizontally || !flag3))
+
+        if (this.isSprinting() && (this.movementInput.moveForward < f || !flag3))
         {
-            this.setSprinting(false);
+            if (this.isCollidedHorizontally ){
+                if (plrStopCollidedBlock){
+                    this.setSprinting(false);
+                }
+            }else {
+                this.setSprinting(true);
+            }
         }
 
         if (this.capabilities.allowFlying)
