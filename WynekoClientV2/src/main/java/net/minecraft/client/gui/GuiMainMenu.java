@@ -41,6 +41,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import static net.wynekoclient.DevWindow.customBg;
 import static net.wynekoclient.DevWindow.customMainMenu;
 
+
 public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
 {
     private static final AtomicInteger field_175373_f = new AtomicInteger(0);
@@ -569,6 +570,12 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
 
         if (Reflector.FMLCommonHandler_getBrandings.exists())
         {
+            try {
+                Class.forName("net.minecraftforge.fml.common.FMLCommonHandler");
+                System.out.println("Forge классы видны!");
+            } catch (ClassNotFoundException e) {
+                System.out.println("Forge классы не загружены!");
+            }
             Object object = Reflector.call(Reflector.FMLCommonHandler_instance, new Object[0]);
             List<String> list = Lists.<String>reverse((List)Reflector.call(object, Reflector.FMLCommonHandler_getBrandings, new Object[] {Boolean.valueOf(true)}));
 

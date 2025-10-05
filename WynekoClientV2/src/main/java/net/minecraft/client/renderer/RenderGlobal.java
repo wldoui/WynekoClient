@@ -80,8 +80,7 @@ import java.util.*;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-import static net.wynekoclient.DevWindow.customBlockOutline;
-import static net.wynekoclient.DevWindow.rainbowBlockOutline;
+import static net.wynekoclient.DevWindow.*;
 import static net.wynekoclient.util.RainbowColor.getRainbowColor;
 
 public class RenderGlobal implements IWorldAccess, IResourceManagerReloadListener
@@ -2534,27 +2533,9 @@ public class RenderGlobal implements IWorldAccess, IResourceManagerReloadListene
         {
             GlStateManager.enableBlend();
             GlStateManager.tryBlendFuncSeparate(770, 771, 1, 0);
-            if(customBlockOutline){
-                Color c = DevWindow.blockOutlineColor;
-                float r = c.getRed() / 255.0F;
-                float g = c.getGreen() / 255.0F;
-                float b = c.getBlue() / 255.0F;
-                float a = c.getAlpha() / 76.f;
 
-                GlStateManager.tryBlendFuncSeparate(770, 771, 1, 0);
-                GlStateManager.color(r, g, b, a);
-            } else if (rainbowBlockOutline) {
-                int[] rgb = getRainbowColor(3000, 1.0f, 1.0f);
-                float r = rgb[0] / 255.0F;
-                float g = rgb[1] / 255.0F;
-                float b = rgb[2] / 255.0F;
-                float a = 1.0F;
-                GlStateManager.tryBlendFuncSeparate(770, 771, 1, 0);
-                GlStateManager.color(r, g, b, a);
-            } else {GlStateManager.color(0.0F, 0.0F, 0.0F, 0.4F);}
             GL11.glLineWidth(2.0F);
             GlStateManager.disableTexture2D();
-
             if (Config.isShaders())
             {
                 Shaders.disableTexture2D();
@@ -2572,14 +2553,108 @@ public class RenderGlobal implements IWorldAccess, IResourceManagerReloadListene
                 double d1 = player.lastTickPosY + (player.posY - player.lastTickPosY) * (double)partialTicks;
                 double d2 = player.lastTickPosZ + (player.posZ - player.lastTickPosZ) * (double)partialTicks;
                 AxisAlignedBB axisalignedbb = block.getSelectedBoundingBox(this.theWorld, blockpos);
-                Block.EnumOffsetType block$enumoffsettype = block.getOffsetType();
+                Block.EnumOffsetType offsetType = block.getOffsetType();
 
-                if (block$enumoffsettype != Block.EnumOffsetType.NONE)
+                if (offsetType != Block.EnumOffsetType.NONE)
                 {
-                    axisalignedbb = BlockModelUtils.getOffsetBoundingBox(axisalignedbb, block$enumoffsettype, blockpos);
+                    axisalignedbb = BlockModelUtils.getOffsetBoundingBox(axisalignedbb, offsetType, blockpos);
                 }
 
-                drawSelectionBoundingBox(axisalignedbb.expand(0.0020000000949949026D, 0.0020000000949949026D, 0.0020000000949949026D).offset(-d0, -d1, -d2));
+                // --- отрисовка контура
+                drawSelectionBoundingBox(axisalignedbb.expand(0.00200000009D, 0.00200000009D, 0.00200000009D).offset(-d0, -d1, -d2));
+
+                // --- отрисовка заливки выбранной грани ---
+                EnumFacing side = movingObjectPositionIn.sideHit;
+                AxisAlignedBB box = axisalignedbb.expand(0.002D, 0.002D, 0.002D).offset(-d0, -d1, -d2);
+
+                GlStateManager.disableTexture2D();
+                GlStateManager.enableBlend();
+                GlStateManager.depthMask(false);
+
+                float r, g, b, a;
+                if (rainbowBlockOutline)
+                {
+                    int[] rgb = getRainbowColor(3000, 1.0f, 1.0f);
+                    r = rgb[0] / 255.0F;
+                    g = rgb[1] / 255.0F;
+                    b = rgb[2] / 255.0F;
+                    a = 0.3F;
+                }
+                else if (customBlockOutline)
+                {
+                    Color c = DevWindow.blockOutlineColor;
+                    r = c.getRed() / 255.0F;
+                    g = c.getGreen() / 255.0F;
+                    b = c.getBlue() / 255.0F;
+                    a = 0.3F;
+                }
+                else
+                {
+                    r = 0.0F;
+                    g = 0.0F;
+                    b = 0.0F;
+                    a = 0.3F;
+                    GlStateManager.color(r, g, b, a);
+                }
+
+                if (solidBlockOutline) {
+
+                    GlStateManager.color(r, g, b, a);
+                    GL11.glDisable(GL11.GL_CULL_FACE);
+                    GL11.glBegin(GL11.GL_QUADS);
+
+
+                    switch (side)
+                    {
+                        case UP:
+                            GL11.glVertex3d(box.minX, box.maxY, box.minZ);
+                            GL11.glVertex3d(box.maxX, box.maxY, box.minZ);
+                            GL11.glVertex3d(box.maxX, box.maxY, box.maxZ);
+                            GL11.glVertex3d(box.minX, box.maxY, box.maxZ);
+                            break;
+
+                        case DOWN:
+                            GL11.glVertex3d(box.minX, box.minY, box.minZ);
+                            GL11.glVertex3d(box.maxX, box.minY, box.minZ);
+                            GL11.glVertex3d(box.maxX, box.minY, box.maxZ);
+                            GL11.glVertex3d(box.minX, box.minY, box.maxZ);
+                            break;
+
+                        case NORTH:
+                            GL11.glVertex3d(box.minX, box.minY, box.minZ);
+                            GL11.glVertex3d(box.maxX, box.minY, box.minZ);
+                            GL11.glVertex3d(box.maxX, box.maxY, box.minZ);
+                            GL11.glVertex3d(box.minX, box.maxY, box.minZ);
+                            break;
+
+                        case SOUTH:
+                            GL11.glVertex3d(box.minX, box.minY, box.maxZ);
+                            GL11.glVertex3d(box.maxX, box.minY, box.maxZ);
+                            GL11.glVertex3d(box.maxX, box.maxY, box.maxZ);
+                            GL11.glVertex3d(box.minX, box.maxY, box.maxZ);
+                            break;
+
+                        case WEST:
+                            GL11.glVertex3d(box.minX, box.minY, box.minZ);
+                            GL11.glVertex3d(box.minX, box.minY, box.maxZ);
+                            GL11.glVertex3d(box.minX, box.maxY, box.maxZ);
+                            GL11.glVertex3d(box.minX, box.maxY, box.minZ);
+                            break;
+
+                        case EAST:
+                            GL11.glVertex3d(box.maxX, box.minY, box.minZ);
+                            GL11.glVertex3d(box.maxX, box.minY, box.maxZ);
+                            GL11.glVertex3d(box.maxX, box.maxY, box.maxZ);
+                            GL11.glVertex3d(box.maxX, box.maxY, box.minZ);
+                            break;
+                    }
+
+                    GL11.glEnd();
+                    GL11.glEnable(GL11.GL_CULL_FACE);
+                    GlStateManager.depthMask(true);
+                    GlStateManager.enableTexture2D();
+                    GlStateManager.disableBlend();
+                }
             }
 
             GlStateManager.depthMask(true);
@@ -2593,6 +2668,7 @@ public class RenderGlobal implements IWorldAccess, IResourceManagerReloadListene
             GlStateManager.disableBlend();
         }
     }
+
 
     public static void drawSelectionBoundingBox(AxisAlignedBB boundingBox)
     {

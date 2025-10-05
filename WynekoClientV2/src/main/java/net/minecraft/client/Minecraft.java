@@ -1453,6 +1453,12 @@ public class Minecraft implements IThreadListener, IPlayerUsage
         }
     }
 
+
+
+
+
+
+
     public void toggleFullscreen() {
         try {
             this.fullscreen = !this.fullscreen;

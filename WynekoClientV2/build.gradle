@@ -6,10 +6,13 @@ group = 'WynekoClient'
 version = '1.0'
 
 var buildFolder = 'build/libs'
-var nick = 'WynekoV2'
+var nick = 'WynekoV1'
 
 repositories {
     mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
     maven {
         url('https://repo.marcloud.net/')
         name('marCloud-Repository')
@@ -55,6 +58,9 @@ dependencies {
 
     //===============================================//
 
+    //Forge
+    //implementation name: 'Forge'
+
     // SOCKS5 & HTTP Proxy Support
     implementation("io.netty:netty-all:4.0.23.Final")
     implementation("io.netty:netty-handler-proxy:4.1.127.Final")
@@ -75,7 +81,7 @@ dependencies {
 }
 tasks.register('runClient', JavaExec) {
     group = "MCP"
-    description = "Run Start class with Zulu 17 JDK"
+    description = "Run Start class with Zulu 8 JDK"
     
     classpath = sourceSets.main.runtimeClasspath
     mainClass = 'Start'

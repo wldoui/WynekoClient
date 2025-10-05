@@ -688,15 +688,9 @@ public class EntityPlayerSP extends AbstractClientPlayer
         }
 
 
-        if (this.isSprinting() && (this.movementInput.moveForward < f || !flag3))
+        if (this.isSprinting() && (this.movementInput.moveForward < f || this.isCollidedHorizontally || !flag3 ))
         {
-            if (this.isCollidedHorizontally ){
-                if (plrStopCollidedBlock){
-                    this.setSprinting(false);
-                }
-            }else {
-                this.setSprinting(true);
-            }
+          this.setSprinting(false);
         }
 
         if (this.capabilities.allowFlying)

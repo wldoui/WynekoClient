@@ -12,6 +12,6 @@ public class DataSave {
     }
 
     public static File getBindsFile() {
-        return new File(getConfigDir(), "binds.txt");
+        return new File(getConfigDir(), "config.txt");
     }
 }

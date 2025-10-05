@@ -30,8 +30,8 @@ public final class DevWindow {
 
     public static boolean noHurtCam = false;
     public static boolean fullBright = false;
-    public static boolean customBlockOutline = false;
-    public static boolean rainbowBlockOutline = false;
+
+
     public static boolean antiBlind = false;
     public static boolean wynekoNameTags = false;
     public static Color blockOutlineColor = Color.BLACK;
@@ -40,6 +40,13 @@ public final class DevWindow {
 
     public static boolean fastPlace = false;
     public static boolean fastPlaceRandom = false;
+    public static boolean fastPlaceNcp = false;
+
+    // == == == == == == == Outline == == == == == == == ==
+    public static boolean customBlockOutline = false;
+    public static boolean colorBlockOutline = false;
+    public static boolean rainbowBlockOutline = false;
+    public static boolean solidBlockOutline = false;
 
     // == == == == == == == Other STR == == == == == == == ==
 
@@ -154,6 +161,11 @@ public final class DevWindow {
         return separator;
     }
 
+    private static JScrollPane CreateScroll(JPanel localPanel) {
+        JScrollPane scrollPane = new JScrollPane(localPanel);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        return scrollPane;
+    }
 
     private static JPanel CreateDetails(String title, Map<String, Boolean> stateMap, JComponent... components) {
         JPanel container = new JPanel();
@@ -211,6 +223,7 @@ public final class DevWindow {
         JPanel leftPanel = new JPanel();
 
         //Мусорка
+        CreateScroll(localPanel);
         Map<String, Boolean> stateMap = new HashMap<>();
         JSeparator separator = new JSeparator(SwingConstants.HORIZONTAL);
         separator.setMaximumSize(new Dimension(Integer.MAX_VALUE, 2));
@@ -223,6 +236,8 @@ public final class DevWindow {
 
         // === === === === === Block Outline === === === === === ===
         JCheckBox cbCustomBOutline = new JCheckBox("Custom Block Outline");
+        JCheckBox cbColorBOutline = new JCheckBox("Color Block Outline");
+        JCheckBox cbBSolidOutline = new JCheckBox("Solid Block Outline");
         JCheckBox cbRainbowBOutline = new JCheckBox("Rainbow Block Outline");
         // === === === === === === === === === === ===
 
@@ -272,6 +287,12 @@ public final class DevWindow {
             Minecraft mc = Minecraft.getMinecraft();
             mc.gameSettings.gammaSetting = fullBright ? 1000.0F : 1.0F;
         });
+
+        cbBSolidOutline.setSelected(solidBlockOutline);
+        cbBSolidOutline.addItemListener(e -> solidBlockOutline = cbBSolidOutline.isSelected());
+
+        cbColorBOutline.setSelected(colorBlockOutline);
+        cbColorBOutline.addItemListener(e -> colorBlockOutline = cbColorBOutline.isSelected());
 
         cbCustomBOutline.setSelected(customBlockOutline);
         cbCustomBOutline.addItemListener(e -> customBlockOutline = cbCustomBOutline.isSelected());
@@ -382,30 +403,6 @@ public final class DevWindow {
 
 
 
-        //Block Outline
-        cbRainbowBOutline.addItemListener(e -> {
-            if (cbRainbowBOutline.isSelected()) {
-                rainbowBlockOutline = true;
-                customBlockOutline = false;
-
-                cbCustomBOutline.setSelected(false); // выключаем кастом
-            } else {
-                rainbowBlockOutline = false;
-            }
-        });
-
-        cbCustomBOutline.addItemListener(e -> {
-            if (cbCustomBOutline.isSelected()) {
-                customBlockOutline = true;
-                rainbowBlockOutline = false;
-
-                cbRainbowBOutline.setSelected(false); // выключаем радужный
-            } else {
-                customBlockOutline = false;
-            }
-        });
-
-
         //Tracers
         cbTracerRainbow.addItemListener(e -> {
             if (cbTracerRainbow.isSelected()) {
@@ -444,10 +441,7 @@ public final class DevWindow {
         leftPanel.add(CreateSeparator());
 
         leftPanel.add(cbCustomBOutline);
-        leftPanel.add(CreateSeparator());
-
-        leftPanel.add(cbRainbowBOutline);
-        leftPanel.add(CreateSeparator());
+        leftPanel.add(CreateDetails("Expand", stateMap, cbBSolidOutline, cbRainbowBOutline, cbColorBOutline));
 
         leftPanel.add(cbKeystroks);
         leftPanel.add(CreateSeparator());
@@ -515,13 +509,90 @@ public final class DevWindow {
 
         rightPanel.setVisible(false);
 
+        // === Block Outline ===
+        // Init
+        cbCustomBOutline.setSelected(false);
+        cbColorBOutline.setSelected(false);
+        cbRainbowBOutline.setSelected(false);
+        cbBSolidOutline.setSelected(false);
+
+        customBlockOutline = false;
+        colorBlockOutline = false;
+        rainbowBlockOutline = false;
+        solidBlockOutline = false;
+
+        cbColorBOutline.setEnabled(false);
+        cbRainbowBOutline.setEnabled(false);
+        cbBSolidOutline.setEnabled(false);
+
+
+
+        // Главный кастомный переключатель
         cbCustomBOutline.addActionListener(e -> {
-            if (customBlockOutline) {
-                rightPanel.setVisible(cbCustomBOutline.isSelected());
-                localPanel.revalidate();
-                localPanel.repaint();
+            boolean enabled = cbCustomBOutline.isSelected();
+
+            cbColorBOutline.setEnabled(enabled);
+            cbRainbowBOutline.setEnabled(enabled);
+            cbBSolidOutline.setEnabled(enabled);
+
+            if (!enabled) {
+                cbColorBOutline.setSelected(false);
+                cbRainbowBOutline.setSelected(false);
+                cbBSolidOutline.setSelected(false);
+
+                colorBlockOutline = false;
+                rainbowBlockOutline = false;
+                solidBlockOutline = false;
+                customBlockOutline = false;
+                rightPanel.setVisible(false);
+            } else {
+                customBlockOutline = true;
+                rightPanel.setVisible(false);
             }
+
+            localPanel.revalidate();
+            localPanel.repaint();
         });
+
+        cbRainbowBOutline.addActionListener(e -> {
+            if (!cbCustomBOutline.isSelected()) return;
+
+            rainbowBlockOutline = cbRainbowBOutline.isSelected();
+
+            if (rainbowBlockOutline) {
+                colorBlockOutline = false;
+                cbColorBOutline.setSelected(false);
+            }
+
+            rightPanel.setVisible(false);
+            localPanel.revalidate();
+            localPanel.repaint();
+        });
+
+        // Цветной контур
+        cbColorBOutline.addActionListener(e -> {
+            if (!cbCustomBOutline.isSelected()) return;
+
+            if (cbRainbowBOutline.isSelected()) {
+                cbColorBOutline.setSelected(false);
+                return;
+            }
+
+            colorBlockOutline = cbColorBOutline.isSelected();
+            rightPanel.setVisible(colorBlockOutline);
+            localPanel.revalidate();
+            localPanel.repaint();
+        });
+
+        // Сплошная заливка
+        cbBSolidOutline.addActionListener(e -> {
+            if (!cbCustomBOutline.isSelected()) return;
+
+            solidBlockOutline = cbBSolidOutline.isSelected();
+            localPanel.revalidate();
+            localPanel.repaint();
+        });
+
 
         localPanel.add(rightPanel, BorderLayout.CENTER);
 
@@ -532,7 +603,7 @@ public final class DevWindow {
     public static JPanel WynekoWorldTab() {
         JPanel localPanel = new JPanel();
         localPanel.setLayout(new BoxLayout(localPanel, BoxLayout.Y_AXIS));
-
+        CreateScroll(localPanel);
         JCheckBox cbFastPlace = new JCheckBox("Fast Place");
         cbFastPlace.setSelected(fastPlace);
         cbFastPlace.addItemListener(e -> fastPlace = cbFastPlace.isSelected());
@@ -548,9 +619,14 @@ public final class DevWindow {
         speedSlider.setBorder(BorderFactory.createTitledBorder("FastPlace Speed (0 = мгновенно)"));
         speedSlider.addChangeListener(e -> fastPlaceSpeed = speedSlider.getValue());
 
+        JCheckBox cbFastPlaceNcp = new JCheckBox("Fast Interact Ncp");
+        cbFastPlaceNcp.setSelected(fastPlaceNcp);
+        cbFastPlaceNcp.addItemListener(e -> fastPlaceNcp = cbFastPlaceNcp.isSelected());
+
         localPanel.add(cbFastPlace);
         localPanel.add(cbRandomFastPlace);
         localPanel.add(speedSlider);
+        localPanel.add(cbFastPlaceNcp);
 
         return localPanel;
     }
@@ -558,7 +634,7 @@ public final class DevWindow {
     private static JPanel WynekoPlayerTab() {
         JPanel localPanel = new JPanel();
         localPanel.setLayout(new BoxLayout(localPanel, BoxLayout.Y_AXIS));
-
+        CreateScroll(localPanel);
 
         JCheckBox cbPlayerStopWhenBlock = new JCheckBox("Player Stop When Collider With Block");
 
@@ -576,6 +652,7 @@ public final class DevWindow {
     private static JPanel WynekoConnectionTab() {
         JPanel localPanel = new JPanel(new GridBagLayout());
         localPanel.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
+        CreateScroll(localPanel);
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(5,5,5,5);
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -708,6 +785,7 @@ public final class DevWindow {
     private static JPanel WynekoOtherPanel(){
         JPanel localPanel = new JPanel();
         localPanel.setLayout(new BoxLayout(localPanel, BoxLayout.Y_AXIS));
+        CreateScroll(localPanel);
 
 
         JLabel label = new JLabel("Other settings coming soon...");
