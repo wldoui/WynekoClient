@@ -65,7 +65,7 @@ public final class DevWindow {
 
     public static boolean tracers = false;
     public static float lineWidth = 3.0f;
-    public static boolean distanceBasedColor = true;
+    public static boolean distanceBasedColor = false;
     public static boolean rainbowTracers = false;
 
     // == == == == == == == Tracers END == == == == == == == ==
@@ -625,8 +625,8 @@ public final class DevWindow {
 
         localPanel.add(cbFastPlace);
         localPanel.add(cbRandomFastPlace);
-        localPanel.add(speedSlider);
         localPanel.add(cbFastPlaceNcp);
+        localPanel.add(speedSlider);
 
         return localPanel;
     }

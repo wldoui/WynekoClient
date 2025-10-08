@@ -81,6 +81,7 @@ public class Tracers {
             }
 
             drawLine3D(playerX, playerY, playerZ, targetX, targetY, targetZ, r, g, b);
+            GlStateManager.color(r, g, b, 1.0f);
         }
 
         GL11.glLineWidth(1.0F);
