@@ -1,0 +1,165 @@
+[03:43:58] [Client thread/INFO] [net.optifine.reflect.Reflector]: [OptiFine] *** Reflector Forge ***
+[03:43:58] [Client thread/INFO] [net.optifine.reflect.Reflector]: [OptiFine] *** Reflector Vanilla ***
+[03:43:58] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Class not present: net.minecraft.launchwrapper.Launch
+[03:43:59] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] OpenGL Version: 4.6.0 - Build 30.0.101.1273
+[03:43:59] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Vendor:  Intel
+[03:43:59] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Renderer: Intel(R) UHD Graphics 630
+[03:43:59] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Capabilities:  2.0  2.1  3.0  3.2  4.0 
+[03:43:59] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] GL_MAX_DRAW_BUFFERS: 8
+[03:43:59] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] GL_MAX_COLOR_ATTACHMENTS_EXT: 8
+[03:43:59] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] GL_MAX_TEXTURE_IMAGE_UNITS: 32
+[03:43:59] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Load shaders configuration.
+[03:43:59] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Save shaders configuration.
+[03:43:59] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] No shaderpack loaded.
+[03:43:59] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Class not present: optifine.OptiFineClassTransformer
+[03:43:59] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.client.renderer.vertex.VertexFormatElement$EnumUsage.preDraw
+[03:43:59] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.client.renderer.vertex.VertexFormatElement$EnumUsage.postDraw
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Class not present: mods.betterfoliage.client.BetterFoliageClient
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.biome.BiomeGenBase.getWaterColorMultiplier
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.addDestroyEffects
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.addHitEffects
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.canCreatureSpawn
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.canRenderInLayer
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.doesSideBlockRendering
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getBedDirection
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getExtendedState
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getLightOpacity
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getLightValue
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.hasTileEntity
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isAir
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isBed
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isBedFoot
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isSideSolid
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.ChunkCache.isSideSolid
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.entity.Entity.canRiderInteract
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Field not present: net.minecraft.entity.Entity.captureDrops
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Field not present: net.minecraft.entity.Entity.capturedDrops
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.entity.Entity.shouldRenderInPass
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.entity.Entity.shouldRiderSit
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Field not present: net.minecraft.item.Item.delegate
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.getDurabilityForDisplay
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.getModel
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.onEntitySwing
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.shouldCauseReequipAnimation
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.showDurabilityBar
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.potion.PotionEffect.isCurativeItem
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.canRenderBreaking
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.getRenderBoundingBox
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.hasFastRenderer
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.shouldRenderInPass
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.World.countEntities
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.World.getPerWorldStorage
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getCloudRenderer
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getSkyRenderer
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getWeatherRenderer
+[03:44:03] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getSaveFolder
+[14:24:39] [Client thread/INFO] [net.optifine.reflect.Reflector]: [OptiFine] *** Reflector Forge ***
+[14:24:39] [Client thread/INFO] [net.optifine.reflect.Reflector]: [OptiFine] *** Reflector Vanilla ***
+[14:24:39] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Class not present: net.minecraft.launchwrapper.Launch
+[14:24:39] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] OpenGL Version: 4.6.0 - Build 30.0.101.1273
+[14:24:39] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Vendor:  Intel
+[14:24:39] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Renderer: Intel(R) UHD Graphics 630
+[14:24:39] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Capabilities:  2.0  2.1  3.0  3.2  4.0 
+[14:24:39] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] GL_MAX_DRAW_BUFFERS: 8
+[14:24:39] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] GL_MAX_COLOR_ATTACHMENTS_EXT: 8
+[14:24:39] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] GL_MAX_TEXTURE_IMAGE_UNITS: 32
+[14:24:39] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Load shaders configuration.
+[14:24:39] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Save shaders configuration.
+[14:24:39] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] No shaderpack loaded.
+[14:24:39] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Class not present: optifine.OptiFineClassTransformer
+[14:24:40] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.client.renderer.vertex.VertexFormatElement$EnumUsage.preDraw
+[14:24:40] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.client.renderer.vertex.VertexFormatElement$EnumUsage.postDraw
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Class not present: mods.betterfoliage.client.BetterFoliageClient
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.biome.BiomeGenBase.getWaterColorMultiplier
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.addDestroyEffects
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.addHitEffects
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.canCreatureSpawn
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.canRenderInLayer
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.doesSideBlockRendering
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getBedDirection
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getExtendedState
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getLightOpacity
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getLightValue
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.hasTileEntity
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isAir
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isBed
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isBedFoot
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isSideSolid
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.ChunkCache.isSideSolid
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.entity.Entity.canRiderInteract
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Field not present: net.minecraft.entity.Entity.captureDrops
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Field not present: net.minecraft.entity.Entity.capturedDrops
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.entity.Entity.shouldRenderInPass
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.entity.Entity.shouldRiderSit
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Field not present: net.minecraft.item.Item.delegate
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.getDurabilityForDisplay
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.getModel
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.onEntitySwing
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.shouldCauseReequipAnimation
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.showDurabilityBar
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.potion.PotionEffect.isCurativeItem
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.canRenderBreaking
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.getRenderBoundingBox
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.hasFastRenderer
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.shouldRenderInPass
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.World.countEntities
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.World.getPerWorldStorage
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getCloudRenderer
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getSkyRenderer
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getWeatherRenderer
+[14:24:46] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getSaveFolder
+[12:48:28] [Client thread/INFO] [net.optifine.reflect.Reflector]: [OptiFine] *** Reflector Forge ***
+[12:48:28] [Client thread/INFO] [net.optifine.reflect.Reflector]: [OptiFine] *** Reflector Vanilla ***
+[12:48:29] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Class not present: net.minecraft.launchwrapper.Launch
+[12:48:29] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] OpenGL Version: 4.6.0 - Build 30.0.101.1273
+[12:48:29] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Vendor:  Intel
+[12:48:29] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Renderer: Intel(R) UHD Graphics 630
+[12:48:29] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Capabilities:  2.0  2.1  3.0  3.2  4.0 
+[12:48:29] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] GL_MAX_DRAW_BUFFERS: 8
+[12:48:29] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] GL_MAX_COLOR_ATTACHMENTS_EXT: 8
+[12:48:29] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] GL_MAX_TEXTURE_IMAGE_UNITS: 32
+[12:48:29] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Load shaders configuration.
+[12:48:29] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Save shaders configuration.
+[12:48:29] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] No shaderpack loaded.
+[12:48:29] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Class not present: optifine.OptiFineClassTransformer
+[12:48:30] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.client.renderer.vertex.VertexFormatElement$EnumUsage.preDraw
+[12:48:30] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.client.renderer.vertex.VertexFormatElement$EnumUsage.postDraw
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Class not present: mods.betterfoliage.client.BetterFoliageClient
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.biome.BiomeGenBase.getWaterColorMultiplier
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.addDestroyEffects
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.addHitEffects
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.canCreatureSpawn
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.canRenderInLayer
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.doesSideBlockRendering
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getBedDirection
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getExtendedState
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getLightOpacity
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getLightValue
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.hasTileEntity
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isAir
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isBed
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isBedFoot
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isSideSolid
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.ChunkCache.isSideSolid
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.entity.Entity.canRiderInteract
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Field not present: net.minecraft.entity.Entity.captureDrops
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Field not present: net.minecraft.entity.Entity.capturedDrops
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.entity.Entity.shouldRenderInPass
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.entity.Entity.shouldRiderSit
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Field not present: net.minecraft.item.Item.delegate
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.getDurabilityForDisplay
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.getModel
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.onEntitySwing
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.shouldCauseReequipAnimation
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.showDurabilityBar
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.potion.PotionEffect.isCurativeItem
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.canRenderBreaking
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.getRenderBoundingBox
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.hasFastRenderer
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.shouldRenderInPass
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.World.countEntities
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.World.getPerWorldStorage
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getCloudRenderer
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getSkyRenderer
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getWeatherRenderer
+[12:48:37] [Client thread/INFO] [net.optifine.Log]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getSaveFolder

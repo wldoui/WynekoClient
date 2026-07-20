@@ -4,6 +4,7 @@ import com.formdev.flatlaf.intellijthemes.FlatOneDarkIJTheme;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.IResourceManager;
 import net.minecraft.util.ResourceLocation;
+import net.wynekoclient.util.CrosshairPixelEditor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.JSONObject;
@@ -37,6 +38,8 @@ public final class DevWindow {
     public static Color blockOutlineColor = Color.BLACK;
 
     public static boolean customCrosshair = false;
+    public static boolean rainbowCrosshair = false;
+    public static CrosshairPixelEditor editor = new CrosshairPixelEditor();
 
     public static boolean fastPlace = false;
     public static boolean fastPlaceRandom = false;
@@ -137,8 +140,8 @@ public final class DevWindow {
         });
     }
 
-    private static void CreateTab(String TabName, JPanel Content) {
-        Tabs.addTab(TabName, Content);
+    private static void CreateTab(String name, Component component) {
+        Tabs.addTab(name, component);
     }
 
     private static void CreateWindowContent() {
@@ -157,30 +160,40 @@ public final class DevWindow {
 
     private static JSeparator CreateSeparator(){
         JSeparator separator = new JSeparator(SwingConstants.HORIZONTAL);
-        separator.setMaximumSize(new Dimension(Integer.MAX_VALUE, 1));
+        separator.setMaximumSize(new Dimension(Integer.MAX_VALUE, 5));
         return separator;
     }
 
     private static JScrollPane CreateScroll(JPanel localPanel) {
         JScrollPane scrollPane = new JScrollPane(localPanel);
-        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         return scrollPane;
     }
 
-    private static JPanel CreateDetails(String title, Map<String, Boolean> stateMap, JComponent... components) {
+    private static JPanel CreateDetails(String title, boolean aligment, Map<String, Boolean> stateMap, JComponent... components) {
         JPanel container = new JPanel();
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
 
-        JToggleButton toggle = new JToggleButton("▶ " + title);
+        JToggleButton toggle = new JToggleButton(aligment ? "▶ " + title : title);
+        toggle.addActionListener(e -> {
+            boolean expanded = toggle.isSelected();
+            if (aligment) {
+                toggle.setText((expanded ? "▼ " : "▶ ") + title);
+            } else {
+                toggle.setText(title);
+            }
+        });
+
         toggle.setFocusPainted(false);
         toggle.setBorderPainted(false);
         toggle.setContentAreaFilled(false);
-        toggle.setAlignmentX(Component.LEFT_ALIGNMENT);
+        toggle.setAlignmentX(0f);
 
         JPanel content = new JPanel();
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
 
-        content.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 0));
+
+        content.setBorder(aligment ? BorderFactory.createEmptyBorder(0, 20, 0, 0) : null);
 
         for (JComponent comp : components) {
             comp.setAlignmentX(Component.LEFT_ALIGNMENT);
@@ -198,18 +211,19 @@ public final class DevWindow {
 
         toggle.addActionListener(e -> {
             boolean expanded = toggle.isSelected();
-            toggle.setText((expanded ? "▼ " : "▶ ") + title);
+            if (aligment) {
+                toggle.setText((expanded ? "▼ " : "▶ ") + title);
+            } else {
+                toggle.setText(title);
+            }
             content.setVisible(expanded);
             container.revalidate();
             container.repaint();
         });
 
-        JSeparator separator = new JSeparator(SwingConstants.HORIZONTAL);
-        separator.setMaximumSize(new Dimension(Integer.MAX_VALUE, 1));
-
         container.add(toggle);
         container.add(content);
-        container.add(separator);
+        container.add(CreateSeparator());
 
         return container;
     }
@@ -246,6 +260,7 @@ public final class DevWindow {
         JCheckBox cbWynekoNameTags = new JCheckBox("Wyneko NameTags");
 
         JCheckBox cbCustomCrosshair = new JCheckBox("Custom Crosshair");
+        JCheckBox cbRainbowCrosshair = new JCheckBox("Rainbow Crosshair");
 
         JCheckBox cbAntiBlind = new JCheckBox("AntiBlind");
         JCheckBox cbTracers = new JCheckBox("Tracers");
@@ -323,6 +338,9 @@ public final class DevWindow {
 
         cbCustomCrosshair.setSelected(customCrosshair);
         cbCustomCrosshair.addItemListener(e -> customCrosshair = cbCustomCrosshair.isSelected());
+
+        cbRainbowCrosshair.setSelected(rainbowCrosshair);
+        cbRainbowCrosshair.addItemListener(e -> rainbowCrosshair = cbCustomCrosshair.isSelected());
 
 
         //ESP)))
@@ -441,25 +459,22 @@ public final class DevWindow {
         leftPanel.add(CreateSeparator());
 
         leftPanel.add(cbCustomBOutline);
-        leftPanel.add(CreateDetails("Expand", stateMap, cbBSolidOutline, cbRainbowBOutline, cbColorBOutline));
+        leftPanel.add(CreateDetails("Expand", true, stateMap, cbBSolidOutline, cbRainbowBOutline, cbColorBOutline));
 
         leftPanel.add(cbKeystroks);
         leftPanel.add(CreateSeparator());
 
         leftPanel.add(cbEntityESP);
-        leftPanel.add(CreateDetails("Expand", stateMap, cbESPShader, cbESPBox, cbESPRainbow));
+        leftPanel.add(CreateDetails("Expand", true, stateMap, cbESPShader, cbESPBox, cbESPRainbow));
 
         leftPanel.add(cbWynekoNameTags);
-        leftPanel.add(CreateDetails("Expand", stateMap, cbWNTItemStack, cbWNTNickname));
-
-        leftPanel.add(cbCustomCrosshair);
-        leftPanel.add(CreateSeparator());
+        leftPanel.add(CreateDetails("Expand", true, stateMap,  cbWNTItemStack, cbWNTNickname));
 
         leftPanel.add(cbAntiBlind);
-        leftPanel.add(CreateSeparator());
+        leftPanel.add(CreateDetails("Crosshair", false, stateMap,  cbCustomCrosshair, cbRainbowCrosshair, editor));
 
         leftPanel.add(cbTracers);
-        leftPanel.add(CreateDetails("Expand", stateMap, cbTracerNearPlayer, cbTracerRainbow, slTracerLineWidthLabel, slTracerLineWidth));
+        leftPanel.add(CreateDetails("Expand", true, stateMap, cbTracerNearPlayer, cbTracerRainbow, slTracerLineWidthLabel, slTracerLineWidth));
 
         localPanel.add(leftPanel, BorderLayout.WEST);
 
@@ -596,7 +611,13 @@ public final class DevWindow {
 
         localPanel.add(rightPanel, BorderLayout.CENTER);
 
-        return localPanel;
+        JScrollPane scroll = CreateScroll(localPanel);
+
+
+        JPanel wrapper = new JPanel(new BorderLayout());
+        wrapper.add(scroll, BorderLayout.CENTER);
+
+        return wrapper;
     }
 
 
@@ -628,7 +649,13 @@ public final class DevWindow {
         localPanel.add(cbFastPlaceNcp);
         localPanel.add(speedSlider);
 
-        return localPanel;
+        JScrollPane scroll = CreateScroll(localPanel);
+
+
+        JPanel wrapper = new JPanel(new BorderLayout());
+        wrapper.add(scroll, BorderLayout.CENTER);
+
+        return wrapper;
     }
 
     private static JPanel WynekoPlayerTab() {
@@ -646,7 +673,13 @@ public final class DevWindow {
 
         localPanel.add(cbPlayerStopWhenBlock);
 
-        return localPanel;
+        JScrollPane scroll = CreateScroll(localPanel);
+
+
+        JPanel wrapper = new JPanel(new BorderLayout());
+        wrapper.add(scroll, BorderLayout.CENTER);
+
+        return wrapper;
     }
 
     private static JPanel WynekoConnectionTab() {
@@ -777,7 +810,13 @@ public final class DevWindow {
         });
 
 
-        return localPanel;
+        JScrollPane scroll = CreateScroll(localPanel);
+
+
+        JPanel wrapper = new JPanel(new BorderLayout());
+        wrapper.add(scroll, BorderLayout.CENTER);
+
+        return wrapper;
     }
 
 
@@ -816,6 +855,12 @@ public final class DevWindow {
         localPanel.add(cbCustomMainMenu);
         localPanel.add(bNextBG);
 
-        return localPanel;
+        JScrollPane scroll = CreateScroll(localPanel);
+
+
+        JPanel wrapper = new JPanel(new BorderLayout());
+        wrapper.add(scroll, BorderLayout.CENTER);
+
+        return wrapper;
     }
 }

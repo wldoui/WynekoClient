@@ -363,7 +363,7 @@ public class RenderManager
                 if(playerEspBox){
                     PlayerESP.RenderPlayerBoxEsp(entity, x, y, z, entityYaw, partialTicks);
                 } else if (playerEspShader) {
-                    mc.entityRenderer.loadShader(new ResourceLocation("shaders/post/espplayer.json"));
+                    System.out.println("SORRY SIR))) SHADER OVERWRITING ITSELF)))) AND YEAH ITS SUCKS, WAIT FOR NEW CHEAT MOD BRO)))))))) bye");
                 }
 
                 if (tracers){

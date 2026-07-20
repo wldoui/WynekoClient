@@ -1,2 +1,0 @@
-26:/leave
-27:/rejoin

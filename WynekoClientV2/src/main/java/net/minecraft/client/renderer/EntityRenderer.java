@@ -2314,6 +2314,8 @@ public class EntityRenderer implements IResourceManagerReloadListener
         Shaders.setClearColor(this.fogColorRed, this.fogColorGreen, this.fogColorBlue, 0.0F);
     }
 
+
+
     private void setupFog(int startCoords, float partialTicks)
     {
         this.fogStandard = false;

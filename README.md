@@ -1,0 +1,14 @@
+1.8.9
+run
+WynekoClientV2/assets
+WynekoClientV2/saves
+WynekoClientV2/shaderpacks
+WynekoClientV2/resourcepacks
+WynekoClientV2/assets
+WynekoClientV2/crash-reports
+WynekoClientV2/options.txt
+WynekoClientV2/optionsof.txt
+WynekoClientV2/optionsof.txt
+WynekoClientV2/servers.dat
+/WynekoClientV2/screenshots
+WynekoClientV2/usercache.json

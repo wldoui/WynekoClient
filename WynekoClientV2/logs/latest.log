@@ -1,0 +1,81 @@
+[12:48:26] [Client thread/ERROR]: Can't find the resource index file: assets\indexes\1.8.json
+[12:48:26] [Client thread/INFO]: Setting user: WynekoV1
+[12:48:26] [Client thread/INFO]: (Session ID is token:0:WynekoV1)
+[12:48:29] [Client thread/INFO]: LWJGL Version: 2.9.4
+[12:48:29] [Client thread/INFO]: [OptiFine] 
+[12:48:29] [Client thread/INFO]: [OptiFine] OptiFine_1.8.9_HD_U_M6_pre2
+[12:48:29] [Client thread/INFO]: [OptiFine] Build: null
+[12:48:29] [Client thread/INFO]: [OptiFine] OS: Windows 10 (amd64) version 10.0
+[12:48:29] [Client thread/INFO]: [OptiFine] Java: 1.8.0_462, Azul Systems, Inc.
+[12:48:29] [Client thread/INFO]: [OptiFine] VM: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.
+[12:48:29] [Client thread/INFO]: [OptiFine] LWJGL: 2.9.4
+[12:48:29] [Client thread/INFO]: [OptiFine] OpenGL: Intel(R) UHD Graphics 630, version 4.6.0 - Build 30.0.101.1273, Intel
+[12:48:29] [Client thread/INFO]: [OptiFine] OpenGL Version: 4.6.0
+[12:48:29] [Client thread/INFO]: [OptiFine] OpenGL Fancy fog: Not available (GL_NV_fog_distance)
+[12:48:29] [Client thread/INFO]: [OptiFine] Maximum texture size: 16384x16384
+[12:48:29] [VersionCheck/INFO]: [OptiFine] Checking for new version
+[12:48:29] [Client thread/INFO]: [OptiFine] [Shaders] Delayed loading of block mappings after resources are loaded
+[12:48:29] [Client thread/INFO]: [OptiFine] [Shaders] Delayed loading of item mappings after resources are loaded
+[12:48:29] [Client thread/INFO]: [OptiFine] [Shaders] Delayed loading of entity mappings after resources are loaded
+[12:48:29] [VersionCheck/INFO]: [OptiFine] Version found: M5
+[12:48:29] [Client thread/INFO]: Reloading ResourceManager: Default
+[12:48:29] [Client thread/INFO]: [OptiFine] *** Reloading textures ***
+[12:48:30] [Client thread/INFO]: [OptiFine] Resource packs: Default
+[12:48:30] [Client thread/ERROR]: Couldn't initialize twitch stream
+[12:48:30] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[12:48:31] [Thread-8/INFO]: Initializing LWJGL OpenAL
+[12:48:31] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[12:48:31] [Thread-8/INFO]: OpenAL initialized.
+[12:48:31] [Sound Library Loader/INFO]: Sound engine started
+[12:48:33] [Client thread/INFO]: [OptiFine] Multitexture: false
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/0_glass_white/glass_pane_white.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/0_glass_white/glass_white.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/10_glass_purple/glass_pane_purple.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/10_glass_purple/glass_purple.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/11_glass_blue/glass_blue.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/11_glass_blue/glass_pane_blue.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/12_glass_brown/glass_brown.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/12_glass_brown/glass_pane_brown.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/13_glass_green/glass_green.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/13_glass_green/glass_pane_green.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/14_glass_red/glass_pane_red.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/14_glass_red/glass_red.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/15_glass_black/glass_black.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/15_glass_black/glass_pane_black.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/1_glass_orange/glass_orange.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/1_glass_orange/glass_pane_orange.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/2_glass_magenta/glass_magenta.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/2_glass_magenta/glass_pane_magenta.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/3_glass_light_blue/glass_light_blue.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/3_glass_light_blue/glass_pane_light_blue.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/4_glass_yellow/glass_pane_yellow.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/4_glass_yellow/glass_yellow.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/5_glass_lime/glass_lime.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/5_glass_lime/glass_pane_lime.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/6_glass_pink/glass_pane_pink.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/6_glass_pink/glass_pink.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/7_glass_gray/glass_gray.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/7_glass_gray/glass_pane_gray.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/8_glass_silver/glass_pane_silver.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/8_glass_silver/glass_silver.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/9_glass_cyan/glass_cyan.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/9_glass_cyan/glass_pane_cyan.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/bookshelf.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/glass.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/glasspane.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/sandstone.properties
+[12:48:33] [Client thread/INFO]: [OptiFine] Multipass connected textures: false
+[12:48:33] [Client thread/INFO]: [OptiFine] BetterGrass: Parsing default configuration optifine/bettergrass.properties
+[12:48:35] [Client thread/INFO]: Created: 1024x512 textures-atlas
+[12:48:35] [Client thread/INFO]: [OptiFine] Animated sprites: 11
+[12:48:37] [Client thread/INFO]: [OptiFine] *** Reloading custom textures ***
+[12:48:37] [Client thread/INFO]: [OptiFine] Enable face culling: acacia_leaves, birch_leaves, dark_oak_leaves, jungle_leaves, oak_leaves, spruce_leaves
+[12:48:43] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:music.menu
+[12:48:59] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:music.menu
+[12:49:13] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:music.menu
+[12:49:20] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:music.menu
+[12:49:39] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:music.menu
+[12:49:57] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:gui.button.press
+[12:49:57] [Client thread/INFO]: Stopping!
+[12:49:57] [Client thread/INFO]: SoundSystem shutting down...
+[12:49:57] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

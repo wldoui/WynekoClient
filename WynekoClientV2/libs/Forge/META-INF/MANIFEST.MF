@@ -1,0 +1,4108 @@
+Manifest-Version: 1.0
+TweakClass: net.minecraftforge.fml.common.launcher.FMLTweaker
+Class-Path: libraries/net/minecraft/launchwrapper/1.12/launchwrapper-1
+ .12.jar libraries/org/ow2/asm/asm-all/5.0.3/asm-all-5.0.3.jar librari
+ es/jline/jline/2.13/jline-2.13.jar libraries/com/typesafe/akka/akka-a
+ ctor_2.11/2.3.3/akka-actor_2.11-2.3.3.jar libraries/com/typesafe/conf
+ ig/1.2.1/config-1.2.1.jar libraries/org/scala-lang/scala-actors-migra
+ tion_2.11/1.1.0/scala-actors-migration_2.11-1.1.0.jar libraries/org/s
+ cala-lang/scala-compiler/2.11.1/scala-compiler-2.11.1.jar libraries/o
+ rg/scala-lang/plugins/scala-continuations-library_2.11/1.0.2/scala-co
+ ntinuations-library_2.11-1.0.2.jar libraries/org/scala-lang/plugins/s
+ cala-continuations-plugin_2.11.1/1.0.2/scala-continuations-plugin_2.1
+ 1.1-1.0.2.jar libraries/org/scala-lang/scala-library/2.11.1/scala-lib
+ rary-2.11.1.jar libraries/org/scala-lang/scala-parser-combinators_2.1
+ 1/1.0.1/scala-parser-combinators_2.11-1.0.1.jar libraries/org/scala-l
+ ang/scala-reflect/2.11.1/scala-reflect-2.11.1.jar libraries/org/scala
+ -lang/scala-swing_2.11/1.0.1/scala-swing_2.11-1.0.1.jar libraries/org
+ /scala-lang/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar libraries/l
+ zma/lzma/0.0.1/lzma-0.0.1.jar libraries/net/sf/jopt-simple/jopt-simpl
+ e/4.6/jopt-simple-4.6.jar libraries/java3d/vecmath/1.5.2/vecmath-1.5.
+ 2.jar libraries/net/sf/trove4j/trove4j/3.0.3/trove4j-3.0.3.jar minecr
+ aft_server.1.8.9.jar
+Main-Class: net.minecraftforge.fml.relauncher.ServerLaunchWrapper
+
+Name: net/minecraftforge/event/terraingen/OreGenEvent$GenerateMinable.
+ class
+SHA-256-Digest: MdWIiX4OOfE2aefloA+1GaXaZKW52cSH/VI5Y1e2CuE=
+
+Name: net/minecraftforge/fml/client/config/GuiEditArrayEntries$Boolean
+ Entry.class
+SHA-256-Digest: BKtl3hxdX9WonAh+Dv4URO/b7A73Z5ksDO530r20wEs=
+
+Name: net/minecraftforge/classloading/FMLForgePlugin.class
+SHA-256-Digest: hlTRzjxsPJpGDqDzSwy+ttBdDDaAZByWWOOiq4o7rTo=
+
+Name: net/minecraftforge/client/event/DrawBlockHighlightEvent.class
+SHA-256-Digest: ipqWS7A/QndPVIweOJT/r2EwF5v+RI1J/uYJGd/UQXs=
+
+Name: net/minecraftforge/event/entity/player/PlayerSleepInBedEvent.cla
+ ss
+SHA-256-Digest: ZA29eUt53xmijEk6t1anyln3C6Gnuw7TpLPRimxNfmw=
+
+Name: net/minecraftforge/event/terraingen/DecorateBiomeEvent.class
+SHA-256-Digest: t/tC/V+EeTQF9HXtqlZ+IlLTSukAFi6/RZzjEjMEDss=
+
+Name: net/minecraftforge/fml/common/network/FMLEventChannel$1.class
+SHA-256-Digest: 4wm1LrA+fIlUoSzEfzCaAP9+eMZcZGSnvLNGM+LuXTY=
+
+Name: net/minecraftforge/fml/common/gameevent/InputEvent$MouseInputEve
+ nt.class
+SHA-256-Digest: scQX+H5PD0rp+0YoWsSYlKlTsPJgBJkB+uMHpayR9+w=
+
+Name: net/minecraftforge/fml/common/Optional$InterfaceList.class
+SHA-256-Digest: K2969sVV0uNGF5231P7l7K8cQPwfN+a/RAu17GzsNQU=
+
+Name: net/minecraftforge/fml/common/network/FMLEmbeddedChannel.class
+SHA-256-Digest: 7A1fhvlX1dcR8v+r67SHCWekL/3vonE6RmQI4r151QY=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeClie
+ ntState$2.class
+SHA-256-Digest: bLZqUuOVvnlP/HLM+2aYn9BV7s/UxS9vo/iwPDcWxQE=
+
+Name: net/minecraftforge/event/world/ChunkWatchEvent$Watch.class
+SHA-256-Digest: adFXzixP2T0GKp39Pf/5/HcQKfvlEcYXT8GAKLXRhF8=
+
+Name: Paulscode IBXM Library License.txt
+SHA-256-Digest: tXxNB5hZJHMPIWCTAQ21CGcEmQX354b95MzRuEd1XF8=
+
+Name: net/minecraftforge/event/entity/minecart/MinecartInteractEvent.c
+ lass
+SHA-256-Digest: 27LdR3jcIZY5BhXxDw2qBLA6sGth1SQlikioDIFAthQ=
+
+Name: net/minecraftforge/common/util/ChunkCoordComparator.class
+SHA-256-Digest: fqZh+8gDtYlaUvCh0mBjWJ6UHrW/pVxlA7R308riB9M=
+
+Name: net/minecraftforge/common/property/PropertyFloat.class
+SHA-256-Digest: ih6JK9pW8EVwnolcHhGedu6OmrzaNhwq5CnrUSgGDQQ=
+
+Name: net/minecraftforge/fml/common/ModContainerFactory.class
+SHA-256-Digest: DlA54H6uqeJZS79GItjNzadT/QLdFEBTNcy17BIKCSg=
+
+Name: net/minecraftforge/fml/common/SidedProxy.class
+SHA-256-Digest: xSdcpKXks7n/VxdqKfhJugtaPrfXY79cqA32u301oIk=
+
+Name: net/minecraftforge/event/entity/EntityEvent.class
+SHA-256-Digest: Lho92LaT87gftL05hkczdBtx6c36HpUSK1ww/JrQtus=
+
+Name: net/minecraftforge/common/config/Property$Type.class
+SHA-256-Digest: l9UjRFPEkTIcp4jDVOfZB0TGTzt7xMfKXq/iU6N6V4A=
+
+Name: net/minecraftforge/client/model/animation/TimeValues.class
+SHA-256-Digest: zDTjFcugffXLsBYlwJZ8yl/TCMH9lIY9dadaZLW2utw=
+
+Name: net/minecraftforge/event/entity/player/PlayerEvent$LoadFromFile.
+ class
+SHA-256-Digest: rvPOEfwKt7WyuABLJhdezCIFKYBau8aEbmp0erVZ4rw=
+
+Name: net/minecraftforge/fml/client/GuiModList$Info.class
+SHA-256-Digest: r3G6qXD2+/bzHj2B8BCD//DGYsI5hYAxzwPY9KmjSvc=
+
+Name: net/minecraftforge/fml/client/registry/IRenderFactory.class
+SHA-256-Digest: T/Q/MH1d+QVib6yFQk36vBE2tmKYeWocX7Ozbs7iwrA=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeMess
+ age$ModList.class
+SHA-256-Digest: xVYmKWPpbdbhFS3hUS3e5bAES/cSTR1hBO0daAqbw+s=
+
+Name: net/minecraftforge/fml/common/network/handshake/NetworkDispatche
+ r$2.class
+SHA-256-Digest: udQsaO/BEXVFYqR+GiyPYc78BJQpUgr6EHM9VaDViMo=
+
+Name: net/minecraftforge/client/event/RenderLivingEvent$Pre.class
+SHA-256-Digest: +vpr2zTkJqvPMTB8XdwHiRQ7vtmjkCVVMtTVQKZ8Afo=
+
+Name: net/minecraftforge/fml/common/network/internal/OpenGuiHandler.cl
+ ass
+SHA-256-Digest: CTxdYmur4roJ2E5jx6scriMfWKyDaOzkVX32F89TbeQ=
+
+Name: net/minecraftforge/event/brewing/PotionBrewedEvent.class
+SHA-256-Digest: t4lP1vtsS7a4yuTg+XwjHh+JoH1ku/lsMaPrERlezds=
+
+Name: net/minecraftforge/client/model/ITransformation.class
+SHA-256-Digest: 6CHDrIgN+fazNUeyVl7RaIVAYrxtV8zpy4+wLlGHr5I=
+
+Name: net/minecraftforge/fml/common/ILanguageAdapter$ScalaAdapter.clas
+ s
+SHA-256-Digest: OZc1AXW/llQT9QtKaP9m/SBO/gLxNs93B4u49oXys4M=
+
+Name: net/minecraftforge/client/gui/ForgeGuiFactory$ForgeConfigGui$Ver
+ sionCheckEntry.class
+SHA-256-Digest: L1pZpzyQmSzSPlh0WjFeqgetJVMFvtg6wNv3QlLxuYQ=
+
+Name: net/minecraftforge/client/model/pipeline/VertexTransformer.class
+SHA-256-Digest: o7NrNCxLAZrI9xb6zT2Or2UDtzSw4WdCY8KEdTwVqDM=
+
+Name: forge-1.8.9-11.15.1.2318-1.8.9-changelog.txt
+SHA-256-Digest: ftsX8YITGfIcIh8tXpik+MvAkg+8s/T5Ypr9hzYXjuQ=
+
+Name: net/minecraftforge/fml/client/config/DummyConfigElement$DummyLis
+ tElement.class
+SHA-256-Digest: JrtysNkOImeLI9/S6LlWYh4/AHSIOhPP1RzTbwYFDT0=
+
+Name: net/minecraftforge/event/world/ExplosionEvent.class
+SHA-256-Digest: MYJO6Bs6Jw4gHjH5zk9QRh/zd7cMC273v/MHOIfx+BI=
+
+Name: net/minecraftforge/client/ForgeHooksClient$2.class
+SHA-256-Digest: Txwxhp8IhjZgiLvhNjKf7g1onu3XEtibV185fR29T8A=
+
+Name: net/minecraftforge/client/model/ForgeBlockStateV1$Variant$Deseri
+ alizer.class
+SHA-256-Digest: HACTg6rzwCRhSXq2Eg5Lgcauya4gTNu8iW+9uSOKI/U=
+
+Name: net/minecraftforge/common/util/Constants.class
+SHA-256-Digest: 2iho/DgKZnBMIElOmp6BDOBnRjOIrbGutpjFhVYnTJs=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeClie
+ ntState$7.class
+SHA-256-Digest: ZNKIwL1cKyZ5jt/UutHxHk9DqPExv2ZtOp3ogLCHd1o=
+
+Name: net/minecraftforge/fml/common/registry/PersistentRegistryManager
+ $2.class
+SHA-256-Digest: 28D3OP251d+P2dyedbpp5DAJ0h3E8xQNztAj0yySvRw=
+
+Name: net/minecraftforge/common/UsernameCache.class
+SHA-256-Digest: K/JURP4C9QvGoWycFzKd9vzdYOuAn1cLMQO/wGAETkc=
+
+Name: net/minecraftforge/fml/client/GuiBackupFailed.class
+SHA-256-Digest: /QLIVZ8rg0cz1DlmmmF+SFZU2CsBnkvQwfF2bat4xk0=
+
+Name: net/minecraftforge/items/IItemHandler.class
+SHA-256-Digest: CT/9hPprfhm42amhaKFUz3e5jkvYIIzMkpiaMRW1b5s=
+
+Name: net/minecraftforge/event/entity/player/PlayerEvent$NameFormat.cl
+ ass
+SHA-256-Digest: qzWaRch8dTnLvS6WiGV/cRIX86uUGg5+glGUR1ltvv4=
+
+Name: net/minecraftforge/event/terraingen/TerrainGen.class
+SHA-256-Digest: qhUKBAohmrU3ESwcSrYrLmIeXRuQD1fTv28ryYlqkMM=
+
+Name: net/minecraftforge/fml/common/functions/ModIdFunction.class
+SHA-256-Digest: Vcm/QtbWJh/fZMMrPflmL2O8tbTaCJNY26l14B9wCrE=
+
+Name: net/minecraftforge/client/model/b3d/B3DLoader$BakedWrapper.class
+SHA-256-Digest: eGfXsz5zSqVk2ipq01zxViZcw624F7I7+Spur8xCMw8=
+
+Name: net/minecraftforge/client/model/TRSRTransformation$1.class
+SHA-256-Digest: P3j8ju+Kk57Nuv32Z3FvwcPqyu4g+e+OtYMrURsbu6k=
+
+Name: net/minecraftforge/fml/common/MCPDummyContainer.class
+SHA-256-Digest: erUn2UC73ar54lYTs47OhVFZpHo3ONJDiGr0Kq0J9IQ=
+
+Name: net/minecraftforge/fml/common/network/handshake/HandshakeMessage
+ Handler.class
+SHA-256-Digest: 3ukbQK1cSRiPfV78n2qfeqYXCyfS635fxDZv8HnHZAE=
+
+Name: net/minecraftforge/common/capabilities/CapabilityDispatcher.clas
+ s
+SHA-256-Digest: s/oCMntwiE7mHOeOQcxAeZbUbs8Ma4wueuIsUW7lCsU=
+
+Name: net/minecraftforge/event/AttachCapabilitiesEvent$Entity.class
+SHA-256-Digest: 0W7SFo+UaQEhkGJoXxd00TjaDNpev7gMo++3+bfYA6Y=
+
+Name: net/minecraftforge/client/model/pipeline/VertexLighterFlat.class
+SHA-256-Digest: Rm1qz0I6Xwbzr4fZQuaU08ilhNc9kpjvlvPZTzFcFYo=
+
+Name: forge_logo.png
+SHA-256-Digest: uvDhzJEqaWJFLGOlUty6M+JA43MSI7BAV8c7RR8DTaE=
+
+Name: net/minecraftforge/fluids/TileFluidHandler.class
+SHA-256-Digest: XhTwm/wu7XzoH7Wb2pPuenvRC9SamDDS7jgvVmLQrG8=
+
+Name: net/minecraftforge/server/console/TerminalHandler$1.class
+SHA-256-Digest: t4ohYx8x5PQoz18Ys4dEnayOmI9d3oRFgsix+c2rDG4=
+
+Name: net/minecraftforge/fml/common/network/FMLEventChannel.class
+SHA-256-Digest: hAvFBoXZ2oK97o1fAG5Vd3teLXkrU8Lh+NWs3L2iaKM=
+
+Name: net/minecraftforge/client/model/ISmartItemModel.class
+SHA-256-Digest: ABrVnyfwngFL0KfGbgTu2v363eibOU9IKdSSH9zt0Ek=
+
+Name: net/minecraftforge/common/BiomeDictionary$Type.class
+SHA-256-Digest: LcuDc56PUBQudmgMR535q4Rmm6K6uD6+mB+OTE482hA=
+
+Name: net/minecraftforge/client/model/b3d/B3DModel$Animation.class
+SHA-256-Digest: LAl5hWNOWGa5EByQ3RfemNQdstNrrYdg9C3PkgGg3tM=
+
+Name: net/minecraftforge/fluids/FluidUtil$1.class
+SHA-256-Digest: wvuCxw0bIH0ptw/tm3G+gdA7NMOTzg2UZpH/yRFLpG8=
+
+Name: net/minecraftforge/fml/common/functions/ArtifactVersionNameFunct
+ ion.class
+SHA-256-Digest: B15zU8qQzEbSG/LWLDpNseWriqZSbhXFMkqm+pAfXvY=
+
+Name: net/minecraftforge/common/BiomeManager.class
+SHA-256-Digest: m/K9DXx13nEaQdO2N+wqv9l7tvp7x9UQrwfKws5pW6w=
+
+Name: net/minecraftforge/fml/common/event/FMLLoadCompleteEvent.class
+SHA-256-Digest: +S93FOcXDf7L4HGWzlmqObOXWfL/Iu9vuxJsZ/TICHk=
+
+Name: net/minecraftforge/client/MinecraftForgeClient.class
+SHA-256-Digest: m4w6D/KCfRSYry64g2/20stG5usEauJ5rntW7b7Ia5g=
+
+Name: ibxm/Player$Driver.class
+SHA-256-Digest: ED/otiPK+XQdpIXFyAbnCKZfZv9dxOMnUIbVjlykUek=
+
+Name: net/minecraftforge/client/model/ModelLoader$VanillaModelWrapper.
+ class
+SHA-256-Digest: h6JL6B6UFElDc5LUfZiSRPDJXkamEXvuq1eh2nfKJkw=
+
+Name: net/minecraftforge/fml/common/eventhandler/IEventExceptionHandle
+ r.class
+SHA-256-Digest: 1dyg3Raf9YVokUeQqx7DlpYYgn6C524FE5lNsBCuHdA=
+
+Name: assets/forge/lang/ro_RO.lang
+SHA-256-Digest: 3vXabOLGee20a1Ihkrip+PE8i45xN97t6cSZda0pY8E=
+
+Name: net/minecraftforge/fml/common/eventhandler/SubscribeEvent.class
+SHA-256-Digest: gff+Vpb/bgzQ2O7/AwhRagUFIL4CWazgqcE5DHCWFwM=
+
+Name: net/minecraftforge/client/model/b3d/B3DLoader$B3DMeshLocation.cl
+ ass
+SHA-256-Digest: ZxVFWW0z6wb8Q+TeZP5fvx27C+ZDlnIsKaIwYpIrNe0=
+
+Name: net/minecraftforge/fml/common/launcher/FMLServerTweaker.class
+SHA-256-Digest: TZapv2osCFUGYQ0YAnFMYLn/ilE8Zqj8KdXv3/IAUsk=
+
+Name: net/minecraftforge/common/capabilities/CapabilityManager$2.class
+SHA-256-Digest: 2lQsb0gLchBTs/rC9o03GvfvLSmkaFkWZA8g3hwVmwk=
+
+Name: net/minecraftforge/client/model/obj/OBJModel.class
+SHA-256-Digest: aqRsQm6yQf4j8+fUHfRsHUrfcFCp+TvdWYzKfnE6LMg=
+
+Name: ibxm/Player.class
+SHA-256-Digest: gH224QtpLrPLyrcyK8wp7KUaCTM/3spw0YGWZa0OwZk=
+
+Name: net/minecraftforge/common/property/ExtendedBlockState.class
+SHA-256-Digest: 1UZed0auXvG5zc1F+CMvTybk+j+rVE4pw0WjFN4SOVY=
+
+Name: net/minecraftforge/event/entity/player/PlayerUseItemEvent.class
+SHA-256-Digest: wsuPMA/cLD+1A4f6+QZTn8AxuNFefys9D6KdRnZzRh0=
+
+Name: net/minecraftforge/client/MinecraftForgeClient$1.class
+SHA-256-Digest: +lP8WWPOwqw5HrFsgPlJp1MiHKcwcWmp0/zhVKzi5XA=
+
+Name: net/minecraftforge/fml/common/discovery/DirectoryDiscoverer.clas
+ s
+SHA-256-Digest: x/5863ZuQWOPmy10WpUNJTHO3JNvfaow4gudhaxJND4=
+
+Name: net/minecraftforge/client/event/RenderPlayerEvent$Specials$Post.
+ class
+SHA-256-Digest: NjbZ/hHb91M+43SiRP2v2AqJwbmGt9hi30OKflnJLm8=
+
+Name: net/minecraftforge/common/property/Properties$PropertyAdapter.cl
+ ass
+SHA-256-Digest: FoR+3s4GKZHNMQVMud1zKJ+KP743KEdM7+DfGPYmvMg=
+
+Name: net/minecraftforge/items/wrapper/SidedInvWrapper.class
+SHA-256-Digest: jF/VTd1DalKtDU6g4USR2R1o6hKhqFKEShVpCWv3/e0=
+
+Name: net/minecraftforge/event/entity/minecart/MinecartEvent.class
+SHA-256-Digest: MLVsiHz+84itd1quTuEAhVvukE/ZpWRj2WtXppjGZAk=
+
+Name: net/minecraftforge/server/command/ForgeCommand.class
+SHA-256-Digest: jvrrBxGu6oOWtFzEmaUA3n5V+XqH+XX60e2RN5MMk0E=
+
+Name: net/minecraftforge/common/BiomeDictionary.class
+SHA-256-Digest: BL2o4ctPVNe1pds18rTI8SpRP1yvJZP5uBi7m47eqPE=
+
+Name: mcpmod.info
+SHA-256-Digest: YNEUgvIKraMa6/EhcPtU0CVqxnfsKyxqu7ZXLqM4KBk=
+
+Name: net/minecraftforge/client/model/pipeline/UnpackedBakedQuad$Build
+ er.class
+SHA-256-Digest: W7uTbuvwrrKdkRifSy5fN5baUVN4ijB6wZdfNX0YgI8=
+
+Name: assets/forge/textures/items/bucket_base.png
+SHA-256-Digest: Tkc60sFPB2v1OEbLiwy8KJ3jD6m6pHuBKW7yEfPdgg0=
+
+Name: net/minecraftforge/client/model/animation/ModelBlockAnimation$MB
+ Clip.class
+SHA-256-Digest: UsWDdaOOBhhciFiAZX2ywnDAcK8y3+ZthFGBEpjpdbg=
+
+Name: net/minecraftforge/fml/common/asm/ASMTransformerWrapper$1.class
+SHA-256-Digest: /uiZxr3XpeLw7pcfkOHSIhi2hRMFvbUwQFkDM7HydrA=
+
+Name: net/minecraftforge/fml/common/discovery/asm/ModAnnotation$EnumHo
+ lder.class
+SHA-256-Digest: 6oH2d9/VKMVvYp5G5BvHB7LSHzl/m4NHIDstxIfyNxU=
+
+Name: net/minecraftforge/fml/common/registry/VillagerRegistry$VanillaT
+ rades.class
+SHA-256-Digest: gnB/M2+kHdJ1QOveF1Le9CiMUZLIzSYyFDqi3l4eVk8=
+
+Name: afh$5.class
+SHA-256-Digest: YZTUgTLxYbiOK/7RB2wUT1vLRdl8iXsQmlqdlqi0DFk=
+
+Name: net/minecraftforge/client/event/RenderGameOverlayEvent.class
+SHA-256-Digest: 7Y0Qjg9lOVVYGv7XeeL6TCfqjkOxONPdSPcKTrwURbU=
+
+Name: net/minecraftforge/client/event/RenderHandEvent.class
+SHA-256-Digest: tFOHC4A3e28Pt1v7V0/baBHZFVWIdL3aMkKh3EsFCAY=
+
+Name: net/minecraftforge/client/gui/ForgeGuiFactory.class
+SHA-256-Digest: JafAd5PU1ht2mCv8/hxDf+Eqb2NCM3giY06hbX2wc6U=
+
+Name: net/minecraftforge/fml/common/network/IGuiHandler.class
+SHA-256-Digest: ARo8txrVrAfdpEJorbt9A1HKom393BwPlZD8KKTI/xs=
+
+Name: net/minecraftforge/fml/common/CertificateHelper.class
+SHA-256-Digest: VPfwFtxPZLKxRFymAh4oK23BYnWw3KkVo9+LbBgZGOU=
+
+Name: net/minecraftforge/fml/common/network/internal/FMLNetworkHandler
+ .class
+SHA-256-Digest: 4l1G1Nd7/pXQAfLh60O7zCycO4rB/oO3QAmtfflN0gs=
+
+Name: net/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder
+ .class
+SHA-256-Digest: Mx+6ojEBczK0Hv8aHq202MZIDVGLB6AghhLu52axJl0=
+
+Name: net/minecraftforge/client/event/RenderLivingEvent$Specials$Post.
+ class
+SHA-256-Digest: mL4Qba1pVnyGVt7/kXTS5Q8pFLIa8RfUtvs3Hpnt5tc=
+
+Name: net/minecraftforge/event/terraingen/BiomeEvent$GetWaterColor.cla
+ ss
+SHA-256-Digest: tz5XQF7HVbbb6L9fHoUK8SNMrJeSLrNxZp9+h8p9T/s=
+
+Name: net/minecraftforge/fml/common/functions/GenericIterableFactory$1
+ .class
+SHA-256-Digest: xutpAtFdjhG9vToaXZl5yiVeHM4DwWricvEHnC6QLRs=
+
+Name: net/minecraftforge/client/model/ForgeBlockStateV1$TRSRDeserializ
+ er.class
+SHA-256-Digest: ApsrLIvqhu0Y4STZw7xI+bL6Rz1614x3WmDzxc3XPl8=
+
+Name: net/minecraftforge/client/model/animation/ModelBlockAnimation$MB
+ Clip$1$1.class
+SHA-256-Digest: 14gPPOv3w7qUSVqAV2Sgt+daOPiJGT5M4RfrRo8GxbI=
+
+Name: assets/forge/lang/el_GR.lang
+SHA-256-Digest: WUydnZuuLxRFLetWVOq5JyjNAA1XhHyCfaTRoR5HCRo=
+
+Name: assets/forge/lang/fi_FI.lang
+SHA-256-Digest: G8AkSfOXaaLdDbzGNf1eXJOIVq3zQB6tXxnO5oXnKWo=
+
+Name: net/minecraftforge/client/model/ItemLayerModel$BakedModel.class
+SHA-256-Digest: A5kuF5h9pAJ/uN29Q3S3jZMmeYt+vJKCpPD1aOY3zeY=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeMess
+ age.class
+SHA-256-Digest: zwmlMElfgiPuRB+k2w/qmzQcRZcwUHp0yKgf4QKfp3M=
+
+Name: net/minecraftforge/common/util/JsonUtils$1.class
+SHA-256-Digest: RqeY1VEJQAeY8zQpwB5SmOZN24RZYHyWHuvsMPgZJO8=
+
+Name: net/minecraftforge/client/model/obj/OBJModel$OBJBakedModel$1.cla
+ ss
+SHA-256-Digest: SfZS641yglrRzNez2lqQ3VntPyvPsk7Qv311SRP+l+s=
+
+Name: net/minecraftforge/event/entity/player/PlayerEvent$HarvestCheck.
+ class
+SHA-256-Digest: h9/Kf/1wvhS9t9ePQMjhb22E+IoRRdOVq4dP2bsZ5DU=
+
+Name: net/minecraftforge/event/entity/item/ItemEvent.class
+SHA-256-Digest: RcDEoR74Bf8g5ThxH7zS0ADimxo6FZNK+SlzxBOL8fg=
+
+Name: net/minecraftforge/common/DungeonHooks$DungeonMob.class
+SHA-256-Digest: 0mkzHz7uYcxR8vPCVMdmzQiwguZJz0UJe+BZuhRJZ3U=
+
+Name: net/minecraftforge/fml/common/versioning/Restriction.class
+SHA-256-Digest: T8DPWMEI/U0kTJwUjfc10UYp7bb1PUlIH7hkypXTi4M=
+
+Name: net/minecraftforge/fml/common/eventhandler/ListenerList$1.class
+SHA-256-Digest: bDUO+OVimMjduDL5FVy/UXBt8BhlMBf5o4bAod4rRGI=
+
+Name: net/minecraftforge/common/UsernameCache$SaveThread.class
+SHA-256-Digest: OWU0VKmWRJBQjSAej/CoYh6lJqjB6wT/L3e9CmCk/lg=
+
+Name: net/minecraftforge/oredict/RecipeSorter$SortEntry.class
+SHA-256-Digest: N49VxGm8ZA7m5kMgT0CEv8Woi2JOVLBYS6yctF2Z+7k=
+
+Name: net/minecraftforge/fml/client/config/GuiConfigEntries$IntegerEnt
+ ry.class
+SHA-256-Digest: Glzov6ySXk2dXQujleEQNRpJABpqQVu+6xYCPVevZh4=
+
+Name: net/minecraftforge/fml/common/registry/IncompatibleSubstitutionE
+ xception.class
+SHA-256-Digest: SqPek93fyDS3jY/ogwe7AjynL++L6P8xTAGw7i39+ZU=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeCode
+ c.class
+SHA-256-Digest: G2/SlusxgiGwLUS/+LEbdypKOPto6HizBm3zJnovf84=
+
+Name: net/minecraftforge/fml/common/event/FMLInterModComms$IMCMessage.
+ class
+SHA-256-Digest: PdlpNht5cSf0Js8I4wukuj3He0+6vzMHs4c7bGTWIeo=
+
+Name: net/minecraftforge/event/terraingen/PopulateChunkEvent.class
+SHA-256-Digest: EQqw+tnbdNdN0op/4WARssg7iIdJmuB3b8Z5Y4qxGbY=
+
+Name: net/minecraftforge/fml/common/versioning/ComparableVersion$Item.
+ class
+SHA-256-Digest: 6yMhHumfhObgv4MvaVHS9B1L0K2lO2vKB3fKb2jznYo=
+
+Name: net/minecraftforge/fml/common/discovery/JarDiscoverer.class
+SHA-256-Digest: OJezMqfwzXqSKK2ljitEvyjRcRq40KX3BeMPJeEK8k4=
+
+Name: net/minecraftforge/fml/common/ProgressManager$1.class
+SHA-256-Digest: KZ2kMfUHmIh185Ko275U2Rydwq+N25KrgmyTIgs0CAQ=
+
+Name: net/minecraftforge/client/model/IModel.class
+SHA-256-Digest: ibxG7wYcYg4YaCVV4A2UMEz0oB4I9InfhzApKXZXIw4=
+
+Name: net/minecraftforge/fml/common/ModContainer.class
+SHA-256-Digest: 5bfW54r6XSdg3fRzEN92nE5kE7mxJsfrL4iOjShawHM=
+
+Name: net/minecraftforge/client/model/pipeline/ForgeBlockModelRenderer
+ $2.class
+SHA-256-Digest: /jr4g24wKo87Qq6j4Vc6BuGjree0bJzYJadaXyUwRb4=
+
+Name: net/minecraftforge/common/capabilities/Capability.class
+SHA-256-Digest: 1AkeprYkrD75a0VqR8ctA6YN6DLdzKrux/jqaIGsXj8=
+
+Name: net/minecraftforge/fml/client/SplashProgress.class
+SHA-256-Digest: qpGxOYIQmVQ2xuqFGW58/gycYO+yyLmmadUdi9gewTE=
+
+Name: net/minecraftforge/client/model/ModelLoader$UVLock.class
+SHA-256-Digest: /boxpnHN5UI7NVjIdwkBVU9PEWqohh/nNdpzShTwhls=
+
+Name: net/minecraftforge/client/model/b3d/B3DLoader$BakedWrapper$1.cla
+ ss
+SHA-256-Digest: C+b7Pdt4UqRYX/9HcJMudd8kC4IobQ+hS7vOC5UOoV4=
+
+Name: net/minecraftforge/fml/common/asm/transformers/BlamingTransforme
+ r$VersionVisitor.class
+SHA-256-Digest: pWt2zygh/FgdnmyXsiMJQGj0+td8B08FzmrYiwvlHoY=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeClie
+ ntState.class
+SHA-256-Digest: MGrW3SvqX2qpvvXxiSDGLAfjWXkRhsxP+vMtPROja6w=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeServ
+ erState$2.class
+SHA-256-Digest: hv6ySRMWWplYHLeM/IjOSBMsexrbS+swiAC/flFEP+g=
+
+Name: net/minecraftforge/fml/common/registry/PersistentRegistryManager
+ $PersistentRegistry.class
+SHA-256-Digest: /iew3CokpnC7nisQ+eJfMKzJjT7X/35LVVQ14tSncAU=
+
+Name: net/minecraftforge/event/world/NoteBlockEvent$Change.class
+SHA-256-Digest: ABRg5ani2BaN3BdiHojxNKuTqpy8sARWXhGIG66N0Ro=
+
+Name: net/minecraftforge/fml/common/launcher/FMLDeobfTweaker.class
+SHA-256-Digest: VfL2S97FAYuXUM4YpdcC08oVXD47e0sdOEs3uG7XdNA=
+
+Name: net/minecraftforge/client/model/IModelWithSubmodels.class
+SHA-256-Digest: SuoaxhGZqjSFbsiMRjQgsBwwqB9EFr6ggQ1lqbelLBY=
+
+Name: net/minecraftforge/fml/common/registry/VillagerRegistry$Villager
+ Profession.class
+SHA-256-Digest: pD6oiOhM1HGMzY8v1RD/Tf8Q4GAuc7iUzG/mgeQrSHc=
+
+Name: net/minecraftforge/fml/relauncher/FileListHelper.class
+SHA-256-Digest: 57MtHpJ6+/23UJUqeWDLhMb2M9ZkA1zjP+anUxf/TSc=
+
+Name: net/minecraftforge/event/entity/player/PlayerWakeUpEvent.class
+SHA-256-Digest: fjmkiCv7GslSlQOKvoof/AXYp3qZ2CxT0QHGkYnIZgo=
+
+Name: net/minecraftforge/fml/common/gameevent/PlayerEvent.class
+SHA-256-Digest: JtyUQvlKm7YCvkdwu3/tUyTFn/m8shQoM43taWqdAAk=
+
+Name: net/minecraftforge/fml/common/network/internal/FMLMessage$Entity
+ Message.class
+SHA-256-Digest: s/boHHeFGWWdo2XDC4U1E6iKzei2heXMHMOlArr8haQ=
+
+Name: net/minecraftforge/client/model/animation/JointClips$NodeJointCl
+ ip.class
+SHA-256-Digest: Box2hQBwPmd7iFiE29odTOmV0i9In2LbVSuNvGh/isE=
+
+Name: net/minecraftforge/client/model/obj/OBJModel$Material.class
+SHA-256-Digest: SJpetAm8YWvGLHl2W4gukuewqbmOnZfHkN3/Ki6cfZI=
+
+Name: net/minecraftforge/event/entity/living/LivingFallEvent.class
+SHA-256-Digest: qF/o2n7LEXCvYIQDyjBinTxHKf19+plm8fjwxN0PIlI=
+
+Name: net/minecraftforge/fml/common/event/FMLServerStoppedEvent.class
+SHA-256-Digest: Qkq9/UyJ4U+AczuAIduHnYgi0+m3gKrw7l9Lv3MSW2k=
+
+Name: CREDITS-fml.txt
+SHA-256-Digest: VUeRjlenrefnzG6M1pSWwZgLb6dDSTBr87+t8SuyikA=
+
+Name: net/minecraftforge/event/entity/minecart/MinecartCollisionEvent.
+ class
+SHA-256-Digest: x2rtr9IhERF7NI7dj+viebcW4Zv7RkviVHUaUMyVl5Q=
+
+Name: net/minecraftforge/fml/common/eventhandler/ListenerList$Listener
+ ListInst.class
+SHA-256-Digest: Vl4pSF6LIT60dDI/KijKsxYXF79+M7eS8OY6f5ZG1zM=
+
+Name: net/minecraftforge/client/event/FOVUpdateEvent.class
+SHA-256-Digest: Yd2syEbj8LTirau3A8PIEIK8tO5sJ5qfBdVlf+z+D5E=
+
+Name: net/minecraftforge/common/brewing/AbstractBrewingRecipe.class
+SHA-256-Digest: ybng56rjDnMfYK4awlnPLHRtGEOhBXaNH1pTXfKH53c=
+
+Name: net/minecraftforge/items/wrapper/CombinedInvWrapper.class
+SHA-256-Digest: bpkFeHvcUxTVQGh2IBMMI21SUhLHCnSqYWnYd4o8QqQ=
+
+Name: net/minecraftforge/fml/common/registry/LanguageRegistry.class
+SHA-256-Digest: NtkJiPo1xNZcCxWLHGO/yBjsGDrELfwHvSRnBn4TXvY=
+
+Name: net/minecraftforge/event/entity/EntityMountEvent.class
+SHA-256-Digest: zZ0YVq2DHWrj4VtF5+go7W1Do2WlYPy6JTovRpR6VDQ=
+
+Name: net/minecraftforge/fml/relauncher/FMLCorePlugin.class
+SHA-256-Digest: VbSRKCgHmLU2/QqNu0npX9iAiQnAqi8vCSKvw6BKRHQ=
+
+Name: net/minecraftforge/fml/relauncher/IFMLLoadingPlugin$DependsOn.cl
+ ass
+SHA-256-Digest: nA/JDKLJQLEh4H+iMYEQHzVpLlyHlxtX7zJMUIu9vAw=
+
+Name: net/minecraftforge/common/WorldSpecificSaveHandler.class
+SHA-256-Digest: TbV0ENJucwR8QZMP/PhmFN54Dmo9wdr5T3xoYOdZpsE=
+
+Name: net/minecraftforge/fml/common/Mod$Metadata.class
+SHA-256-Digest: tbFqplez4sIr+6Bq4n/7wEO+7l8yhvtMJ+LWEFXXi/c=
+
+Name: net/minecraftforge/client/model/IColoredBakedQuad$ColoredBakedQu
+ ad.class
+SHA-256-Digest: pc963OWjEUthIw4LO9yWJzEzWbqpNPCxXz7J8KE6ok4=
+
+Name: net/minecraftforge/fml/client/config/HoverChecker.class
+SHA-256-Digest: YHA4FTCY6b8hurF3PotzEypECFzKzYvfic4dipZUZ6M=
+
+Name: net/minecraftforge/event/entity/EntityEvent$CanUpdate.class
+SHA-256-Digest: CFfvsV5CD+REhveWLTKBcXQw9Z5S8w3EQ49MiNe++7I=
+
+Name: net/minecraftforge/client/model/ForgeBlockStateV1$Variant.class
+SHA-256-Digest: PUurSN4XKu2kluQEuQddRretP6HLlws1OIRXekJGzJ0=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeServ
+ erState$3.class
+SHA-256-Digest: tD3lJoBWyO/wLYXxEOHBRXzKUVt4HiXB54I9iSklBkA=
+
+Name: net/minecraftforge/oredict/ShapedOreRecipe.class
+SHA-256-Digest: 4hiyvJzvWCYCMrDet7XTiixDQpY/tefvXecNkEXJOzw=
+
+Name: net/minecraftforge/fml/common/network/FMLOutboundHandler$Outboun
+ dTarget$2.class
+SHA-256-Digest: xaF/iH5awd5ZLz2OrTB5JUxVziLNfDyUomNGFtEPhFI=
+
+Name: net/minecraftforge/fml/common/toposort/TopologicalSort$DirectedG
+ raph$1.class
+SHA-256-Digest: 95fQeX6gLkvQ4YVBeHirDkdDm5NPRUXWvXAaKWUEktY=
+
+Name: net/minecraftforge/fml/common/asm/transformers/EventSubscriberTr
+ ansformer.class
+SHA-256-Digest: 51/hZWHuNIPEeyrQw21vn3WNpPY2ImtUTpQmI+I9SG8=
+
+Name: net/minecraftforge/client/GuiIngameForge.class
+SHA-256-Digest: kWUtyeYfBtIh7sSK7F+z3AN2k2KA8k9DnQsZ6da8hS4=
+
+Name: net/minecraftforge/event/entity/item/ItemExpireEvent.class
+SHA-256-Digest: O7Vs6CJpTLhuwIufKsaHdCTCmDwcjwCoL/u6++LYuXc=
+
+Name: net/minecraftforge/common/util/BlockSnapshot.class
+SHA-256-Digest: HDdzK9pNKt0XI5PrMjIlW3qJjgiFFgQqSVfiwOaOdxg=
+
+Name: net/minecraftforge/fml/client/config/GuiEditArrayEntries$BaseEnt
+ ry.class
+SHA-256-Digest: loDwGrZifFrp9gdBwoZntcHYJbk3MvfblnGrKBRUbks=
+
+Name: net/minecraftforge/common/config/Configuration$UnicodeInputStrea
+ mReader.class
+SHA-256-Digest: jdvJF7Ky9+zKeNUPTbefzT/apT599a6gVZMPoWK6YQ0=
+
+Name: net/minecraftforge/fml/common/discovery/ModDiscoverer.class
+SHA-256-Digest: Nz70AGaKSCPXWuogFMzSVLHeYBaBg9RSRSSPqqVegLU=
+
+Name: net/minecraftforge/common/config/ConfigElement.class
+SHA-256-Digest: sJRp9RtruIbLQXC0EzyjV9cag0R7IdYtWDxoLTfeC7w=
+
+Name: ibxm/Pattern.class
+SHA-256-Digest: P20GjsN9/SXdvfc3mJO9rLJfAoJViuxfqTGAKUrTpvw=
+
+Name: net/minecraftforge/client/event/GuiScreenEvent$KeyboardInputEven
+ t$Post.class
+SHA-256-Digest: n6mI87rcJgsqCvofjnhAMupSmfqUNwqWKm1E/CIgOpw=
+
+Name: log4j2.xml
+SHA-256-Digest: PIEl8FXyRIQOswRz42LY7wG8eRSe+svZByc+9CB4ub8=
+
+Name: net/minecraftforge/client/model/obj/OBJModel$UVsOutOfBoundsExcep
+ tion.class
+SHA-256-Digest: ZK2/qFuQRQtB0nsGKVdWVQnOBJPirM04LmqLJF9Ia2o=
+
+Name: net/minecraftforge/client/model/animation/Clips$CommonClipTypeAd
+ apterFactory.class
+SHA-256-Digest: mLlLTCm0ibfNJXXLRFeZeNMVjdcVEmgHet8mFpFpy/4=
+
+Name: net/minecraftforge/event/brewing/PotionBrewEvent.class
+SHA-256-Digest: D31xo3mSIxDVpwoUrh3UO8xO26+ArsVDyVBMNrz0Afg=
+
+Name: assets/forge/lang/sl_SI.lang
+SHA-256-Digest: vPyFDykG8AHPOIDsKlyPJYjmWv+dyKvOUFYiQ9DA0Tk=
+
+Name: net/minecraftforge/client/EnumHelperClient.class
+SHA-256-Digest: jMnmZGBchhBLt32nuxbB+5F2crw0u0imH76ZDlPrjh4=
+
+Name: net/minecraftforge/event/entity/living/LivingSetAttackTargetEven
+ t.class
+SHA-256-Digest: BOocCYnWDiRWcpkUaFNHTqy81o2357EE8X4H9HTsE1w=
+
+Name: net/minecraftforge/client/model/ModelLoader$3.class
+SHA-256-Digest: NAKnGrW+8STQdCJZgI3a+e7NA8P95SOOWvvJOC0EDHo=
+
+Name: net/minecraftforge/fluids/FluidContainerRegistry$1.class
+SHA-256-Digest: wcWvyuvxXwPkPMsySofM/yG7yw2w/Et25ZbI1Qg3tgY=
+
+Name: zw$18.class
+SHA-256-Digest: m16YNNZvtsVJXDSerrMIiFs35DcETdmfz1oq/6u80gY=
+
+Name: assets/forge/lang/af_ZA.lang
+SHA-256-Digest: X2H2r8HYYZJ0SDnF0Mrxl44qlZynf4nefRlx8xNL57I=
+
+Name: ibxm/Instrument.class
+SHA-256-Digest: QdrvyOw0ITonIL0jo6/uh2Eqy4MWYQDzsIYMkSfL9aY=
+
+Name: net/minecraftforge/fml/common/network/simpleimpl/SimpleIndexedCo
+ dec.class
+SHA-256-Digest: 0jM71im+9XRvy96JCzEypygePjeRjnsm7WikHHajEZs=
+
+Name: net/minecraftforge/fml/common/asm/transformers/deobf/FMLRemappin
+ gAdapter$StaticFixingMethodVisitor.class
+SHA-256-Digest: A4Kxu7RFQnroGBKxWZRKrX7Cp/hlLLfbom11r8MIxMw=
+
+Name: net/minecraftforge/fml/common/asm/transformers/DeobfuscationTran
+ sformer.class
+SHA-256-Digest: +oakidtcVXkLTs3EwuSJpfu06db33EXPSi0YAyJWyzg=
+
+Name: net/minecraftforge/fml/common/discovery/ASMDataTable.class
+SHA-256-Digest: JQ65fJhG4Ki9nDD7KTKKTO8r6OhYLeZJdbA7gL8awOk=
+
+Name: net/minecraftforge/fml/common/network/FMLOutboundHandler$Outboun
+ dTarget$8.class
+SHA-256-Digest: gCC75dUgzrcSKXTEGzCaTlMR0N/Ce37dDGuISSDb0JA=
+
+Name: net/minecraftforge/fml/common/MinecraftDummyContainer.class
+SHA-256-Digest: DK9YmSMOqJGK/zM/1H9ALIyS3aViwlEqHpFUqNqevto=
+
+Name: net/minecraftforge/client/model/ForgeBlockStateV1$1.class
+SHA-256-Digest: pYgIG5a4RJJitzpwBw1vEvGWzeDpo5uJB7w/QXxHowA=
+
+Name: net/minecraftforge/fml/client/config/GuiEditArrayEntries$DoubleE
+ ntry.class
+SHA-256-Digest: gMPmDXAhwXqkTeoh0tW2/it8PSYt+WJ9MUDYs77Sc7k=
+
+Name: assets/forge/lang/cs_CZ.lang
+SHA-256-Digest: 6DyLeMLbTEznLNRkMeT1lpMz8FRwrps9ZUBUPL9kjM4=
+
+Name: net/minecraftforge/common/ForgeVersion$Status.class
+SHA-256-Digest: cM30cEUvD9R8YRUj7u7zXP0HndQREi+yZN7sk4Pm4d0=
+
+Name: net/minecraftforge/items/CapabilityItemHandler$1.class
+SHA-256-Digest: GiCZMQlTD2UbdCnCrQ55OYaK8/qNNo2xQm3benfuK44=
+
+Name: net/minecraftforge/fml/repackage/com/nothome/delta/PatchExceptio
+ n.class
+SHA-256-Digest: /EoyvDAt/sgTLVu30R0pii0MaeIpIdx4SeqCzUK444c=
+
+Name: assets/forge/lang/zh_TW.lang
+SHA-256-Digest: 5+0DpcvLHX0RTqN8YHSGcSm5qJV6HCiI701SPIUndoE=
+
+Name: net/minecraftforge/fml/common/network/NetworkRegistry.class
+SHA-256-Digest: gt7lEiyCUswdH/LKtNk6gWUxacSROQv3Tf6gIWSA5eY=
+
+Name: net/minecraftforge/fml/common/registry/EntityRegistry$EntityRegi
+ stration.class
+SHA-256-Digest: tHODvyB0GZl2LRsU1xJ2yJWZ5CULEbrEc6YxPZJkIXc=
+
+Name: net/minecraftforge/client/GuiIngameForge$1.class
+SHA-256-Digest: QUQUIb0jNbAr7LGMg4D5QhEQ6rsw275xsuZqwhg7Yjw=
+
+Name: ibxm/ProTracker.class
+SHA-256-Digest: f/5SJSQsonr212HjyLRhCJutlJ2O9TCzlnawM9LSDqs=
+
+Name: net/minecraftforge/client/event/GuiScreenEvent$MouseInputEvent.c
+ lass
+SHA-256-Digest: Pz1592I2/uCaNnRY/NNi3uEGSGgoKhklCQ+vp5JLHeA=
+
+Name: net/minecraftforge/client/model/obj/OBJModel$1.class
+SHA-256-Digest: dQZfq62u9wrzUV1M9ahrMeACqTEKzAXUbQq1G496Rc4=
+
+Name: net/minecraftforge/fml/common/network/FMLOutboundHandler$Outboun
+ dTarget$7.class
+SHA-256-Digest: X+PApJNAgNtk3D99jPd7u/rCnO+d4yDph4Xb4UFZ6lo=
+
+Name: net/minecraftforge/fluids/FluidContainerRegistry.class
+SHA-256-Digest: lsZgINaiF5UVXj122e+Y5jBvf5kHK9oo4MBr0hY4pYQ=
+
+Name: net/minecraftforge/fml/common/functions/TypeCastFunction.class
+SHA-256-Digest: +rH3h+3yiqUnEj7FXOgUzJCYtvEglGAWhY1gKmKR7nQ=
+
+Name: assets/forge/lang/nb_NO.lang
+SHA-256-Digest: b5DDuB+GvSAchmFfQyg25t2+pnxpx+X0JhHYHcpNfUw=
+
+Name: net/minecraftforge/common/capabilities/CapabilityInject.class
+SHA-256-Digest: V1ThzhrIZVAYCQY5zDc+7wKWRGNa68xbUguomhV3Beg=
+
+Name: net/minecraftforge/fml/common/versioning/ComparableVersion.class
+SHA-256-Digest: 2862nnaYruONDAcGSQU0oEhciu6Cf2sfasil+3KhjOQ=
+
+Name: net/minecraftforge/common/ForgeChunkManager$PlayerOrderedLoading
+ Callback.class
+SHA-256-Digest: DJqSuiTKYTyULVIYhtTCgpw1KxA6BdFdydCLJU4XfeI=
+
+Name: net/minecraftforge/fml/common/ModAPIManager$APIContainer.class
+SHA-256-Digest: JajlnN4V7ve99XZvimdXOl6vAkT+oDAhQV2YNI8eVBc=
+
+Name: net/minecraftforge/fml/common/registry/ItemStackHolderInjector.c
+ lass
+SHA-256-Digest: +6SxJBar1C+Zvbq3Eq72lx0drthRBUiRd+eXyu6Rc7w=
+
+Name: net/minecraftforge/client/model/animation/JointClips.class
+SHA-256-Digest: CqZICQHgcGqNNIsPGbjkMYw3kNlW7tSphNn0BioFTWY=
+
+Name: net/minecraftforge/event/entity/player/PlayerEvent$StopTracking.
+ class
+SHA-256-Digest: tb0gfvcZABETrc1z3hprNie9JdqD/TmbQTJvGZKTU/8=
+
+Name: net/minecraftforge/fml/client/event/ConfigChangedEvent$OnConfigC
+ hangedEvent.class
+SHA-256-Digest: zq01JEDAU7W31TK0bZmmdEuFBYzCUuHCJ7AIHN1mXgM=
+
+Name: net/minecraftforge/fml/common/gameevent/PlayerEvent$PlayerChange
+ dDimensionEvent.class
+SHA-256-Digest: O/B8lXwCHfl/8f6HvrWzlgBx14VYmEkH5WzG4zMo51A=
+
+Name: net/minecraftforge/client/model/pipeline/ForgeBlockModelRenderer
+ .class
+SHA-256-Digest: 4L0cuaFPa9l02GR5poJSNo0sw7GkuSRRjg6pFWlw1lM=
+
+Name: net/minecraftforge/event/entity/living/LivingSpawnEvent$SpecialS
+ pawn.class
+SHA-256-Digest: QVCCmlI2kjV135FuRGWvbxq6LEcRAqS3AXO57sVHcVA=
+
+Name: net/minecraftforge/common/DimensionManager.class
+SHA-256-Digest: zAH/m1vKXBk2jvc/cJlhxr3Iwx9bCcWCt05+VFMPukM=
+
+Name: net/minecraftforge/event/terraingen/InitMapGenEvent.class
+SHA-256-Digest: oZ5cs2CMJxX6wE/72C9kPQxSCyBkfykDoNbhF3fSX7s=
+
+Name: net/minecraftforge/client/model/animation/Event.class
+SHA-256-Digest: 3MDtZaHQLmomc9LXBHVvO8ToWmEU4MUJUPzyzzUhUNM=
+
+Name: net/minecraftforge/fml/common/Optional$Interface.class
+SHA-256-Digest: DOF4QJXNrTwMetxEM8AZ4qXkPoImBTodVwJWtIN4K1M=
+
+Name: net/minecraftforge/items/IItemHandlerModifiable.class
+SHA-256-Digest: Lh7Zv4FiCKODOxzybBMuECVGXTmzUZZHPhFr+B18fwc=
+
+Name: net/minecraftforge/common/BiomeManager$BiomeEntry.class
+SHA-256-Digest: +dS82KNk5VhsssbgcR452TTBxpzm9au56bf1LBFzGQI=
+
+Name: net/minecraftforge/fml/common/FMLModContainer$1.class
+SHA-256-Digest: ssGhRn2GoWfnJH10OTtC5AZX1u+rm1TGZLZWyqwCaE4=
+
+Name: ibxm/IBXM.class
+SHA-256-Digest: H20RjIqknDPwKG0xWETs0/C4ss9Wuqk/iZkdW+6W/lc=
+
+Name: net/minecraftforge/fml/client/GuiSlotModList$1.class
+SHA-256-Digest: VnpK3PUOrNUfASB7G7/YmmRw+SNl9sgsnwnqjNVGPd0=
+
+Name: assets/forge/textures/items/bucket_cover.png
+SHA-256-Digest: ucm47DTjyxfkdjvlV8u0TzEmqHhPbjEFWhFEthSoaAc=
+
+Name: net/minecraftforge/fml/client/registry/ClientRegistry.class
+SHA-256-Digest: tIwem4jdfSjsofJHpQ5GHOej2uA/HwQgR5Qx7Gbvk3U=
+
+Name: net/minecraftforge/client/event/GuiScreenEvent$BackgroundDrawnEv
+ ent.class
+SHA-256-Digest: 6PRqYyG2pBU29eLX+AiB4xTcTF6IhylXvnBzC6QL/vE=
+
+Name: net/minecraftforge/fml/common/registry/PersistentRegistryManager
+ $GameDataSnapshot.class
+SHA-256-Digest: PLpCnOLe5VrlUyJX19i1xXqhKH2NZekno9Sjvzdto2I=
+
+Name: net/minecraftforge/fml/client/IModGuiFactory$RuntimeOptionCatego
+ ryElement.class
+SHA-256-Digest: naDrAjLVuQgmC4+YSKC507G1wEWQP/l5xCbkDflxNLI=
+
+Name: net/minecraftforge/fml/common/registry/ObjectHolderRegistry.clas
+ s
+SHA-256-Digest: eJvFteJx5ToqYay8GF47kX1VcuEfEzBGt5OB1uiTUg8=
+
+Name: net/minecraftforge/fml/client/config/GuiConfigEntries$NumberSlid
+ erEntry.class
+SHA-256-Digest: LAjZIISMQKHcysX8YLU2W66xOGv/RKMMqCdc7kqQQ/s=
+
+Name: net/minecraftforge/client/model/obj/OBJModel$Vertex.class
+SHA-256-Digest: T56WDqYiKZLcpWxSPYpuZ3IvrpD/QnyILv4C3UNF2uw=
+
+Name: assets/forge/lang/da_DK.lang
+SHA-256-Digest: ZfbgRLslbOND2TqFLsVSRepLWJC5GOFjJ/klGQvYuZE=
+
+Name: net/minecraftforge/fml/common/network/FMLNetworkEvent$ServerConn
+ ectionFromClientEvent.class
+SHA-256-Digest: vzsJ/+rKM433KWicvHIsTiCJWmaO3d0l/hav0w6CzRA=
+
+Name: net/minecraftforge/fml/common/network/FMLNetworkEvent$CustomPack
+ etEvent.class
+SHA-256-Digest: BMAz0//vMBzDxD1SD+y53OImHppNBtnWZoKKrc9OaRE=
+
+Name: net/minecraftforge/common/IExtendedEntityProperties.class
+SHA-256-Digest: O11QjmiUHdT4egn109d7vZXPeiDDJzUzAaX1L5jdUCc=
+
+Name: net/minecraftforge/fml/common/asm/ASMTransformerWrapper$Transfor
+ merWrapper.class
+SHA-256-Digest: 20jwzbvR8Glbj/hm5hBty3rimOVhz0Ao9nkKQYeLg/Y=
+
+Name: net/minecraftforge/event/world/ChunkDataEvent$Load.class
+SHA-256-Digest: r9au9fPAZoKyUfbTlMhIYqKCIGcd4zQPb/tW9npH55o=
+
+Name: net/minecraftforge/event/world/ChunkEvent$Load.class
+SHA-256-Digest: LVRBBUSF8baUIs1pgSPqdExLu2GBbZpzGDvsnAR12nk=
+
+Name: net/minecraftforge/fml/client/FMLConfigGuiFactory.class
+SHA-256-Digest: izqX7x5iswZF+g0/2aH/PqaWW35ejxsVCA3bQvfr0Pc=
+
+Name: net/minecraftforge/fml/relauncher/ReflectionHelper.class
+SHA-256-Digest: xGggaY9dj8sOShbA88iSZ3WFpfpwhJR0riQ/FEZB4n0=
+
+Name: net/minecraftforge/common/BiomeDictionary$BiomeInfo.class
+SHA-256-Digest: eFLikW+p9LNmhA48a/W8WxUg9ebxKCnM4bvct4pDPAs=
+
+Name: net/minecraftforge/fml/client/FMLConfigGuiFactory$FMLConfigGuiSc
+ reen.class
+SHA-256-Digest: kcKqFoPLwVsz0is7mgQLxjb6pggxt4vI2zrlthHB45w=
+
+Name: net/minecraftforge/fml/common/launcher/FMLTweaker.class
+SHA-256-Digest: v1mZ+IIQmnrWdFQRC+SA4nRo0QDEd1W5lelmBTev/tg=
+
+Name: net/minecraftforge/client/model/ModelLoader$DefaultTextureGetter
+ .class
+SHA-256-Digest: IMMXxGlJJHYEbz6fjHcPbmrOpJRh1Fm7ar9SWCHf6QI=
+
+Name: net/minecraftforge/fml/common/asm/ASMTransformerWrapper$ASMGenHa
+ ndler$1.class
+SHA-256-Digest: CttRJa3LrrHAcWCBiCnj7kTNdIDuLcwslSxUaOcpS0o=
+
+Name: net/minecraftforge/fluids/IFluidBlock.class
+SHA-256-Digest: I34c7kglK9DC7Qk2Cg7/0L7a4KMCrNg7HXMDNI/rkyI=
+
+Name: net/minecraftforge/oredict/RecipeSorter$Category.class
+SHA-256-Digest: XdRqfk2IU73CS0MqqL6gVyrla8ISB/syesWmMNSI4Ss=
+
+Name: net/minecraftforge/fml/common/EnhancedRuntimeException$WrappedPr
+ intStream.class
+SHA-256-Digest: KhtZ/eHHm6zt3gUBq49cLRVMkFp4o96QF90VOxLrLwI=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeMess
+ age$ClientHello.class
+SHA-256-Digest: 14xqOhRuzMyGRkOex1sRLR82AejYiBB/G4rdHoJ5pUE=
+
+Name: net/minecraftforge/client/model/b3d/B3DClip.class
+SHA-256-Digest: fclfGBZWB1DrJJKP2ssctpe1wxEdlrJ9JfO4WYRLEeI=
+
+Name: net/minecraftforge/event/entity/living/LivingSpawnEvent$CheckSpa
+ wn.class
+SHA-256-Digest: PNrwrgm/mcqXL1ue8mYYY5ysl4bq68iGAot94+JoHYw=
+
+Name: net/minecraftforge/client/model/ISmartBlockModel$Wrapper.class
+SHA-256-Digest: 4ias1U40V+a+MUC1NWvK4u9QNaWpoKNBZLc1k9u316I=
+
+Name: net/minecraftforge/client/model/IFlexibleBakedModel$Wrapper.clas
+ s
+SHA-256-Digest: hnHNISUk5hODnYQmMmKbYPjj2gbJWynromzrqgVBIB4=
+
+Name: net/minecraftforge/client/event/GuiScreenEvent.class
+SHA-256-Digest: hKie53v2NzNqZoKWAkfIGlRkVYHQELHLvD3mHDbh+Mc=
+
+Name: net/minecraftforge/fml/client/SplashProgress$4.class
+SHA-256-Digest: HNfSVcHgXCTc0pWVV5Xiwc1kKuQDaG0NWLpm0qJtqFs=
+
+Name: net/minecraftforge/fml/relauncher/CoreModManager$4.class
+SHA-256-Digest: GcoOkYRZSfMZyH5EUByIDRr+rQT9TkhoBSrn1Ht4iXw=
+
+Name: net/minecraftforge/fml/common/registry/GameRegistry$UniqueIdenti
+ fier.class
+SHA-256-Digest: GkuhkBQiiiwM+K0UKH6l+O40XHvuoFt7RirVYVCL6o0=
+
+Name: net/minecraftforge/client/model/animation/AnimationStateMachine$
+ 2.class
+SHA-256-Digest: 6yD+FA59ZyKwVe+ISPh2iGr3eUgZzq2cB31+R8B+aCs=
+
+Name: net/minecraftforge/fml/common/asm/transformers/ModAccessTransfor
+ mer.class
+SHA-256-Digest: hTZtiR4/dJJUKeTq7pQ8/TUt7eaByRuHaaC6Pak1NZE=
+
+Name: net/minecraftforge/event/entity/player/PlayerEvent.class
+SHA-256-Digest: PWp+Ntu2ZE8Pb7SdrJmP3jsXYySXR6Pp0zXlxaP7B8Y=
+
+Name: net/minecraftforge/event/entity/player/PlayerOpenContainerEvent.
+ class
+SHA-256-Digest: 6mWKBzQbP53G9ZpFitqOkU88C9XTm8msAMbeyfRcUvE=
+
+Name: net/minecraftforge/client/model/BlockStateLoader$ForgeVariant.cl
+ ass
+SHA-256-Digest: qThjpX7WHKZOUvnX0rtUmZmswVjknxk0zQrmvv/U+JE=
+
+Name: net/minecraftforge/fml/common/event/FMLInterModComms.class
+SHA-256-Digest: vrEw7hrlrq3OvoT5V1DdJzHLztKaRCd9g5w6qxZvTnU=
+
+Name: net/minecraftforge/fml/relauncher/FMLSecurityManager$ExitTrapped
+ Exception.class
+SHA-256-Digest: f7roPanbuhXRcBoc8NhjeV60FyFBOTCdkuIVikcBct4=
+
+Name: net/minecraftforge/fml/relauncher/CoreModManager$3.class
+SHA-256-Digest: kc9DH9isJZFopmTA6BX5EVv7zHfQL48XuYiZqL0hxsE=
+
+Name: net/minecraftforge/fml/client/SplashProgress$3.class
+SHA-256-Digest: iY7Z/PiZs9BTS5Zw5yNKKjjIyVvAnFuDO/AhPhhO/pw=
+
+Name: net/minecraftforge/fml/common/ModMetadata.class
+SHA-256-Digest: Q4J7vcuUXeS1ak+kBLUQNVX8crhOjX0v9i0dl6HnV+0=
+
+Name: net/minecraftforge/client/model/BlockStateLoader.class
+SHA-256-Digest: DzVobCW3Wlkr3ZHfRYfjDfknwApzjZR5jkloRAZM4Lw=
+
+Name: net/minecraftforge/common/network/ForgeNetworkHandler.class
+SHA-256-Digest: 40OkBMUOEJPZ+JL3dRTMMXvHsGVzMq3D1NejKoIe+68=
+
+Name: net/minecraftforge/client/event/RenderLivingEvent$Specials.class
+SHA-256-Digest: IyUfxnTbrZmfDgdUP7zHoKoNO5j7qZa3S6QXiQYVK6s=
+
+Name: net/minecraftforge/client/event/EntityViewRenderEvent$FogDensity
+ .class
+SHA-256-Digest: PQr54tEWWXnYIaMzLujpHecFNIB8L0Hmq8evYdYsVMc=
+
+Name: net/minecraftforge/client/GuiIngameForge$GuiOverlayDebugForge.cl
+ ass
+SHA-256-Digest: xty8QFcu09n+QLwlU9YkYU6GtipXYQz0mh27fw2lBls=
+
+Name: net/minecraftforge/common/ForgeModContainer.class
+SHA-256-Digest: 4AphUikbsG0zw4WWWjYivc6yuuf5w/kH4RyxymN4oyk=
+
+Name: net/minecraftforge/common/chunkio/QueuedChunk.class
+SHA-256-Digest: vihGFRbkQ10ysUYuTeK4Qr7Ka5cWPg026Q+TVgWEcNk=
+
+Name: net/minecraftforge/event/entity/player/PlayerInteractEvent$Actio
+ n.class
+SHA-256-Digest: kYtHK+st6cU1vq+FN3ng9lm+L6nUzytuKzr/gdWU448=
+
+Name: net/minecraftforge/event/entity/player/PlayerUseItemEvent$Stop.c
+ lass
+SHA-256-Digest: /I1IigIlPouzQNzB59HsBVjqjTbOXs9JQQ8DWqGcV6Q=
+
+Name: net/minecraftforge/client/model/ModelLoader$VanillaLoader.class
+SHA-256-Digest: VJIQdkCuYiJNI+MpzxaMIObsjAxRwWYxAMtw0/Aqn0k=
+
+Name: net/minecraftforge/items/VanillaHopperItemHandler.class
+SHA-256-Digest: shuBrxjbcH07ujybN9d99JYR9pev8zLeWqSflkbbvT0=
+
+Name: net/minecraftforge/client/model/ModelFluid$1.class
+SHA-256-Digest: J3yu9qoKsaC9PGwRSB9BFSnObfbw6yb4hCyw/5rG/E4=
+
+Name: net/minecraftforge/client/model/b3d/B3DLoader$B3DState.class
+SHA-256-Digest: v8pas5U5+cNdsaNDA9adnXCtX7fBIXE7YQM/PMumMEU=
+
+Name: net/minecraftforge/client/model/b3d/B3DLoader$PartWrapper.class
+SHA-256-Digest: 2ITX2+aH9TauDXqw5c9XgH0ad2keZHGcAP3vqztnA4Q=
+
+Name: net/minecraftforge/client/model/pipeline/WorldRendererConsumer.c
+ lass
+SHA-256-Digest: nDetPryC4XawD4CMUj4RDqsr7U8W1Xcg3P/PLaCCLiQ=
+
+Name: net/minecraftforge/event/world/BlockEvent.class
+SHA-256-Digest: iO1U0s6nVV1FQHbGLLLH8/CMtud+9RSnZZ3ixqV5uPw=
+
+Name: net/minecraftforge/client/event/GuiScreenEvent$ActionPerformedEv
+ ent$Post.class
+SHA-256-Digest: zkVtHhgt8eZXQebZ7Xv8BkBx4c+sFQnDmITKMYNfutQ=
+
+Name: net/minecraftforge/client/model/MultiLayerModel$MultiLayerBakedM
+ odel$1.class
+SHA-256-Digest: baRaJIqhGIRKjNCjmHGe4DPvWF596kxzUjdFKJZLhrM=
+
+Name: net/minecraftforge/fml/common/network/FMLOutboundHandler$Outboun
+ dTarget$3.class
+SHA-256-Digest: BOQBWOkWe6TGmy4Xsb4RCTqKwPIve+DtQsyLXTK6ABQ=
+
+Name: net/minecraftforge/fml/common/registry/PersistentRegistryManager
+ $1.class
+SHA-256-Digest: wgLs0jidBIAqdp2lWjzVfQc4E65hS0Drxk8PQYYhqvk=
+
+Name: net/minecraftforge/fluids/FluidEvent$FluidDrainingEvent.class
+SHA-256-Digest: aSSswVPHKykxO2Qr+Dj4IeSJ9+xQ2B3xNJN8p18yJIY=
+
+Name: net/minecraftforge/fml/common/asm/transformers/AccessTransformer
+ .class
+SHA-256-Digest: pPjaE30HbNzfh1bAvreheOtN1lpZ6ZzzK1edvDgtCUw=
+
+Name: assets/forge/lang/nn_NO.lang
+SHA-256-Digest: b5DDuB+GvSAchmFfQyg25t2+pnxpx+X0JhHYHcpNfUw=
+
+Name: net/minecraftforge/event/entity/EntityEvent$EntityConstructing.c
+ lass
+SHA-256-Digest: 4oF8EhTa5iFIoiXscsRiJtYK2WhYHo03Ox3h8MFE9uk=
+
+Name: net/minecraftforge/common/util/EnumHelper.class
+SHA-256-Digest: ++vcgOjRsf6IxMMMzkcbtKexmaguR41ygTt4ZG8UkBo=
+
+Name: net/minecraftforge/fml/common/SaveInspectionHandler.class
+SHA-256-Digest: l1EdQPpxQAGDRi94kPq5LU64bU59SbMTxp6kTKBqK/A=
+
+Name: net/minecraftforge/fluids/FluidEvent$FluidMotionEvent.class
+SHA-256-Digest: EsGYguKkmxFmkbAKYWkMlwtUU5uAHorxCcNMk1VJONk=
+
+Name: net/minecraftforge/common/property/Properties$1.class
+SHA-256-Digest: iCqCmZKmiiJ91b75p2iRE0WvocU+QzLL41fZSPuOXrM=
+
+Name: net/minecraftforge/fml/common/event/FMLEvent.class
+SHA-256-Digest: G8NeztprRcJH5EUNL1H2sniQq2cA0equ2GfjodjOUw4=
+
+Name: net/minecraftforge/fml/common/network/FMLNetworkEvent.class
+SHA-256-Digest: oINUBIQGy3u0Obk0UFg8nQJvr1RMSvPccdbG84sxmTk=
+
+Name: net/minecraftforge/fml/client/config/GuiConfigEntries$DoubleEntr
+ y.class
+SHA-256-Digest: SWAPVMiC6CIDKPsg4bhRTJ3jOPsCwpXqEwLPM4PX2s4=
+
+Name: net/minecraftforge/client/model/animation/AnimationStateMachine$
+ 1.class
+SHA-256-Digest: I9SePBnlhMfoUct+Lbkt4o0zqnIkKegudY3l1jm8m8w=
+
+Name: net/minecraftforge/event/entity/living/LivingHealEvent.class
+SHA-256-Digest: GmeiEbdGmlYGe4zeJrrRy6Y2xBLn1nlLmj8urYUpDMk=
+
+Name: net/minecraftforge/client/event/GuiScreenEvent$InitGuiEvent$Pre.
+ class
+SHA-256-Digest: Tcg3sRo4ebrAaCrNtbB1tANqm/+0ug1VIPLzJp2GWl0=
+
+Name: net/minecraftforge/fml/client/GuiAccessDenied.class
+SHA-256-Digest: 2V+z0qIX9ZYAwq+f0MOGUsnROPaV6TPOvpn+L02XWaY=
+
+Name: net/minecraftforge/fml/common/eventhandler/Event$HasResult.class
+SHA-256-Digest: m3txnqi1e7lod9TxSdUaEBsMDg+0kHO3q7mC02UOY/A=
+
+Name: yj$2.class
+SHA-256-Digest: yvDvaKiClfahrbfX/sxKNVf2WrCpbYkXvQmq4mMDHnY=
+
+Name: net/minecraftforge/fml/relauncher/CoreModManager$2.class
+SHA-256-Digest: Bwy8wKa104AioP/1/UGp/+xAvB/Osx66hqwIl2hz1KE=
+
+Name: net/minecraftforge/client/event/RenderLivingEvent.class
+SHA-256-Digest: xeh+KuxeyPifouakbmTVvUkaW28r/xOZ3RLmF5lZRpI=
+
+Name: net/minecraftforge/event/terraingen/OreGenEvent$Post.class
+SHA-256-Digest: SQIlh+egZmX0gtxnw+fKXuAFl5dDXiMjlLQl8+Ymu5g=
+
+Name: net/minecraftforge/event/world/WorldEvent$Load.class
+SHA-256-Digest: m/h8bng2aXRDTPjSQnBsx9WsgAxBnp11kJJVDX27qm0=
+
+Name: assets/forge/lang/he_IL.lang
+SHA-256-Digest: wpIe/qFcruMTTkhWore23u0TuruEz40EitRkIlqZw2w=
+
+Name: net/minecraftforge/client/model/ISmartVariant.class
+SHA-256-Digest: BUnsbPfAlf2klNfCoCpNixGkxduVi/ewdytuALYfbj0=
+
+Name: net/minecraftforge/event/ServerChatEvent.class
+SHA-256-Digest: XWju5D9p5tTzuoZCnBVpNX74BmLMT4QRUCtJfUXhPao=
+
+Name: net/minecraftforge/fml/common/network/internal/FMLMessage$Entity
+ SpawnMessage.class
+SHA-256-Digest: S5KL0tWoLR4+7oAwHX1oqqkKXGXXVm6QKY+fTAfs4C8=
+
+Name: net/minecraftforge/fml/common/FMLContainerHolder.class
+SHA-256-Digest: kRVcXVG/gV8I2ZM/FOhC+h949ab/o2xnd/9SY1lbMaw=
+
+Name: net/minecraftforge/client/IRenderContextHandler.class
+SHA-256-Digest: fPGZcCn7VFBuos/4ddwBDGezIln/T6c2D4dlksOifTQ=
+
+Name: net/minecraftforge/fluids/UniversalBucket.class
+SHA-256-Digest: 4iz/tFdjfg9iu9pJlpdKoSXzWEOuYNzj2QbE2J6lIk4=
+
+Name: net/minecraftforge/fml/client/GuiWrongMinecraft.class
+SHA-256-Digest: +9fF3GLG2wcjFrizj1d2UZdcXh4HLSbSCQbo/SzfGt8=
+
+Name: net/minecraftforge/event/terraingen/ChunkProviderEvent$InitNoise
+ Field.class
+SHA-256-Digest: bdb3yHrk7Ybrll+G+MLNv1B6CuUHtbG8AvUFZTkPbio=
+
+Name: net/minecraftforge/server/console/TerminalHandler.class
+SHA-256-Digest: z8fVl4LnX8RlgV+0BO2pdQFqVIrCm2ulW3G3gm2zDXw=
+
+Name: net/minecraftforge/client/event/sound/PlayBackgroundMusicEvent.c
+ lass
+SHA-256-Digest: rZpbQugmOIbeDjPjDDgDWV9OMh6VSnmjHMCD2J4CoPI=
+
+Name: net/minecraftforge/event/AttachCapabilitiesEvent$Item.class
+SHA-256-Digest: d2vFjgvjhZJpBXPghAJahAHRa5NrWQKGvTIfoUAfjpI=
+
+Name: net/minecraftforge/fml/common/ILanguageAdapter$JavaAdapter.class
+SHA-256-Digest: psmsAwUkdOn6tybH9CVGTnv47TAtLi2aHXUYGnSHnOA=
+
+Name: assets/forge/lang/nl_NL.lang
+SHA-256-Digest: pwAA6moK4OpGU4EDP1AHer1wJLWuIIK3U8m7f6cwuJ0=
+
+Name: net/minecraftforge/event/world/ChunkEvent$Unload.class
+SHA-256-Digest: QfY4vRM/gILs/HyPqDQUTXHq9hbroFjy06C5Ded57oU=
+
+Name: assets/forge/lang/sr_SP.lang
+SHA-256-Digest: 16WpCJcOpK1ZMrsUyx7oE4LXoLlZDj48g1/LsA9Hu9c=
+
+Name: net/minecraftforge/event/terraingen/BiomeEvent$GetVillageBlockID
+ .class
+SHA-256-Digest: tc6wekGGeHl/uoABuT0FlZszoHsUP7/JJ50YWTYRbCo=
+
+Name: net/minecraftforge/common/util/AsynchronousExecutor$CallBackProv
+ ider.class
+SHA-256-Digest: 0pihBFKcDvfhSVA7cFu5N3z/anefZOWO+okKB1pwwzw=
+
+Name: net/minecraftforge/fml/client/SplashProgress$2.class
+SHA-256-Digest: oioRj/mmaaMM50FoDQjJgTILCVcHi35kJK+yQB7cA/Y=
+
+Name: net/minecraftforge/client/event/RenderPlayerEvent$Pre.class
+SHA-256-Digest: 85ZleI8RNfk+ybwWCt9cCQ2CMEoCMxgQDHn5nNMAL1g=
+
+Name: assets/forge/blockstates/dynbucket.json
+SHA-256-Digest: rMZdtZHYejvTsN9sdEJPsdOeSdBCIjc92a9AIAVFwqQ=
+
+Name: net/minecraftforge/event/world/NoteBlockEvent$Note.class
+SHA-256-Digest: 0H3dqThOmYNNYCAT2mxLMYOWpIrn1tgwfIkhDGOSWMk=
+
+Name: assets/forge/lang/ca_ES.lang
+SHA-256-Digest: S2PAkLOEkCNJjjOk33O9MIoHdRX+RQJEqswwLvZGVnM=
+
+Name: net/minecraftforge/fml/common/versioning/ComparableVersion$ListI
+ tem.class
+SHA-256-Digest: UjUStYqcvS75YTlbyE8h4ZmkT8m3vMy5nvyYqzIZ7kk=
+
+Name: net/minecraftforge/event/entity/EntityJoinWorldEvent.class
+SHA-256-Digest: s5ypm12Kc1UyaTBan5GQ7UZJjGMfXKwXGWaIiJgsmB4=
+
+Name: net/minecraftforge/client/event/RenderWorldEvent$Pre.class
+SHA-256-Digest: cMs3Lujn1vVzRNBxtwBV5W5f0dMp3xQWpbVitlipFNM=
+
+Name: net/minecraftforge/fml/client/GuiModList$SortType$1.class
+SHA-256-Digest: Wxp9ECTAr+As/r4UdvXPQ2jPK0OpCVes+Yp4ioVR6ns=
+
+Name: net/minecraftforge/common/capabilities/CapabilityManager$3.class
+SHA-256-Digest: T5u4dn2sV1+FVlZpSPuP7I3JmVVGWB6H+Ll5e2OJhF8=
+
+Name: net/minecraftforge/fml/relauncher/ModListHelper.class
+SHA-256-Digest: 6FdR3FKhekzfNgrQ+VTaB9Oe/RyplYjLq1a2HQGk/eI=
+
+Name: net/minecraftforge/fml/common/registry/PersistentRegistryManager
+ $ValidateRegistryFunction.class
+SHA-256-Digest: 7fXyUY6O0zkiEPe4UIhqpoPga2Rn5pBih1ndO2aD4KU=
+
+Name: net/minecraftforge/common/util/Constants$NBT.class
+SHA-256-Digest: 3VFxjOpVIssTm25fpYgcVthRz98KMMQrgDwpvt14Syo=
+
+Name: net/minecraftforge/client/event/TextureStitchEvent$Post.class
+SHA-256-Digest: IgFhZbag/KPe/80McE68USgMZPZlogr42oSitni/vfw=
+
+Name: net/minecraftforge/client/model/b3d/B3DLoader$B3DState$1.class
+SHA-256-Digest: /aRYnbSeQvT2ysAlqP3btFSODkwsr04StOMIhZ93RKs=
+
+Name: net/minecraftforge/fml/common/eventhandler/EventBus.class
+SHA-256-Digest: zOHLd9cepjq8rlLbMxibd92Klg5s3oS0xmrxnl0YcX0=
+
+Name: net/minecraftforge/client/event/ClientChatReceivedEvent.class
+SHA-256-Digest: 5sTM7b5UnfVTvaJ65+153T3ILuoFdrOMt9vjV31aBx4=
+
+Name: net/minecraftforge/event/world/NoteBlockEvent.class
+SHA-256-Digest: eMIjtQmJsoq4DQ5+GLkSTqcV/d4/emswbBwNaKZvLI4=
+
+Name: net/minecraftforge/fml/repackage/com/nothome/delta/Delta$TargetS
+ tate.class
+SHA-256-Digest: BfDpD6TJVGKmjBzsadOizX9rd7XYYmRjWVEOo1tRXSg=
+
+Name: net/minecraftforge/client/model/b3d/B3DModel$Texture.class
+SHA-256-Digest: bu5vgWMkV5UdceUO9AMeUDGKU6D9GyKymFMEDh9L5G8=
+
+Name: ibxm/Envelope.class
+SHA-256-Digest: 0+2TK7preQKX8TEqGuBmL2wZE+AiFSniHu8LSTqw7pk=
+
+Name: net/minecraftforge/event/entity/living/LivingAttackEvent.class
+SHA-256-Digest: 6DVsXjUXodT5QWIwMvy85FUvLm2pE8W54KSf8WTeIqQ=
+
+Name: net/minecraftforge/fml/client/config/DummyConfigElement$DummyCat
+ egoryElement.class
+SHA-256-Digest: hzBcCx9xjWUZstRgXXW8Uocq6Recl6ngisoYkmPeupM=
+
+Name: net/minecraftforge/event/terraingen/WorldTypeEvent$BiomeSize.cla
+ ss
+SHA-256-Digest: YTJkicKDOXlfhNmXoEtgBge4xSSxoZ1DSjczIsghza8=
+
+Name: net/minecraftforge/fml/client/config/GuiSlider$ISlider.class
+SHA-256-Digest: wHf7PzFcQVn1CXS0Md3RFbAxJTNJ6hBc4g9CD8thaLU=
+
+Name: assets/forge/models/item/bucket_milk.json
+SHA-256-Digest: pKBwOqzBA4BW0sdwiVG5Mnk8O/pMyeO3iWMBTN7dXRo=
+
+Name: net/minecraftforge/client/model/obj/OBJModel$MaterialLibrary.cla
+ ss
+SHA-256-Digest: 57dRjMfUogwNHxBbCiPJbvKePy89Mke2hn2gQ5Z14XM=
+
+Name: net/minecraftforge/common/ForgeVersion$CheckResult.class
+SHA-256-Digest: MhND86YUEBFx2gc3SdzUNLjo3ZdpkL8BuJ2MRIrzpKo=
+
+Name: net/minecraftforge/fml/common/versioning/ComparableVersion$Strin
+ gItem.class
+SHA-256-Digest: Xo96cIZwPqZqU06n3raBSpJ85WY5tmccrHPtGZPHeFw=
+
+Name: net/minecraftforge/fml/repackage/com/nothome/delta/SeekableSourc
+ e.class
+SHA-256-Digest: xDBBadnxkvJG2mbEtPK8GPvXwWpRACqu9KUfR3g+NwA=
+
+Name: net/minecraftforge/client/model/animation/ModelBlockAnimation$Pa
+ rameter$Type.class
+SHA-256-Digest: JJ+paIoO+OcHij39r11SOsZZ/5lPkKxBrJ5cg5YsrTk=
+
+Name: net/minecraftforge/fml/relauncher/IFMLLoadingPlugin$SortingIndex
+ .class
+SHA-256-Digest: WmFy9EoeP755OM51HTRxMdl94jmMFfj3T9h+aesm/qY=
+
+Name: net/minecraftforge/fml/common/network/FMLOutboundHandler$Outboun
+ dTarget.class
+SHA-256-Digest: bz07X0OIAV1BfNRZkMRciHXTXzhBHFl5j74qP5o0+cc=
+
+Name: net/minecraftforge/fml/common/network/FMLNetworkEvent$CustomNetw
+ orkEvent.class
+SHA-256-Digest: N/LjV/Mw+X0a2AAsWgdWn1OD639ZDLzlZhr+CigxwL4=
+
+Name: net/minecraftforge/client/model/pipeline/LightUtil.class
+SHA-256-Digest: UZ4HunJodYjw50yCz6DBKk2KduB4g93tPEcl0xW0Zr4=
+
+Name: net/minecraftforge/client/model/pipeline/BlockInfo.class
+SHA-256-Digest: A5MLqAWzRHMksq6k0CJ/nj2ELqQuT4A2ab3bpSoJaOs=
+
+Name: net/minecraftforge/client/gui/ForgeGuiFactory$ForgeConfigGui$Add
+ ModOverrideEntry.class
+SHA-256-Digest: wn1Xo1csaA5cEElTxnyQVQh/DON2mgoK2tg/yNJZV9g=
+
+Name: net/minecraftforge/client/model/BlockStateLoader$Marker.class
+SHA-256-Digest: lSlW5LCX2mfMBJThWVhab7vX4Me9M1Wgb+r4chwkuNw=
+
+Name: net/minecraftforge/client/model/b3d/B3DClip$NodeClip.class
+SHA-256-Digest: 5QPgbz4/FMwAlnRJr6YGTwxR2J2j1Y9wLwNh9tdTil8=
+
+Name: net/minecraftforge/client/event/RenderWorldEvent$Post.class
+SHA-256-Digest: 1equnQFYEtgEbCrcaR9ruphC0JQQhSWWzgvV4MDuXck=
+
+Name: net/minecraftforge/fml/common/registry/FMLControlledNamespacedRe
+ gistry$AddCallback.class
+SHA-256-Digest: FKaLs83NzYF4CAjl+FDippu3+aNIyMbeFExfWZjAcxw=
+
+Name: assets/forge/lang/hu_HU.lang
+SHA-256-Digest: Ouor3RTIFWbyrWK72xVcfIB2Ufm0CgpK9mhQaZaXJx8=
+
+Name: net/minecraftforge/fluids/BlockFluidFinite.class
+SHA-256-Digest: nMpIaAObbR1GNtUUJsBmfPY5Irwp7RCVwO7OZ/mG/9U=
+
+Name: net/minecraftforge/event/entity/player/PlayerUseItemEvent$1.clas
+ s
+SHA-256-Digest: fbmV1RHM1sCTx5UzS1oDH/qrc1WS0mgzMPUk6I0VbH4=
+
+Name: net/minecraftforge/client/event/sound/SoundEvent.class
+SHA-256-Digest: BPX0aMnSY87AwW3QWZHlD97HIaZ7VPH5qoQ2uaaoGG8=
+
+Name: net/minecraftforge/event/terraingen/DecorateBiomeEvent$Post.clas
+ s
+SHA-256-Digest: i2XjVZl9LeVOBS18Qzbh8BA2JByoI+W+irt3WuvLusY=
+
+Name: net/minecraftforge/client/model/ItemLayerModel$BakedItemModel.cl
+ ass
+SHA-256-Digest: afq8icEEIoReYLM/vQjoVfBNHjMyIxPEkIJH+inJGSE=
+
+Name: net/minecraftforge/event/entity/player/SleepingLocationCheckEven
+ t.class
+SHA-256-Digest: lHrb9wJJVeYVOSAWWFKXqfMDJ6dE0hktUULIuODlzx8=
+
+Name: net/minecraftforge/fml/common/Loader$ModIdComparator.class
+SHA-256-Digest: c8njRQTg0G8xzogQyTws+MrfuEtCG4AkyjKK1YCNhMY=
+
+Name: net/minecraftforge/fml/common/network/FMLOutboundHandler$Outboun
+ dTarget$6.class
+SHA-256-Digest: EOZ1gb3G12JBHb/JRW9TMiCaC/aSLIAr5b2G9dsiSxQ=
+
+Name: net/minecraftforge/fml/client/config/GuiMessageDialog.class
+SHA-256-Digest: fI2bNXCIteM0kd0ZtM8t6dSNbMcvohkOB2S6OWbsT1k=
+
+Name: net/minecraftforge/fml/client/config/GuiUnicodeGlyphButton.class
+SHA-256-Digest: qPz4lIFWEOAOgggks7QVskb2AhNa0Oo64SoqR/ioTVU=
+
+Name: assets/forge/lang/ko_KR.lang
+SHA-256-Digest: +KQuZEWxGI6/TZmrghyVLOlQHpY9JNMD2NShZAcKgZc=
+
+Name: net/minecraftforge/client/gui/ForgeGuiFactory$ForgeConfigGui$Gen
+ eralEntry.class
+SHA-256-Digest: iEOaSvIhsyb1FO/ktAwfAyU/TnjivrdO9xCIwVoVTQk=
+
+Name: net/minecraftforge/fml/common/event/FMLServerStoppingEvent.class
+SHA-256-Digest: PBMGzcwGfnOElukB21h9iYvvhglvUoOVl94hF/1Do00=
+
+Name: net/minecraftforge/event/entity/player/ArrowNockEvent.class
+SHA-256-Digest: G4krAep7qbwCFWR1d2qmHmB276P+LPrOXQFydM/Fles=
+
+Name: net/minecraftforge/client/event/RenderWorldEvent.class
+SHA-256-Digest: iyWeBzKsPEupYG1jtZX2z0/ITGF7FoeHi2XDVbH2wBw=
+
+Name: lgpl-3.0.txt
+SHA-256-Digest: 6or154nLLU6bELzjh0mCreFjt0m2v72zLi3yHE0QbeE=
+
+Name: net/minecraftforge/common/capabilities/CapabilityManager$1.class
+SHA-256-Digest: nxnk8EIGtklk6Npgtyev8BIUIEBOifsi8PxAAd4POK8=
+
+Name: net/minecraftforge/fml/common/network/PacketLoggingHandler$4.cla
+ ss
+SHA-256-Digest: BUuqrUS0xQB9KNMPGHamiIPsdIEGFClkcF1ApI+HUMc=
+
+Name: net/minecraftforge/fml/relauncher/ReflectionHelper$UnableToFindF
+ ieldException.class
+SHA-256-Digest: V3V0UQRG4sRcb7j4cLS6ud3No2aaCIQdBFGLZevy3Ow=
+
+Name: net/minecraftforge/fml/common/registry/GameRegistry$1.class
+SHA-256-Digest: 3PNrg7eFl2HFDBaNFf90ugvVs6kYRcmwmWN8Xa/l3Gc=
+
+Name: assets/forge/lang/ru_RU.lang
+SHA-256-Digest: MQh5vrnTbJZBtoH5tJfgiLSGgCtndb+RUowYAPHryQA=
+
+Name: net/minecraftforge/fml/common/Optional$Method.class
+SHA-256-Digest: gywHMtuf3/p1GxSSKejDMcxbuTl+m8h1JTWazhXHpmw=
+
+Name: net/minecraftforge/client/model/animation/ModelBlockAnimation$MB
+ JointWeight.class
+SHA-256-Digest: PM9jlkL9AMm296jGIRNHFnA3osQm8wVFv177zLlOGs0=
+
+Name: net/minecraftforge/event/entity/player/PlayerInteractEvent.class
+SHA-256-Digest: kryb9jLmjoCJUVBgjJZxYR6TkKxcWVLRm9o0+P3tPoo=
+
+Name: net/minecraftforge/fml/common/asm/FMLSanityChecker.class
+SHA-256-Digest: 0KepVIzemDW3Oaw0t8yNQZGjed8o5cyLuZVb64+kWFg=
+
+Name: net/minecraftforge/fml/common/asm/transformers/deobf/FMLRemappin
+ gAdapter.class
+SHA-256-Digest: ID9T53Zu66K8e8KXymZMxWewfq8v6UM1nWTnSOfCZMI=
+
+Name: net/minecraftforge/fml/common/discovery/ModCandidate.class
+SHA-256-Digest: Agrl8dSzFDaQV4SEM7uHg0aLlF4MZ4J6YsCK7ztbEoQ=
+
+Name: net/minecraftforge/fml/common/network/simpleimpl/SimpleNetworkWr
+ apper.class
+SHA-256-Digest: tboVKOchxE5RaywX0DMP2/P3kbwvM/PgMvXjmlKPL8g=
+
+Name: net/minecraftforge/event/world/BlockEvent$PlaceEvent.class
+SHA-256-Digest: MWV/Kh812UhnORzorx18l4SfmY7ONUT3BlnCexjx6jY=
+
+Name: net/minecraftforge/event/entity/player/EntityItemPickupEvent.cla
+ ss
+SHA-256-Digest: MIiQRycUQMWPoYiaxyYWUXAZqFMFzu9jI05R0bHckss=
+
+Name: net/minecraftforge/fml/common/FMLModContainer.class
+SHA-256-Digest: ucF0lxVPxeiQsywXmwJEgM76AgPSj3omNYHu432mYjw=
+
+Name: net/minecraftforge/fml/repackage/com/nothome/delta/Delta$SourceS
+ tate.class
+SHA-256-Digest: j9/iS2VBaPw5sltXJTBtFfnAC4AhQ4HYGer/QBXwQRk=
+
+Name: net/minecraftforge/common/network/FluidIdRegistryMessageHandler.
+ class
+SHA-256-Digest: taosTMv8SjGwsN6uEVV/Ws9LCwHYNFrxz478cs+HdH8=
+
+Name: net/minecraftforge/client/event/RenderGameOverlayEvent$Post.clas
+ s
+SHA-256-Digest: ph2QD7By8iJMNZCj5lq82go7Q/26cuahwRVj3j2ddfo=
+
+Name: net/minecraftforge/client/model/animation/Animation$1.class
+SHA-256-Digest: KxnHi7GihPMI2ElDvYbFZ6WL/yFAkzLFf0FZfbdzmKc=
+
+Name: net/minecraftforge/fml/relauncher/FMLRelaunchLog.class
+SHA-256-Digest: SGqToPQTRAWg/zUAfIoRJSuFkbKyAt21Ct7SOp6UCcs=
+
+Name: net/minecraftforge/fml/common/asm/ASMTransformerWrapper$WrapperV
+ isitor.class
+SHA-256-Digest: bkWMHUaZAQDkJO4yEbeYiPLuR4mpwDHQUgAmgh+cCjI=
+
+Name: net/minecraftforge/fml/common/asm/transformers/TerminalTransform
+ er$ExitVisitor.class
+SHA-256-Digest: lPO2hve4bJIujfhKWvFA+lUs0//hWzPkjSnp9W0Iam4=
+
+Name: net/minecraftforge/fml/common/EnhancedRuntimeException$2.class
+SHA-256-Digest: 2+reitSHLKW7n21NF1qGi26HD1Y4XUssuEIX/jPxGGE=
+
+Name: net/minecraftforge/fml/common/network/internal/FMLMessage.class
+SHA-256-Digest: 91CaleCi4Pq/Zf7wJW9sMKwPjwbQZoflT9ggIzb7Veo=
+
+Name: net/minecraftforge/common/util/AsynchronousExecutor.class
+SHA-256-Digest: Nbx9Irfm4w/mMH11IPTtaOvnXPRAJXjvNwh0Z8lwecQ=
+
+Name: net/minecraftforge/fml/client/GuiModsMissingForServer.class
+SHA-256-Digest: eaQyRZkChuA+4wwLyr6tdMovFvu2lJCRf7O5PvU06ng=
+
+Name: net/minecraftforge/fml/common/toposort/TopologicalSort$DirectedG
+ raph.class
+SHA-256-Digest: Rzk0yO6PmRzW3hg4gkuuDrOSDq5r7tUIjgRVz3ezSAM=
+
+Name: net/minecraftforge/event/world/NoteBlockEvent$Octave.class
+SHA-256-Digest: 2AJHvjqkuwF+vEpLyFxLe/cqkCOEsRttKfD5Grndr9U=
+
+Name: net/minecraftforge/fml/client/config/GuiEditArrayEntries$Integer
+ Entry.class
+SHA-256-Digest: RADyBJ920iZ3qgADXp1YdTwxYOATXzUQ6UOJzPtu5WI=
+
+Name: net/minecraftforge/client/model/ISmartBlockModel.class
+SHA-256-Digest: 4vUGiQYRJtd8QKRqNWC+1SieKyeKqgfyO2UWd6eQzLI=
+
+Name: net/minecraftforge/client/model/b3d/B3DLoader$BakedWrapper$2.cla
+ ss
+SHA-256-Digest: 5nErUzz3qIl4jKU1v9PffLFW50QGJclXAHI1zCoHrng=
+
+Name: net/minecraftforge/common/FishingHooks$FishableCategory.class
+SHA-256-Digest: 39U4rJtdMf/EUXDzH6LG6qxOz26lciS+4WtJRSFalPk=
+
+Name: ibxm/Sample.class
+SHA-256-Digest: T4+ulcZXLEbV/PEnHYtrUz6THDSaCc89mwzCG3bgDcA=
+
+Name: net/minecraftforge/fml/relauncher/IFMLCallHook.class
+SHA-256-Digest: CboRZG6oduEjiOAanO102H9mzpb48auqhFVajhPV8Rw=
+
+Name: lc$a$1.class
+SHA-256-Digest: Blp88GHKHO9ik4c2IoQXEtbmaBgarF+mIQxO4JJEsoM=
+
+Name: net/minecraftforge/event/world/ChunkEvent.class
+SHA-256-Digest: E7fIvmDzB2BtoeAGtEdsSaoIgQvGsfLCBNmCffizWKs=
+
+Name: net/minecraftforge/fml/client/GuiModList.class
+SHA-256-Digest: SILh5XaG9MskMlsPOsB5JVNg85FbWx+603UjgOWiNmI=
+
+Name: net/minecraftforge/fml/relauncher/ReflectionHelper$UnableToFindC
+ lassException.class
+SHA-256-Digest: DB4b2x85dBsZn+BmrILUxZmnsFxiJItbalMjbMlfyPw=
+
+Name: deobfuscation_data-1.8.9.lzma
+SHA-256-Digest: ZQXhwqUTnmGDUcknw3jNCEL5BXJEP+q+OsunPhEhhi8=
+
+Name: net/minecraftforge/fluids/FluidRegistry$1.class
+SHA-256-Digest: al+11glQJVcpCivOt+E3GgSRo0GImyEcWghzBzZeTD0=
+
+Name: net/minecraftforge/fml/common/ProxyInjector.class
+SHA-256-Digest: U+3s0DygnrNZyirskvvkLGba5XR/U+ZhXM5AbAJ4K6I=
+
+Name: net/minecraftforge/fml/common/asm/transformers/ModAccessTransfor
+ mer$JarByteSource.class
+SHA-256-Digest: Ls8v+q6DWZIcNPyY4QPOIQFabUzE9e+i5Qm1q88+X/Y=
+
+Name: net/minecraftforge/client/event/GuiScreenEvent$KeyboardInputEven
+ t.class
+SHA-256-Digest: TPsA7Om8Rv//vRxXvh0Y471Vj6tDhd4V1Xddmolk9EA=
+
+Name: net/minecraftforge/event/entity/player/AchievementEvent.class
+SHA-256-Digest: bJudar6bWyzQ+mM38a9rA1lJDKORpuzpLHETuVLSLDM=
+
+Name: net/minecraftforge/items/VanillaDoubleChestItemHandler.class
+SHA-256-Digest: I+4CMs0glbG+W24qj3042q+SMSnvaDv/TefG1A5yp5A=
+
+Name: net/minecraftforge/client/model/MultiModel.class
+SHA-256-Digest: 1Eu3i5cmfDbSO7ntIE8+95977JC8fZfl+ICQYR+PDHM=
+
+Name: forge.exc
+SHA-256-Digest: LH097ASRtL8hxRQ1mmxjQhy57PU3OBamcwvDmiQgH00=
+
+Name: net/minecraftforge/fml/common/event/FMLModIdMappingEvent.class
+SHA-256-Digest: lHhc0mo9JsDbOO0s9elkm8EC5HIiSnEZ1S4mEtFu6m0=
+
+Name: MinecraftForge-Credits.txt
+SHA-256-Digest: X8Qa6I9VxNYo6slL/pq9IBSA+I23Qw8VXpYOqw13VhI=
+
+Name: net/minecraftforge/common/config/ConfigCategory.class
+SHA-256-Digest: MT52mNQb8/u7tNKPuZKU0dSWMh2PDgq8hzYs+TpBGs0=
+
+Name: net/minecraftforge/fml/common/network/handshake/ChannelRegistrat
+ ionHandler.class
+SHA-256-Digest: McHIeNgY3cZGgAWhh9bJRPCiGdcmUp7F5zNWily9dk0=
+
+Name: net/minecraftforge/client/event/RenderPlayerEvent.class
+SHA-256-Digest: W4ncRpDFbRBKsXO98LNFX+dLe63IgAaDHLBhvaLi6SQ=
+
+Name: net/minecraftforge/client/event/RenderWorldLastEvent.class
+SHA-256-Digest: lp/ki0dV9VYSL+aMSNvwIDK93EEq87zUY8JJI/n5E7k=
+
+Name: net/minecraftforge/fml/common/network/internal/NetworkModHolder$
+ IgnoredChecker.class
+SHA-256-Digest: jfCVoPut325u0EtkX5YFcQ3mQVaXXcb7oy+LRs/fTGk=
+
+Name: net/minecraftforge/event/terraingen/PopulateChunkEvent$Post.clas
+ s
+SHA-256-Digest: xQigcGDV/VwCPZdyPVY6RqT4XnpRW/uqcPJvo9lqvU4=
+
+Name: net/minecraftforge/fluids/FluidRegistry$2.class
+SHA-256-Digest: gwdfhS0s53Qqho3E0pTOaSf1WZKoIBBqwipEWjoUR9s=
+
+Name: net/minecraftforge/fml/common/network/FMLNetworkEvent$ClientConn
+ ectedToServerEvent.class
+SHA-256-Digest: qqN9Zo4sUR5FCzf2OiNZrw38sMghU77MWghfu+37XgY=
+
+Name: net/minecraftforge/common/AchievementPage.class
+SHA-256-Digest: jUiI8dM+5/PW9f+OrsXFlgTy6mrwuYZLRmPhHF09/xM=
+
+Name: net/minecraftforge/items/CapabilityItemHandler.class
+SHA-256-Digest: YE7oyi4CnxsCKFC6rJv3/J+AACMevbbLmODsaSoxaMk=
+
+Name: net/minecraftforge/fml/common/LoaderState.class
+SHA-256-Digest: e86iFlvgC4MlEcoZOg6HbEEg9lZ2KawBlOFpb+YhGxQ=
+
+Name: net/minecraftforge/fml/common/registry/PersistentRegistryManager
+ $BlockDummyAir.class
+SHA-256-Digest: D+rIy9Q9qnBUEl9BS9b2qNqcpVRfLfb5GRxY+xWP+dY=
+
+Name: net/minecraftforge/client/model/animation/Clips$TimeClip$1.class
+SHA-256-Digest: U0BO7d0Coi9db+7FEy2O1FDBpHga35j+nh9FVR0rtms=
+
+Name: net/minecraftforge/common/config/Configuration.class
+SHA-256-Digest: 4QUi+IUsGaaT7UO8D6JvdJPf1i/19Wa+M9xVjSM2ov8=
+
+Name: net/minecraftforge/client/model/animation/AnimationModelBase.cla
+ ss
+SHA-256-Digest: Xj2OzoJFdjEBWjvfZ5aZkcJnsYJ4gx8j1kJN+O2dzqk=
+
+Name: net/minecraftforge/client/model/animation/AnimationTESR.class
+SHA-256-Digest: rJMU1NeMZO3egOz0UQrkaPaLqGReZrHrCOK7pse9wsE=
+
+Name: net/minecraftforge/common/ForgeHooks$SeedEntry.class
+SHA-256-Digest: hkgm9KAgvqccTj522EEGnPoQX935bGJV3CW7Ha6vBy0=
+
+Name: net/minecraftforge/event/entity/player/UseHoeEvent.class
+SHA-256-Digest: VZHfFnyYjnTgvc9TouUX/8G3vWJjsna8Jyldy3zhHAw=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeMess
+ age$HandshakeAck.class
+SHA-256-Digest: RuHNkbYq7uM5TD4WN7MAoPFJlUQuMaq36hm0IQYgWBw=
+
+Name: net/minecraftforge/fml/common/FMLLog.class
+SHA-256-Digest: S1IaMsjO9UONEHdKHCNuZb6mqpgCADSmyohcQdZfp5c=
+
+Name: net/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEven
+ t.class
+SHA-256-Digest: AnX8OVVG55lc5Cy1zGUcZnbByDVdHJMjw/olq4puWIE=
+
+Name: net/minecraftforge/fluids/FluidStack.class
+SHA-256-Digest: MqtDgbaitUcRI9RMbtkACBhlrkSu2Yj/dDoCiZeHeSQ=
+
+Name: net/minecraftforge/client/model/animation/ModelBlockAnimation$Pa
+ rameter$Variable.class
+SHA-256-Digest: XaJa6F+35G+e7xdl7hezEkSEUCVN6A0X7NJYuiFa2Vw=
+
+Name: net/minecraftforge/common/util/INBTSerializable.class
+SHA-256-Digest: TWDDg8/K3jLJjdwRuUYkaS25WJLeL4SCcfw2U75Jxu8=
+
+Name: net/minecraftforge/fml/client/event/ConfigChangedEvent$PostConfi
+ gChangedEvent.class
+SHA-256-Digest: gAeV/9wDrmnd5NFLQ51xI1Z84ACwSCoND8lkTCC10qI=
+
+Name: net/minecraftforge/client/model/MultiLayerModel.class
+SHA-256-Digest: TLm7jhD0cjlhnN3EKWr8ur2+4pYLe+EJfGsOlB+1Gh0=
+
+Name: net/minecraftforge/fml/common/discovery/ASMDataTable$ASMData.cla
+ ss
+SHA-256-Digest: r2zSWDSea7/TfyXWvU6yxB+kJxPG2QKHVl11J+7ikEM=
+
+Name: net/minecraftforge/fml/common/registry/VillagerRegistry$IVillage
+ CreationHandler.class
+SHA-256-Digest: +7BtU74lzVvfwtKyVTtVSutW3K7/3qppEwNv5meZCEY=
+
+Name: net/minecraftforge/common/util/JsonUtils$2.class
+SHA-256-Digest: jH8Kz++lLWvvsA7fWRf0Aw6TvLRLUSgm7vcZ2vZo/4w=
+
+Name: net/minecraftforge/fml/common/gameevent/PlayerEvent$1.class
+SHA-256-Digest: 3v+8vtqyA/4IpBNV3Lq7TRampdyqXxo9PQ8amv1AinE=
+
+Name: net/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent
+ .class
+SHA-256-Digest: VD6W7xO8QoJJb0R9q7pIatyKoZwjNZIhfBVle4gHaYA=
+
+Name: net/minecraftforge/client/model/animation/ModelBlockAnimation$Pa
+ rameter$Interpolation.class
+SHA-256-Digest: qAwrbsQ3ODz2lfyoV+fxohSeWGseMqGHZ1nKwsZv4Io=
+
+Name: net/minecraftforge/client/model/pipeline/VertexLighterFlat$1.cla
+ ss
+SHA-256-Digest: TVCEgyt/Gg9T/tSkrQanryHt1aNmFMBnceIIgNZetX8=
+
+Name: net/minecraftforge/event/entity/player/PlayerEvent$StartTracking
+ .class
+SHA-256-Digest: iHNTOjARFbxFK4yAqknnCGMhFT7txliOWAnN6BQTN9Y=
+
+Name: net/minecraftforge/fml/client/config/GuiEditArray.class
+SHA-256-Digest: oK1oPrnvOYjBBq88f3z+Ic7jy+GfvpnCC/VwGijNeqI=
+
+Name: net/minecraftforge/event/entity/EntityEvent$EnteringChunk.class
+SHA-256-Digest: NGMRUPFKbHlYABhbGKKpTBnW7liftoryGmUrmmqm840=
+
+Name: net/minecraftforge/client/model/BlockStateLoader$SubModel.class
+SHA-256-Digest: 3gN4GIWHV+kbpaTzUIweY7BtHQrdnCAmNuhlRMGWTbo=
+
+Name: net/minecraftforge/fml/common/toposort/ModSorter.class
+SHA-256-Digest: mpP7vE3PXv3ZibrqLvt44h0hy3ZTevjNU+a2vcP3kGk=
+
+Name: assets/forge/lang/br_FR.lang
+SHA-256-Digest: KAnYOJpoFP/db4v+xhQgPAPxEJJriSggtGwdlbvPWUY=
+
+Name: net/minecraftforge/fml/common/eventhandler/ASMEventHandler$1.cla
+ ss
+SHA-256-Digest: YIe71zDrel5ZDWOzOGXQpiR9uYwlEUq2O+FjFcKgm6w=
+
+Name: net/minecraftforge/client/model/pipeline/LightUtil$1.class
+SHA-256-Digest: 0GeJcyg1V9oEjKAT5hTwJ2dn8A474XiNx3M4tXUBt9A=
+
+Name: net/minecraftforge/fml/common/event/FMLMissingMappingsEvent.clas
+ s
+SHA-256-Digest: OTenjctgYHZUQoZICoa9fDFwrdW8nPCE3VRJOEgXoHs=
+
+Name: net/minecraftforge/client/model/pipeline/LightUtil$ItemConsumer.
+ class
+SHA-256-Digest: 5ECHzvkEZ288USQ/3SyVd6XUwrfILqxiGOgcXkMI/lg=
+
+Name: net/minecraftforge/client/model/ISmartBlockModel$PerspectiveWrap
+ per$1.class
+SHA-256-Digest: GRFBct/8qhYLKzNoc28m/RNHrjgGoMQdDSQT9TyVNrE=
+
+Name: net/minecraftforge/fml/common/toposort/TopologicalSort.class
+SHA-256-Digest: 6l1xfPC8KwEXxrxK9APcTzLT3K+2dxuYKZmBSWroZMk=
+
+Name: net/minecraftforge/fml/common/network/PacketLoggingHandler$3.cla
+ ss
+SHA-256-Digest: 24ZkynxJHhP6N+GcgTkqhaIekvVz7Yp/bBXYs4HWgWc=
+
+Name: net/minecraftforge/client/event/RenderPlayerEvent$Specials.class
+SHA-256-Digest: /JJPp1g7mAkPz7ZIxtauvVSh7R4dTvXUQmGfZeo2Fcw=
+
+Name: net/minecraftforge/client/model/obj/OBJLoader.class
+SHA-256-Digest: 0BUeinDDeDn8ACUEbmzXdLYDXGoMZCO/wQZ866C7JFY=
+
+Name: net/minecraftforge/fluids/FluidRegistry$FluidRegisterEvent.class
+SHA-256-Digest: MdFZ9B7EE1hcVbiXyC4kxwL49gmc+Was2CJE0XuMtRI=
+
+Name: net/minecraftforge/client/model/animation/Clips$TimeClip.class
+SHA-256-Digest: YW5rKA1oYyeOxlF+z+d1Q+/nXvDL7eoks0cYKR9csrU=
+
+Name: assets/forge/lang/zh_CN.lang
+SHA-256-Digest: u1NehG8TtA+fZGSflG+RTbvK6PWKnK89/LYTB1mSbTA=
+
+Name: assets/forge/lang/vi_VN.lang
+SHA-256-Digest: +2N63wcOiS2pU3HNnNtCycaf6ALvt+gWUG9idfpUuTA=
+
+Name: net/minecraftforge/fml/common/versioning/VersionParser.class
+SHA-256-Digest: 6G5UOfz7uymh+sL4z1efK9nR5GIe5EoUwnm2D12oFgo=
+
+Name: net/minecraftforge/items/VanillaInventoryCodeHooks.class
+SHA-256-Digest: G/rftpUkRL30nu7wOalRj1gd6NmsNq7wbsCGm7ogoFU=
+
+Name: assets/fml/textures/gui/icons.png
+SHA-256-Digest: ZvsycrlHgE+5E+HgaStN3+bRTY44r87a7FUfA/D/XZE=
+
+Name: net/minecraftforge/common/ISpecialArmor.class
+SHA-256-Digest: +xHvrhhGXnqRU7I9WTo+/YQlGWaNKZNiJylC44gijFk=
+
+Name: net/minecraftforge/fml/client/config/GuiEditArrayEntries$StringE
+ ntry.class
+SHA-256-Digest: YrZPh70UDh2NLaXQ+X7hSGtSXpsGIWXDC+6k1jGbRuw=
+
+Name: net/minecraftforge/fml/common/registry/RegistryDelegate$Delegate
+ .class
+SHA-256-Digest: xBmQPS/cBjsitrEhEWtDg+K9y+WLC5QS0DdDpA8CauM=
+
+Name: net/minecraftforge/fluids/Fluid.class
+SHA-256-Digest: YjxokQiqoHLzYhTMQIsiNv2ju9A9JlwPPHEghP3LKgc=
+
+Name: net/minecraftforge/client/model/MultiLayerModel$Loader.class
+SHA-256-Digest: /XVkfqpk7CbbYs/B+d8q+oJHEepoZmsGXp5TMOt7T4w=
+
+Name: net/minecraftforge/fml/common/registry/GameData$PotionArrayCaptu
+ re.class
+SHA-256-Digest: IyU+tWzG+ZguEd7AIIxmtKviYb4w4jswgj0Hku56n/s=
+
+Name: net/minecraftforge/fml/common/EnhancedRuntimeException$1.class
+SHA-256-Digest: z54mSWFkKGF+LzRLu60sFIRRlLQoL7xvJzDv/gOKPFY=
+
+Name: net/minecraftforge/client/event/GuiScreenEvent$KeyboardInputEven
+ t$Pre.class
+SHA-256-Digest: QoYNOrQCh4vCBmUhv8/abcMvQB9B6X+3uaDyibQ0ZCg=
+
+Name: net/minecraftforge/client/model/animation/Clips.class
+SHA-256-Digest: LyRONBltaOuvoSIdc4iJ9aK5FyWyoDs4avh8Y7hbhAk=
+
+Name: net/minecraftforge/fml/relauncher/ServerLaunchWrapper.class
+SHA-256-Digest: HImhHM3M+mTs2qM7nKJKqr4U1YHBu5ut/SbXA1Ikp/Y=
+
+Name: net/minecraftforge/common/util/JsonUtils$3.class
+SHA-256-Digest: K6I9x2nwUD+s4YHIFXR1U25+Wf41Z6YP/L49SIHf/u8=
+
+Name: net/minecraftforge/client/event/GuiScreenEvent$InitGuiEvent.clas
+ s
+SHA-256-Digest: eI4X2RNvV/18JoyXVmG8gdpmsEmhuKpJIUW6JCexOjU=
+
+Name: net/minecraftforge/client/event/GuiScreenEvent$DrawScreenEvent.c
+ lass
+SHA-256-Digest: brHX/7fQf7N6Ssb6XHCRgCGZE4AWWWJkctJEcbm60PQ=
+
+Name: net/minecraftforge/fml/common/toposort/ModSortingException$Sorti
+ ngExceptionData.class
+SHA-256-Digest: DvLqswXng4OCYu6+GMhHwgPGZFVaXkWZlxfWTSRoJyA=
+
+Name: assets/forge/lang/en_US.lang
+SHA-256-Digest: wqpKzk0+z4WAc025RgyAXbSX0FmHHnXiJ3+XLFc0gzw=
+
+Name: net/minecraftforge/event/terraingen/DecorateBiomeEvent$Decorate$
+ EventType.class
+SHA-256-Digest: WhAy5jwrQu4qEBy04lSIE1r8XftPfK2Jznm/QSiBYOU=
+
+Name: net/minecraftforge/fml/common/LoadController.class
+SHA-256-Digest: Gd6suNps8q67T1Jp4nw1MnfrwY1GUYbJhMpcTy/Da5c=
+
+Name: net/minecraftforge/client/model/ModelDynBucket$BakedDynBucket$1.
+ class
+SHA-256-Digest: 9PKfhl+I3zILWOzvClrlAVw/PtubVpFdIe/ivP1v/G4=
+
+Name: net/minecraftforge/items/wrapper/PlayerArmorInvWrapper.class
+SHA-256-Digest: J0s8VRWs9PtyqbDjlrmfiqcLPR7UILysKGWrG1fnUzY=
+
+Name: net/minecraftforge/common/brewing/BrewingRecipeRegistry.class
+SHA-256-Digest: ZIYYancMLRwNiVNFMDVePAhAkprmCpbkdVepB4gs1ls=
+
+Name: net/minecraftforge/fml/common/registry/GameData$BlockStateCaptur
+ e.class
+SHA-256-Digest: vvQxa0EF2M7LwJbMXQrIa0bU0Xk+JdILgpTFE72wROs=
+
+Name: net/minecraftforge/event/entity/living/LivingDeathEvent.class
+SHA-256-Digest: Zw51y6YhukKpuL51tNiF3gzogVqm4Fbcqq7+y0s7mpY=
+
+Name: net/minecraftforge/fml/client/config/GuiConfigEntries$ChatColorE
+ ntry.class
+SHA-256-Digest: RqihwHe7WEqdI7KWuJ39Xu+sCVAdxTj2RSZCr+yGzgs=
+
+Name: net/minecraftforge/client/model/MapModelState$Wrapper.class
+SHA-256-Digest: JUp0dkdjbY5oOgw8lT+kt9Tx1616sT/r2N7VldTF6F4=
+
+Name: net/minecraftforge/event/entity/player/BonemealEvent.class
+SHA-256-Digest: VxIIvzvuY8bBlMSyiWX8mQmd8RU19hSe2RmcPejNrDQ=
+
+Name: net/minecraftforge/fml/common/IFMLHandledException.class
+SHA-256-Digest: mNwuoZPhGaHll6xXPZJnwVvOlYHB8D1l8/4rdk4NWK4=
+
+Name: net/minecraftforge/common/ForgeVersion$1.class
+SHA-256-Digest: skQ3GYqo/BA6kxI6IQwguHcSSicLGi3Rq66Yzp1C0j8=
+
+Name: net/minecraftforge/client/model/pipeline/LightUtil$2.class
+SHA-256-Digest: Hsyv4nOy1JN6c3UZA836QMAKZePmVBDxC4b7NrsEnK4=
+
+Name: net/minecraftforge/fml/client/GuiDupesFound.class
+SHA-256-Digest: P4WFZ0gU0/sSj/ocY1AnU4BpG6UMx9s1KMWi1UrFpHM=
+
+Name: net/minecraftforge/fml/common/patcher/GenDiffSet.class
+SHA-256-Digest: 9CC0U/oVbIsdKQ11G/6LKse9xJp1vmdAWnusUmx09xk=
+
+Name: net/minecraftforge/fml/common/asm/transformers/TerminalTransform
+ er$ExitVisitor$1.class
+SHA-256-Digest: JlvFWw1taiM9UoWpgf9qSwnlEzuL/d1WTnqFwpb8ziQ=
+
+Name: net/minecraftforge/fml/common/network/simpleimpl/SimpleChannelHa
+ ndlerWrapper.class
+SHA-256-Digest: NHUhDvKckYkETv8/wJ1Tm2/34bCJE1GIrM0MfOTC0RY=
+
+Name: net/minecraftforge/fml/common/network/internal/FMLMessage$OpenGu
+ i.class
+SHA-256-Digest: T5P9k8Btf6mHybm6BNjZdqeWAIDHrY3VYlZgv/KEoag=
+
+Name: net/minecraftforge/server/console/ConsoleCommandCompleter.class
+SHA-256-Digest: YHqglEXeBHHTh8YYw97gTImEuXJD87wEtTzHACAWjVM=
+
+Name: net/minecraftforge/client/model/animation/Clips$ModelClip.class
+SHA-256-Digest: /vBMpCfQmPN0BIz3FP9bUprnV5D3FzUEFXpK3UVD5sk=
+
+Name: assets/forge/lang/ja_JP.lang
+SHA-256-Digest: jTgpr6rfSJj8k+Gjtk+JDU6ld4eMOZPTcT+0/DD5eyY=
+
+Name: net/minecraftforge/fml/common/network/PacketLoggingHandler$2.cla
+ ss
+SHA-256-Digest: EfDWTKmOn5Wctq77WsuTwj8aGtVVSlfYJm8FkBeCv+c=
+
+Name: net/minecraftforge/fml/common/ModAPIManager.class
+SHA-256-Digest: vglJ6amk+/HuvaevKcbyhWs1gzT0lf+idvvjC5ZrbYs=
+
+Name: net/minecraftforge/fluids/FluidRegistry.class
+SHA-256-Digest: izi58eV6G+VWhurXXD4OrfWcS+p8hmi5g569tqaW9+I=
+
+Name: mcplogo.png
+SHA-256-Digest: cA0CJLhx4n6nwjP+C0v8TJ3fdVeVUKsRtzxwIRE3o30=
+
+Name: net/minecraftforge/fml/client/config/GuiConfigEntries$CategoryEn
+ try.class
+SHA-256-Digest: pxGy1U5wwXBSzLj08M4u5nK93HMmgYh0Wbh8xqZ2A4E=
+
+Name: net/minecraftforge/fml/common/registry/PersistentRegistryManager
+ $ResetDelegatesFunction.class
+SHA-256-Digest: jqBiFm/mZgCcgrz9Z+yQnCjpcR/Eov2BM8xBRb7oL0Q=
+
+Name: net/minecraftforge/common/ForgeChunkManager$LoadingCallback.clas
+ s
+SHA-256-Digest: pIIyvuonZgA6aNaREae/vQBnG94KenU0ocdIFoPsv3o=
+
+Name: net/minecraftforge/client/model/ModelLoader.class
+SHA-256-Digest: CDQAEVIZ8oiRmog9dDSnTlHQ5G+83fTzJU2+uvM0y54=
+
+Name: net/minecraftforge/client/model/animation/IClip.class
+SHA-256-Digest: L0cYTxNUnfaNAOijGXfLbcqLo7GZzoDAgl/VqLsT2S0=
+
+Name: net/minecraftforge/fml/common/eventhandler/ASMEventHandler.class
+SHA-256-Digest: XNM4krqY5VGWMobHhAoKqZ4YHvBA449UYsNEo2FtG0w=
+
+Name: assets/forge/lang/pt_PT.lang
+SHA-256-Digest: KLh3tWHnvZo78J5+NzWw91iLS48MkxW/qs2MEJTVWC8=
+
+Name: net/minecraftforge/fml/common/Loader$3.class
+SHA-256-Digest: jfQhsE9xFFKfIwbxRrkA2s4wCzMLDDuql1Zde2/5XmI=
+
+Name: net/minecraftforge/fml/client/GuiModList$SortType$2.class
+SHA-256-Digest: 3fwiT+tN2kXMFuxakRrx9ncA4i2xqCGfezmOpD0LpOw=
+
+Name: net/minecraftforge/client/model/IPerspectiveAwareModel.class
+SHA-256-Digest: pQPGO65oipmC2wEszYcL38yJhV0a1dG8FnUS8thoP6U=
+
+Name: net/minecraftforge/event/entity/player/EntityInteractEvent.class
+SHA-256-Digest: QiNlQtcXRMuAFL6SB/uFtXDTpo3UBHfGeZsdsQXEyPQ=
+
+Name: net/minecraftforge/client/model/obj/OBJModel$OBJState.class
+SHA-256-Digest: av+x1F+sh8Dpfu8reOtaW5bSdrQswWWOTnrzyHEq94I=
+
+Name: net/minecraftforge/event/terraingen/BiomeEvent$BiomeColor.class
+SHA-256-Digest: TkV1O7yCFBmkP3b3NbhwKRw1bEciWuBEpRaOs1NPeSs=
+
+Name: net/minecraftforge/fml/common/discovery/asm/ModClassVisitor.clas
+ s
+SHA-256-Digest: DOdEXHjho4+JsrtckFLID/XW2nNpdiql5ktUd2sK69I=
+
+Name: net/minecraftforge/fml/common/discovery/DirectoryDiscoverer$1.cl
+ ass
+SHA-256-Digest: uwUoS3UYzpbIyc6J4kCMLW1orMlOHk8HfLevexi1lls=
+
+Name: net/minecraftforge/fml/common/network/PacketLoggingHandler$1.cla
+ ss
+SHA-256-Digest: qFR43Hy1xiE+Zv5tka6XFoLtr0zbym1e6uysBu+Bgeg=
+
+Name: net/minecraftforge/fml/client/ExtendedServerListData.class
+SHA-256-Digest: NMFsxobC9OQSobglBpUjtueB05us+w9lhoJOB/Wk+/c=
+
+Name: net/minecraftforge/fml/common/eventhandler/ASMEventHandler$ASMCl
+ assLoader.class
+SHA-256-Digest: rXXqQ0MI6ODEAAZeHWlCAbMXqckmUMOKDQqQfDkl3Bw=
+
+Name: net/minecraftforge/event/terraingen/InitMapGenEvent$EventType.cl
+ ass
+SHA-256-Digest: FG89/Ng55rq77BEuqZR3SzLHxe57mWQZSSr+XbKJ1yg=
+
+Name: net/minecraftforge/fml/common/network/internal/FMLMessage$Comple
+ teHandshake.class
+SHA-256-Digest: KLtIEk0XjviaaG0OzsWFnvk4R373yjIfNxw0E9jSoiM=
+
+Name: net/minecraftforge/event/entity/item/ItemTossEvent.class
+SHA-256-Digest: l91gfeiXrqQyfeN+yH8pNU8uUnOJ5TSda7VST0yBmh4=
+
+Name: net/minecraftforge/server/console/ConsoleCommandCompleter$1.clas
+ s
+SHA-256-Digest: y4VA/CpP9tSCIFyLKlVpmIekGTeB/xtfUyhkh9TQDUg=
+
+Name: net/minecraftforge/client/model/ItemTextureQuadConverter$1.class
+SHA-256-Digest: 59pXpcYb8QKxijGWbMyT/IhNYwO0T4+ZDEsewZKLYck=
+
+Name: net/minecraftforge/common/ForgeVersion.class
+SHA-256-Digest: BWd16xKDidLummwOZKCWTm75hU3cNSDSNJ/cMvfUOCo=
+
+Name: net/minecraftforge/fml/common/event/FMLFingerprintViolationEvent
+ .class
+SHA-256-Digest: ZO4pIP/oJHg02bwbwAPurSMDlf535Tc4sztJJPuUK+4=
+
+Name: net/minecraftforge/fml/common/discovery/asm/ModAnnotation.class
+SHA-256-Digest: edOW/DOmyKvA1V4pL4mC5WDSPupCJekmlcPDx3u/bVA=
+
+Name: net/minecraftforge/event/CommandEvent.class
+SHA-256-Digest: 3JAHBojYaTkCQdXpJ3a1deIlNhYJ/u19dlbj7jvQkHg=
+
+Name: net/minecraftforge/fml/common/registry/GameData.class
+SHA-256-Digest: fyByTlT/UE/M7LVvAfsxigqeLxSI8Ac4sVxuCrvyQAI=
+
+Name: net/minecraftforge/fml/client/config/GuiSelectStringEntries.clas
+ s
+SHA-256-Digest: BVD0Gm3G4T8ko8wFPdYKT/0/iqbaHzEG3lfjQ32GRJs=
+
+Name: net/minecraftforge/client/model/animation/TimeValues$ConstValue.
+ class
+SHA-256-Digest: xXW0cfw1iqNSSW3A+SNJydCEqiDCaWrbZqJk15iwJbg=
+
+Name: net/minecraftforge/common/util/JsonUtils$4.class
+SHA-256-Digest: vi2ED/uAgCUETQD60ys1LVIcWwC+Pu9dWEsTrsKJxro=
+
+Name: net/minecraftforge/client/model/animation/FastTESR.class
+SHA-256-Digest: nlqKK0juZmeIn/WaJsx3OIiK3kwdxuXAlHDGlQx010M=
+
+Name: net/minecraftforge/fml/common/Loader$1.class
+SHA-256-Digest: jm8NLUA5981L8on0jS5VLzODSj4LOwP1SNkHrJTQFu4=
+
+Name: net/minecraftforge/client/model/animation/TimeValues$SimpleExprV
+ alue.class
+SHA-256-Digest: ffa1Cxj/bTJn4qoiwG2O+SjtHcNr5Q/6PfEjI0OzQ/w=
+
+Name: net/minecraftforge/common/property/Properties.class
+SHA-256-Digest: msEtV4Q3umsmXID0YlMnTTxLmyTbm64K2AhKVFZjnpU=
+
+Name: net/minecraftforge/fml/client/config/GuiConfigEntries$ArrayEntry
+ .class
+SHA-256-Digest: 915PJsMUzlO5OTBvhI1lnz7I2DKTbhkD0ogx9/iQLQs=
+
+Name: net/minecraftforge/fml/client/SplashProgress$Texture.class
+SHA-256-Digest: CtzrNyk+Ea/1+SVzbaf2kvi16iYy7CoGB9MmuX5JPD4=
+
+Name: net/minecraftforge/event/entity/PlaySoundAtEntityEvent.class
+SHA-256-Digest: 6qF4xARsLCTf+yem7kez1eHhkFebsyVQJAC9WxevwYc=
+
+Name: net/minecraftforge/fml/client/config/GuiConfigEntries$SelectValu
+ eEntry.class
+SHA-256-Digest: 3q2LdLDkG7cCvIFjoM+SoGWzZK3gr+hN6p5YlLie47E=
+
+Name: net/minecraftforge/client/gui/ForgeGuiFactory$ForgeConfigGui$Mod
+ OverridesEntry.class
+SHA-256-Digest: yGSlLNgra5ox5vIVwfowQS/Gehq+iYvG3l6awW4uOkY=
+
+Name: net/minecraftforge/client/model/SimpleModelState.class
+SHA-256-Digest: S/IqVQblRg+MG5QVpj3xvbwcaIxXIaNUIEIaMdDxOOA=
+
+Name: net/minecraftforge/common/property/ExtendedBlockState$ExtendedSt
+ ateImplementation.class
+SHA-256-Digest: Vw2ntnF7x8k62VeiR7VI7+OjHQCgfYm1GRoPlasyG2Q=
+
+Name: net/minecraftforge/client/event/MouseEvent.class
+SHA-256-Digest: kTKxx0A+ThjmNEFm6FymquQcTMeb8ppOPgiJRJEHbTQ=
+
+Name: net/minecraftforge/event/entity/living/ZombieEvent$SummonAidEven
+ t.class
+SHA-256-Digest: aUGsnuwqiVv2FzOW263jMluehmjKjmfZnM/xzYtkKL0=
+
+Name: net/minecraftforge/event/world/BlockEvent$HarvestDropsEvent.clas
+ s
+SHA-256-Digest: /wTIvJO/auulP95GKX841noLuM4YneDEJHmHRJsIj3k=
+
+Name: net/minecraftforge/fml/client/config/IConfigElement.class
+SHA-256-Digest: qBmDNGLPvRKjqLOrI/jlf/0QA8xLf2BGIJjkK3IfZlA=
+
+Name: net/minecraftforge/common/IMinecartCollisionHandler.class
+SHA-256-Digest: uS3t6HuXd47KEwCgt7KcBBKkgFKHRYJDYuwumFE7jyY=
+
+Name: net/minecraftforge/client/ForgeHooksClient$1.class
+SHA-256-Digest: 1I+YY/5JMNyRTxibKZfd7FaAWz79oBjJATohEA3ME64=
+
+Name: net/minecraftforge/event/terraingen/SaplingGrowTreeEvent.class
+SHA-256-Digest: e8rGijy4PDGVpKByrps2+lpN5m3Q7moTt/SLJTsB8Yc=
+
+Name: net/minecraftforge/oredict/ShapelessOreRecipe.class
+SHA-256-Digest: LyTxfaNhFKkzPeRjYwEInLo9ZDwLHaZd0EMzw/IP+xU=
+
+Name: net/minecraftforge/fml/common/network/internal/OpenGuiHandler$1.
+ class
+SHA-256-Digest: VEiROS52UOxnWKlisI+G/rjzj5NV1i0WPVgzwOlnJ24=
+
+Name: net/minecraftforge/client/model/MultiModel$Baked.class
+SHA-256-Digest: XbE0WjXA+t42mQ0aLbXYdO9+0BitBcwmnX2Ot901rt4=
+
+Name: net/minecraftforge/common/UsernameCache$1.class
+SHA-256-Digest: Zr7K61MyLuNwQ4tS1y65zhsYTCkXLUzrxFD0W3VBEuY=
+
+Name: MinecraftForge-License.txt
+SHA-256-Digest: XVtZg4J8GXrC81K4WA44sYI4mYXPCltWUMNd6B/ekCY=
+
+Name: net/minecraftforge/fml/common/eventhandler/EventPriority.class
+SHA-256-Digest: ia5vtb+m1zmhHOPOjM5lkOvqstaFpAMy5wdzouDG6bw=
+
+Name: net/minecraftforge/fml/client/config/GuiSelectStringEntries$List
+ Entry.class
+SHA-256-Digest: xtMHpq2pOJm8xrzwn7Z8sEpLFYejYidDG/d3vEB+iGk=
+
+Name: net/minecraftforge/fml/common/event/FMLMissingMappingsEvent$Acti
+ on.class
+SHA-256-Digest: n2OHo0ddqP6/prF+FY+UL+CS0bXz1FFMsjYv7i6+vu8=
+
+Name: net/minecraftforge/client/event/RenderBlockOverlayEvent$OverlayT
+ ype.class
+SHA-256-Digest: P2kv2RecN7YQ76Faibmx4X3ZVvMeQk0hWta7P+ojK8M=
+
+Name: net/minecraftforge/fml/client/IModGuiFactory.class
+SHA-256-Digest: f2Y/AUUPOZPd0gEQ40EfP13ez2qh6w4sESP3igTsTTI=
+
+Name: net/minecraftforge/fml/relauncher/IFMLLoadingPlugin$MCVersion.cl
+ ass
+SHA-256-Digest: pVfdEel7aLEMjVe/tkTIvjlOkiPTRIdPg9rLPAIHUqI=
+
+Name: net/minecraftforge/common/network/ForgeMessage.class
+SHA-256-Digest: IITDXj/W8scqXYnQmUVAcUJBvXgWnMufxWWabYlyjoE=
+
+Name: net/minecraftforge/client/model/b3d/B3DModel$Parser.class
+SHA-256-Digest: ds72MYqTtKoP5kLQp4JOoyfATKL+KH5OTAcR6Xez3p0=
+
+Name: net/minecraftforge/oredict/RecipeSorter.class
+SHA-256-Digest: pnNDUtkYwzwffwh4irZ/ZiM4AVqYE8IWmMMuqDBYbQ0=
+
+Name: net/minecraftforge/common/ISpecialArmor$ArmorProperties.class
+SHA-256-Digest: 8apGRj1lyZQiLmgP/wZC8c/+xPGoDarvyjHxgSsaoX8=
+
+Name: net/minecraftforge/fml/common/asm/transformers/TerminalTransform
+ er.class
+SHA-256-Digest: sJ87cEESDQo16yeuLlgKFMX71Ulkfkowb5Du3cdImMw=
+
+Name: net/minecraftforge/fml/common/network/FMLEventChannel$EventFacto
+ ry$1.class
+SHA-256-Digest: jG54pzTdqCqilXBFeLd2KvlebDs2MvBtYZLI8qV246s=
+
+Name: net/minecraftforge/client/model/ModelStateComposition.class
+SHA-256-Digest: Alnk+4Hbvpu9j97E67nRBN5o7VAKyqZySCnRW8lcxbw=
+
+Name: net/minecraftforge/event/AttachCapabilitiesEvent$TileEntity.clas
+ s
+SHA-256-Digest: pfBZsawYxjDzj88T9cxj016CXX+kjIr5USa+Q80am5Q=
+
+Name: net/minecraftforge/fml/client/config/GuiUtils.class
+SHA-256-Digest: /bcRr033qONQEN4rWWjYzFsHX4ED73WZc22TOMwnWHs=
+
+Name: net/minecraftforge/fml/common/StartupQuery$1.class
+SHA-256-Digest: agnkk5ABro1TlvbpX9yy1eMizFQHDiWwsc1TLPuzoz4=
+
+Name: net/minecraftforge/common/EnumPlantType.class
+SHA-256-Digest: 2VaNjaqJo8EsuMYnubxysxj8HGEvHfcoyuxtEluJeoY=
+
+Name: net/minecraftforge/fml/client/FMLConfigGuiFactory$1.class
+SHA-256-Digest: OPPZR7VCrITQUJOsFngWwCG3mAWiXzK294Tux+jKHBk=
+
+Name: net/minecraftforge/fml/common/network/handshake/NetworkDispatche
+ r$MultiPartCustomPayload.class
+SHA-256-Digest: p6sgr+YA+IurKoNxL7ZLYt+Fb+7oRTkUGzRf70TD5iU=
+
+Name: net/minecraftforge/fml/repackage/com/nothome/delta/Checksum.clas
+ s
+SHA-256-Digest: 9hARikMSm0jPYia/vqjtup5WLvbe1a04qQMi5jr/p2M=
+
+Name: net/minecraftforge/event/terraingen/WorldTypeEvent.class
+SHA-256-Digest: z6F+S+FbqVROUFm2gHmJQ2M2QrcRPIOemjHB3wr9GLU=
+
+Name: net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler
+ .class
+SHA-256-Digest: Ot9b1oIcacRwXcz7S4Sap709qKyR9e6PCp+Q+pN96LE=
+
+Name: net/minecraftforge/client/model/b3d/B3DModel$Vertex.class
+SHA-256-Digest: t1wg1t7y9vjyMf6ej1ISP3eog7gklsvRVSFa2C2Z47Y=
+
+Name: binpatches.pack.lzma
+SHA-256-Digest: KzYTURPEQ3eQ1N57qUq6gF3aQ41J9zuUcAdbKicICzs=
+
+Name: net/minecraftforge/client/model/pipeline/IVertexProducer.class
+SHA-256-Digest: lH+yD6yFLYe1u4bj6C6WpWx88c2GQevvteZYCGsspEE=
+
+Name: net/minecraftforge/fml/relauncher/ReflectionHelper$UnableToAcces
+ sFieldException.class
+SHA-256-Digest: bzGS4GuPQFChdhPCCh2OHGQfs5vOaEYu4/hn1YAQcIA=
+
+Name: net/minecraftforge/fml/common/WrongMinecraftVersionException.cla
+ ss
+SHA-256-Digest: JzomR+OfcYvC3FVrFaCYoU4EGG4CIVgYK7iuyZ962Hs=
+
+Name: net/minecraftforge/fml/common/network/FMLOutboundHandler$Outboun
+ dTarget$5.class
+SHA-256-Digest: Z9hdM2IyxFdylmYjmUx0RkWBaCcu60hwKY5+yH/yo2E=
+
+Name: net/minecraftforge/fml/relauncher/SideOnly.class
+SHA-256-Digest: Ib14gVC3qDNBWxBkaWygjshwMrRh5UK3tz6pByF8FhA=
+
+Name: net/minecraftforge/client/event/EntityViewRenderEvent$FogColors.
+ class
+SHA-256-Digest: /2jdYbRNrpWhCLq0m8l0laI4XcyoGoLya6EJ1USJcTo=
+
+Name: net/minecraftforge/client/gui/ForgeGuiFactory$ForgeConfigGui$Mod
+ IDEntry.class
+SHA-256-Digest: o8/e1RsnQMDFN+UvxVSnhFULQ6JE5Anj0WCItCGsD9I=
+
+Name: net/minecraftforge/client/model/b3d/B3DModel.class
+SHA-256-Digest: SVdysvitWyZjzCi0SCvLnuWE0cTTYgZp2fwUv3iuNto=
+
+Name: net/minecraftforge/fml/client/GuiModsMissing.class
+SHA-256-Digest: OHsT9kZDZcuud1AKNkiW4WWUB2GA8ZYj2ckV6t3FfAc=
+
+Name: net/minecraftforge/fml/common/network/FMLOutboundHandler.class
+SHA-256-Digest: t5fx68rfLQCntVfVSLu6qnwKdQ9WYR0MmF/72+4Lg3s=
+
+Name: net/minecraftforge/fml/client/config/GuiSelectStringEntries$IGui
+ SelectStringListEntry.class
+SHA-256-Digest: TS3cYJWGMQCctR7SXVlToLFft5xQHTi2H30ECptbiFs=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeMess
+ age$ServerHello.class
+SHA-256-Digest: cvZyW6W8h2vKnXxL9G585VyKUYHWI9Hh0M2ZDyHX76g=
+
+Name: net/minecraftforge/fml/repackage/com/nothome/delta/ByteBufferSee
+ kableSource.class
+SHA-256-Digest: vqNXHJL4udVYQyBHCiawKSffqFqITYWAig9ll/32UPk=
+
+Name: net/minecraftforge/client/model/ModelDynBucket$LoaderDynBucket.c
+ lass
+SHA-256-Digest: w9e4d485vhjprPO4nsk7K3HKr69GrM/xhkDmvWfySlo=
+
+Name: net/minecraftforge/common/ForgeInternalHandler.class
+SHA-256-Digest: Y1UCBkp7oMamhApcZCEEUDcDUZ7Njhr5gI3HBfD6dpA=
+
+Name: net/minecraftforge/fml/common/Loader$2.class
+SHA-256-Digest: NwKPVtc8VNpA3ydMWJshOu8H4Cm0u++VeFd611twZ4Q=
+
+Name: net/minecraftforge/fml/common/eventhandler/Cancelable.class
+SHA-256-Digest: 6hJBmUFHa7Vp/reYPxO7L7Kdnxe3fv6SUg5Q13viLnQ=
+
+Name: net/minecraftforge/fml/common/launcher/TerminalTweaker.class
+SHA-256-Digest: s0tclSmmtObvReWDQp8JPGWPUruD2LQhIFGoW6o2Rfk=
+
+Name: net/minecraftforge/event/AnvilUpdateEvent.class
+SHA-256-Digest: b1uOjzv+YV4BlBDpwpbbjeWiNJZEOLQ1KWeSiswi2GI=
+
+Name: net/minecraftforge/fml/common/asm/transformers/deobf/FMLDeobfusc
+ atingRemapper.class
+SHA-256-Digest: cB6K+2vrgHYwcLY9IwWuKvGRllYDQQW8+fa548zPIWg=
+
+Name: net/minecraftforge/fml/common/DuplicateModsFoundException.class
+SHA-256-Digest: nmqvhqJ4GwE37m1o8oGwu5RflFIc5uHJbv1DMxAv9NA=
+
+Name: net/minecraftforge/fml/common/network/internal/FMLProxyPacket.cl
+ ass
+SHA-256-Digest: ibWRUO0mOK2JFK+G+tjKbwgQJ3RPPGWn3wHv1nmsUkU=
+
+Name: net/minecraftforge/client/model/MultiModelState$PartState.class
+SHA-256-Digest: /j1ypLsJgsl5K/3wd+rJYMvdRcRtzjJeZSuHrI1X6oA=
+
+Name: net/minecraftforge/client/model/b3d/B3DModel$Key.class
+SHA-256-Digest: ZvZx/FljCEwu4IXF3XZvL75+DTvKDl5KeTqwJjhkS9w=
+
+Name: net/minecraftforge/client/event/GuiScreenEvent$MouseInputEvent$P
+ re.class
+SHA-256-Digest: naOlWU+lx65Kc41rH3geChyRaBV8OHbZKybEY73EPmo=
+
+Name: net/minecraftforge/fml/repackage/com/nothome/delta/GDiffPatcher.
+ class
+SHA-256-Digest: Qr6gD5opnB9459BeH5Pm9venjQqd3DvkzFnP6x2OlnQ=
+
+Name: net/minecraftforge/fml/common/ICrashCallable.class
+SHA-256-Digest: JAVPTKRI2NIGCJ1P3RMk67wcqZuuYTMO60b0tt5+3p0=
+
+Name: net/minecraftforge/client/event/sound/SoundSetupEvent.class
+SHA-256-Digest: UDjxnIsfP6rPCcx/h0NRKW6yQcVzMLV8hZTzvA/uPT4=
+
+Name: net/minecraftforge/client/model/Attributes.class
+SHA-256-Digest: 9FW6L+ggNayWejyBYepJMIp6bzuAcWW+t13ndEDCxaY=
+
+Name: net/minecraftforge/fml/common/event/FMLStateEvent.class
+SHA-256-Digest: aKKATaVcRas3LIg2OYzKTqR4CXGNomTY/mMq1GcDk5E=
+
+Name: net/minecraftforge/fml/common/network/FMLNetworkEvent$ServerCust
+ omPacketEvent.class
+SHA-256-Digest: mn8VfQqfDgVNOcNQSHzmWl5/YTCNtNJa/M/qxSVXb14=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeServ
+ erState$5.class
+SHA-256-Digest: r8nE7DDgAofRR+p+jsfRBQ97JjYB4ha/Pm//rCsH8hs=
+
+Name: net/minecraftforge/event/entity/EntityTravelToDimensionEvent.cla
+ ss
+SHA-256-Digest: G+OiezaBx3v/xJfJ8zNMerH4silEoj2tfARfdbhyuww=
+
+Name: net/minecraftforge/fml/common/registry/PersistentRegistryManager
+ $DumpRegistryFunction.class
+SHA-256-Digest: ivRFM/AXT4vfjCcVfAZ4IymmGtM6W3an/mllUXjNTog=
+
+Name: net/minecraftforge/event/world/ChunkDataEvent$Save.class
+SHA-256-Digest: Dr79Uqgpwbhn6pM5vB/my5Ji7s5g4qWN6MV6MkeXH0A=
+
+Name: net/minecraftforge/fml/client/config/GuiConfigEntries$StringEntr
+ y.class
+SHA-256-Digest: cRb8xWADd4/lu3c8YYDsC20hcLtvBZ/sShM+pI0a9/4=
+
+Name: net/minecraftforge/fml/common/network/internal/NetworkModHolder$
+ DefaultNetworkChecker.class
+SHA-256-Digest: JyEdXvDc5//RRg4SS7pEqsQdhkgpMEo4BE3Z2TDZUFQ=
+
+Name: net/minecraftforge/fml/common/network/simpleimpl/IMessage.class
+SHA-256-Digest: iJMG6+u3IGG2sahjc5zWRaR8hPrd+XWrfqwa4P6UpPU=
+
+Name: net/minecraftforge/client/model/animation/TimeValues$1.class
+SHA-256-Digest: 5W5/20sFauRmAh5hjf6KVlbsmXvSEuii4pidHyZrxfo=
+
+Name: net/minecraftforge/client/model/animation/Clips$ClipReference.cl
+ ass
+SHA-256-Digest: yCxA613P4/fj5OFGh4gRne/0X3KlFIxnLA5zlzIzpCk=
+
+Name: net/minecraftforge/event/entity/living/LivingEvent.class
+SHA-256-Digest: ghaTF+eaidN+U9xYf8nPMhRlyzdF3aJmHRORy1hLg9I=
+
+Name: net/minecraftforge/event/world/ChunkDataEvent.class
+SHA-256-Digest: KCpsBpuU9gmJk4EcOS2ucOH5MNPdNsHvX5V2Jk+Lt6Q=
+
+Name: net/minecraftforge/client/IRenderHandler.class
+SHA-256-Digest: ZzTuCpiiqgxaPMbMj0WWlP/lJIRkNRbbn0scdoWD18s=
+
+Name: net/minecraftforge/fml/client/GuiNotification.class
+SHA-256-Digest: 9GAGe0BBz3pqpt28L8Dix851zW42eNhEW74RtAU6tT8=
+
+Name: net/minecraftforge/event/terraingen/PopulateChunkEvent$Populate$
+ EventType.class
+SHA-256-Digest: PhkgmEmdaH5E8AowsY4BsEjwwHcqdLKta0cpzeOGch8=
+
+Name: net/minecraftforge/client/model/MultiLayerModel$MultiLayerBakedM
+ odel.class
+SHA-256-Digest: ejxEeH7E6YltFSz9ZMNJAXN4RS6MY2a9ExekJSkckI8=
+
+Name: net/minecraftforge/client/model/animation/Animation$ClipResolver
+ .class
+SHA-256-Digest: AT/K3VR84XII2XhM7osjf1Oara4CUFeinD8cHel40zg=
+
+Name: net/minecraftforge/fml/common/asm/transformers/AccessTransformer
+ $Modifier.class
+SHA-256-Digest: zEEN6m+PnNM1dGxsTfdU/YSSJJ7wa5+Ddm1Xc2sssAA=
+
+Name: net/minecraftforge/fml/common/Mod$Instance.class
+SHA-256-Digest: O6Rb9u0GY7YM4DB7OOOMalrGMrTLj8cuPbS5ybuIY6g=
+
+Name: net/minecraftforge/client/model/ModelDynBucket$BakedDynBucket.cl
+ ass
+SHA-256-Digest: LhR12utTDRK98jlRWbqB6Y45Szc3SVA4hmuK1o+89vI=
+
+Name: net/minecraftforge/event/entity/player/PlayerUseItemEvent$Tick.c
+ lass
+SHA-256-Digest: SdsXgHYomceKoViSNeVvNyNSxiKJSmQsJoRU6b6nSus=
+
+Name: net/minecraftforge/fluids/ItemFluidContainer.class
+SHA-256-Digest: xqKOqFyXkulnHNVdEHNaj3ZveJXNNYzNzRIdsmdZ4DM=
+
+Name: net/minecraftforge/client/model/ItemLayerModel$Loader.class
+SHA-256-Digest: FfvoVmwpPS6/pnRIVTDtR9onZx74k2gcLgHTlaMh+VA=
+
+Name: net/minecraftforge/fml/common/gameevent/TickEvent$Type.class
+SHA-256-Digest: JBQI9coqZURVqhRjnnsvQW/a+8AaEGv4KNlDWAhTcQA=
+
+Name: net/minecraftforge/client/model/ModelLoader$1.class
+SHA-256-Digest: m+dtwdwSD2OZa7DvJYNPI4FRNEMDoUQpxMc4XP3f2GA=
+
+Name: net/minecraftforge/client/event/sound/SoundLoadEvent.class
+SHA-256-Digest: 689qCVn300tUnoAYlWT+bDBzGVwidD5M5jYUF6cY9EQ=
+
+Name: net/minecraftforge/client/model/b3d/B3DLoader.class
+SHA-256-Digest: qnOfKbHC70qMI/cjDW+mlDsx74kR8wqkmmN3QsZmR9Q=
+
+Name: net/minecraftforge/fml/common/ZipperUtil.class
+SHA-256-Digest: FMEr0fWMUv8OcZSSMk/wt83vx+hYG0UmMC/kwXF5eOM=
+
+Name: net/minecraftforge/fml/common/asm/transformers/EventSubscriberTr
+ ansformer$SubscribeEventPredicate.class
+SHA-256-Digest: 5oJ1X/d0wFmzcVx2MlVp9YP3e3rFgj9qIlKBlOu/ovA=
+
+Name: assets/forge/lang/pl_PL.lang
+SHA-256-Digest: ZEVgMZFr2O1DDx6YA5N95flOd0Ni5bGpXm/w2s0b6/g=
+
+Name: net/minecraftforge/client/model/IRetexturableModel.class
+SHA-256-Digest: FIppPF8ZImocn7rqKWA0E86bHTOezm/d9oVr34c7i80=
+
+Name: net/minecraftforge/event/terraingen/BiomeEvent$GetGrassColor.cla
+ ss
+SHA-256-Digest: 4WCVRZpxbb5u2qaznBTN43AkTYOb5Mxbw6zvqvze7ig=
+
+Name: net/minecraftforge/fml/common/discovery/asm/ASMModParser$Annotat
+ ionType.class
+SHA-256-Digest: qHEQpaQJ3jwLUCSxwERZmOQH05t8uDEyCaD//odgmqg=
+
+Name: net/minecraftforge/event/entity/player/PlayerFlyableFallEvent.cl
+ ass
+SHA-256-Digest: xiWgswcla3QQnv/vHmi2FTIUVWYYJwXu/ao/p0kb20c=
+
+Name: net/minecraftforge/fml/common/LoaderState$ModState.class
+SHA-256-Digest: xbNoExkUSoRAvBbQ/eEd1STvJF/S9jZcX0b+7jPueIY=
+
+Name: net/minecraftforge/fluids/FluidEvent.class
+SHA-256-Digest: /pOirbYOd2b61tyWoJ1kelTjOoAk2wv/v0Qy5I/JMJM=
+
+Name: net/minecraftforge/fml/client/config/ConfigGuiType.class
+SHA-256-Digest: EkB8A5bisBGGndEyozJtfHnwZVAJFUjxx0JflYSoJGo=
+
+Name: net/minecraftforge/client/event/EntityViewRenderEvent$FOVModifie
+ r.class
+SHA-256-Digest: 6PdJrDyMtME+9Xzd97eauVOiW560F1Cp4wwVULZC6Rg=
+
+Name: net/minecraftforge/fml/common/functions/GenericIterableFactory.c
+ lass
+SHA-256-Digest: zROXJpm9t0yaFsHGbY44hlypNSX4e6/Ro2s4mOLXjY4=
+
+Name: net/minecraftforge/client/model/animation/ModelBlockAnimation$Pa
+ rameter.class
+SHA-256-Digest: +MnJnQhLJe/Bw96v8ZL9plAi5X+t2dtgzncM+VGhxQA=
+
+Name: net/minecraftforge/fml/common/asm/transformers/TerminalTransform
+ er$1.class
+SHA-256-Digest: CzwUuGAUMHhNv/CBWCzQegH3lqF9G1XYCuZqirV99cg=
+
+Name: net/minecraftforge/client/gui/ForgeGuiFactory$ForgeConfigGui$Chu
+ nkLoaderEntry.class
+SHA-256-Digest: IQpOdPhTLYBRVzAHOO1O2RRi9XVaALZ+94lux84LuDo=
+
+Name: net/minecraftforge/client/model/ModelFluid$FluidLoader.class
+SHA-256-Digest: p8A41Yx2pVbxf9qUAsC2Cw12kFoASGWAikughE158KY=
+
+Name: net/minecraftforge/fml/common/ClassNameUtils.class
+SHA-256-Digest: Wbg3BHa9JZvd96rnbfedGYNiGdXzz3yMshj10aJwp50=
+
+Name: net/minecraftforge/fml/client/config/GuiConfigEntries$ButtonEntr
+ y.class
+SHA-256-Digest: ss8DD+gnw2Yc5FHspdecnvzEW3m8G3m05LtttziDqpg=
+
+Name: net/minecraftforge/fml/common/network/FMLNetworkEvent$ClientCust
+ omPacketEvent.class
+SHA-256-Digest: ZkFGRdJZdcOAYV/Fl6m65jyEcLgd32s/oc+G7c7J7Qk=
+
+Name: net/minecraftforge/fml/common/registry/PersistentRegistryManager
+ $GameDataSnapshot$Entry.class
+SHA-256-Digest: vX3r0kAHzlfYbF+zJe5a0wEz8S+RAPAHjmCMmFLmgpk=
+
+Name: net/minecraftforge/fml/relauncher/CoreModManager$FMLPluginWrappe
+ r.class
+SHA-256-Digest: GANOR6pNUC8ALWcwmc7Fqhp600jzaNWNQXIFKtDAzTw=
+
+Name: net/minecraftforge/client/event/GuiScreenEvent$MouseInputEvent$P
+ ost.class
+SHA-256-Digest: oQO8gV9gAclmoesth1m+8IVVmLgRtgDpp4zuzzPOUP4=
+
+Name: net/minecraftforge/fml/client/SplashProgress$SplashFontRenderer.
+ class
+SHA-256-Digest: 8amIkK2eH6ocI8zafNWt2Tn6ld1f+m52v+rbiY/o8GA=
+
+Name: net/minecraftforge/client/model/animation/ModelBlockAnimation$MB
+ Clip$1.class
+SHA-256-Digest: CstpILGqrqB+nWevNJzn3NGqfjga/+9U3guwQ4fSaNQ=
+
+Name: net/minecraftforge/fml/common/gameevent/TickEvent$RenderTickEven
+ t.class
+SHA-256-Digest: OWLfLeZ8Fgr42nLqq2H/PoEn9BO/2Ml2ljEpKVUUfNA=
+
+Name: net/minecraftforge/fml/common/versioning/ComparableVersion$Integ
+ erItem.class
+SHA-256-Digest: 32KWwysYmonLGq0xHh2uXA9ZIfHNBC3b43mjU8C6Ij0=
+
+Name: net/minecraftforge/fml/repackage/com/nothome/delta/DiffWriter.cl
+ ass
+SHA-256-Digest: eGriNCD99skAnB+WhwF1uOm0LHWnrTlFqUXhwsNK0lc=
+
+Name: net/minecraftforge/client/event/sound/PlaySoundEffectSourceEvent
+ .class
+SHA-256-Digest: Bg3YVavx8Wj2GjmYIe16/gyF41QY4s6hVIcmEOB5YjE=
+
+Name: net/minecraftforge/client/event/RenderItemInFrameEvent.class
+SHA-256-Digest: IRVdVmYqhIBNGf9hlxaD7H25KY+YMJH3giFvUnKKTEc=
+
+Name: net/minecraftforge/client/model/b3d/B3DModel$Brush.class
+SHA-256-Digest: s/4je7FZFaItpAZJFirMBFXJ/cYEdIAQXgNou596fG8=
+
+Name: net/minecraftforge/client/model/obj/OBJModel$CustomData.class
+SHA-256-Digest: l+Fw3ZumnXkxXlhCMk3esaKK3JDNUmlRCeOzfR1eEoQ=
+
+Name: net/minecraftforge/event/terraingen/DeferredBiomeDecorator.class
+SHA-256-Digest: lOV4kvBZwISNSWE5pJjoxcQJ5pU9HJjlwoFw2ge3Wdk=
+
+Name: net/minecraftforge/client/model/IModelPart.class
+SHA-256-Digest: 5MjClMU+Q7nM94ojTkUdaGnH6QVzGoEd3ZsbsdAtfnw=
+
+Name: net/minecraftforge/fml/common/Mod$InstanceFactory.class
+SHA-256-Digest: mIYmH8PqYHb1E8n1ha/wfNEq2gH1aX0kxkuTvbQ2P74=
+
+Name: net/minecraftforge/client/model/pipeline/UnpackedBakedQuad.class
+SHA-256-Digest: OT/QhxRZt5IORgjJcQUWX4MxpKvtWyJt+MIjMrBd1AY=
+
+Name: net/minecraftforge/fml/common/network/FMLNetworkEvent$CustomPack
+ etRegistrationEvent.class
+SHA-256-Digest: PYb+BNbbFxfLzyqwxQDXPHBgPR9Jb53XpHF1b/AwfnA=
+
+Name: net/minecraftforge/fml/common/ProgressManager$ProgressBar.class
+SHA-256-Digest: SluuXOcQiEUBjBwfiLNuiJKS1puPxcr9aplI3gKXcjw=
+
+Name: net/minecraftforge/client/model/animation/ModelBlockAnimation.cl
+ ass
+SHA-256-Digest: 3nlcbxaWFLXy2Tqb8aKVXt66zXvVeTTnKHnpILTlrdI=
+
+Name: net/minecraftforge/common/capabilities/ICapabilityProvider.class
+SHA-256-Digest: bqWwymgjqDWMi/Skd/qvJv0gtf5FVzRLZpKIdlaOFo4=
+
+Name: net/minecraftforge/client/event/GuiScreenEvent$DrawScreenEvent$P
+ re.class
+SHA-256-Digest: obSq72UGAVDMn2Vtuk79tB3KbnymA3kKjkdnyE33tvI=
+
+Name: net/minecraftforge/fml/repackage/com/nothome/delta/GDiffWriter.c
+ lass
+SHA-256-Digest: 7dxR1GLu3e9IpJIIK5hmHqFxkcuK8R+/h+F+I2BKe+E=
+
+Name: net/minecraftforge/fml/client/config/GuiConfigEntries$CycleValue
+ Entry.class
+SHA-256-Digest: pZ+POb1pHwM3CjEp7DBRjQeh1kOGIBTnfO8xsvKwD1E=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeClie
+ ntState$4.class
+SHA-256-Digest: C3EaBy18OmxMex8SQLiNsxZFYJMci4AwhNBxxqJvolE=
+
+Name: net/minecraftforge/client/model/pipeline/IVertexConsumer.class
+SHA-256-Digest: 0QKOemLs0r79+/PobxYB+gS/ZXGzICrxC4MVfoN+x5o=
+
+Name: net/minecraftforge/fml/client/config/GuiButtonExt.class
+SHA-256-Digest: YahQt73FThAQTuTygW6964nJNM+c+/SWw7TdRQzV1uQ=
+
+Name: net/minecraftforge/event/terraingen/DecorateBiomeEvent$Pre.class
+SHA-256-Digest: Lu2N6D+/8/Ayc/9YQjbwOqGS6gmv7EjV6bMANRx6fTI=
+
+Name: net/minecraftforge/items/wrapper/EmptyHandler.class
+SHA-256-Digest: x4EOPsPOLAijXQWgjhHDg+qZE58b4I1BJkxC8LeTJco=
+
+Name: net/minecraftforge/fml/common/registry/ItemStackHolderRef.class
+SHA-256-Digest: zCg74oFmiCffwrEjDLR9X6W+8BRmnnBRdQP+muHojZ4=
+
+Name: net/minecraftforge/client/model/MultiModelState$MultiModelPart.c
+ lass
+SHA-256-Digest: /3/iSNNl262WyN4HP2fRsb4iv73LRLnbm4yQqrkLLkY=
+
+Name: net/minecraftforge/event/entity/player/AttackEntityEvent.class
+SHA-256-Digest: q4TbKS21b6PdKb5ISX8ovJLy1DkfxUXUcQ4+1U7zfgg=
+
+Name: net/minecraftforge/common/ForgeChunkManager$ForceChunkEvent.clas
+ s
+SHA-256-Digest: 3BpWu/iPiYxa+gtdKrnHXKy30wnlmryxtTuQ3Atilqs=
+
+Name: net/minecraftforge/client/model/MultiModelState$PartPart.class
+SHA-256-Digest: tmrcK1xtux8GBKnAhVo79ZmVyhG1b5Eh+WhU2vmnLMU=
+
+Name: net/minecraftforge/fml/common/network/internal/FMLRuntimeCodec.c
+ lass
+SHA-256-Digest: vYGgtzWVaC6HTMXINxFO5ei5jzjUXX5wFZrh1aqGen0=
+
+Name: net/minecraftforge/client/model/obj/OBJModel$Face.class
+SHA-256-Digest: zuSOApJTHdnOXTBvYlB+AsIwxtm7hjn+bo71avt6UJ4=
+
+Name: net/minecraftforge/fml/common/event/FMLLoadEvent.class
+SHA-256-Digest: gd768Qp1vFiLRzaLGM9F49TNLwbEVSqbaKWr6TBg5ng=
+
+Name: net/minecraftforge/fml/common/registry/VillagerRegistry.class
+SHA-256-Digest: DxfUp0JrqHsjDeRSse0QPhYIWtthvsjgN7rocSqg8m0=
+
+Name: net/minecraftforge/fml/relauncher/Side.class
+SHA-256-Digest: NoqAllxm6QUjDyEccqJ9TXkIYFTRXzF+YyrW+ifbskI=
+
+Name: net/minecraftforge/client/model/pipeline/QuadGatheringTransforme
+ r.class
+SHA-256-Digest: PhEmCyEgwmZ522nHKQAhhSEtWZS343TAJu9gioEhoco=
+
+Name: net/minecraftforge/client/model/ModelLoader$FlexibleWeightedBake
+ dModel.class
+SHA-256-Digest: B6ApmsQvKoqkNHsvFhPhbGFfwwyHyL82GvNGu4eGoH8=
+
+Name: assets/forge/lang/ar_SA.lang
+SHA-256-Digest: exCPzTc/OCi7RO91gLypVCxYkH8HtWL/icV5woM78/o=
+
+Name: net/minecraftforge/client/gui/ForgeGuiFactory$ForgeConfigGui$Cli
+ entEntry.class
+SHA-256-Digest: NiqUQqYZM6dSXpykh5lWd3EugHJJet6Q/rmaFp4ZwEo=
+
+Name: net/minecraftforge/fml/common/gameevent/InputEvent.class
+SHA-256-Digest: r6p4+JyUmwLdv6Co9RVGoJ0xHWBGFgYAT6CyuBXYF0U=
+
+Name: net/minecraftforge/client/model/animation/TimeValues$Composition
+ Value.class
+SHA-256-Digest: Jf7MCI0E1D63YPzTk6nYRmuCOd0P9w5Lo5ogLbvrdt0=
+
+Name: net/minecraftforge/common/ForgeChunkManager$UnforceChunkEvent.cl
+ ass
+SHA-256-Digest: W0mil61ofSnoGm2K3BfHWcCHBzV3Yq1DsluBsgQk1NM=
+
+Name: net/minecraftforge/fml/client/config/GuiConfig.class
+SHA-256-Digest: gjOT3kt0xSr1lp54hSSo71FDF3kQK2Ima5UEGFKrfvY=
+
+Name: net/minecraftforge/fml/repackage/com/nothome/delta/Delta.class
+SHA-256-Digest: QvcO/ZdRU18B66fz2X4W1bhhEETx1eU7Fm4KF+R/SDY=
+
+Name: net/minecraftforge/event/entity/living/ZombieEvent.class
+SHA-256-Digest: tYq/2goOjcpeuROG2vB6Vo17V1MFSCJY1oE952I3pzw=
+
+Name: net/minecraftforge/client/event/RenderBlockOverlayEvent.class
+SHA-256-Digest: Z1N7T8rlj27YHAV2GsJ3WmA+CWzbDN+1NETMODP5QC4=
+
+Name: lc$a$2.class
+SHA-256-Digest: c4QLWrogYIw3npG30Zxnn4vwyMQ9ZBuHVPbCsWekBgg=
+
+Name: net/minecraftforge/fml/common/registry/IThrowableEntity.class
+SHA-256-Digest: d0gKW5cQGNXVRQG/69rTzghvHs2AUQa+e3O0EXPZTOI=
+
+Name: net/minecraftforge/client/event/RenderPlayerEvent$Specials$Pre.c
+ lass
+SHA-256-Digest: bB6mbaQwbsXrnA36z4ihUivl+rqc5Nyn15bhMTzuumo=
+
+Name: net/minecraftforge/common/util/FakePlayer.class
+SHA-256-Digest: CqdvObCdLMHW9R/fzHxZejsr1wv8h90y3L+uuN2tWwk=
+
+Name: net/minecraftforge/fml/common/network/internal/HandshakeCompleti
+ onHandler.class
+SHA-256-Digest: iOlX84ZpfxVe8bRbJ01/QcBzsMYeXcKREjRmt3RJnt4=
+
+Name: net/minecraftforge/fml/relauncher/IFMLLoadingPlugin$Name.class
+SHA-256-Digest: APZPLtiJr1drAwAOoml7rgB4p+HmXCnQ7Ou2WpclcLU=
+
+Name: net/minecraftforge/client/model/ItemTextureQuadConverter.class
+SHA-256-Digest: IrpL5o1mVvwwub4RWTfJVDHCcVrJF4H3vv3lxtbNbj4=
+
+Name: net/minecraftforge/fml/common/launcher/FMLInjectionAndSortingTwe
+ aker.class
+SHA-256-Digest: kv4Yc2VnZFEy99UXdpX0oG7F38pZnLBP8vuGlr9cw1M=
+
+Name: net/minecraftforge/fml/common/WorldAccessContainer.class
+SHA-256-Digest: uzeQwdAr54MSHjlOASRY9SvlN/A2JhevKESPAjfcw1I=
+
+Name: net/minecraftforge/fluids/FluidRegistry$FluidDelegate.class
+SHA-256-Digest: JWhm1XPgxsc0oYjEZQtJD9X0N6eEeVu1G1LPjaTGKw8=
+
+Name: net/minecraftforge/oredict/RecipeSorter$1.class
+SHA-256-Digest: fi0W+lrF5Jx8QFrd0y2zsA4l0EeRg0dBWgeZvOoU1UQ=
+
+Name: net/minecraftforge/client/model/b3d/B3DModel$Node.class
+SHA-256-Digest: kWAiPJXrC+74pBIXXPc965/uOqJLeNWTeLOtwgMCTrM=
+
+Name: net/minecraftforge/fml/common/event/FMLServerAboutToStartEvent.c
+ lass
+SHA-256-Digest: q5kmQxlibxLMt40t4Jpw46y7It0SYQjJuX3F//6n0tg=
+
+Name: net/minecraftforge/event/world/NoteBlockEvent$Play.class
+SHA-256-Digest: PFwYKZJxNL0dsO+ouy8w5Dm1JhwdFx2svyFJrpttdas=
+
+Name: net/minecraftforge/fml/common/event/FMLInterModComms$IMCEvent.cl
+ ass
+SHA-256-Digest: 4zDp3Oal4wAJhY5i+/9JbD+MeYNZZ9xCgRgvX8V1Occ=
+
+Name: net/minecraftforge/common/network/ForgeMessage$FluidIdMapMessage
+ .class
+SHA-256-Digest: 0iNB56iMpuXy+5aDypIffakV+0iXtVaMv2+sV5sWqTU=
+
+Name: net/minecraftforge/client/ClientCommandHandler.class
+SHA-256-Digest: fEE417fiGPwvMGAkkbV0oYMEQ5HDQmm28ilEEVi8yTg=
+
+Name: net/minecraftforge/fml/common/EnhancedRuntimeException$3.class
+SHA-256-Digest: vpJXiEGuq8sv+m38jjABJbTT8o6xjNZ69iU99ptelQw=
+
+Name: net/minecraftforge/event/terraingen/PopulateChunkEvent$Populate.
+ class
+SHA-256-Digest: tM675hRDnZSE5gBF4p2o9NDvdrNJlfP4TpzjIcpks68=
+
+Name: net/minecraftforge/client/ItemModelMesherForge$1.class
+SHA-256-Digest: iWXYzJ6w3xeQwAf6tmNaDm2pwrM6VvJLgoDKAqc0vks=
+
+Name: net/minecraftforge/client/model/animation/ModelBlockAnimation$MB
+ Clip$MBJointClip.class
+SHA-256-Digest: GEWBm3VeaKxs+bKtQSv8wC7T2RS6c6NvPmV7CHwE128=
+
+Name: net/minecraftforge/fml/common/FMLModContainer$2.class
+SHA-256-Digest: K9fnHDYVatZjI+4LKxjjfSa/KCXU/JzbVLnPnWfMN34=
+
+Name: net/minecraftforge/fml/common/event/FMLModDisabledEvent.class
+SHA-256-Digest: 5x/S1UNjDoX99XfMKMrEbnLq7+zt5iIZ2ZNhiPMPi88=
+
+Name: net/minecraftforge/fml/common/gameevent/PlayerEvent$PlayerLogged
+ OutEvent.class
+SHA-256-Digest: ab2jQeScTMEPlbJjWRy0FdasDv3tdSEIkWVlS4KM+XM=
+
+Name: net/minecraftforge/fml/common/asm/ReobfuscationMarker.class
+SHA-256-Digest: KALe4+JOeu6f2Ec1HUB5ISukEKKViDpYRhCPWr7MPBo=
+
+Name: net/minecraftforge/client/model/ModelFluid$BakedFluid$1.class
+SHA-256-Digest: ggsgks5x+I1X7sah5bPlOz+M+2FZD767OKPi9PdB5+c=
+
+Name: net/minecraftforge/fml/common/FMLContainer.class
+SHA-256-Digest: HwpbF7rFl65cTd9NivzsEHbnfY64kRVHOz3HqJd+nE4=
+
+Name: net/minecraftforge/fml/common/Optional.class
+SHA-256-Digest: O7qJJFHKPZzluZkVFnLzr38dQRD0SeVmIeQitI44aiY=
+
+Name: LICENSE-fml.txt
+SHA-256-Digest: hoUuoRodfLz35Y+uiRj4iqWS7jwL1l8m0xdMzd+bEAo=
+
+Name: net/minecraftforge/fml/common/discovery/asm/ModMethodVisitor.cla
+ ss
+SHA-256-Digest: cJVWQKLvUD+0R678tkyLjj4EfkSdbUfCsDeikKFQJ8E=
+
+Name: net/minecraftforge/event/entity/living/LivingDropsEvent.class
+SHA-256-Digest: tSb4CIRKtYyoF39rrFPfIHkUcOHR2DhAhDugLEAbaNU=
+
+Name: net/minecraftforge/fml/common/ModContainer$Disableable.class
+SHA-256-Digest: Ut+S2Ktjyv63ivAQvbJlInGZ2AAg3O39a4FFkylgRvg=
+
+Name: net/minecraftforge/client/event/GuiScreenEvent$InitGuiEvent$Post
+ .class
+SHA-256-Digest: K1u0qHWmxhVhcju8HIJfoub8NtTvEaRMhMrNKl/N1S4=
+
+Name: net/minecraftforge/fml/client/SplashProgress$5.class
+SHA-256-Digest: r3uCk5sqZwjFsh5gRjE9fsjH8aTnS/0ZYDZ1R9EWS2A=
+
+Name: net/minecraftforge/client/event/RenderLivingEvent$Specials$Pre.c
+ lass
+SHA-256-Digest: GItua/Iup++JO8VHC63VqEwNJ535DDxSMMvPpanAI3Y=
+
+Name: net/minecraftforge/client/model/TRSRTransformation.class
+SHA-256-Digest: rOegsysbmqRvRqwdkyhmHejl020i+Bsnh1epWNioOcQ=
+
+Name: net/minecraftforge/fml/relauncher/ReflectionHelper$UnableToFindM
+ ethodException.class
+SHA-256-Digest: BrDzJve1N0XMgNbR5p75ps26ypEvPLimpURcrAPpSEE=
+
+Name: net/minecraftforge/fml/common/DummyModContainer.class
+SHA-256-Digest: upfDLXwNIP349CMGbObNcpe6Y6Q2MvDZlB1EbpMvnkg=
+
+Name: net/minecraftforge/fluids/BlockFluidBase.class
+SHA-256-Digest: tZPQtg5rio2ZMsZw9NTsRz/qkVnf19T59g4wX0eYpa8=
+
+Name: net/minecraftforge/event/entity/living/LivingExperienceDropEvent
+ .class
+SHA-256-Digest: OVycFeOw/XnhKQ8DO2SKJudWYHSnaLraYBghSJYmw+c=
+
+Name: net/minecraftforge/event/world/WorldEvent$Unload.class
+SHA-256-Digest: 6MiiVBNHC6L9rsLh+66gMa3FSGz4CWn+JVBfz6Yzoqw=
+
+Name: net/minecraftforge/client/model/obj/OBJModel$TextureCoordinate.c
+ lass
+SHA-256-Digest: FT4K1Tmz/OuGLyxOTNfXSdugymT4CZ0bxfMhwuv44D4=
+
+Name: net/minecraftforge/event/entity/player/PlayerEvent$SaveToFile.cl
+ ass
+SHA-256-Digest: wSFCUi8AP8/qNijJSjGdzhMqfX+3dpDXFJ0kTVTeK60=
+
+Name: net/minecraftforge/fml/common/network/handshake/NetworkDispatche
+ r$ConnectionState.class
+SHA-256-Digest: K35y7YL1CKQ/k5+V+8wbhrZfVqrEm0Mq+7l8EHIWT0g=
+
+Name: net/minecraftforge/fml/common/asm/transformers/SideTransformer.c
+ lass
+SHA-256-Digest: JN44VRUoBOuA1OjUmpd51e2xl45eRGSUQKAf9Ofgh9M=
+
+Name: assets/forge/lang/fa_IR.lang
+SHA-256-Digest: 16WpCJcOpK1ZMrsUyx7oE4LXoLlZDj48g1/LsA9Hu9c=
+
+Name: assets/forge/lang/no_NO.lang
+SHA-256-Digest: b5DDuB+GvSAchmFfQyg25t2+pnxpx+X0JhHYHcpNfUw=
+
+Name: net/minecraftforge/client/event/GuiScreenEvent$ActionPerformedEv
+ ent.class
+SHA-256-Digest: S3MZFowcfJuelLi0IWlA+7Jxnn222X5rk4aeE8/ZWZE=
+
+Name: net/minecraftforge/fml/common/gameevent/TickEvent$Phase.class
+SHA-256-Digest: ME4fclJ3DBP2XTqbJmgGtBQK7JEr70ZBlV35VcCedYs=
+
+Name: net/minecraftforge/fml/common/network/internal/NetworkModHolder.
+ class
+SHA-256-Digest: gXaMM6N/Vw7F6Ayh/BeYCc8uD09e4pfqACDzoOs58Vg=
+
+Name: net/minecraftforge/client/model/obj/OBJModel$Normal.class
+SHA-256-Digest: 9+s9u7NC0Bek673Wq/rei91FxveABmYe/jHLTXp0UAU=
+
+Name: net/minecraftforge/event/world/WorldEvent.class
+SHA-256-Digest: obfytGqSmRO0ls2yvd9fTzahtUfuJXcCp4kZpiO/OHw=
+
+Name: net/minecraftforge/client/model/ModelLoader$WeightedRandomModel.
+ class
+SHA-256-Digest: tIU3sSq6qlLALoPEQ2tzUSZQ1GsHBU2bN4/vaFLh7iE=
+
+Name: net/minecraftforge/fml/client/GuiScrollingList.class
+SHA-256-Digest: +zM20s48Fcukh33zIdMpofy6hFC9XRgmb5awWc+Mlz0=
+
+Name: net/minecraftforge/client/model/animation/Clips$TriggerClip.clas
+ s
+SHA-256-Digest: WY5pYRSxn5fTbhdpmMw7BCXT9U/E3r0Q91wkKmsEzZo=
+
+Name: net/minecraftforge/event/terraingen/OreGenEvent$GenerateMinable$
+ EventType.class
+SHA-256-Digest: 8RAKtMH/bJCzy1hkblo7Xf7tENrRwKJYJjm6O0MTk+A=
+
+Name: net/minecraftforge/fml/common/discovery/asm/ASMModParser.class
+SHA-256-Digest: Io+J82GgThdp+3Fwg0FI71/tcSTEkj/KIX82QEIAnok=
+
+Name: net/minecraftforge/event/ForgeEventFactory.class
+SHA-256-Digest: LtRAuOXlJQSR3t2Nn/t5gYowVL0Fb5TlCEvHqsfYnEI=
+
+Name: net/minecraftforge/common/chunkio/ChunkIOProvider.class
+SHA-256-Digest: USJZbZZm6Pe1WB4Qcmf6acyUtX/T3RilUhvrIHHI/0s=
+
+Name: net/minecraftforge/fluids/FluidTank.class
+SHA-256-Digest: S/nnIqMpx1zmoRxRvlg0rZo1M9SdKCnuS/TolGrPOQA=
+
+Name: net/minecraftforge/common/DungeonHooks.class
+SHA-256-Digest: RVwXjD+A09GQFFvHEtEmEveIlzrLZTb6vDJyPivkhOY=
+
+Name: net/minecraftforge/fml/common/network/internal/EntitySpawnHandle
+ r$1.class
+SHA-256-Digest: sCsWwIGGsWzKNRx3HpQZS0rj1Eov7Sh0ps6ZXpw0j/k=
+
+Name: net/minecraftforge/common/chunkio/ChunkIOExecutor.class
+SHA-256-Digest: 5Rzr+He31XVlV/HttXkUUhinZ2TcmYIoN17pKnJiVcw=
+
+Name: net/minecraftforge/fml/common/network/FMLNetworkException.class
+SHA-256-Digest: w6hl7zFkNunwfweXUaw8EK8qEjpp5bjcpZNSgs4gRNM=
+
+Name: assets/fml/textures/gui/forge.png
+SHA-256-Digest: 4ptLsGWueioDJuGmHev922Qvz8cosu2CvcApNTAQaro=
+
+Name: net/minecraftforge/common/FishingHooks.class
+SHA-256-Digest: V/sWUsKR2ekh1NRw9RXU3EN6cY6EANzi9MgEI+GP1JI=
+
+Name: net/minecraftforge/fml/common/network/NetworkRegistry$TargetPoin
+ t.class
+SHA-256-Digest: ImXyjtIm+jBpA5myQ2ND6eaCWEBCsBGq3Hmp0lckJgU=
+
+Name: net/minecraftforge/client/event/GuiScreenEvent$ActionPerformedEv
+ ent$Pre.class
+SHA-256-Digest: 6JGeLXzrFmhvjED5LmFj5N6XByS5JUQmvNj7GEsTkII=
+
+Name: assets/forge/lang/es_ES.lang
+SHA-256-Digest: AXc4rYt/GrJTiKqrBufJ2vvgaCNMRSon3BpxPbCTcro=
+
+Name: net/minecraftforge/event/entity/player/PlayerPickupXpEvent.class
+SHA-256-Digest: 7X1OhRrr/0sj7CBAXG/FtDBpdpNoGFK+b+RDHvKBHv4=
+
+Name: net/minecraftforge/fml/common/launcher/Yggdrasil.class
+SHA-256-Digest: U6FC1HNfkbl/fNnMfN+4BtBt7KdBxn3uBM41MV4isCs=
+
+Name: net/minecraftforge/event/world/BlockEvent$NeighborNotifyEvent.cl
+ ass
+SHA-256-Digest: v8+5luABNBoPy4KDHa4oasQ2Ytu7IS7G02PUhVx+OcM=
+
+Name: assets/forge/lang/it_IT.lang
+SHA-256-Digest: l/wlOIVb8Z8nVhT8GfVm7Vf0WaZkYOGhLykfzaW4i/s=
+
+Name: net/minecraftforge/fml/relauncher/FMLSecurityManager.class
+SHA-256-Digest: Qc+/9JS1JeBZXtX9fKv6qvGKfyFmtRxA+UEQLoxC2DU=
+
+Name: net/minecraftforge/common/util/FakePlayerFactory.class
+SHA-256-Digest: SKrExxlHhRwV3eWWzjLUCZDWjK0FT+oSC1XYZdNYzzw=
+
+Name: net/minecraftforge/fml/common/asm/transformers/BlamingTransforme
+ r.class
+SHA-256-Digest: UaC8BtDTbCN762iMpPJ+Rf4qJP23F/GDy3NPkruwbFo=
+
+Name: net/minecraftforge/fml/common/event/FMLModIdMappingEvent$ModRema
+ pping.class
+SHA-256-Digest: nHBV4hrnYVFWPtpKj3ZSHdKcvnaBL1dBi9M2ID7r0nA=
+
+Name: net/minecraftforge/fml/common/event/FMLMissingMappingsEvent$Miss
+ ingMapping.class
+SHA-256-Digest: KSGBccwLx0LqaiNaxwXaarzCqt+gfzqht3q45IuQK1Q=
+
+Name: net/minecraftforge/client/model/ItemLayerModel.class
+SHA-256-Digest: ekKivILOVz2iXX/zFuAkM0WevQmbBWTl+lwQE4JMSdU=
+
+Name: net/minecraftforge/event/brewing/PotionBrewEvent$Post.class
+SHA-256-Digest: Wugj9CAbUnyRfmq6/C4LwBNTHa3TVDvTOxvBh7H+fD0=
+
+Name: net/minecraftforge/fluids/FluidContainerRegistry$FluidContainerD
+ ata.class
+SHA-256-Digest: NgmNTRUM25SSwbwbeh6Yx53PcUEOSk1N5fub1oXbiDU=
+
+Name: net/minecraftforge/fml/common/network/handshake/NetworkDispatche
+ r.class
+SHA-256-Digest: Xg1fs0Fvz5CXmaH+mTwTz0sqnxeyuFuTEcyENeK8z5k=
+
+Name: net/minecraftforge/fml/common/registry/GameData$ClearableObjectI
+ ntIdentityMap.class
+SHA-256-Digest: gQ5roZjyTSnbzFu+T+U1uILRtMiy+vZZyzFQF9tiiOI=
+
+Name: net/minecraftforge/items/CapabilityItemHandler$2.class
+SHA-256-Digest: SCpgHpOJeOzvIVgGoyAEpLSAVB0WdCC0o96zKBghPhA=
+
+Name: net/minecraftforge/client/model/b3d/B3DModel$Bone.class
+SHA-256-Digest: Pq0T+JRQDr/V5kDGR60yOh9fATu4HitnbMaAnz/gwkY=
+
+Name: net/minecraftforge/fml/common/eventhandler/Event$Result.class
+SHA-256-Digest: QfGQcZTutHHfRvLBWVQp7C1Z+RuuOAIi2OYkCWuKtM0=
+
+Name: net/minecraftforge/fml/common/eventhandler/IEventListener.class
+SHA-256-Digest: V4HP4UdnkLho6/lmObVO8Wh9LrPw6/Tpy6wHI7gVaYw=
+
+Name: net/minecraftforge/event/terraingen/PopulateChunkEvent$Pre.class
+SHA-256-Digest: GsXx83PXN+ImafqnlNZWdTbjvRwMo20XzgRgVjgiKok=
+
+Name: net/minecraftforge/event/entity/player/PlayerEvent$Clone.class
+SHA-256-Digest: oz8pueyx+NciVWdfTuKPnMpvlewMSEW2dA7OPpcvU5I=
+
+Name: net/minecraftforge/event/terraingen/BiomeEvent$CreateDecorator.c
+ lass
+SHA-256-Digest: /s9mI+/tYZkzRiZFfDJoEFzSbJ2RAiE64HnuqVMDK10=
+
+Name: net/minecraftforge/client/model/pipeline/UnpackedBakedQuad$Color
+ ed.class
+SHA-256-Digest: BMBFDQRDH0hzzEuoYsYEF4OsUmFS+FAkE7eXVfE/zqI=
+
+Name: forge_at.cfg
+SHA-256-Digest: 6IYqONP2lJOlIBtPtcytfQvh/0BbdIIDBA0LQ8+dSJQ=
+
+Name: net/minecraftforge/fml/common/Mod$EventHandler.class
+SHA-256-Digest: jlsoXhdlEWQ1q/D+tS8C7tMZQf30Afc65QUfF8VXam0=
+
+Name: assets/forge/lang/uk_UA.lang
+SHA-256-Digest: h5eo+FbTYwDsiahxw5jOWHJrCpWvaDlkFjxdqDbivPc=
+
+Name: net/minecraftforge/client/model/obj/OBJModel$Group.class
+SHA-256-Digest: 6ca+dXxNw/Pr2N7/a4XePnNezihylIrWUQOdkmKK3X4=
+
+Name: net/minecraftforge/event/terraingen/ChunkProviderEvent.class
+SHA-256-Digest: tl9JxaQuHGopUqgjK2ZkTsc1CgTkvbjfIS2b68sDopE=
+
+Name: assets/forge/lang/pt_BR.lang
+SHA-256-Digest: JvYnFckzwFwXsnhPhaJA5VY3eREdGszBvEXtD4GtNCw=
+
+Name: net/minecraftforge/fml/common/registry/ObjectHolderRef.class
+SHA-256-Digest: p2rJkrI5FS2uOP32lbl4ou8XUX2bWxkUZIPctB0bhoQ=
+
+Name: net/minecraftforge/server/console/TerminalConsoleAppender.class
+SHA-256-Digest: YElq1meSmEBzNJAg7ZAeGMqdrnolZWRJR3tZ0TJbZ9c=
+
+Name: net/minecraftforge/fml/common/network/NetworkEventFiringHandler.
+ class
+SHA-256-Digest: e5K5RQRpz4mXNt6gtau29qVkIPsT5cfoWnmqqf8ys1g=
+
+Name: net/minecraftforge/client/model/ForgeBlockStateV1.class
+SHA-256-Digest: L2BA9SEWG4+VzEa0kmSJTu25PvanXfGouXNLHKBwOHk=
+
+Name: net/minecraftforge/fml/client/SplashProgress$6.class
+SHA-256-Digest: QUrSfZksd/e5IHuHBCD2RMS94t3qDx1/knI6O5DoW2Y=
+
+Name: net/minecraftforge/fml/common/event/FMLPreInitializationEvent.cl
+ ass
+SHA-256-Digest: b68bMImbLQb57BzAADOOabInkLJsYwH8w2YUBFFWjwo=
+
+Name: net/minecraftforge/fml/common/discovery/DirectoryDiscoverer$Clas
+ sFilter.class
+SHA-256-Digest: xVJx/kZAsDeqrGpWB4WAx21g8g8SFpvaVvgdBNCd3/o=
+
+Name: net/minecraftforge/client/model/ModelFluid.class
+SHA-256-Digest: gvksYcthHJWXhXMe2CAVV+3yrbY5PjGYfRhoSPmXTPI=
+
+Name: net/minecraftforge/fml/common/discovery/asm/ModAnnotationVisitor
+ .class
+SHA-256-Digest: LkKulNM9tPttxRIMdW16+qeCT5LpNBnB3dO88vWOUiI=
+
+Name: net/minecraftforge/client/model/animation/TimeValues$VariableVal
+ ue.class
+SHA-256-Digest: Q5VhlI+U0ShiaINygHeHZXZ0he/NXTFaZy4agDceaaM=
+
+Name: net/minecraftforge/fml/common/network/handshake/HandshakeInjecto
+ r.class
+SHA-256-Digest: dJTU+pVGqaXwVGB/4vBPNxHsCnng2V1TGGKGO4TJ/Dw=
+
+Name: net/minecraftforge/fml/common/network/internal/EntitySpawnHandle
+ r.class
+SHA-256-Digest: 2l1H/x65QTG6fxnsOySZnJz8weB4u3eKUiT+FmEecwA=
+
+Name: net/minecraftforge/client/event/RenderGameOverlayEvent$Chat.clas
+ s
+SHA-256-Digest: zoZZUCc3ijWnYH84TSdjSaPNlBAHAjDG4K67V6KM2uI=
+
+Name: net/minecraftforge/common/util/JsonUtils$ImmutableMapTypeAdapter
+ .class
+SHA-256-Digest: 9PKQh3M29Bm/w1gcKaaPaiZ3JrtmDMESN74JV3aFngU=
+
+Name: net/minecraftforge/fml/client/FMLClientHandler.class
+SHA-256-Digest: qBmPb6MSMKuCwN7WPkr8ZDOFKvP1vNoPoQoYkfhZNXA=
+
+Name: net/minecraftforge/client/model/MultiModelState.class
+SHA-256-Digest: AR/tpMvdMFSmUdxchcBj1S1viyyrqLTknBdbMk+yjkA=
+
+Name: net/minecraftforge/fml/common/versioning/DefaultArtifactVersion.
+ class
+SHA-256-Digest: WDaqiDHQHALJg6y93MvsgtizraNLLqS4onLYelysW5k=
+
+Name: net/minecraftforge/common/ChestGenHooks.class
+SHA-256-Digest: RbwfsL56aMPQiDFCFPBSb08r4M7/uzwxY1LTp7lgKGI=
+
+Name: net/minecraftforge/fml/client/config/GuiConfigEntries$1.class
+SHA-256-Digest: xcFtQ1chXVer9Yd/PdDvRkn7oOByT6GzU3W9f+0giws=
+
+Name: net/minecraftforge/client/model/animation/IJoint.class
+SHA-256-Digest: koTySKneFpGZf6DpVRAuX2h3UiIpqxMDSrZ7QFVcCVA=
+
+Name: net/minecraftforge/fml/relauncher/CoreModManager$1.class
+SHA-256-Digest: oovqpIuEs4UB5w0nYKmqewkPGmVa3of5Q1f9b04Z4x8=
+
+Name: net/minecraftforge/fluids/FluidEvent$FluidFillingEvent.class
+SHA-256-Digest: FmkdqGW6RKYyqZXFPKcRs9rjj+1RrZ9IqSw+89pBXrs=
+
+Name: assets/forge/lang/de_DE.lang
+SHA-256-Digest: wt71QP75WdRqV9DQANocgzORQIZHuk77AnhvH/H93XU=
+
+Name: net/minecraftforge/fml/common/asm/ASMTransformerWrapper.class
+SHA-256-Digest: YkU73POS6ZggGSwGtp225pi98XnuTh9r97qMUFOqAPw=
+
+Name: net/minecraftforge/client/event/RenderPlayerEvent$Post.class
+SHA-256-Digest: 5tUQLjblIzgupdN450G6+kN+/e/ZI5l3shyqiG6hKnc=
+
+Name: net/minecraftforge/fml/common/MetadataCollection$ArtifactVersion
+ Adapter.class
+SHA-256-Digest: QM2p7iNOXAP4M3Ytq8kTzjF+II+AFLzIzdOuHT6rBsM=
+
+Name: net/minecraftforge/fml/common/ProgressManager.class
+SHA-256-Digest: ytno6oBZmp8xXGbNdJuEc0RguY41MW8J5btZ56aZi7A=
+
+Name: net/minecraftforge/fml/common/network/FMLOutboundHandler$Outboun
+ dTarget$1.class
+SHA-256-Digest: ezlNWcVHVpKUXIG0HqyZqjtLTKulzKLw44P9pLEbajU=
+
+Name: net/minecraftforge/items/ItemStackHandler.class
+SHA-256-Digest: ZUU6Tr8PtXTJXKME3v9lCybCBqLtD46sFz6L5Hi21hs=
+
+Name: net/minecraftforge/event/entity/player/PlayerUseItemEvent$Start.
+ class
+SHA-256-Digest: /Ox0KixGI4L4xNHQDhu4qOeMvLRYWVp2cY9GDqcN6zE=
+
+Name: net/minecraftforge/event/world/NoteBlockEvent$Instrument.class
+SHA-256-Digest: ajAOHrPt4d3Y+3N7C3OBMIYsIfySP8CzAcNJQ/Y7mFI=
+
+Name: net/minecraftforge/items/wrapper/PlayerMainInvWrapper.class
+SHA-256-Digest: NLmQWNWNfIyde+4fpAZsRhmwXiOj5xs53gkSMXl/k30=
+
+Name: net/minecraftforge/client/event/GuiOpenEvent.class
+SHA-256-Digest: 0Me2y1VvJSghQErsPUtHpKU40uefkzsZAs7azbGYgWc=
+
+Name: net/minecraftforge/fml/common/network/FMLOutboundHandler$Outboun
+ dTarget$4.class
+SHA-256-Digest: oNe0bwtVt0FCgGgahl8umL5mVueanFo6joBC7/dxns8=
+
+Name: net/minecraftforge/client/model/obj/OBJModel$OBJBakedModel.class
+SHA-256-Digest: QRU2h1+cnX6P8dsdODc5LLMD83ECctcJv9X9wmsZ+j0=
+
+Name: net/minecraftforge/fml/client/FMLFolderResourcePack.class
+SHA-256-Digest: 4ghk/JstBsrh9ImjQM6IgH+efFddlbPIwPHA/TsDTvY=
+
+Name: net/minecraftforge/common/BiomeManager$TrackedList.class
+SHA-256-Digest: SRqFLsUf8OX/ezzO/46OcbFENs6mAXDq9DBzxzOx4BU=
+
+Name: net/minecraftforge/event/terraingen/BiomeEvent.class
+SHA-256-Digest: m8gKo7gzdGmTczR2pnuIm8AcJhP4hfKKEpP/K5MayNU=
+
+Name: net/minecraftforge/fml/client/SplashProgress$1.class
+SHA-256-Digest: foANt32gfQJDZcY74zQHpVJ5WojP8A48kfgjrgDJ1Ws=
+
+Name: net/minecraftforge/event/world/BlockEvent$MultiPlaceEvent.class
+SHA-256-Digest: XrgMbO3KSdW7KzrGmDJ0twUay/aNP00IdgQMFB8wNig=
+
+Name: net/minecraftforge/fluids/FluidUtil.class
+SHA-256-Digest: g7noBPN5nmUmNp8cYKJpVxgic3VxS35C7M4aM1UbaQg=
+
+Name: net/minecraftforge/fml/common/network/internal/NetworkModHolder$
+ 1.class
+SHA-256-Digest: CNvP1Hi59ajC/kRDG0fDwVp7+cIe6bkN2vLjfE0BXbA=
+
+Name: assets/forge/lang/lt_LT.lang
+SHA-256-Digest: 7MFnlWGhu0NA77yTS4N0H07pS6HaaJgmyFg2FB2YFQI=
+
+Name: net/minecraftforge/event/terraingen/DecorateBiomeEvent$Decorate.
+ class
+SHA-256-Digest: QFqFyJ1KEp8slNHeUSIIued13pS+YXxYwMH3vecuE4o=
+
+Name: net/minecraftforge/fml/common/registry/VillagerRegistry$Villager
+ Career.class
+SHA-256-Digest: KT7BLascCYrWfgyD/Ji0T/3AQHoTdnRGM0BREOAMAcI=
+
+Name: net/minecraftforge/event/entity/player/ArrowLooseEvent.class
+SHA-256-Digest: 5AgQctNRXfy6YrTu8UDs43zUVWoY0PIBuLhbm6tW4Fk=
+
+Name: net/minecraftforge/common/ForgeChunkManager$OrderedLoadingCallba
+ ck.class
+SHA-256-Digest: b8Y6WxakLzuLwwy3zkqmhXZReqsItzEP/znxt2I3+l4=
+
+Name: net/minecraftforge/event/brewing/PotionBrewEvent$Pre.class
+SHA-256-Digest: NKWPh1JA3QeJlbj2VuPeDHBw4x10+IyyzEGmI41z4GU=
+
+Name: net/minecraftforge/fml/common/registry/GameRegistry$ItemStackHol
+ der.class
+SHA-256-Digest: l1uBo0KDAadd/o6qW/dkFP1qBoHjuCE7L5n2RZo1O/Y=
+
+Name: net/minecraftforge/client/model/b3d/B3DModel$Pivot.class
+SHA-256-Digest: hiv6OjKi8vY7x362E/JPBMxriS6UFnOI/4nUCXE4M+E=
+
+Name: net/minecraftforge/fml/client/config/GuiSelectStringEntries$Entr
+ yComparator.class
+SHA-256-Digest: sJ4hLwT9SD4+YXTfyDwifhaAor5bM0siBTMTQIrRneM=
+
+Name: net/minecraftforge/fml/common/asm/ASMTransformerWrapper$Transfor
+ merException.class
+SHA-256-Digest: 26MufmGI0+3oeoEvQvj5zG+eBo6nLI5Rqm5XfRKBB38=
+
+Name: net/minecraftforge/event/world/ChunkWatchEvent$UnWatch.class
+SHA-256-Digest: eLzlm2zw4F1I8ZEHSPQDfl2V/8sFeZcGDuHA9RTNFQ8=
+
+Name: net/minecraftforge/fml/common/asm/transformers/MarkerTransformer
+ .class
+SHA-256-Digest: 0nQuOBiWqbBuP0VC3fmvg9CZhrotYiJBn/CJee86AKU=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeMess
+ age$RegistryData.class
+SHA-256-Digest: WeTwjxiHA/NeZqwg+hEhqiyzpCjmb3TbNkGtNAmAPtM=
+
+Name: net/minecraftforge/oredict/OreDictionary$OreRegisterEvent.class
+SHA-256-Digest: Fp7omcC0YS3Mf76Y4mwJ91KzsOCSNgnZot/5ubV9iGc=
+
+Name: net/minecraftforge/event/entity/player/PlayerDestroyItemEvent.cl
+ ass
+SHA-256-Digest: 9JFhrpWMUnu4rQdq4hEMhEvDeyFRncXv5h4aSaygkvQ=
+
+Name: net/minecraftforge/common/capabilities/Capability$IStorage.class
+SHA-256-Digest: Y8HZdHrM8Isd5lmENkHdrUUlQUWERooJJ5o+bzC9CKw=
+
+Name: net/minecraftforge/common/network/ServerToClientConnectionEstabl
+ ishedHandler.class
+SHA-256-Digest: HuK2ojluSBcAyOmgUar340BP0nyPJJSckbFZu0Z3RZ0=
+
+Name: net/minecraftforge/fml/repackage/com/nothome/delta/DebugDiffWrit
+ er.class
+SHA-256-Digest: VBTk982lZe6iTfPbjtBNNXBW2tKdEIKDrQ/vIT02YCc=
+
+Name: net/minecraftforge/fml/common/versioning/ComparableVersion$1.cla
+ ss
+SHA-256-Digest: Oc8cYrFUZhNqowv8E3u3Npp85Esnz0INa9vC9czmXtY=
+
+Name: net/minecraftforge/client/model/obj/OBJModel$OBJState$Operation.
+ class
+SHA-256-Digest: BOpm7W2riHHFf84UfXhYdW65xtAcgBWIFUnozlEbfTY=
+
+Name: net/minecraftforge/client/model/animation/TimeValues$CommonTimeV
+ alueTypeAdapterFactory.class
+SHA-256-Digest: tK4Kn6HGytaReyak/6jS8xn6ohc5Sl5LV2Fqha6w7Ds=
+
+Name: net/minecraftforge/common/model/animation/IAnimationStateMachine
+ .class
+SHA-256-Digest: +gHousBabb9p7lfVckpT7QkFZWJ4tX06DWSFSDTZ7Uk=
+
+Name: net/minecraftforge/items/wrapper/PlayerInvWrapper.class
+SHA-256-Digest: SmEKtlsDZa6sNzWYnHpQzzgFPXsBQVFl7uZtY0ZBPSo=
+
+Name: net/minecraftforge/client/model/ISmartBlockModel$PerspectiveWrap
+ per.class
+SHA-256-Digest: q4uMo1mrLc2kR2LHrHAaRzmyzCAdMIFUKZErKxLP0XA=
+
+Name: net/minecraftforge/client/event/sound/PlaySoundEffectEvent.class
+SHA-256-Digest: CaGvY+6J2fR33TgGT9dut7RSXuYzYEI5ZrY3JXlc3lo=
+
+Name: net/minecraftforge/fml/common/asm/transformers/PatchingTransform
+ er.class
+SHA-256-Digest: 6BlhgakRcltCA2Vwv4kQEh05l1IAzAALrBGmbqoFr5s=
+
+Name: net/minecraftforge/fml/client/GuiSlotModList.class
+SHA-256-Digest: gfpri5wyW6MQwqkm3e8RZ+TyhUji1hh42VVvY92cSsk=
+
+Name: net/minecraftforge/client/model/ModelFluid$BakedFluid.class
+SHA-256-Digest: jRwLJrkRaJ7ueWN9KwA3nCvlSY1qVRJYO6rLKoNEyNc=
+
+Name: net/minecraftforge/client/model/animation/Animation.class
+SHA-256-Digest: es+Pd7oPlM+vntn6xTwZb/eQTkyTRFgEqRxEaNvg1LE=
+
+Name: net/minecraftforge/client/model/animation/ModelBlockAnimation$1.
+ class
+SHA-256-Digest: JGbpe9c4E9vo6AjLjC5ySUzAuRRL6rn5XXUycKBYMgw=
+
+Name: net/minecraftforge/fml/client/GuiOldSaveLoadConfirm.class
+SHA-256-Digest: e/R5iXxE2qWmEsZKwK5rWQGL7IFAywrq8OtJsjeaE2o=
+
+Name: net/minecraftforge/fml/client/config/GuiCheckBox.class
+SHA-256-Digest: BYCpGZ99clO7ZTK6aiwc8qXliidYdPNHMXY+OfUHI6E=
+
+Name: net/minecraftforge/items/wrapper/InvWrapper.class
+SHA-256-Digest: +kw72G96/mdvM7dZkRmI1Jxlu04kPX/9cwKTPH2fzmQ=
+
+Name: net/minecraftforge/fml/client/config/GuiConfigEntries$BooleanEnt
+ ry.class
+SHA-256-Digest: EVpQYR97XWG7wjBS16Yo5zrjW1Ppp97wpNuQURIDjp0=
+
+Name: net/minecraftforge/event/entity/player/PlayerEvent$BreakSpeed.cl
+ ass
+SHA-256-Digest: jTnTAVFybdBJv6UDgpOOrZl9U8S2kPSaKit2hCQM3/o=
+
+Name: net/minecraftforge/client/model/animation/Animation$ParameterRes
+ olver.class
+SHA-256-Digest: gGfsedcWcGx8aHjfmDHFIXTE6BlhtXGxmaV/s7Q8DLM=
+
+Name: net/minecraftforge/fml/common/FMLCommonHandler.class
+SHA-256-Digest: Bd+y5YKr2BKOUgPtt3//oCvS1bPn2ig0Djunz/088YU=
+
+Name: net/minecraftforge/fml/client/GuiModList$1.class
+SHA-256-Digest: Gfe1OYg4Wh2GVdZxvRJkUk90lwyMvI0VQOAEy8Q8ipc=
+
+Name: net/minecraftforge/client/model/IModelSimpleProperties.class
+SHA-256-Digest: WvkXpjCUNBIJM/7YXYb+xDsIGbhPAWb+LQ+X2HjrKp4=
+
+Name: net/minecraftforge/event/terraingen/ChunkProviderEvent$ReplaceBi
+ omeBlocks.class
+SHA-256-Digest: u+82sOKv7k4Un/9NR+ZhsMhfIJrCyKmMtYnx5ufybDw=
+
+Name: net/minecraftforge/fluids/IFluidTank.class
+SHA-256-Digest: 7kQaGZ1ezsgaAcScf8iLn3vpVP4W7Kahw4tkKymQQms=
+
+Name: net/minecraftforge/client/model/animation/Clips$CommonClipTypeAd
+ apterFactory$1.class
+SHA-256-Digest: aRgYauXaCc4NuOgj01gJ7lO2JFCWfiCCDjCVw+CN1Aw=
+
+Name: net/minecraftforge/client/model/IModelState.class
+SHA-256-Digest: XNXZ+YqJCZOUZhwWflrwMyhdlch5TBlVSRGiN5OvMCs=
+
+Name: net/minecraftforge/client/model/b3d/B3DLoader$1.class
+SHA-256-Digest: 5KC0m+3VVlvVh0CrKN0c18D2ZTAVjZIlRxgeq+g8vgQ=
+
+Name: net/minecraftforge/client/event/EntityViewRenderEvent$RenderFogE
+ vent.class
+SHA-256-Digest: QKSnPK5sv1rATM8r3uGSiapCqpVL/doYoLlwQvcBQIw=
+
+Name: aee$1.class
+SHA-256-Digest: O1k1GQ1ov2+Zlld3Pv6AzpwPwgVecbc81Q4H3WpPRWE=
+
+Name: net/minecraftforge/fml/common/network/FMLNetworkEvent$ClientDisc
+ onnectionFromServerEvent.class
+SHA-256-Digest: yhmG1019nyLG9HMDdXyOUsBV725A/uxt46gosvsp/yI=
+
+Name: net/minecraftforge/client/model/ModelLoaderRegistry.class
+SHA-256-Digest: 5gJfPrF/+PETzES839PgIx18qXs++Wmj/AEMNg1B32I=
+
+Name: net/minecraftforge/client/event/sound/PlayStreamingSourceEvent.c
+ lass
+SHA-256-Digest: NsuZidwxdSQyTJ1A9++JgLUiWotaIZFnkhWa74lLpkg=
+
+Name: net/minecraftforge/client/model/ICustomModelLoader.class
+SHA-256-Digest: ref0yv5EI9jkrDRgOPSaV0KaaI0VKiuvHzH9DJ+Dnw0=
+
+Name: net/minecraftforge/client/ItemModelMesherForge.class
+SHA-256-Digest: VhuBwmfNfl2Q+jgwKGrEYKWcPR+d5xxHkp0t6TOsKZE=
+
+Name: net/minecraftforge/fml/common/IFuelHandler.class
+SHA-256-Digest: efT+daog8LtynOWyr7gGCCx3Mp1m/x8L7ENXcvgqAYA=
+
+Name: net/minecraftforge/common/network/ForgeRuntimeCodec.class
+SHA-256-Digest: q9NU0UKvwUzS+307D2xS8721mt9U18wbpV1R0WzQjwY=
+
+Name: net/minecraftforge/client/model/b3d/B3DLoader$ModelWrapper$1.cla
+ ss
+SHA-256-Digest: 5Zh1pC69MGJnTCvUQqo+xDZiLVI3YloDRHewYDpvZNg=
+
+Name: net/minecraftforge/fml/common/discovery/ContainerType.class
+SHA-256-Digest: Asl9XrwsklEgjbzZgFEsfrSmxsyQTa9QHbKgdU4fjQ8=
+
+Name: net/minecraftforge/fml/common/eventhandler/ListenerList.class
+SHA-256-Digest: ck7nwB9aU6AbYU12s0Jciq9FrkAhqKUmGQPueeYpc1Q=
+
+Name: net/minecraftforge/event/entity/living/LivingEvent$LivingJumpEve
+ nt.class
+SHA-256-Digest: uQ3H2nbNog0zotrmwfli7ZHhaHYQmtqgI5ahesQk6HY=
+
+Name: net/minecraftforge/fml/common/event/FMLModIdMappingEvent$1.class
+SHA-256-Digest: phAOabnOp5dyST8lwaS24OQp0S1tJSjIKpjq1mWCH/Q=
+
+Name: net/minecraftforge/common/ForgeHooks.class
+SHA-256-Digest: foh1sGCS9XUvQk5R5M9USfHUpRdFREmV0RdcUv9o9mY=
+
+Name: net/minecraftforge/fml/common/InjectedModContainer.class
+SHA-256-Digest: MKy2r1DcWknwVGiLs5cX52yB19CtXE2/5CqAZw9Y5SU=
+
+Name: net/minecraftforge/event/entity/player/ItemTooltipEvent.class
+SHA-256-Digest: Cs8ZWcXzIOtTvgikA0z9qg8d75JPC1hqP/SKUyxQaA0=
+
+Name: net/minecraftforge/fml/client/config/GuiSlider.class
+SHA-256-Digest: M+jfgbq0uDja8BDoCEpeaGrEBD48F+2fvQgSgb/+24o=
+
+Name: ibxm/Player$1.class
+SHA-256-Digest: pYDuoziJRV3DWLBxD43bSdmZDLYm/LkEvByGjEMB1Ec=
+
+Name: net/minecraftforge/event/entity/living/LivingSpawnEvent.class
+SHA-256-Digest: xHol5055aEnHPZEfP7CmnSCaT7Np2xJdC9fk4E7v1X8=
+
+Name: net/minecraftforge/fml/relauncher/FMLInjectionData.class
+SHA-256-Digest: AllpdjVhqC40tVZmu8jcXIZPZgpAezCKIWQMQ09OfG4=
+
+Name: net/minecraftforge/fml/common/Mod$CustomProperty.class
+SHA-256-Digest: u4FjOU5KVqdJ1xtMBj3PCFvHH2xgIz8p5CHPbkNf4kg=
+
+Name: log4j2_server.xml
+SHA-256-Digest: LE8wIqH46BPlPTw9HzpGC6BW2YtZE1Rz8Acg8AcVgmI=
+
+Name: net/minecraftforge/fml/common/versioning/ArtifactVersion.class
+SHA-256-Digest: waVFnBTJYKoHl07nyF9JzMwm5Z+RxvZYFvvORlDYYaI=
+
+Name: net/minecraftforge/fluids/IFluidContainerItem.class
+SHA-256-Digest: aK7WBVMh4UYFv7HwvOzgcVrirdXRsSkDIRh81Ghc1Jo=
+
+Name: net/minecraftforge/client/model/animation/AnimationStateMachine.
+ class
+SHA-256-Digest: YVVX/dsCuWkBNIf+DBnQXx7qmddIBwM6be1/TO0S00Y=
+
+Name: net/minecraftforge/fml/common/ObfuscationReflectionHelper.class
+SHA-256-Digest: E9FY0qDKBF6j8Jenlr9VXmd+1KESUeFKNM9AD/OTzKI=
+
+Name: net/minecraftforge/fml/common/gameevent/TickEvent.class
+SHA-256-Digest: xaKJHltmpGVKNKaqj5ZkZsDpV4T3LH4LYAXBm1eavh0=
+
+Name: net/minecraftforge/client/model/IFlexibleBakedModel.class
+SHA-256-Digest: 7lZTjRk3S23tOA83+uqb3tWFWdvRhvliugWNZbOg1wo=
+
+Name: net/minecraftforge/common/network/ForgeMessage$DimensionRegister
+ Message.class
+SHA-256-Digest: CmDS+PpERWX/tv6kR2H32oh/SDxgoqVBMljNyD5HjgQ=
+
+Name: net/minecraftforge/common/util/JsonUtils$ImmutableListTypeAdapte
+ r.class
+SHA-256-Digest: Ueu4V3dedWRe6ZYuNhoRO1vkC86nyRJEB3e//ph1Os8=
+
+Name: net/minecraftforge/client/event/sound/PlaySoundSourceEvent.class
+SHA-256-Digest: /GPRdUEVDKItwsXkUwFwlPIMUpOoP/igthR3VyZ7LoI=
+
+Name: net/minecraftforge/fml/common/network/handshake/NetworkDispatche
+ r$1.class
+SHA-256-Digest: ZMH90H4+0gt2VHnZe3PrDPQsLoHPoiZYwMkm+TMTS4s=
+
+Name: net/minecraftforge/client/model/ModelLoader$VanillaModelWrapper$
+ 1.class
+SHA-256-Digest: St4D69RWDAg3n+yDZe3TwjATbCWKuGA42svCQCaHC5U=
+
+Name: net/minecraftforge/common/brewing/BrewingRecipe.class
+SHA-256-Digest: QEJ/+hiF5cGGbfjANMQvQnfJ43WKV89EpkLqIfQ8RgY=
+
+Name: net/minecraftforge/client/event/TextureStitchEvent.class
+SHA-256-Digest: Pj7zvMiMTvXv9ot9DQ+wBK9YHQDjrPeMc2v+XS/w1gI=
+
+Name: net/minecraftforge/client/model/ModelLoader$White.class
+SHA-256-Digest: 7ovpOfV1az2jEbOu3GiXTdWXH4pREa+c8ieRVzzIJws=
+
+Name: net/minecraftforge/fluids/FluidContainerRegistry$FluidContainerR
+ egisterEvent.class
+SHA-256-Digest: DGFpyGhe27ATqxmK8oDlROfvuRHR+LKuxYD9pIoU4uM=
+
+Name: net/minecraftforge/fml/common/gameevent/PlayerEvent$ItemCraftedE
+ vent.class
+SHA-256-Digest: cQeaso/surnlLirqudOWmuO22pA3Q2pgFYEXNC16Av4=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeMess
+ age$HandshakeReset.class
+SHA-256-Digest: 736qE0TY8C9+BlACr5KjCr+0l4rSnNeDr+ExDS3NZns=
+
+Name: net/minecraftforge/client/event/RenderGameOverlayEvent$Pre.class
+SHA-256-Digest: KH8iTcEn+sVrjN/KK2GdSnhtSVdQgivwtYRroiCK+mY=
+
+Name: net/minecraftforge/client/event/RenderGameOverlayEvent$Text.clas
+ s
+SHA-256-Digest: LklPaRfTP5XkMZbwfg3jvDzzXRobAjyxkMM/yihD044=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeClie
+ ntState$8.class
+SHA-256-Digest: MrMBNTXQeb6TUuG7GefpfHXYb2kkqIr7q4by2vKQawE=
+
+Name: net/minecraftforge/fml/common/registry/EntityRegistry.class
+SHA-256-Digest: eBYiRzCOEIEsn4Sx2jSJjY5KGiF20vLqoNRjCv7MLyc=
+
+Name: net/minecraftforge/fml/common/MissingModsException.class
+SHA-256-Digest: OUnnQyDSesyyZBCIDPdeTclHAiKeyClUJczV0VuQ1ik=
+
+Name: net/minecraftforge/fml/common/network/handshake/NetworkDispatche
+ r$ConnectionType.class
+SHA-256-Digest: FRBxluJwyBqkKbSBp8PyQjuPJ4wvjMxWJxbCTri5kAY=
+
+Name: net/minecraftforge/fml/common/event/FMLPostInitializationEvent.c
+ lass
+SHA-256-Digest: yg3Bb8nNLTTfrywTuPwTBEfW/BL/iHGc2FotLmeFlJo=
+
+Name: net/minecraftforge/event/AttachCapabilitiesEvent.class
+SHA-256-Digest: Ubd4SnuXnMH+wRSqrmDCHVX28M4iyMs2+KULPrTdR80=
+
+Name: net/minecraftforge/fml/relauncher/IFMLLoadingPlugin.class
+SHA-256-Digest: 9vGCF3xKUDW1NtBx+XTrnPahMfyAtjvq4ti2rl/7tjA=
+
+Name: net/minecraftforge/common/config/Property.class
+SHA-256-Digest: /hEl/VQrYTmskQyk+dYMM6VOm0d+bvApffazsJq23AM=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeServ
+ erState$6.class
+SHA-256-Digest: //XHmFLxLjl2WApFMbCkPsGazFsU/UB/ukC9j0hYkeA=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeClie
+ ntState$3.class
+SHA-256-Digest: QhwaQs+oDGyRxk9Rg5zwVAUlj7ZXLu4uOhATe/5aJJ8=
+
+Name: net/minecraftforge/fml/server/FMLServerHandler.class
+SHA-256-Digest: 2xlMhaXlyW0FYTEAgWv65O7nwuG1biH6y7bnlurdQoQ=
+
+Name: net/minecraftforge/client/model/b3d/B3DLoader$B3DFrameProperty.c
+ lass
+SHA-256-Digest: O1Vk2puFaiGDILPFa6PT3aMrx0CowXowZrhFtdwtKak=
+
+Name: net/minecraftforge/fml/client/event/ConfigChangedEvent.class
+SHA-256-Digest: pHVUoc+pBKuUUQHkAPL3DVgRCrNJ2x4UPmoOA6EBUfc=
+
+Name: net/minecraftforge/event/entity/living/LivingHurtEvent.class
+SHA-256-Digest: MVJHdXlRFD2Qg8t/C/4g5qhkawat+X4HwFjO6IDNsl4=
+
+Name: net/minecraftforge/fml/common/network/FMLEventChannel$EventFacto
+ ry$2.class
+SHA-256-Digest: /E+jgm7pVih6NsYvEZRgdjdREFLdfuKGCRkg9nqgO6A=
+
+Name: net/minecraftforge/event/world/BlockEvent$BreakEvent.class
+SHA-256-Digest: 9MbZ6RA9VtgF5Doj7n/dh81H+sYZj/XSQNbrBHVvhZ0=
+
+Name: net/minecraftforge/fml/relauncher/CoreModManager.class
+SHA-256-Digest: uZV2/qwBQicdEIyiK7opKC8y0TeXS3tdElkg9tNGoKw=
+
+Name: assets/forge/lang/fr_FR.lang
+SHA-256-Digest: IMDnMKkIeNOc6Hm7IsJhoeGYPny4F9En22W26bTp6LI=
+
+Name: net/minecraftforge/fml/common/asm/transformers/ModAPITransformer
+ .class
+SHA-256-Digest: Dr7SGjoM7nj1HZOEeOaMoeQS+5mvRiGKO5O/rNyM1dc=
+
+Name: net/minecraftforge/client/gui/ForgeGuiFactory$ForgeConfigGui.cla
+ ss
+SHA-256-Digest: VVXRfi7PDqwvHvtXm6NrY4JihZNmU/1F4ZloyEAPnyA=
+
+Name: net/minecraftforge/fml/common/event/FMLModIdMappingEvent$RemapTa
+ rget.class
+SHA-256-Digest: NQs0OswJ5ybzWi3o4YX6TQbBOn6E1tEAmtlqdukhJfM=
+
+Name: net/minecraftforge/fml/common/MetadataCollection.class
+SHA-256-Digest: Vgk/D5jz3mocbFZmevqecuWZgvN1fVxw0y7HRyfLsTU=
+
+Name: net/minecraftforge/common/IPlantable.class
+SHA-256-Digest: ZiDSIYsxv7V1H8KWHN8sWJr0HzhdQqn4Qp+Os/ev6mw=
+
+Name: net/minecraftforge/client/event/RenderLivingEvent$Post.class
+SHA-256-Digest: KdS96fHrPt5JhhzsfkkgYjoswKZAHhHZfSf/yJbmxkQ=
+
+Name: net/minecraftforge/client/model/ModelLoader$2.class
+SHA-256-Digest: XWof3XwXROXVcjRuAtqiuRlszqQIsxTJgA4YerOj2Rw=
+
+Name: net/minecraftforge/fml/common/event/FMLInterModComms$1.class
+SHA-256-Digest: EotG5PunHYneB0tIXJ6IZD8GFfZI5mhZ1kRwZ4X8bKQ=
+
+Name: net/minecraftforge/fml/common/API.class
+SHA-256-Digest: MqfF8jxJTZGp4a/QDIUGtlwhCPW3CoOr44XrojX+kt8=
+
+Name: net/minecraftforge/client/model/animation/IJointClip.class
+SHA-256-Digest: KDAL+8SgOd8ZnJlw7b1Jm1SQAi7U9ULK28TjnzwFgzw=
+
+Name: net/minecraftforge/fml/common/network/internal/NetworkModHolder$
+ NetworkChecker.class
+SHA-256-Digest: 0noZ163HUhOArpxFQxfuv+mYAoq+PzFPDSvj4FtmCsw=
+
+Name: net/minecraftforge/fml/client/GuiCustomModLoadingErrorScreen.cla
+ ss
+SHA-256-Digest: JT0PMn3xNiZfH8Ni5NVNvdEs213TabGnMYJCeSLDt4M=
+
+Name: net/minecraftforge/client/model/b3d/B3DLoader$NodeJoint.class
+SHA-256-Digest: RKycLNJyfRU+cJyWaxP7a2ftwJsEGxW19utWmgaem6E=
+
+Name: net/minecraftforge/fml/common/network/simpleimpl/MessageContext.
+ class
+SHA-256-Digest: EzWUi8S7JgDUDLyDnzgk8ef8d5sVoPuVSzwWERNvsps=
+
+Name: net/minecraftforge/client/model/ModelDynBucket.class
+SHA-256-Digest: eeJT0T8/Jttze2rFyB0u8u3TgBVcTOIpg2yh5ruMv1M=
+
+Name: net/minecraftforge/client/model/b3d/B3DModel$Face.class
+SHA-256-Digest: VxADfqJ6Va0DRBMnbq5X6wTCJVw2bqkpILcFHEL4iF4=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeClie
+ ntState$6.class
+SHA-256-Digest: kMQ4gYQRGo0pGycwkn2RT+r/iOEOvdUqup36WzIKe4Y=
+
+Name: ibxm/FastTracker2.class
+SHA-256-Digest: DUSE80ni20VZpJNUlWXJNGOwQKjw3iGP0j1NSJEDgKk=
+
+Name: net/minecraftforge/event/world/ChunkWatchEvent.class
+SHA-256-Digest: iqI/Vs+e6meW0BP2mjK3IP4lQa2izWG3cmYIO5JEQpo=
+
+Name: net/minecraftforge/fml/client/CustomModLoadingErrorDisplayExcept
+ ion.class
+SHA-256-Digest: Zh5+wHvIDX1Wi5pfXKNCuGz+tvPQVGEJ6wNwyH51Fe4=
+
+Name: assets/forge/textures/items/bucket_fluid.png
+SHA-256-Digest: QIL6g/j0m2M+A48jk/SPk0vt9E+1Sc0mOm55S7WhqH8=
+
+Name: net/minecraftforge/fml/client/registry/RenderingRegistry.class
+SHA-256-Digest: 14t78J+U1wpt/v0nENTdCZGiUoHF8hIWmoeEH4+TLcs=
+
+Name: assets/fml/textures/gui/forge.gif
+SHA-256-Digest: 6dMMhFVvU6AT6srG2M/ZfU4UUw29A++WfikhaQQibUY=
+
+Name: net/minecraftforge/client/model/b3d/B3DLoader$Wrapper.class
+SHA-256-Digest: IGwlI//e9Uo6cUSV4UODv832b3suGLljh9hsgqnf33Y=
+
+Name: net/minecraftforge/client/model/animation/IAnimationProvider.cla
+ ss
+SHA-256-Digest: Sbvdnnkn1g+n/DCmD+ayfA1BlsBCY+72cMAorfS5eLM=
+
+Name: net/minecraftforge/server/ForgeTimeTracker.class
+SHA-256-Digest: hJKlfuKfA0cc5WLTGxZnRVBxhaJdhu2fNHVgQzGpAxI=
+
+Name: net/minecraftforge/client/model/obj/OBJModel$Texture.class
+SHA-256-Digest: lkRV4J2d4Hu49rYYGwjGtlIdKdbrYR/rRZvOorVq3OE=
+
+Name: net/minecraftforge/event/entity/living/LivingEvent$LivingUpdateE
+ vent.class
+SHA-256-Digest: V6dRwpenCsaJTj8xTEQ3J8ht2clO0F6ElIBZLWN1W58=
+
+Name: net/minecraftforge/fml/common/registry/GameRegistry.class
+SHA-256-Digest: YsELAOpcSSWqm+COacAgz+mKHYcBOms6R0c7L5uYCB4=
+
+Name: net/minecraftforge/fml/common/network/FMLEventChannel$EventFacto
+ ry.class
+SHA-256-Digest: T4Xl8YHU1Hu8eUR6zSlW28dk3RolMJ6VqJqpNLYIx1k=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeServ
+ erState$4.class
+SHA-256-Digest: K3c22KVdIsBiMfOnzQvmNE1nsXW+M4MpEt+5+sb2NFk=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeServ
+ erState.class
+SHA-256-Digest: DmwbCvyTMiPAOYiDYEI9spLjPOtDPL7m9OVdUX5PvOw=
+
+Name: net/minecraftforge/client/model/animation/IAnimatedModel.class
+SHA-256-Digest: lht+2EN1Ny3l8u5bWGLXU9W/QdSwnqmdX2N5D4aiq/E=
+
+Name: net/minecraftforge/client/model/obj/OBJModel$Parser.class
+SHA-256-Digest: Oth0tCBHNVHpHc4bCEzaCeDfNLpsan36k9jjO2wF8PI=
+
+Name: net/minecraftforge/fml/common/asm/transformers/AccessTransformer
+ $1.class
+SHA-256-Digest: XfYGR+1OfvlyqygsGizsab1e7RBBM/Zo+df9wZsRNOg=
+
+Name: net/minecraftforge/fml/client/config/GuiConfigEntries$IConfigEnt
+ ry.class
+SHA-256-Digest: zamL3ZIoogi2ZA2EOWN4tkXRdmKxfdc4UgofTozIx3g=
+
+Name: net/minecraftforge/event/entity/living/LivingPackSizeEvent.class
+SHA-256-Digest: XPHEiI3RExzYB0DLTw1EaPm1eNneT4uj4jzbFTPFmM4=
+
+Name: net/minecraftforge/fml/common/FMLCommonHandler$1.class
+SHA-256-Digest: lShkSJEK9W3mwVvDVFDW/oUM1wLhYTf1Aqq+ZBC2GUQ=
+
+Name: net/minecraftforge/fml/common/gameevent/TickEvent$ServerTickEven
+ t.class
+SHA-256-Digest: l1YRf6z3hM9IXRIyo5j4tA8a6zIAVx8Fbe7HTu04tUs=
+
+Name: net/minecraftforge/client/event/GuiScreenEvent$DrawScreenEvent$P
+ ost.class
+SHA-256-Digest: P9FbXc5mBVrb3WSXnvridKXVlmPqlderG3E2QIpgQ44=
+
+Name: net/minecraftforge/client/model/b3d/B3DLoader$Wrapper$1.class
+SHA-256-Digest: 3s5t4+8dQk90wOvNqcjRM4MCSO4e19fTHhoBxgQ9Z/I=
+
+Name: net/minecraftforge/fluids/BlockFluidClassic.class
+SHA-256-Digest: /QBUm3pxCNqLUXARH+BydKcSROXzNTcDQ5VksDE+/oo=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeServ
+ erState$1.class
+SHA-256-Digest: LuhSmitPY0FQxis5x+R6UwRXyRpGrUwP10vd9ZR8lU8=
+
+Name: Paulscode SoundSystem CodecIBXM License.txt
+SHA-256-Digest: 8Oo7COFsKwMcjZTZLVOpk+PVZ+53+OjUsNZ0VvOQWaA=
+
+Name: net/minecraftforge/event/world/WorldEvent$CreateSpawnPosition.cl
+ ass
+SHA-256-Digest: zAiYxiis84OS0MMAymhdpIqg2bh/9ujCNDaWdmeebxc=
+
+Name: net/minecraftforge/fml/common/registry/ExistingSubstitutionExcep
+ tion.class
+SHA-256-Digest: 1gCtMXEbRWGvRSRcXhDCzNK7v81+IVlKyhUHSR30dkE=
+
+Name: net/minecraftforge/client/model/animation/IEventHandler.class
+SHA-256-Digest: YJIKHxrGGXcSNlPnJZ2LJIrgZ1Rdmftq3OnrvCnXfmY=
+
+Name: aee$EmeraldGenerator.class
+SHA-256-Digest: 6B3hZVIvHbublwKJQ4j6tshay19maaJNoi8ziEK70qM=
+
+Name: net/minecraftforge/fml/common/discovery/ITypeDiscoverer.class
+SHA-256-Digest: 7vBG1f5FvzY0CfFk0hwzm0qW2TZz7E2dX6tM2PsK9go=
+
+Name: net/minecraftforge/client/event/RenderPlayerEvent$SetArmorModel.
+ class
+SHA-256-Digest: lFx4lmphMrXEW1Lg+qlQaW9ePyv9t6gDkMTpJZwTDaQ=
+
+Name: ady$FlowerEntry.class
+SHA-256-Digest: W645PDrssUUqyPtup0sOVVEVjeHWW6EqyONX1Jh7evA=
+
+Name: afh$7.class
+SHA-256-Digest: YmxYOdR/yptVuWOJs8tqA+JcihbrJ48rECiBK9NREVc=
+
+Name: ibxm/Channel.class
+SHA-256-Digest: +Vj6Jy+n8fMXb5lx+6Qvu3K1cs2u6UxkvtZNtJCal2A=
+
+Name: net/minecraftforge/client/event/sound/PlaySoundEvent.class
+SHA-256-Digest: D8X0VbZbhXep3I7DsMO7Not07zu7XTdhpogzTJhV8WU=
+
+Name: ibxm/ScreamTracker3.class
+SHA-256-Digest: DzSI4LRotj9wNr9ooAeg2BNbJWw/CFd5iJ8kOsN5nWw=
+
+Name: net/minecraftforge/common/ForgeChunkManager.class
+SHA-256-Digest: H1inpiKjEt9wFpkV2c3JEqxOboP/VfZpYi9wMzhUlLA=
+
+Name: net/minecraftforge/fml/client/GuiModList$SortType.class
+SHA-256-Digest: viEOnjqvOJ39tGIUYNIC/lRIUek3KL4BsALAu648P9I=
+
+Name: net/minecraftforge/client/event/sound/SoundEvent$SoundSourceEven
+ t.class
+SHA-256-Digest: Pye5DIbvaDRg4xVKnRMjbRVeqwhH5+3Ss1i/cxre/Ok=
+
+Name: net/minecraftforge/fml/common/EnhancedRuntimeException.class
+SHA-256-Digest: n355K5EtSJWSLV5rdPdh3hEzu7gZMLCDTElQENr4zwE=
+
+Name: net/minecraftforge/event/world/ExplosionEvent$Start.class
+SHA-256-Digest: nKs0cZC+s6Yy16HC9otFBIrcNAFYG95nup39RSUEGmw=
+
+Name: c$5.class
+SHA-256-Digest: YuiaLAfrhQgn4SMcHeom4mQwIZfNFRCo4bLkEHOgdeI=
+
+Name: net/minecraftforge/event/terraingen/InitNoiseGensEvent.class
+SHA-256-Digest: YghYPy8WTs9Sml7QWC9NnAB9n4A1F2KRbSzWBxQrZho=
+
+Name: net/minecraftforge/fml/common/patcher/ClassPatch.class
+SHA-256-Digest: ABwqc+jDsOKkF8gXIYQai+KgUf0gmFvxvEXL2KuZcrM=
+
+Name: net/minecraftforge/client/model/pipeline/TransformerConsumer.cla
+ ss
+SHA-256-Digest: +ZlGhpO0Qtx0Rpcyn40VaGp1GzVmBTlEhcdS+gD5dKs=
+
+Name: net/minecraftforge/fml/common/asm/transformers/MarkerTransformer
+ $1.class
+SHA-256-Digest: 3kdATRCoAO9/3gnc1ctIp4s0F5M8BgCc5F9+BaUxzuY=
+
+Name: net/minecraftforge/client/model/pipeline/ForgeBlockModelRenderer
+ $1.class
+SHA-256-Digest: iZn3WLd8wFcNqlXzL5+Z3yz4Uiy4nAjj2T9lIrc8EG4=
+
+Name: net/minecraftforge/common/ForgeChunkManager$Ticket.class
+SHA-256-Digest: YN0cmlkMu1XDikknaElWPIpyNQI//w++W4SeHTCwpBo=
+
+Name: net/minecraftforge/fml/client/config/DummyConfigElement.class
+SHA-256-Digest: UxYVARMpLfmXwpXCci4s7IhSES21zgYY+WJtg0DVqos=
+
+Name: afh$6.class
+SHA-256-Digest: 7FNeRKaG50LMHWBuVeUBDO2JJY3GN5r2BvAJppLXzrQ=
+
+Name: net/minecraftforge/client/event/sound/SoundResultEvent.class
+SHA-256-Digest: uLF2zbEIgNOisiVCGZSKjcomletUHuqISoWCLXCspKU=
+
+Name: net/minecraftforge/fml/client/config/GuiEditArrayEntries$IArrayE
+ ntry.class
+SHA-256-Digest: U4vEtMRxq/WGHjjDWD1KKI2Dgm5bSF5eo7cKJPSJx9I=
+
+Name: net/minecraftforge/client/event/EntityViewRenderEvent$CameraSetu
+ p.class
+SHA-256-Digest: 16B94VNKhrn/UNdhRwSVnq9FVsVYjvusDNvgK+1DCRU=
+
+Name: net/minecraftforge/fml/common/asm/ASMTransformerWrapper$ASMGenCo
+ nnection.class
+SHA-256-Digest: zGm8E1lnO2SloBhUXRWS+kPMYn/I6Q2R3Ky21efwu9Q=
+
+Name: net/minecraftforge/fml/common/toposort/ModSortingException.class
+SHA-256-Digest: frd3JB9CB36Tkn5fvbYgN+IrtDXoSYLtiex5r2OoBDo=
+
+Name: c$4.class
+SHA-256-Digest: onSlz74r9jabSMbWmZmSOp5qxqJ5MoGpTqPTyCtnang=
+
+Name: net/minecraftforge/client/model/IColoredBakedQuad.class
+SHA-256-Digest: rpjcgN2jhfjFcxJPMLYHn9eYa+A1HQQfZdvFQubkq1k=
+
+Name: net/minecraftforge/fml/common/gameevent/PlayerEvent$ItemPickupEv
+ ent.class
+SHA-256-Digest: gyOPf3fuerB9i13vbXUCET8pfQg2lkl6GOOgarJc79E=
+
+Name: net/minecraftforge/fml/common/asm/ASMTransformerWrapper$ASMGenHa
+ ndler.class
+SHA-256-Digest: sq++GiA4dSwDfJGN35Lo5gduij0sIVP9FyTnGUwZZWM=
+
+Name: net/minecraftforge/fml/common/event/FMLInitializationEvent.class
+SHA-256-Digest: cx6PKwAK4NJ0GfSZGAkSffe6/VhwBuzTceMqtEcvj7M=
+
+Name: net/minecraftforge/fml/repackage/com/nothome/delta/RandomAccessF
+ ileSeekableSource.class
+SHA-256-Digest: WDgwZSbHZVIOINEd7ev9iqy8lILfZPivgYC374ctY34=
+
+Name: assets/forge/lang/README.txt
+SHA-256-Digest: a7jn01w9Negg//0C2oeAzz9AYOAe5Q710pPSxYsaiG4=
+
+Name: net/minecraftforge/common/util/JsonUtils.class
+SHA-256-Digest: gEY4ibzHCJ6I0+AE/vQCRra9tmxfAE8sjUFeDq93Dnc=
+
+Name: net/minecraftforge/fml/common/event/FMLServerStartedEvent.class
+SHA-256-Digest: YNTAOnaAmb8vZrMxzdYmM/sj27+8bY4083ip7mAKt64=
+
+Name: net/minecraftforge/fml/common/discovery/ASMDataTable$ModContaine
+ rPredicate.class
+SHA-256-Digest: ATYpfsmhVxsKU+3whqDECKMxVvLoElD2VkkV/LaYzZQ=
+
+Name: net/minecraftforge/event/entity/player/AnvilRepairEvent.class
+SHA-256-Digest: J1C5OSgCx2+0g3l4GrdE18W8gwUxWJOd3XVm7PJDRkY=
+
+Name: net/minecraftforge/client/event/RenderGameOverlayEvent$1.class
+SHA-256-Digest: QUpbnYqVmVu4DC1d99mq4ux67pMUsqtvm230ySVsWdg=
+
+Name: net/minecraftforge/client/model/animation/Clips$2.class
+SHA-256-Digest: Gh6Juj1TN+YciJut5an33rP1B5jZDd7PnFJqd//S5EQ=
+
+Name: net/minecraftforge/client/model/animation/Clips$IdentityClip.cla
+ ss
+SHA-256-Digest: NYeZ+/4PH/Z9JVrTITfJDYjfbW5vCAqJOZRY1hME3o4=
+
+Name: net/minecraftforge/event/entity/living/LivingSpawnEvent$AllowDes
+ pawn.class
+SHA-256-Digest: hPskb+DNrb6jqK4frLB/QGLFz6kW2loup8kxbzHLs0k=
+
+Name: net/minecraftforge/common/brewing/VanillaBrewingRecipe.class
+SHA-256-Digest: xp2T8M+GUgnB/cvVPGD+/Wm/X9HAGkwWG8ZGog3llWI=
+
+Name: net/minecraftforge/event/entity/player/PlayerSetSpawnEvent.class
+SHA-256-Digest: DghTnNaNYXc3Q3NBQezAxgntvXo6MUyIn1jlGH7HeqU=
+
+Name: net/minecraftforge/fml/client/config/GuiConfigEntries.class
+SHA-256-Digest: oGq7K5m0WJ9APPjDMIl8pMr/th7CzNDBBq63WqET2gM=
+
+Name: version.json
+SHA-256-Digest: /D6QI85g4xWhktK4YRBMdHr7XktSZRDOHtMNI7HvqtM=
+
+Name: net/minecraftforge/client/model/animation/TimeValues$ParameterVa
+ lue.class
+SHA-256-Digest: Wbun8jxjBR98QymEZFzM1QG67PplOQnNtZgqPNCh6t0=
+
+Name: net/minecraftforge/client/model/obj/OBJModel$OBJProperty.class
+SHA-256-Digest: RetsssvxYFi15/tbvvuchNIcP3xhEhjCMheTplPs8+k=
+
+Name: net/minecraftforge/client/model/animation/ITimeValue.class
+SHA-256-Digest: 6wxl5DcpK1HKA4BwQmlgLS8LcOwcP5hdXY+73x3Zq/c=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeClie
+ ntState$5.class
+SHA-256-Digest: x/yYqE8hxYZUNYhwPCkO7dUQyKdQn60k+eOydoOICHQ=
+
+Name: assets/forge/lang/tr_TR.lang
+SHA-256-Digest: wSG2APG4OsI4Y/j0oXgG1nPz4Kbljm2AJRnCX3481ug=
+
+Name: net/minecraftforge/fml/common/gameevent/TickEvent$WorldTickEvent
+ .class
+SHA-256-Digest: S2XVJfdTZY7i1WQeQp51EGoMGd9tWQnSx+2lLW34KrE=
+
+Name: net/minecraftforge/fml/common/network/FMLIndexedMessageToMessage
+ Codec.class
+SHA-256-Digest: 2L85ltUCGrusRvTmDqBqs7sSnPs+WI96Snjeayz3VWM=
+
+Name: net/minecraftforge/common/capabilities/ICapabilitySerializable.c
+ lass
+SHA-256-Digest: ELsgeg4kyJGKfKNrMabSZpiIYOpFp5IbA0XwIu30Ffc=
+
+Name: ibxm/LogTable.class
+SHA-256-Digest: Nv2vyGOhfOldpb0J1ZR4qlpUOhnpLklgJb1kwUxaEDg=
+
+Name: net/minecraftforge/event/terraingen/OreGenEvent.class
+SHA-256-Digest: LUDuemgJZHazFWMyDKbDLDu25Z9y4M7XOMWlHm0q0+M=
+
+Name: net/minecraftforge/fml/common/StartupQuery$AbortedException.clas
+ s
+SHA-256-Digest: NSsXZma5i690sAKWVsSQcbpXn8pYvINcEIpRUyXVDfM=
+
+Name: net/minecraftforge/fml/common/network/NetworkHandshakeEstablishe
+ d.class
+SHA-256-Digest: jLrbNtQ3l29Tpev0lgkRkBOMwLF+oVgFb8HZPWWbko4=
+
+Name: net/minecraftforge/client/gui/ForgeGuiFactory$ForgeConfigGui$Ver
+ sionCheckEntry$1.class
+SHA-256-Digest: i/oSj/mnJyw2MqgXCQGcQEOazlwNM8RSZflgKpb3E9U=
+
+Name: net/minecraftforge/event/entity/minecart/MinecartUpdateEvent.cla
+ ss
+SHA-256-Digest: QnykW/hk123R5yAdk8wlN1BsKkmak18F3AwXwdubNkQ=
+
+Name: net/minecraftforge/client/model/b3d/B3DModel$IKind.class
+SHA-256-Digest: y0TLk+UmiEXKWxZefvEMlwe1qFd5E6gbAi0Rjq+qork=
+
+Name: net/minecraftforge/fml/common/gameevent/PlayerEvent$PlayerRespaw
+ nEvent.class
+SHA-256-Digest: UVK7p5vZFEx8KfF2JO5Mk+p1DhuFECdxkM32geEIrIU=
+
+Name: net/minecraftforge/oredict/OreDictionary.class
+SHA-256-Digest: Fq0kZ4nneTc1bDWMLee0y0sVhTnq1XDQ5syz0g5JOXY=
+
+Name: net/minecraftforge/fml/client/config/GuiConfigEntries$ListEntryB
+ ase.class
+SHA-256-Digest: 1L7pfWHcZesuz16N+gp35cAF/Z3LMo6N4XaTUaul8Qk=
+
+Name: net/minecraftforge/fml/common/patcher/ClassPatchManager.class
+SHA-256-Digest: YZOm23TaSAUEiCSyokwmUEI08QdkmttPqjAEfGBb/cU=
+
+Name: net/minecraftforge/fml/common/asm/transformers/EventSubscription
+ Transformer.class
+SHA-256-Digest: k3L/ZLfjTmE4GbgTjvC00CbqxL8E0iF84n7Xu4pBMPk=
+
+Name: net/minecraftforge/fml/common/event/FMLPostInitializationEvent$1
+ .class
+SHA-256-Digest: G6LuQZ1FLeh0X3TzXja1FroHeORBcbmDp88Nd4zU0oI=
+
+Name: net/minecraftforge/client/model/ItemLayerModel$1.class
+SHA-256-Digest: Gzk33twcTx2KOb8okuVvk95dCbnAZ0dkmhvMLjZP/bY=
+
+Name: net/minecraftforge/fml/common/network/FMLNetworkEvent$ServerDisc
+ onnectionFromClientEvent.class
+SHA-256-Digest: O/ARzY1/Ue7Rj6RRAMMaSbBjsvcaWz1Ow00YWBaDXBE=
+
+Name: net/minecraftforge/client/model/IPerspectiveAwareModel$MapWrappe
+ r.class
+SHA-256-Digest: W8u4+tJRaQUQv24iXhpfNt7t0f5a6EmfFiLwje2VuoM=
+
+Name: net/minecraftforge/fml/client/FMLFileResourcePack.class
+SHA-256-Digest: LFnlFl2WQYTNdVpQzKOCiRA4Zy8zMNIcFXS6OdU3I0o=
+
+Name: forge.srg
+SHA-256-Digest: 20R5BK4YKQNrbSUMvS32zYmvsIl1Lx1lpNGq73qT56g=
+
+Name: net/minecraftforge/event/entity/player/FillBucketEvent.class
+SHA-256-Digest: V3iZyzsRt8low0mznsPcTdkFUaCYKXLKbe9LUTsazq8=
+
+Name: net/minecraftforge/fml/common/eventhandler/Event.class
+SHA-256-Digest: mwhclvL/TxFf3h5qDILAlPTWh7V1d/1SaiQ+9Ecr1uw=
+
+Name: net/minecraftforge/fml/common/registry/GameData$ItemBlockCapture
+ .class
+SHA-256-Digest: TNYw9/fqSPVpeRc7ZxfuLumncl6LEVQg1BaWgeQwPzM=
+
+Name: net/minecraftforge/fml/common/functions/ModNameFunction.class
+SHA-256-Digest: 4j786p90kEAXBCTmWXwyXmVcOeb4Iecp8yKYu91OzFw=
+
+Name: net/minecraftforge/fml/common/network/internal/FMLMessage$Entity
+ AdjustMessage.class
+SHA-256-Digest: iRb4fu4W4k3ZtnCWb1R6/GciKaj9FhmUHxQt+jnV+vo=
+
+Name: net/minecraftforge/client/model/MapModelState.class
+SHA-256-Digest: At9S5rva1sSvDIl3Eok21M9l2Uz/Typmo8aCEjo0Zpo=
+
+Name: net/minecraftforge/fluids/IFluidHandler.class
+SHA-256-Digest: 2AHjDj8fXL1Fmsphpvepe49DHYv5TtiB2g/UKDOSFVA=
+
+Name: net/minecraftforge/common/capabilities/CapabilityManager.class
+SHA-256-Digest: JC7rjHzzT855+kEIAwIst1v1wlOH+W6DPne8OiZ+xWA=
+
+Name: net/minecraftforge/common/property/IUnlistedProperty.class
+SHA-256-Digest: 48d/dcvKbRMkD9zWRx/5i8TrFDT83nPc6DMtyTE9HEY=
+
+Name: net/minecraftforge/common/brewing/BrewingOreRecipe.class
+SHA-256-Digest: y4hLc/8IlcjgGSH5HcrUjG5SmYy0uzpA+HGQ+OX/b+Q=
+
+Name: net/minecraftforge/fml/common/IWorldGenerator.class
+SHA-256-Digest: 0ONpGRyIlct74qRvzCgf0AtJhQ2RJdE9LYxwBN/4KS8=
+
+Name: net/minecraftforge/fml/common/asm/transformers/deobf/LZMAInputSu
+ pplier.class
+SHA-256-Digest: IYIFooWFEb+BJXNvOD5HVMj4QK9IQIwRuneCUxbRfZ4=
+
+Name: net/minecraftforge/client/model/b3d/B3DModel$Mesh.class
+SHA-256-Digest: RPOTrF7/7J5JG66Irlx1dD8K069wDNiabq9T4GHJfd8=
+
+Name: ibxm/Module.class
+SHA-256-Digest: JQ+HBkG42kQ8gn8pqtYIE/9MSM7LFSvBMsnKGEiopC8=
+
+Name: net/minecraftforge/fml/common/discovery/asm/ModFieldVisitor.clas
+ s
+SHA-256-Digest: pZIDIozwLVvAiVtl5jYlQcH8gPXpKZC5ZG2ZnnIij38=
+
+Name: net/minecraftforge/client/event/TextureStitchEvent$Pre.class
+SHA-256-Digest: v1+YuDyVvDJWBX41kAZZSZdcFcopilEhsXCqvkhMHJw=
+
+Name: assets/forge/lang/sv_SE.lang
+SHA-256-Digest: srSMwC4Pv+uIHiydAV3VZ0lkWly7WHKNTsRDtF/1iJQ=
+
+Name: net/minecraftforge/fml/common/LoaderException.class
+SHA-256-Digest: iXUzZhDfau48If5Q8Q4pVxh041kAxw4BdY3apuO8QTA=
+
+Name: net/minecraftforge/common/brewing/IBrewingRecipe.class
+SHA-256-Digest: HCQMYZeZ5+FDrtzzqbAJftHDDy6Z/XwgvRyI1uOOXv4=
+
+Name: net/minecraftforge/fml/client/GuiSortingProblem.class
+SHA-256-Digest: n8CSH9Fl0x9ixfMAtqPDcw14fN97Xd9Zss/QY6pzVWY=
+
+Name: net/minecraftforge/fml/common/ModClassLoader.class
+SHA-256-Digest: JQREovJYwV5CAn5tgCL1BOEAjzJyYvuDKzlbcHgGKCk=
+
+Name: net/minecraftforge/fml/common/network/FMLOutboundHandler$1.class
+SHA-256-Digest: 2PdHn5xeQn4E55tUmxgIZ1db0DIUdw76J48G5asruCE=
+
+Name: net/minecraftforge/fml/common/gameevent/PlayerEvent$ItemSmeltedE
+ vent.class
+SHA-256-Digest: LkSu1q4csZP5fY/BWIPKd9urofD9CbtSIloe4uNGCd8=
+
+Name: net/minecraftforge/server/console/ConsoleFormatter.class
+SHA-256-Digest: 6/6AMg8mkP0q7873+4+0ZC3DHjXZucQpG2n4iM+ma1U=
+
+Name: net/minecraftforge/client/model/animation/Clips$1.class
+SHA-256-Digest: KLJqRkpw8jJaaJeq9ZqzT3tAGBIlNCxydgKG7x818Ko=
+
+Name: net/minecraftforge/fml/common/registry/GameRegistry$Type.class
+SHA-256-Digest: LcuJndXFtVs4YLWRP5NCM+WwwGh1xNpEgdiAaDuZwgY=
+
+Name: net/minecraftforge/fml/common/event/FMLConstructionEvent.class
+SHA-256-Digest: klWG4pqxkJ4e2wWoQp3g51d8ziiV8eL8Z6PqPPkVMv0=
+
+Name: net/minecraftforge/common/property/IExtendedBlockState.class
+SHA-256-Digest: Fhs54Pu8tlIPU1Kv1U9j/EIdx/lTcDP6V6HMI9cqQS0=
+
+Name: net/minecraftforge/fml/common/network/internal/NetworkModHolder$
+ MethodNetworkChecker.class
+SHA-256-Digest: +DbwcneeC8TyTyT24+0nFirkPqQu2NVsucn5E+fQ6ro=
+
+Name: net/minecraftforge/event/world/WorldEvent$PotentialSpawns.class
+SHA-256-Digest: FOHxY0HH/PD/e+DEM/aFrM6l9RcMKcubgBBV+QmeaY4=
+
+Name: net/minecraftforge/fml/common/TracingPrintStream.class
+SHA-256-Digest: I4baQPUoAEo4MsjvF/sV79X4tyzS3xN0hgP6vL09m/s=
+
+Name: net/minecraftforge/fml/client/IModGuiFactory$RuntimeOptionGuiHan
+ dler.class
+SHA-256-Digest: l60EBmco9xme4FJ1h19sSEN0kzn30na2XgWQr65WN9c=
+
+Name: net/minecraftforge/fml/common/event/FMLServerStartingEvent.class
+SHA-256-Digest: O8QquZykASfxprSbq5xTUEI4mMY23cQ3h522xT6qkhI=
+
+Name: net/minecraftforge/fml/common/network/PacketLoggingHandler.class
+SHA-256-Digest: A4ALlVHCZcXqsmrEhXRAvMpAYBYZnPLxUQhQ2G1gNsQ=
+
+Name: net/minecraftforge/client/event/EntityViewRenderEvent.class
+SHA-256-Digest: z1mLShlHogXji93JSuPAo1wVfXWtEDvB64ze3Vs2P8M=
+
+Name: net/minecraftforge/event/world/ExplosionEvent$Detonate.class
+SHA-256-Digest: y9FyC+QdrCpn2oB1PC4is93ApKP3RcYS9A4xmR7Icns=
+
+Name: net/minecraftforge/fml/common/versioning/VersionRange.class
+SHA-256-Digest: mqZE49kJdyTfK5oIRJ4ml9dh4t4w7vj+pUq/Z7DsfmA=
+
+Name: net/minecraftforge/fluids/FluidContainerRegistry$ContainerKey.cl
+ ass
+SHA-256-Digest: 3b0XhZzYKzG1lWj+PYGLd5DjjRpLqvD6Td5Ts2UJ0sc=
+
+Name: net/minecraftforge/fml/common/IFMLSidedHandler.class
+SHA-256-Digest: Ehyr+jH8o+ZoCUsbe4QVVYK/qCYSjq67VyEOU6euBe0=
+
+Name: net/minecraftforge/fml/common/Loader.class
+SHA-256-Digest: PT5Fl5eARI0k4lsRl73M4nMgxN74/nVJLG3ovgVDcfs=
+
+Name: net/minecraftforge/client/ForgeHooksClient.class
+SHA-256-Digest: 8Tdxfnq40TU/zqNFpduRTFZR3Pl9L+bqMuZITowzsS0=
+
+Name: net/minecraftforge/event/terraingen/WorldTypeEvent$InitBiomeGens
+ .class
+SHA-256-Digest: g0RXxj/1X1rWoM73fK8j13LkF5JVetHIjuvThIhMd3k=
+
+Name: net/minecraftforge/fml/common/versioning/InvalidVersionSpecifica
+ tionException.class
+SHA-256-Digest: H5kS3z21Nms2HH2A2crS79/VUujMvg2YsctoXzu4xR8=
+
+Name: net/minecraftforge/client/event/sound/PlayStreamingEvent.class
+SHA-256-Digest: N5zf10nF+xYVZzVfLghqDeGRptHQQ1RiTmMKR+zg2LQ=
+
+Name: net/minecraftforge/fml/common/registry/RegistryDelegate.class
+SHA-256-Digest: rlObJOm6NzMzuThTFeQ/ege5vDOobtGjqE3ibX/JTRg=
+
+Name: net/minecraftforge/client/model/animation/ModelBlockAnimation$MB
+ Joint.class
+SHA-256-Digest: 1T+h2y8zbLnK5OS6eYXoriHe5+J0B+5+IXqTzyDSfac=
+
+Name: net/minecraftforge/client/model/animation/AnimationTESR$1.class
+SHA-256-Digest: t+RRJqZj0JL2WZOyV4wjxOnMkmYW8dtjw4u7nX07FDY=
+
+Name: net/minecraftforge/items/ItemHandlerHelper.class
+SHA-256-Digest: 3+ASAvvHw3so51xQqJPR58rvn9jp4dAI9/QjBe2QvqU=
+
+Name: net/minecraftforge/event/entity/EntityStruckByLightningEvent.cla
+ ss
+SHA-256-Digest: 9IoXxVHG0OUy4cG9ASuMrLUD9TH89CmCrLbnjkuIOFg=
+
+Name: net/minecraftforge/fluids/FluidEvent$FluidSpilledEvent.class
+SHA-256-Digest: VQ3pF9dIMyBoOMY5b0gOW8TiC6gn/k04DMQFvwqC9kk=
+
+Name: net/minecraftforge/fml/common/StartupQuery.class
+SHA-256-Digest: 0cC2dWN8RHJ3zplBzwLr4V/bjGvVZ6+lr+l3O6EgYUU=
+
+Name: assets/forge/models/item/bucket.json
+SHA-256-Digest: gFsxNhHpMudAV5v1rSFDqj8mxWZjB40NSGu95VngWlU=
+
+Name: net/minecraftforge/items/SlotItemHandler.class
+SHA-256-Digest: bhhyXXv0t54yfZ76K7d7GHfV5Vw0sN6W74G2I76lBA0=
+
+Name: net/minecraftforge/client/model/animation/Clips$SlerpClip.class
+SHA-256-Digest: akAV1Uo9D/gvIpKgp3JTtyadHH8Dv6scU0T8ROAtdJM=
+
+Name: net/minecraftforge/fml/relauncher/IFMLLoadingPlugin$TransformerE
+ xclusions.class
+SHA-256-Digest: /4sjBMRvcfj83eWOL/cQbfi62eTyyPBreKRt73Oh/FM=
+
+Name: net/minecraftforge/event/entity/player/PlayerDropsEvent.class
+SHA-256-Digest: 1lR/aatScNtZTaPOrQOnj9fZTi+TrWCw0CKXM9jyjh8=
+
+Name: net/minecraftforge/common/network/DimensionMessageHandler.class
+SHA-256-Digest: baKQTnBuDRaK6XCGHiI3oCCHYTsYcjy21khNQn6u/r8=
+
+Name: net/minecraftforge/client/model/animation/TimeValues$IdentityVal
+ ue.class
+SHA-256-Digest: Oc9/Da4oSU5IKEznq8DftVj15IMq2sL1/xLHiCmjS9Q=
+
+Name: net/minecraftforge/common/IShearable.class
+SHA-256-Digest: rnfYXXyICcfz9fUstBiKmvuftmdk1sC0dCvPCT7K0g0=
+
+Name: net/minecraftforge/common/ForgeChunkManager$Type.class
+SHA-256-Digest: ydzwuQoF4LpOI/f45kpmyKKlu/YWYG5Sf5RNlE/ogC8=
+
+Name: net/minecraftforge/common/util/AsynchronousExecutor$Task.class
+SHA-256-Digest: 9iJE4nSfQsRbmaLS3qfrCta0DiUoKcRYYgNCClWw3kM=
+
+Name: net/minecraftforge/fml/common/LoadController$FMLSecurityManager.
+ class
+SHA-256-Digest: n8RCnSCdlO2tTBTM51dzjdkctQiO3qi9/WH9eUNs/04=
+
+Name: net/minecraftforge/common/MinecraftForge.class
+SHA-256-Digest: RG14O3zzlaORrzSYI7aWl7mQ2Ja31y6hb9+E4jQ/w1U=
+
+Name: net/minecraftforge/fml/common/registry/IEntityAdditionalSpawnDat
+ a.class
+SHA-256-Digest: SCU7WqdmoEfe2fbw+jhIMY96261VUhv6HUwgV8qxabs=
+
+Name: net/minecraftforge/fml/relauncher/FileListHelper$CaseInsensitive
+ FileComparator.class
+SHA-256-Digest: s/PZ7CqvpU5ncuO+VqY7gl8grwME32la3Cu5AAIM5S4=
+
+Name: net/minecraftforge/fml/relauncher/ModListHelper$JsonModList.clas
+ s
+SHA-256-Digest: uaiGpq8PKe4eYsP3nowqMtc4ZZh3k+biAO6fMmCBspo=
+
+Name: net/minecraftforge/fml/common/network/handshake/FMLHandshakeClie
+ ntState$1.class
+SHA-256-Digest: gwJPkjwjj0QGLjjthieEzXTtKZvmgkTXdIPcIZH8wu4=
+
+Name: net/minecraftforge/event/entity/player/PlayerUseItemEvent$Finish
+ .class
+SHA-256-Digest: I8UWRcCQZbL5jITZZhxxSFJIiNKwEKY4ulBGkilS7uo=
+
+Name: net/minecraftforge/client/model/animation/Clips$3.class
+SHA-256-Digest: gXiXIFRGrvVbIh3h+DIYUOZqo+6j3Xoyf//Va2sAlOI=
+
+Name: net/minecraftforge/fml/common/registry/FMLControlledNamespacedRe
+ gistry.class
+SHA-256-Digest: IaDizJj0ApKd+Wh3P4RIudvlqwjWIfTksXBSfGFjfmQ=
+
+Name: net/minecraftforge/client/model/animation/ModelBlockAnimation$MB
+ VariableClip.class
+SHA-256-Digest: I4Coo3KDdj95NPIiN7ycxuDSEkMwPY9k5yaRSr30ld4=
+
+Name: net/minecraftforge/client/model/animation/JointClips$IdentityJoi
+ ntClip.class
+SHA-256-Digest: qCv4ONwoWjwAggfBIwn+asgNj8Q5OK5zySfvkp90Cpc=
+
+Name: net/minecraftforge/fml/common/network/handshake/IHandshakeState.
+ class
+SHA-256-Digest: Ng7/B6gxeukPvxQuJsaIG9A7uXFXeDyHcyzrR6j2Q30=
+
+Name: net/minecraftforge/client/model/animation/TimeValues$CommonTimeV
+ alueTypeAdapterFactory$1.class
+SHA-256-Digest: 5cfXtN73sCye+YvWmx3FZJDlh3/Pyi8l9fRdV9wN1pQ=
+
+Name: net/minecraftforge/fml/common/Mod.class
+SHA-256-Digest: WKVTfRdhGupBy5y7bcS/dOdewNrvODVU6sIGMDPy1uc=
+
+Name: net/minecraftforge/fml/common/network/NetworkCheckHandler.class
+SHA-256-Digest: CHlkFsv9Y/pKmX3ywpyRci91ZKNeSVdn5bmF55oPdgY=
+
+Name: net/minecraftforge/client/model/pipeline/VertexLighterSmoothAo.c
+ lass
+SHA-256-Digest: h5IoSqKG7Yw3xuAoQu4edxdtdB1NIlE1/2KnEVEX8O4=
+
+Name: net/minecraftforge/event/entity/living/EnderTeleportEvent.class
+SHA-256-Digest: 0SvxVhc90XEIOJK3KIck+JW28JlRR4pnIIGAQg/zgJU=
+
+Name: net/minecraftforge/fml/common/ILanguageAdapter.class
+SHA-256-Digest: ToHF1jJovAMMpfs2BxkSkE6ab4BFcW8hr1194rLX5BY=
+
+Name: net/minecraftforge/fml/client/GuiConfirmation.class
+SHA-256-Digest: gF9h44LLolYsMpG1Y//o6PuGOjp8rwVyNnzmmKyD72k=
+
+Name: kb$5$1.class
+SHA-256-Digest: nBo16jWC93c9ezjFu9KAlS2dnMeeawYkUL4hxP1i5Go=
+
+Name: net/minecraftforge/fml/common/gameevent/TickEvent$ClientTickEven
+ t.class
+SHA-256-Digest: cTxGhfIxjTNnTB4yEFBfmNomkdtwlJlUT+dBe4ShrKA=
+
+Name: net/minecraftforge/event/world/WorldEvent$Save.class
+SHA-256-Digest: l9LPIhzb9aRXFtC50y3FDZxycsG31Wu/ZE956RMFx7w=
+
+Name: net/minecraftforge/fluids/FluidTankInfo.class
+SHA-256-Digest: N6AEvGjSWztUrq87pp+MlEsPqYS3Qte4U8Ukl1pgqvQ=
+
+Name: net/minecraftforge/fml/common/registry/PersistentRegistryManager
+ .class
+SHA-256-Digest: Rq9TR+KpaGTVMZMMcscGnZvOqR5NFpBgoE5kNuPESTw=
+
+Name: net/minecraftforge/client/event/RenderGameOverlayEvent$ElementTy
+ pe.class
+SHA-256-Digest: TAbjQs4aPXihY3ltHoTfpU2IfyR38kIosJ4RHurL1bA=
+
+Name: net/minecraftforge/client/event/ModelBakeEvent.class
+SHA-256-Digest: eu323o4cooOJjdIdCkg1HEyZadQRjq0rDGRP1+uZVio=
+
+Name: net/minecraftforge/client/model/IModelCustomData.class
+SHA-256-Digest: mekwV7aSfkK5GGGSQPiXJVBxtZy6VzRNv3sK1EqaSRA=
+
+Name: net/minecraftforge/fml/client/config/GuiSelectString.class
+SHA-256-Digest: zDIzJVw0vLy5RUkGvEL6HDqmUdjd2XdkRqTSi+bvPOY=
+
+Name: net/minecraftforge/event/terraingen/OreGenEvent$Pre.class
+SHA-256-Digest: 3twFtXaaQqFoZPNHzZ7RuX3HiK2csUbbKUipgm9lxYc=
+
+Name: net/minecraftforge/fml/common/functions/CollectionWrapperFactory
+ .class
+SHA-256-Digest: uY6HF6qv+PKk+lDIvemmJZa7RTV0+cBXfq/cXTwU72I=
+
+Name: net/minecraftforge/fml/relauncher/FMLLaunchHandler.class
+SHA-256-Digest: vw/dVh/apjXJ8y1btOQJc7Ji2rVD5waxgT+b3X0n3nc=
+
+Name: net/minecraftforge/fml/common/network/ByteBufUtils.class
+SHA-256-Digest: fUlg1Nbf3G9uuPYrwLBpBV/bUFbI1e3h3gOlgz1GyUo=
+
+Name: net/minecraftforge/client/model/ForgeBlockStateV1$Deserializer.c
+ lass
+SHA-256-Digest: 4tCtn82I68tFZueCMWOPFVhBxHsTqmBLm/JxLFUYZPk=
+
+Name: net/minecraftforge/fml/client/config/GuiEditArrayEntries.class
+SHA-256-Digest: Ieyh6s9rPXGseOUTPZ8mWipsjVctzc1NKVjRtXUNnLg=
+
+Name: net/minecraftforge/common/BiomeManager$BiomeType.class
+SHA-256-Digest: o43AW61R7ITjAzgcugfyc9E+wlSAdI4JgIF9HPPv7tE=
+
+Name: net/minecraftforge/fml/common/asm/transformers/ItemStackTransfor
+ mer.class
+SHA-256-Digest: jRdzvLZiitgTsLF5LoU/KFljoaR82AHa8gunhOPFRhY=
+
+Name: net/minecraftforge/fml/common/gameevent/PlayerEvent$PlayerLogged
+ InEvent.class
+SHA-256-Digest: 6Ouw7BUYBEM6cgi6Odhm/znoxngdMjSh2diuBefT83U=
+
+Name: net/minecraftforge/client/model/b3d/B3DLoader$BakedWrapper$2$1.c
+ lass
+SHA-256-Digest: yfM25NepJRsRFnMzS8131ZlOfJNeYoMk1GJ+/DnN2v8=
+
+Name: net/minecraftforge/event/terraingen/BiomeEvent$GetFoliageColor.c
+ lass
+SHA-256-Digest: ujSYfrRVUMiXvIjkFQAHq3k8U8LJMHPHjskJPidfy98=
+
+Name: net/minecraftforge/client/model/b3d/B3DLoader$ModelWrapper.class
+SHA-256-Digest: p782uB1H+0RcIExH05wnSCo0bYoei8xYTKIyxvfUG3A=
+
